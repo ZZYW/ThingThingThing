@@ -33,7 +33,7 @@ Shader "Custom/rainbow" {
 			//float2 uv_MainTex;
             float3 normal;
             float4 vertex;
-            float2 uv;
+            float2 uv_MainTex;
 		};
 
 		half _Glossiness;
@@ -53,13 +53,13 @@ Shader "Custom/rainbow" {
         void vert (inout appdata_full v, out Input data) {       
           data.normal = v.normal;
           data.vertex = v.vertex;
-          data.uv = v.texcoord;
+          data.uv_MainTex = v.texcoord;
         }
 
         void mycolor (Input IN, SurfaceOutputStandard o, inout fixed4 color){
           float3 worldPos = mul(unity_ObjectToWorld, IN.vertex).xyz;
-           fixed4 texColor = tex2D(_MainTex, IN.uv);
-          fixed4 finalColor = _Color;
+          fixed4 texColor = tex2D(_MainTex, IN.uv_MainTex);
+          fixed4 finalColor = fixed4(o.Albedo.xyz, 1);
 
          
 
@@ -75,6 +75,7 @@ Shader "Custom/rainbow" {
              }
              float timescale = 30;
              finalColor = lerp(  lerp(_RainbowColor1, _RainbowColor2, (sin(_Time.x*timescale)+1) / 2), lerp(_RainbowColor2, _RainbowColor3, (sin(_Time.x*timescale)+1) / 2), y);
+             finalColor *= fixed4(o.Albedo.xyz, 1);
           }
 
 
@@ -98,7 +99,8 @@ Shader "Custom/rainbow" {
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
-			fixed4 c = _Color;
+            
+			fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
 			o.Albedo = c;
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;

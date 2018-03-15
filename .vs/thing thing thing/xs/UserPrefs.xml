@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{AC344065-CDC0-5EFF-BC47-043A56D8E98A}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/rainbow.shader">
     <Files>
-      <File FileName="Assets/Shaders/rainbow.shader" Line="51" Column="31" />
+      <File FileName="Assets/Shaders/rainbow.shader" Line="98" Column="3" />
+      <File FileName="Assets/Shaders/NewSurfaceShader.shader" Line="22" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.thing_220thing_220thing PreferredExecutionTarget="Unity.Editor" />
