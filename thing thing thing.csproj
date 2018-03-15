@@ -301,6 +301,7 @@
     <None Include="Assets\Polyquest Worlds Full Pack Vol.1\shaders\PolyboxCoreForward.cginc" />
     <None Include="Assets\Polyquest Worlds Full Pack Vol.1\shaders\PolyboxCoreForwardSimple.cginc" />
     <None Include="Assets\Polyquest Worlds Full Pack Vol.1\shaders\PolyboxStandard.shader" />
+    <None Include="Assets\Shaders\rainbow.shader" />
     <None Include="Assets\Simple Animals\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
