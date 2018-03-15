@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: a620c2ce8b83a6741b72ac2f240c10b8
+timeCreated: 1462409850
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cliff_A
+    100002: Cliff_A_child
+    100004: Cliff_B
+    100006: Cliff_C
+    100008: Cliff_D
+    100010: Cliff_E
+    100012: Cliff_F
+    100014: Cliff_G
+    100016: Cliff_H
+    100018: Cliff_I
+    100020: Cliff_J
+    100022: Cliff_J_child
+    100024: Cliff_K
+    100026: Cliff_K_child
+    100028: Cliff_L
+    100030: Cliff_M
+    100032: Cliff_N
+    100034: Cliff_O
+    100036: Cliff_P
+    100038: Cliff_Q
+    100040: Cliff_R
+    100042: Cliff_S
+    100044: Cliff_T
+    100046: Cliff_U
+    100048: Cliff_V
+    100050: Cliff_V_child
+    100052: Cliff_W
+    100054: //RootNode
+    400000: Cliff_A
+    400002: Cliff_A_child
+    400004: Cliff_B
+    400006: Cliff_C
+    400008: Cliff_D
+    400010: Cliff_E
+    400012: Cliff_F
+    400014: Cliff_G
+    400016: Cliff_H
+    400018: Cliff_I
+    400020: Cliff_J
+    400022: Cliff_J_child
+    400024: Cliff_K
+    400026: Cliff_K_child
+    400028: Cliff_L
+    400030: Cliff_M
+    400032: Cliff_N
+    400034: Cliff_O
+    400036: Cliff_P
+    400038: Cliff_Q
+    400040: Cliff_R
+    400042: Cliff_S
+    400044: Cliff_T
+    400046: Cliff_U
+    400048: Cliff_V
+    400050: Cliff_V_child
+    400052: Cliff_W
+    400054: //RootNode
+    2300000: Cliff_A
+    2300002: Cliff_A_child
+    2300004: Cliff_B
+    2300006: Cliff_C
+    2300008: Cliff_D
+    2300010: Cliff_E
+    2300012: Cliff_F
+    2300014: Cliff_G
+    2300016: Cliff_H
+    2300018: Cliff_I
+    2300020: Cliff_J
+    2300022: Cliff_J_child
+    2300024: Cliff_K
+    2300026: Cliff_K_child
+    2300028: Cliff_L
+    2300030: Cliff_M
+    2300032: Cliff_N
+    2300034: Cliff_O
+    2300036: Cliff_P
+    2300038: Cliff_Q
+    2300040: Cliff_R
+    2300042: Cliff_S
+    2300044: Cliff_T
+    2300046: Cliff_U
+    2300048: Cliff_V
+    2300050: Cliff_V_child
+    2300052: Cliff_W
+    3300000: Cliff_A
+    3300002: Cliff_A_child
+    3300004: Cliff_B
+    3300006: Cliff_C
+    3300008: Cliff_D
+    3300010: Cliff_E
+    3300012: Cliff_F
+    3300014: Cliff_G
+    3300016: Cliff_H
+    3300018: Cliff_I
+    3300020: Cliff_J
+    3300022: Cliff_J_child
+    3300024: Cliff_K
+    3300026: Cliff_K_child
+    3300028: Cliff_L
+    3300030: Cliff_M
+    3300032: Cliff_N
+    3300034: Cliff_O
+    3300036: Cliff_P
+    3300038: Cliff_Q
+    3300040: Cliff_R
+    3300042: Cliff_S
+    3300044: Cliff_T
+    3300046: Cliff_U
+    3300048: Cliff_V
+    3300050: Cliff_V_child
+    3300052: Cliff_W
+    4300000: Cliff_A
+    4300002: Cliff_A_child
+    4300004: Cliff_B
+    4300006: Cliff_C
+    4300008: Cliff_D
+    4300010: Cliff_E
+    4300012: Cliff_F
+    4300014: Cliff_G
+    4300016: Cliff_H
+    4300018: Cliff_I
+    4300020: Cliff_J
+    4300022: Cliff_J_child
+    4300024: Cliff_K
+    4300026: Cliff_K_child
+    4300028: Cliff_L
+    4300030: Cliff_M
+    4300032: Cliff_N
+    4300034: Cliff_O
+    4300036: Cliff_P
+    4300038: Cliff_Q
+    4300040: Cliff_R
+    4300042: Cliff_S
+    4300044: Cliff_T
+    4300046: Cliff_U
+    4300048: Cliff_V
+    4300050: Cliff_V_child
+    4300052: Cliff_W
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 0
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

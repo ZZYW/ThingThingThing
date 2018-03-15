@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: 002827ae41915cb4ab705371bc8c3adf
+timeCreated: 1475539772
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rock_Blocky_I_fog
+    100004: Rock_ground_fog
+    100006: Pyramid
+    100008: Cube_beveled
+    100010: Cylindre_beveled
+    100012: water_bottom
+    100014: water_box
+    100016: water_top
+    400000: //RootNode
+    400002: Rock_Blocky_I_fog
+    400004: Rock_ground_fog
+    400006: Pyramid
+    400008: Cube_beveled
+    400010: Cylindre_beveled
+    400012: water_bottom
+    400014: water_box
+    400016: water_top
+    2300000: Rock_Blocky_I_fog
+    2300002: Rock_ground_fog
+    2300004: Pyramid
+    2300006: Cube_beveled
+    2300008: Cylindre_beveled
+    2300010: water_bottom
+    2300012: water_top
+    3300000: Rock_Blocky_I_fog
+    3300002: Rock_ground_fog
+    3300004: Pyramid
+    3300006: Cube_beveled
+    3300008: Cylindre_beveled
+    3300010: water_bottom
+    3300012: water_top
+    4300000: Rock_ground_fog
+    4300002: Rock_Blocky_I_fog
+    4300004: Pyramid
+    4300006: Cube_beveled
+    4300008: Cylindre_beveled
+    4300010: water_top
+    4300012: water_bottom
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 0
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

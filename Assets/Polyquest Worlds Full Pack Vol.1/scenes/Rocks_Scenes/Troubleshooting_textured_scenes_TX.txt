@@ -1,0 +1,13 @@
+Guidelines for using textures:
+
+-When opening textured example scenes containing the “_TX” letters, make sure you check “swap UVs” ON for all models in these 3 folders:
+Assets\models\models_standard”
+Assets\models\models_multimat” 
+Assets\models\models_layered” 
+
+
+-This is to make sure Unity uses the second UV set of the models where everything is unwrapped to handle image textures correctly. 
+
+-Otherwise the scenes with the “_TX” letters will appear broken.
+
+
