@@ -327,6 +327,10 @@
     <Compile Include="Assets\Low Poly Trees 2\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Low Poly Trees 2\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Low Poly Trees 2\Scripts\FreeCamera.cs" />
+    <Compile Include="Assets\Scripts\sctCharRot.cs" />
+    <Compile Include="Assets\Scripts\sctFace.cs" />
+    <Compile Include="Assets\Scripts\sctObjChange.cs" />
+    <Compile Include="Assets\Scripts\sctPlayerControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3rdPersonCamera\DemoSceneDependencies\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

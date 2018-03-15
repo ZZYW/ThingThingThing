@@ -33,7 +33,7 @@ Shader "Custom/rainbow" {
 			//float2 uv_MainTex;
             float3 normal;
             float4 vertex;
-           
+            float2 uv;
 		};
 
 		half _Glossiness;
@@ -53,14 +53,15 @@ Shader "Custom/rainbow" {
         void vert (inout appdata_full v, out Input data) {       
           data.normal = v.normal;
           data.vertex = v.vertex;
+          data.uv = v.texcoord;
         }
 
         void mycolor (Input IN, SurfaceOutputStandard o, inout fixed4 color){
           float3 worldPos = mul(unity_ObjectToWorld, IN.vertex).xyz;
-
+           fixed4 texColor = tex2D(_MainTex, IN.uv);
           fixed4 finalColor = _Color;
 
-        
+         
 
           if(_Rainbow==1){
             float y = IN.vertex.y;
