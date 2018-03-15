@@ -64,13 +64,16 @@ Shader "Custom/rainbow" {
 
           if(_Rainbow==1){
             float y = IN.vertex.y;
+
             if(y < 0.5){
             //0-0.5
-                finalColor = lerp(_RainbowColor1, _RainbowColor2, y/0.5);
+                finalColor = lerp(_RainbowColor1, _RainbowColor2, y + y/0.5);
             }else{
             //0.5-1
                 finalColor = lerp(_RainbowColor2, _RainbowColor3, (y-0.5)/0.5);
              }
+             float timescale = 30;
+             finalColor = lerp(  lerp(_RainbowColor1, _RainbowColor2, (sin(_Time.x*timescale)+1) / 2), lerp(_RainbowColor2, _RainbowColor3, (sin(_Time.x*timescale)+1) / 2), y);
           }
 
 
