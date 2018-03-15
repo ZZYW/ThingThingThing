@@ -7,13 +7,16 @@ Shader "Custom/rainbow" {
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
-        [Toggle] _HeightFog("Height Fog", int) = 1
+        [Toggle] _HeightFog("Height Fog", int) = 0
         _HeightFogColor ("Height Fog Color", Color) = (1,1,1,1)
         _HeightFogStart ("Height Fog Start", Range(0,10)) = 1
         _HeightFogEnd ("Height Fog End", Range(0,10)) = 1
         _RainbowColor1("Rainbow Color 1", Color) = (1,1,1,1)
         _RainbowColor2("Rainbow Color 2", Color) = (1,1,1,1)
         _RainbowColor3("Rainbow Color 3", Color) = (1,1,1,1)
+
+        _TimeOfffset("Time Offset", Float) = 0.0
+        _TimeScale("Time Elapse Speed", Float) = 30
        
 	}
 	SubShader {
@@ -45,6 +48,8 @@ Shader "Custom/rainbow" {
         float _HeightFogEnd;
         int _HeightFog;
         int _Rainbow;
+        float _TimeOfffset;
+        float _TimeScale;
 
         fixed4 _RainbowColor1;
         fixed4 _RainbowColor2;
@@ -73,8 +78,11 @@ Shader "Custom/rainbow" {
             //0.5-1
                 finalColor = lerp(_RainbowColor2, _RainbowColor3, (y-0.5)/0.5);
              }
-             float timescale = 30;
-             finalColor = lerp(  lerp(_RainbowColor1, _RainbowColor2, (sin(_Time.x*timescale)+1) / 2), lerp(_RainbowColor2, _RainbowColor3, (sin(_Time.x*timescale)+1) / 2), y);
+            
+             finalColor = lerp(  lerp(_RainbowColor1, 
+                                    _RainbowColor2, (sin( (_Time.x + _TimeOfffset) *_TimeScale)+1) / 2), 
+                                    lerp(_RainbowColor2, _RainbowColor3, (sin((_Time.x + _TimeOfffset)*_TimeScale)+1) / 2), 
+                                    y);
              finalColor *= fixed4(o.Albedo.xyz, 1);
           }
 
