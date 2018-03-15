@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.9614267, g: 0.506908, b: 0.44297293, a: 1}
+  m_IndirectSpecularColor: {r: 0.9614267, g: 0.5069081, b: 0.44297335, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -88,6 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -558,7 +559,7 @@ GameObject:
   - component: {fileID: 15842990}
   m_Layer: 0
   m_Name: Ocean_B
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10105,6 +10106,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -512.26
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 6d83c761eb672d4428fb820081204b50, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d83c761eb672d4428fb820081204b50, type: 3}
   m_IsPrefabParent: 0
@@ -15190,6 +15195,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 2.63
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 9f0210b123a758941a0f0ae68ed7b648, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f0210b123a758941a0f0ae68ed7b648, type: 3}
   m_IsPrefabParent: 0
@@ -21798,6 +21807,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -293.58
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 131a3aabb2da76c4aaa9400db8173ce0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 131a3aabb2da76c4aaa9400db8173ce0, type: 3}
   m_IsPrefabParent: 0
@@ -23839,7 +23852,7 @@ GameObject:
   - component: {fileID: 752612343}
   m_Layer: 0
   m_Name: Ocean_A
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29004,6 +29017,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -322.6
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 8657c74593a3b074e80ac5514c085d25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8657c74593a3b074e80ac5514c085d25, type: 3}
   m_IsPrefabParent: 0
@@ -32163,7 +32180,7 @@ GameObject:
   - component: {fileID: 1022439440}
   m_Layer: 0
   m_Name: Ocean_D (1)
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35762,6 +35779,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 9.81
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: ab7f6c79ba9110245899b85ffbedab12, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab7f6c79ba9110245899b85ffbedab12, type: 3}
   m_IsPrefabParent: 0
@@ -35911,6 +35932,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 10.73
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: cd217012700f74845b32e81d1ff6fb4c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd217012700f74845b32e81d1ff6fb4c, type: 3}
   m_IsPrefabParent: 0
@@ -36838,7 +36863,7 @@ GameObject:
   - component: {fileID: 1155634318}
   m_Layer: 0
   m_Name: Ocean_B
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37033,7 +37058,7 @@ Prefab:
     - target: {fileID: 13700000, guid: 0a2a2d5007feeb64689fe070ed23e0e6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 940be0860e677ad4f84cbe6142f36dd3, type: 2}
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a2a2d5007feeb64689fe070ed23e0e6, type: 3}
   m_IsPrefabParent: 0
@@ -39344,6 +39369,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
   m_IsPrefabParent: 0
@@ -40989,6 +41018,48 @@ Transform:
   m_Father: {fileID: 2071269056}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 9.69, y: -114.31, z: 0}
+--- !u!1001 &1328482394
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -21.733913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.345119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -80.01265
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702046095088086, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f318138e0be194de2ab874ebe62a8b31, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1344073017
 GameObject:
   m_ObjectHideFlags: 0
@@ -45751,7 +45822,7 @@ GameObject:
   - component: {fileID: 1530858265}
   m_Layer: 0
   m_Name: Ocean_C (1)
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49092,6 +49163,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -293.58
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 0fa5641bb5f698a46b60648af36f86ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fa5641bb5f698a46b60648af36f86ba, type: 3}
   m_IsPrefabParent: 0
@@ -52277,7 +52352,7 @@ GameObject:
   - component: {fileID: 1738890462}
   m_Layer: 0
   m_Name: Ocean_C
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53328,7 +53403,7 @@ GameObject:
   - component: {fileID: 1769069652}
   m_Layer: 0
   m_Name: Ocean_D
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57972,7 +58047,7 @@ GameObject:
   - component: {fileID: 1906687328}
   m_Layer: 0
   m_Name: Ocean_A
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59205,6 +59280,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -258.9
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 4db2d9706ac1be94497fb02cc2dc3339, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db2d9706ac1be94497fb02cc2dc3339, type: 3}
   m_IsPrefabParent: 0
@@ -63385,7 +63464,7 @@ GameObject:
   - component: {fileID: 2103065502}
   m_Layer: 0
   m_Name: Ocean_D (1)
-  m_TagString: Untagged
+  m_TagString: norainbow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63605,6 +63684,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -2.19
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: f8271c7d7b213eb428ce56d8abc849c9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa888247ad5e6484eb67b17e2876b1f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8271c7d7b213eb428ce56d8abc849c9, type: 3}
   m_IsPrefabParent: 0
