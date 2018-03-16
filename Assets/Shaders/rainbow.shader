@@ -17,6 +17,7 @@ Shader "Custom/rainbow" {
 
         _TimeOfffset("Time Offset", Float) = 0.0
         _TimeScale("Time Elapse Speed", Float) = 30
+        _NoiseScaler("Noise Scaler", Float) = 0
        
 	}
 	SubShader {
@@ -26,7 +27,7 @@ Shader "Custom/rainbow" {
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma surface surf Standard fullforwardshadows finalcolor:mycolor vertex:vert 
-
+        #include "ClassicNoise3D.hlsl"
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
@@ -55,9 +56,12 @@ Shader "Custom/rainbow" {
         fixed4 _RainbowColor2;
         fixed4 _RainbowColor3;
 
+        float _NoiseScaler;
+
         void vert (inout appdata_full v, out Input data) {       
           data.normal = v.normal;
           data.vertex = v.vertex;
+          v.vertex += cnoise(v.vertex.xyz + _Time.yyy) * _NoiseScaler;
           data.uv_MainTex = v.texcoord;
         }
 

@@ -26,7 +26,7 @@ public class MakeAllRainbow : MonoBehaviour
         foreach(GameObject g in all)
         {
             Renderer rend = g.GetComponent<Renderer>();
-            if(rend!=null && g.tag != "norainbow" && Random.Range(0f,1f)>0.5f)
+            if(rend!=null && g.tag != "norainbow" && Random.Range(0f,1f)>0.3f)
             {
                 rend.material.shader = rainbowShader;
                 rend.material.SetInt("_Rainbow", 1);
@@ -35,6 +35,11 @@ public class MakeAllRainbow : MonoBehaviour
                 rend.material.SetColor("_RainbowColor1", Color.red);
                 rend.material.SetColor("_RainbowColor2", Color.green);
                 rend.material.SetColor("_RainbowColor3", Color.blue);
+
+                if(Random.Range(0f,1f) > 0.9)
+                {
+                    rend.material.SetFloat("_NoiseScaler", Random.Range(0.1f,0.5f));
+                }
             }
         }
 
