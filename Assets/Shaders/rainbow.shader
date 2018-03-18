@@ -7,6 +7,7 @@ Shader "Custom/rainbow" {
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
+
         [Toggle] _HeightFog("Height Fog", int) = 0
         _HeightFogColor ("Height Fog Color", Color) = (1,1,1,1)
         _HeightFogStart ("Height Fog Start", Range(0,10)) = 1
