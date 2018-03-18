@@ -34,10 +34,10 @@ Shader "Custom/rainbow" {
 		sampler2D _MainTex;
 
 		struct Input {
-			//float2 uv_MainTex;
             float3 normal;
             float4 vertex;
             float2 uv_MainTex;
+            float3 worldPos;
 		};
 
 		half _Glossiness;
@@ -58,39 +58,28 @@ Shader "Custom/rainbow" {
 
         float _NoiseScaler;
 
-        void vert (inout appdata_full v, out Input data) {       
-          data.normal = v.normal;
-          data.vertex = v.vertex;
+        void vert (inout appdata_full v, out Input o) {       
+          UNITY_INITIALIZE_OUTPUT(Input,o);
           v.vertex += cnoise(v.vertex.xyz + _Time.yyy) * _NoiseScaler;
-          data.uv_MainTex = v.texcoord;
+          o.vertex = v.vertex;
         }
 
         void mycolor (Input IN, SurfaceOutputStandard o, inout fixed4 color){
-          float3 worldPos = mul(unity_ObjectToWorld, IN.vertex).xyz;
-          fixed4 texColor = tex2D(_MainTex, IN.uv_MainTex);
+          float3 worldPos = IN.worldPos;
           fixed4 finalColor = fixed4(o.Albedo.xyz, 1);
 
          
-
+          //rainbow stuff
           if(_Rainbow==1){
             float y = IN.vertex.y;
 
-            if(y < 0.5){
-            //0-0.5
-                finalColor = lerp(_RainbowColor1, _RainbowColor2, y + y/0.5);
-            }else{
-            //0.5-1
-                finalColor = lerp(_RainbowColor2, _RainbowColor3, (y-0.5)/0.5);
-             }
-            
              finalColor = lerp(  lerp(_RainbowColor1, 
                                     _RainbowColor2, (sin( (_Time.x + _TimeOfffset) *_TimeScale)+1) / 2), 
                                     lerp(_RainbowColor2, _RainbowColor3, (sin((_Time.x + _TimeOfffset)*_TimeScale)+1) / 2), 
                                     y);
              finalColor *= fixed4(o.Albedo.xyz, 1);
           }
-
-
+          //height fog stuff
           if(_HeightFog == 0){
             color = finalColor;
           }else if(_HeightFog==1){
@@ -112,7 +101,7 @@ Shader "Custom/rainbow" {
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
             
-			fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c;
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;
