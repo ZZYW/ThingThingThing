@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Barn
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 4800000, guid: 4b667bdadbc6c476d959895206ba50d6, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -60,15 +60,30 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EmissionScaleUI: 0
+    - _GlossMapScale: 1
     - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _HeightFog: 0
+    - _HeightFogEnd: 0.52
+    - _HeightFogStart: 3.1
     - _Metallic: 0
     - _Mode: 0
+    - _NoiseScaler: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Rainbow: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TimeOfffset: 0
+    - _TimeScale: 30
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.7523248, g: 0.7873807, b: 0.8897059, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightFogColor: {r: 1, g: 0.63235295, b: 0.63235295, a: 1}
+    - _RainbowColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _RainbowColor2: {r: 0, g: 0.13103437, b: 1, a: 1}
+    - _RainbowColor3: {r: 0.11724138, g: 1, b: 0, a: 1}
