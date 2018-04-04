@@ -4,15 +4,92 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-abstract public class Creature : MonoBehaviour
+[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Rigidbody))]
+public class Creature : MonoBehaviour
 {
+    //pre filled 
+    public GameObject ChatBalloonPrefab;
 
+    //PRIVATE
     NavMeshAgent nmAgent;
+    SphereCollider neighborDetector;
+    List<GameObject> neighborList;
+    ChatBalloon chatBalloon;
 
-    private void Awake()
+
+
+    //PUBLIC
+
+    public int neighborDetectorRadius = 30;
+    public int chatBalloonYOffset = 10;
+
+    //PROPERTIES
+
+    //Time
+    static System.DateTime CurrentTime
     {
-        nmAgent = GetComponent<NavMeshAgent>();
+        get
+        {
+            return TOD_Data.main.CurrentDatetime;
+        }
     }
+
+    int NeighborCount
+    {
+        get {
+            return neighborList.Count;
+        }
+    }
+
+
+
+    //MONOBEHAVIOR METHODS
+    private void Start()
+    {
+        //tag
+        gameObject.tag = "Thing";
+
+        //neighbor detector
+        neighborDetector = GetComponent<SphereCollider>();
+        neighborDetector.isTrigger = true;
+        neighborDetector.radius = neighborDetectorRadius;
+
+        //nav mesh agent
+
+        nmAgent = GetComponent<NavMeshAgent>();
+        Debug.Log(nmAgent);
+
+        //Instantiating ChatBallon Object
+        GameObject chatBalloonGameobject = Instantiate(ChatBalloonPrefab, gameObject.transform);
+        chatBalloonGameobject.transform.position += new Vector3(0, chatBalloonYOffset, 0);
+        chatBalloon = chatBalloonGameobject.GetComponent<ChatBalloon>();
+
+        //Init
+        neighborList = new List<GameObject>();
+    }
+
+    private void Update()
+    {
+        //Mouse left key
+        if(Input.GetMouseButtonUp(0))
+        {
+            nmAgent.SetDestination(RandomVec3(-40,40));
+        }
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            Debug.Log(NeighborCount);
+        }
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            Speak("Hello World", 1f);
+        }
+    }
+
+
+
+    //TTT BEHAVIOURS
 
     //Behaviours
     protected void SetTarget(Vector3 target)
@@ -25,14 +102,14 @@ abstract public class Creature : MonoBehaviour
         transform.Rotate(angle);
     }
 
-    protected void SetScale(Vector3 mul)
+    protected void SetScale(Vector3 newScale)
     {
-
+        transform.localScale = newScale;
     }
 
-    protected void Speak(string content)
+    protected void Speak(string content, float howLong)
     {
-
+        chatBalloon.SetTextAndActive(content, howLong);
     }
 
     protected void Spark(string ParticleType)
@@ -54,24 +131,50 @@ abstract public class Creature : MonoBehaviour
     //Events
     void OnMeetSomeone(GameObject other)
     {
-
+        //when you meet another Thing
+        //do something
+        Speak("I met " + other.name, 2f);
+   
     }
 
     void OnLeaveSomeone(GameObject other)
     {
-
+        //when another Thing leaves you
+        //do something
+        Speak("I am leaving from " + other.name, 2f);
     }
 
-    void OnSunrise()
+
+    //=---
+
+    private void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.tag == "Thing")
+        {
+            OnMeetSomeone(other.gameObject);
+            //if neighborList doesn't contain this object, then add it into the list
+            if(!neighborList.Contains(other.gameObject))
+            {
+                neighborList.Add(other.gameObject);
+            }
+        }
     }
 
-    void OnSunset()
+    private void OnTriggerExit(Collider other)
     {
-
-
+        if (other.gameObject.tag == "Thing")
+        {
+            OnLeaveSomeone(other.gameObject);
+            //if neighborList contains this object, then remove it from the list
+            if(neighborList.Contains(other.gameObject))
+            {
+                neighborList.Remove(other.gameObject);
+            }
+        }
     }
+
+
+
 
 
 
@@ -82,6 +185,8 @@ abstract public class Creature : MonoBehaviour
     {
         return new Vector3(Random.Range(a, b), Random.Range(a, b), Random.Range(a, b));
     }
+
+
 
 
 

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Cloud Shadows (Bumped)
+  m_Shader: {fileID: 4800000, guid: 55158f8039b974f21ab2964fcdfdad1a, type: 1}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _NoiseTexture1
+        second:
+          m_Texture: {fileID: 2800000, guid: 1b445fb7d9c814ff79a66cc2b7a77dc6, type: 1}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NoiseTexture2
+        second:
+          m_Texture: {fileID: 2800000, guid: 55f39d5d1e5d74a94b0a818bb858c416, type: 1}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats: {}
+    m_Colors: {}
