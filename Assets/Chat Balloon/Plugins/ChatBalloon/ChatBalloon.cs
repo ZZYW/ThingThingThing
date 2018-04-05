@@ -58,7 +58,7 @@ public class ChatBalloon : MonoBehaviour {
 		text.horizontalOverflow = HorizontalWrapMode.Wrap;
 		text.verticalOverflow = VerticalWrapMode.Truncate;
 	
-		Debug.Log("before everything:   Text Box Size:\n" + text.rectTransform.sizeDelta);
+		//Debug.Log("before everything:   Text Box Size:\n" + text.rectTransform.sizeDelta);
 		//Adjust Width of size
 		if(text.preferredWidth + widthBorder <= minWidth ){
 			size.x = minWidth;
@@ -68,7 +68,7 @@ public class ChatBalloon : MonoBehaviour {
 			size.x = text.preferredWidth + widthBorder;
 		}
 
-		Debug.Log ("current width of the text rectTransform -> " + text.rectTransform.sizeDelta.x + ", preferred height -> " + text.preferredHeight);
+		//Debug.Log ("current width of the text rectTransform -> " + text.rectTransform.sizeDelta.x + ", preferred height -> " + text.preferredHeight);
 
 		//Adjust height
 		if(text.preferredHeight + heightBorder <= minHeight ){
@@ -127,7 +127,7 @@ public class ChatBalloon : MonoBehaviour {
 			text.text = currentString;
 			substringIndex++;
 			if (substringIndex == completeString.Length + 1) {
-                Debug.Log("Hide");
+                //Debug.Log("Hide");
 				Invoke ("Hide", showTime);
 			}
 			

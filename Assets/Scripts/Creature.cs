@@ -7,28 +7,39 @@ using UnityEngine.AI;
 [RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
+
 public class Creature : MonoBehaviour
 {
-    //pre filled 
+
+    //---------------------------------------------------------------------------------
+    //  PROPERTIES AND FIELDS
+    //---------------------------------------------------------------------------------
+
+
+    //  PREFABS WE WILL NEED TO FILL IN BEFOREHAND
     public GameObject ChatBalloonPrefab;
-
-    //PRIVATE
-    NavMeshAgent nmAgent;
-    SphereCollider neighborDetector;
-    List<GameObject> neighborList;
-    ChatBalloon chatBalloon;
+    public GameObject ParticleExplode;
 
 
 
-    //PUBLIC
-
+    //Variables for us to tweak on Unity GUI
     public int neighborDetectorRadius = 30;
     public int chatBalloonYOffset = 10;
 
-    //PROPERTIES
 
-    //Time
-    static System.DateTime CurrentTime
+    private NavMeshAgent nmAgent;
+    private SphereCollider neighborDetector;
+    private ChatBalloon chatBalloon;
+    private ParticleSystem explodePS;
+    private AudioSource audioSource;
+
+
+    private List<GameObject> neighborList;
+    private string soundFilePath = "Sounds/";
+
+
+    private System.DateTime CurrentTime
     {
         get
         {
@@ -36,16 +47,17 @@ public class Creature : MonoBehaviour
         }
     }
 
-    int NeighborCount
+    private int NeighborCount
     {
-        get {
+        get
+        {
             return neighborList.Count;
         }
     }
 
 
 
-    //MONOBEHAVIOR METHODS
+
     private void Start()
     {
         //tag
@@ -57,87 +69,114 @@ public class Creature : MonoBehaviour
         neighborDetector.radius = neighborDetectorRadius;
 
         //nav mesh agent
-
         nmAgent = GetComponent<NavMeshAgent>();
-        Debug.Log(nmAgent);
 
-        //Instantiating ChatBallon Object
+
+        //ChatBallon
         GameObject chatBalloonGameobject = Instantiate(ChatBalloonPrefab, gameObject.transform);
         chatBalloonGameobject.transform.position += new Vector3(0, chatBalloonYOffset, 0);
         chatBalloon = chatBalloonGameobject.GetComponent<ChatBalloon>();
 
+        //Instantiating Particle Object
+        //TODO: add particle system prefab to each models
+        explodePS = GetComponentInChildren<ParticleSystem>();
+
+        //Sound
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.spatialBlend = 0.9f;
+        audioSource.maxDistance = 35;
+
+
+
         //Init
         neighborList = new List<GameObject>();
+
     }
 
     private void Update()
     {
         //Mouse left key
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
-            nmAgent.SetDestination(RandomVec3(-40,40));
+            nmAgent.SetDestination(RandomVec3(-40, 40));
         }
-        if(Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Debug.Log(NeighborCount);
+
         }
-        if(Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            Speak("Hello World", 1f);
+            //Speak("Hello World", 1f);
+            Spark(new Color(1, 1, 1), 20);
+            PlaySound("cartoon-pinch");
         }
+
     }
 
+    //---------------------------------------------------------------------------------
+    //  BEHAVIOURS
+    //---------------------------------------------------------------------------------
 
 
-    //TTT BEHAVIOURS
-
-    //Behaviours
-    protected void SetTarget(Vector3 target)
+    private void SetTarget(Vector3 target)
     {
         nmAgent.SetDestination(target);
     }
 
-    protected void RotateSelf(Vector3 angle)
+    private void RotateSelf(Vector3 angle)
     {
         transform.Rotate(angle);
     }
 
-    protected void SetScale(Vector3 newScale)
+    private void SetScale(Vector3 newScale)
     {
         transform.localScale = newScale;
     }
 
-    protected void Speak(string content, float howLong)
+    private void Speak(string content, float stayLength)
     {
-        chatBalloon.SetTextAndActive(content, howLong);
+        chatBalloon.SetTextAndActive(content, stayLength);
     }
 
-    protected void Spark(string ParticleType)
+    private void Spark(Color particleColor, int numberOfParticles)
+    {
+        var particleMain = explodePS.main;
+        particleMain.startColor = particleColor;
+
+        var newBurst = new ParticleSystem.Burst(0f, numberOfParticles);
+        explodePS.emission.SetBurst(0, newBurst);
+        explodePS.Play();
+    }
+
+    private void PlaySound(string soundName)
+    {
+        audioSource.clip = Resources.Load(soundFilePath + soundName) as AudioClip;
+        audioSource.Play();
+    }
+
+    private void PlayAnimation(string animationName)
     {
 
     }
 
-    protected void PlaySound(string soundName)
-    {
 
-    }
-
-    protected void PlayAnimation(string animationName)
-    {
-
-    }
+    //---------------------------------------------------------------------------------
+    //  EVENTS
+    //---------------------------------------------------------------------------------
 
 
-    //Events
-    void OnMeetSomeone(GameObject other)
+
+    private void OnMeetSomeone(GameObject other)
     {
         //when you meet another Thing
         //do something
         Speak("I met " + other.name, 2f);
-   
+
+
     }
 
-    void OnLeaveSomeone(GameObject other)
+    private void OnLeaveSomeone(GameObject other)
     {
         //when another Thing leaves you
         //do something
@@ -145,7 +184,12 @@ public class Creature : MonoBehaviour
     }
 
 
-    //=---
+
+
+    //---------------------------------------------------------------------------------
+    //  OTHER 
+    //---------------------------------------------------------------------------------
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -153,7 +197,7 @@ public class Creature : MonoBehaviour
         {
             OnMeetSomeone(other.gameObject);
             //if neighborList doesn't contain this object, then add it into the list
-            if(!neighborList.Contains(other.gameObject))
+            if (!neighborList.Contains(other.gameObject))
             {
                 neighborList.Add(other.gameObject);
             }
@@ -166,15 +210,12 @@ public class Creature : MonoBehaviour
         {
             OnLeaveSomeone(other.gameObject);
             //if neighborList contains this object, then remove it from the list
-            if(neighborList.Contains(other.gameObject))
+            if (neighborList.Contains(other.gameObject))
             {
                 neighborList.Remove(other.gameObject);
             }
         }
     }
-
-
-
 
 
 
