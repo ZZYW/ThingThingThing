@@ -27,6 +27,10 @@ public class Creature : MonoBehaviour
     public int neighborDetectorRadius = 30;
     public int chatBalloonYOffset = 10;
 
+    //for other scripts to access
+    public int desiredFollowDistance = 1;
+
+    //....
 
     private NavMeshAgent nmAgent;
     private SphereCollider neighborDetector;
@@ -102,7 +106,8 @@ public class Creature : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log(NeighborCount);
+            //Debug.Log(NeighborCount);
+            Speak("aaaaaaaaaaaaa!!", 2f);
 
         }
         if (Input.GetKeyDown(KeyCode.S))
