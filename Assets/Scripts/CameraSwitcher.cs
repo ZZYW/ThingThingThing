@@ -25,7 +25,6 @@ public class CameraSwitcher : MonoBehaviour
 
 
         allThings = GameObject.FindGameObjectsWithTag("Thing");
-        Debug.Log(allThings.Length);
 
         AssignFollowTarget();
 
@@ -36,7 +35,10 @@ public class CameraSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyUp(KeyCode.A))
+        {
+            ChangeCamera();
+        }
     }
 
     void AssignFollowTarget()
@@ -48,7 +50,6 @@ public class CameraSwitcher : MonoBehaviour
         desiredFollowDistance =  oneRandomThing.GetComponent<Creature>().desiredFollowDistance;
         camController.desiredDistance = desiredFollowDistance;
     }
-
 
 
     void ChangeCamera()
