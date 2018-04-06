@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: d53e468fe0113674ead928845b1ec8ee
+timeCreated: 1436067428
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: OjoExteriorRenata
+    100004: OjoExteriorRomana
+    100006: OjoExteriorSammi
+    100008: OjoExteriorTsuiWang
+    100010: OjoExteriorVanessa
+    100012: OjoInteriorBase001
+    100014: OjoInteriorBase002
+    100016: OjoInteriorRenata
+    100018: OjoInteriorRomana
+    100020: OjoInteriorSammi
+    100022: Renata
+    100024: RenataGrupo
+    100026: Romana
+    100028: RomanaGrupo
+    100030: Sammi
+    100032: SammiGrupo
+    100034: TsuiWang
+    100036: TsuiWang-Ojos
+    100038: TsuiWangGrupo
+    100040: Vanessa
+    100042: VanessaGrupo
+    400000: //RootNode
+    400002: OjoExteriorRenata
+    400004: OjoExteriorRomana
+    400006: OjoExteriorSammi
+    400008: OjoExteriorTsuiWang
+    400010: OjoExteriorVanessa
+    400012: OjoInteriorBase001
+    400014: OjoInteriorBase002
+    400016: OjoInteriorRenata
+    400018: OjoInteriorRomana
+    400020: OjoInteriorSammi
+    400022: Renata
+    400024: RenataGrupo
+    400026: Romana
+    400028: RomanaGrupo
+    400030: Sammi
+    400032: SammiGrupo
+    400034: TsuiWang
+    400036: TsuiWang-Ojos
+    400038: TsuiWangGrupo
+    400040: Vanessa
+    400042: VanessaGrupo
+    2300000: OjoExteriorRenata
+    2300002: OjoExteriorRomana
+    2300004: OjoExteriorSammi
+    2300006: OjoExteriorTsuiWang
+    2300008: OjoExteriorVanessa
+    2300010: OjoInteriorBase001
+    2300012: OjoInteriorBase002
+    2300014: OjoInteriorRenata
+    2300016: OjoInteriorRomana
+    2300018: OjoInteriorSammi
+    2300020: Renata
+    2300022: Romana
+    2300024: Sammi
+    2300026: TsuiWang
+    2300028: TsuiWang-Ojos
+    2300030: Vanessa
+    3300000: OjoExteriorRenata
+    3300002: OjoExteriorRomana
+    3300004: OjoExteriorSammi
+    3300006: OjoExteriorTsuiWang
+    3300008: OjoExteriorVanessa
+    3300010: OjoInteriorBase001
+    3300012: OjoInteriorBase002
+    3300014: OjoInteriorRenata
+    3300016: OjoInteriorRomana
+    3300018: OjoInteriorSammi
+    3300020: Renata
+    3300022: Romana
+    3300024: Sammi
+    3300026: TsuiWang
+    3300028: TsuiWang-Ojos
+    3300030: Vanessa
+    4300000: OjoExteriorVanessa
+    4300002: Vanessa
+    4300004: OjoInteriorBase002
+    4300006: OjoInteriorRenata
+    4300008: OjoExteriorRenata
+    4300010: Renata
+    4300012: OjoExteriorRomana
+    4300014: Romana
+    4300016: OjoInteriorRomana
+    4300018: OjoExteriorTsuiWang
+    4300020: TsuiWang
+    4300022: TsuiWang-Ojos
+    4300024: OjoExteriorSammi
+    4300026: OjoInteriorSammi
+    4300028: Sammi
+    4300030: OjoInteriorBase001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
