@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.Events;
 
 [RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
-
 public class Creature : MonoBehaviour
 {
 
@@ -16,32 +15,30 @@ public class Creature : MonoBehaviour
     //  PROPERTIES AND FIELDS
     //---------------------------------------------------------------------------------
 
-
-    //  PREFABS WE WILL NEED TO FILL IN BEFOREHAND
+    //PUBLIC
+    [Header("Need to be filled to work properly")]
     public GameObject ChatBalloonPrefab;
     public GameObject ParticleExplode;
 
-
-
-    //Variables for us to tweak on Unity GUI
+    [Header("Tweak-able")]
+    [Tooltip("Distance from camera to object center on 3rd personn camera following mode")]
+    public int desiredFollowDistance = 1;
+    [Tooltip("how large is my neighbor awareness radar")]
     public int neighborDetectorRadius = 30;
+    [Tooltip("Distance from the chat balloon to the object center on Y axis")]
     public int chatBalloonYOffset = 10;
 
-    //for other scripts to access
-    public int desiredFollowDistance = 1;
 
-    //....
 
+    //PRIVATE
     private NavMeshAgent nmAgent;
     private SphereCollider neighborDetector;
     private ChatBalloon chatBalloon;
     private ParticleSystem explodePS;
     private AudioSource audioSource;
 
-
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
-
 
     private System.DateTime CurrentTime
     {
@@ -59,11 +56,21 @@ public class Creature : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        TTTManager.OnSomeoneSpeaking += OnSomeoneSpeaking;
+        TTTManager.OnSomeoneSparking += OnSomeoneSparking;
+    }
 
-
+    private void OnDisable()
+    {
+        TTTManager.OnSomeoneSpeaking -= OnSomeoneSpeaking;
+        TTTManager.OnSomeoneSparking -= OnSomeoneSparking;
+    }
 
     private void Start()
     {
+
         //tag
         gameObject.tag = "Thing";
 
@@ -90,10 +97,11 @@ public class Creature : MonoBehaviour
         audioSource.spatialBlend = 0.9f;
         audioSource.maxDistance = 35;
 
-
-
         //Init
         neighborList = new List<GameObject>();
+
+
+
 
     }
 
@@ -104,25 +112,21 @@ public class Creature : MonoBehaviour
         {
             nmAgent.SetDestination(RandomVec3(-40, 40));
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            //Debug.Log(NeighborCount);
-            Speak("aaaaaaaaaaaaa!!", 2f);
 
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            //Speak("Hello World", 1f);
-            Spark(new Color(1, 1, 1), 20);
-            PlaySound("cartoon-pinch");
-        }
 
+        //if (CurrentTime.Hour > 9 && CurrentTime.Hour < 17)
+        //{
+        //    SetScale(new Vector3(0.5f, 0.5f, 0.5f));
+        //}
+        //else
+        //{
+        //    SetScale(new Vector3(1f, 1f, 1f));
+        //}
     }
 
     //---------------------------------------------------------------------------------
     //  BEHAVIOURS
     //---------------------------------------------------------------------------------
-
 
     private void SetTarget(Vector3 target)
     {
@@ -139,19 +143,29 @@ public class Creature : MonoBehaviour
         transform.localScale = newScale;
     }
 
-    private void Speak(string content, float stayLength)
+    //TODO for yang: make this private
+    public void Speak(string content, float stayLength)
     {
+        Debug.Log(gameObject.name + " speaks: " + content);
+        TTTManager.main.SomeoneSpoke(gameObject);
         chatBalloon.SetTextAndActive(content, stayLength);
     }
 
-    private void Spark(Color particleColor, int numberOfParticles)
+    public void Speak(string content)
     {
+        Speak(content, 2f);
+    }
+
+    public void Spark(Color particleColor, int numberOfParticles)
+    {
+        
         var particleMain = explodePS.main;
         particleMain.startColor = particleColor;
 
         var newBurst = new ParticleSystem.Burst(0f, numberOfParticles);
         explodePS.emission.SetBurst(0, newBurst);
         explodePS.Play();
+        TTTManager.main.SomeoneSparked(gameObject);
     }
 
     private void PlaySound(string soundName)
@@ -165,27 +179,34 @@ public class Creature : MonoBehaviour
 
     }
 
-
     //---------------------------------------------------------------------------------
     //  EVENTS
     //---------------------------------------------------------------------------------
 
-
-
-    private void OnMeetSomeone(GameObject other)
+    private void OnMeetingSomeone(GameObject other)
     {
         //when you meet another Thing
         //do something
         Speak("I met " + other.name, 2f);
-
-
     }
 
-    private void OnLeaveSomeone(GameObject other)
+    private void OnLeavingSomeone(GameObject other)
     {
         //when another Thing leaves you
         //do something
         Speak("I am leaving from " + other.name, 2f);
+    }
+
+    private void OnNeighborSpeaking()
+    {
+        //IMPORTANT NOTE: DO NOT SPEAK HERE. OTHERWISE IT WILL BE A INFINITE LOOP AND CRASH THE PROGRAM
+        //Spark(Color.red, 10);
+    }
+
+    private void OnNeigborSparkingParticles()
+    {
+        Debug.Log("neighbor sparked!");
+        Speak("Hey You sparked!");
     }
 
 
@@ -195,12 +216,28 @@ public class Creature : MonoBehaviour
     //  OTHER 
     //---------------------------------------------------------------------------------
 
+    private void OnSomeoneSpeaking(GameObject who)
+    {
+        if (neighborList.Contains(who))
+        {
+            OnNeighborSpeaking();
+        }
+    }
+
+    private void OnSomeoneSparking(GameObject who)
+    {
+        if (neighborList.Contains(who))
+        {
+            OnNeigborSparkingParticles();
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Thing")
         {
-            OnMeetSomeone(other.gameObject);
+            OnMeetingSomeone(other.gameObject);
             //if neighborList doesn't contain this object, then add it into the list
             if (!neighborList.Contains(other.gameObject))
             {
@@ -213,7 +250,7 @@ public class Creature : MonoBehaviour
     {
         if (other.gameObject.tag == "Thing")
         {
-            OnLeaveSomeone(other.gameObject);
+            OnLeavingSomeone(other.gameObject);
             //if neighborList contains this object, then remove it from the list
             if (neighborList.Contains(other.gameObject))
             {
