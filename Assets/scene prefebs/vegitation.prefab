@@ -11307,6 +11307,7 @@ GameObject:
   - component: {fileID: 4382747025686310}
   - component: {fileID: 33853757078518474}
   - component: {fileID: 23730130873979328}
+  - component: {fileID: 64886133631358712}
   m_Layer: 0
   m_Name: Mountain002
   m_TagString: Untagged
@@ -14500,7 +14501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4983166918317964}
   m_Layer: 0
-  m_Name: lands
+  m_Name: vegitation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50196,8 +50197,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513045422861706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -122.05255, y: 270.5836, z: 76.13068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -20, y: -150, z: -1481}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4848251297400136}
@@ -50208,7 +50209,7 @@ Transform:
   - {fileID: 4093167720851922}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4983447727731736
 Transform:
   m_ObjectHideFlags: 1
@@ -118339,3 +118340,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1309386426679572}
   m_Mesh: {fileID: 4301612, guid: 159ee89425d896f4ebb13eb216948d97, type: 3}
+--- !u!64 &64886133631358712
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384311259671074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300402, guid: 159ee89425d896f4ebb13eb216948d97, type: 3}
