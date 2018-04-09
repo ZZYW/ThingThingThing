@@ -75,7 +75,7 @@ Material:
     - _SpecularHighlights: 1
     - _Speed: 20
     - _SrcBlend: 1
-    - _SwayMax: 0.1
+    - _SwayMax: 0.035
     - _UVSec: 0
     - _YOffset: 0.5
     - _ZWrite: 1
