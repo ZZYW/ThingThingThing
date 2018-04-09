@@ -10,6 +10,7 @@ public class ChatBalloon : MonoBehaviour {
 
 	public AudioSource sound;
 
+
 	[HideInInspector][System.NonSerialized] public float minWidth = 20f;
 	[HideInInspector][System.NonSerialized] public float maxWidth = 300f;
 
@@ -36,7 +37,8 @@ public class ChatBalloon : MonoBehaviour {
 		Hide();
 	}
 
-	public void SetBox(Sprite _boxSprite){
+
+    public void SetBox(Sprite _boxSprite){
 		#region method
 		box.sprite = _boxSprite;
 		#endregion

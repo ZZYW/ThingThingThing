@@ -21,6 +21,8 @@ public class CreatureEditor : Editor
         {
             creature.Spark(Color.blue, 10);
         }
+
+
     }
 
 }

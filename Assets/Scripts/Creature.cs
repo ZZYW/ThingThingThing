@@ -18,7 +18,8 @@ public class Creature : MonoBehaviour
     //PUBLIC
     [Header("Need to be filled to work properly")]
     public GameObject ChatBalloonPrefab;
-    public GameObject ParticleExplode;
+    public GameObject ParticlePrefab; 
+
 
     [Header("Tweak-able")]
     [Tooltip("Distance from camera to object center on 3rd personn camera following mode")]
@@ -36,6 +37,7 @@ public class Creature : MonoBehaviour
     private ChatBalloon chatBalloon;
     private ParticleSystem explodePS;
     private AudioSource audioSource;
+    private GameObject parentObject;
 
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
@@ -82,11 +84,8 @@ public class Creature : MonoBehaviour
         //nav mesh agent
         nmAgent = GetComponent<NavMeshAgent>();
 
-
-        //ChatBallon
-        GameObject chatBalloonGameobject = Instantiate(ChatBalloonPrefab, gameObject.transform);
-        chatBalloonGameobject.transform.position += new Vector3(0, chatBalloonYOffset, 0);
-        chatBalloon = chatBalloonGameobject.GetComponent<ChatBalloon>();
+        //Chat Ballon
+        chatBalloon = gameObject.GetComponentInChildren<ChatBalloon>();
 
         //Instantiating Particle Object
         //TODO: add particle system prefab to each models
@@ -97,16 +96,18 @@ public class Creature : MonoBehaviour
         audioSource.spatialBlend = 0.9f;
         audioSource.maxDistance = 35;
 
-        //Init
+
+        //Init List
         neighborList = new List<GameObject>();
-
-
 
 
     }
 
     private void Update()
     {
+        //
+
+
         //Mouse left key
         if (Input.GetMouseButtonUp(0))
         {
@@ -209,9 +210,6 @@ public class Creature : MonoBehaviour
         Speak("Hey You sparked!");
     }
 
-
-
-
     //---------------------------------------------------------------------------------
     //  OTHER 
     //---------------------------------------------------------------------------------
@@ -258,8 +256,6 @@ public class Creature : MonoBehaviour
             }
         }
     }
-
-
 
 
     //others
