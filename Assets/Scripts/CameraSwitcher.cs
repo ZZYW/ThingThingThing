@@ -11,7 +11,7 @@ public class CameraSwitcher : MonoBehaviour
 
     ThirdPersonCamera.CameraController camController;
 
-    GameObject[] allThings;
+    public GameObject[] allThings;
 
     bool useMain = true;
 
@@ -25,7 +25,7 @@ public class CameraSwitcher : MonoBehaviour
 
 
         allThings = GameObject.FindGameObjectsWithTag("Thing");
-
+        if (allThings.Length < 1) return;
         AssignFollowTarget();
 
         InvokeRepeating("ChangeCamera", intervals, intervals);
@@ -35,6 +35,7 @@ public class CameraSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (allThings.Length < 1) return;
         if(Input.GetKeyUp(KeyCode.A))
         {
             ChangeCamera();

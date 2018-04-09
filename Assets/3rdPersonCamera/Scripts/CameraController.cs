@@ -245,7 +245,7 @@ namespace ThirdPersonCamera
                         length -= (thicknessEndPoint - thicknessHit.point).magnitude - 0.00001f;
                         thicknessEndPoint = thicknessHit.point + dirToTarget * 0.00001f;
                         if (!thicknessEnds.ContainsKey(thicknessHit.collider.name))
-                            thicknessEnds.Add(thicknessHit.collider.name, thicknessHit);
+                            thicknessEnds.Add(thicknessHit.collider.name, thicknessHit); //TODO: fix multiple keys issue
 
                         currentIterations++;
                     }

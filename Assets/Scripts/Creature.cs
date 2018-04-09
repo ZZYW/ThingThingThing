@@ -16,16 +16,16 @@ public class Creature : MonoBehaviour
     //---------------------------------------------------------------------------------
 
     //PUBLIC
-    [Header("Need to be filled to work properly")]
-    public GameObject ChatBalloonPrefab;
-    public GameObject ParticlePrefab; 
+    //[Header("Need to be filled to work properly")]
+    //public GameObject ChatBalloonPrefab;
+    //public GameObject ParticlePrefab; 
 
 
     [Header("Tweak-able")]
     [Tooltip("Distance from camera to object center on 3rd personn camera following mode")]
-    public int desiredFollowDistance = 1;
+    public int desiredFollowDistance = 3;
     [Tooltip("how large is my neighbor awareness radar")]
-    public int neighborDetectorRadius = 30;
+    public int neighborDetectorRadius = 10;
     [Tooltip("Distance from the chat balloon to the object center on Y axis")]
     public int chatBalloonYOffset = 10;
 

@@ -173,9 +173,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433695525608346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 800, y: 800, z: 800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 881.5816, y: 471.12238, z: 844.6073}
+  m_LocalScale: {x: 5000, y: 5000, z: 5000}
   m_Children:
   - {fileID: 4886695088777462}
   - {fileID: 4807365422668380}
@@ -207,8 +207,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465141584825984}
-  m_LocalRotation: {x: 0.5179352, y: -0.023758683, z: 0.014392875, w: 0.8549687}
-  m_LocalPosition: {x: 0.025716709, y: 0.88632065, z: -0.4623573}
+  m_LocalRotation: {x: 0.20492521, y: -0.106184274, z: 0.022369549, w: 0.97274363}
+  m_LocalPosition: {x: 0.197412, y: 0.40342996, z: -0.8934611}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4034312049924482}
@@ -259,9 +259,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1430911615011372}
-  m_LocalRotation: {x: -0.07630192, y: 0.85167867, z: 0.5148526, w: 0.061223306}
-  m_LocalPosition: {x: -0.0257167, y: -0.88632077, z: 0.46235713}
-  m_LocalScale: {x: 0.03490747, y: 0.03490747, z: 0.03490747}
+  m_LocalRotation: {x: 0.15270127, y: 0.96094376, z: 0.2206639, w: 0.067652576}
+  m_LocalPosition: {x: -0.197412, y: -0.40343, z: 0.8934611}
+  m_LocalScale: {x: 0.17464377, y: 0.17464377, z: 0.17464377}
   m_Children: []
   m_Father: {fileID: 4034312049924482}
   m_RootOrder: 0
@@ -285,8 +285,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1032940869105516}
-  m_LocalRotation: {x: -0.51815146, y: -0.018452697, z: 0.055204295, w: -0.853306}
-  m_LocalPosition: {x: 0.025716709, y: 0.88632065, z: -0.4623573}
+  m_LocalRotation: {x: -0.19934112, y: 0.11632969, z: -0.07113345, w: -0.9703971}
+  m_LocalPosition: {x: 0.197412, y: 0.40342996, z: -0.8934611}
   m_LocalScale: {x: 0.06981494, y: 0.06981494, z: 0.06981494}
   m_Children: []
   m_Father: {fileID: 4034312049924482}
@@ -332,7 +332,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873873583117684}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -434,7 +434,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1699059686724174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -547,8 +547,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.9699718, g: 0.7364226, b: 0.36120865, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.95415735, g: 0.469591, b: 0, a: 1}
+  m_Intensity: 1.4
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -606,38 +606,38 @@ MonoBehaviour:
     Year: 2000
     MoonPhase: 0
     MoonPosition: 0
-    Latitude: 20
-    Longitude: -75
-    UTC: -5
+    Latitude: 58
+    Longitude: 5
+    UTC: 1
   Atmosphere:
-    ScatteringColor: {r: 1, g: 1, b: 1, a: 1}
+    ScatteringColor: {r: 1, g: 0.9026369, b: 0.64705884, a: 1}
     RayleighMultiplier: 1
     MieMultiplier: 1
     Brightness: 1
-    Contrast: 1
+    Contrast: 0.82
     Directionality: 0.5
-    Haziness: 0.5
-    Fogginess: 0
+    Haziness: 1
+    Fogginess: 0.3
   Day:
     AdditiveColor: {r: 0, g: 0, b: 0, a: 1}
-    AmbientColor: {r: 1, g: 0.97160244, b: 0.74264705, a: 0.78431374}
-    SunLightColor: {r: 1, g: 0.8693712, b: 0.58823526, a: 1}
+    AmbientColor: {r: 1, g: 0.7655173, b: 0, a: 0.78431374}
+    SunLightColor: {r: 1, g: 0.68275857, b: 0, a: 1}
     SunMeshColor: {r: 1, g: 0.9137255, b: 0.7058824, a: 1}
     SunShaftColor: {r: 1, g: 0.9529412, b: 0.91764706, a: 1}
     SunMeshSize: 1
-    SunLightIntensity: 1
+    SunLightIntensity: 1.4
     ShadowStrength: 1
     SkyMultiplier: 1
     CloudMultiplier: 1
   Night:
     AdditiveColor: {r: 0, g: 0, b: 0, a: 1}
-    AmbientColor: {r: 0, g: 0.31081057, b: 1, a: 0.19607843}
-    MoonLightColor: {r: 0, g: 0.31081057, b: 1, a: 1}
+    AmbientColor: {r: 0, g: 0.04827571, b: 1, a: 0.19607843}
+    MoonLightColor: {r: 0.15862082, g: 0, b: 1, a: 1}
     MoonMeshColor: {r: 1, g: 0.9137255, b: 0.78431374, a: 1}
     MoonHaloColor: {r: 0.31764707, g: 0.40784314, b: 0.60784316, a: 0.1}
-    MoonMeshSize: 1
+    MoonMeshSize: 5
     MoonLightIntensity: 0.5
-    ShadowStrength: 1
+    ShadowStrength: 0.5
     SkyMultiplier: 0.1
     CloudMultiplier: 0.2
   Light:
@@ -645,14 +645,14 @@ MonoBehaviour:
     Falloff: 0.7
     Coloring: 0.7
     SkyColoring: 1
-    CloudColoring: 1
+    CloudColoring: 0.25
     ShaftColoring: 0.9
-    AmbientColoring: 0.5
+    AmbientColoring: 1
   Stars:
-    Tiling: 2
-    Density: 0.5
+    Tiling: 5.44
+    Density: 1
   Clouds:
-    Density: 2
+    Density: 0
     Sharpness: 3
     Brightness: 1
     ShadowStrength: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f048f256d29b7428352774558a9860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DayLengthInMinutes: 1
+  DayLengthInMinutes: 5
   UpdateInterval: 0
   ProgressDate: 0
   ProgressMoonPhase: 0
@@ -771,11 +771,11 @@ Projector:
   m_Enabled: 0
   serializedVersion: 2
   m_NearClipPlane: 0
-  m_FarClipPlane: 1600
+  m_FarClipPlane: 10000
   m_FieldOfView: 90
   m_AspectRatio: 1
   m_Orthographic: 1
-  m_OrthographicSize: 800
+  m_OrthographicSize: 5000
   m_Material: {fileID: 2100000, guid: a536ecc04579a4a7d8ec46faa142cd00, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
