@@ -75,9 +75,9 @@ Material:
     - _SpecularHighlights: 1
     - _Speed: 28.6
     - _SrcBlend: 1
-    - _SwayMax: 0.024
+    - _SwayMax: 0.1
     - _UVSec: 0
-    - _YOffset: 0.33
+    - _YOffset: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.086887784, g: 0.3455882, b: 0.038116343, a: 1}
