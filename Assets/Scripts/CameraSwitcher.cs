@@ -23,8 +23,8 @@ public class CameraSwitcher : MonoBehaviour
     {
         camController = followCam.GetComponent<ThirdPersonCamera.CameraController>();
 
+        allThings = ThingManager.main.AllThings;
 
-        allThings = GameObject.FindGameObjectsWithTag("Thing");
         if (allThings.Length < 1) return;
         AssignFollowTarget();
 

@@ -30,7 +30,7 @@ Shader "Custom/rainbow" {
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
         #pragma surface surf Standard fullforwardshadows finalcolor:mycolor vertex:vert 
-        #include "ClassicNoise3D.hlsl"
+      //  #include "ClassicNoise3D.hlsl"
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
 
@@ -63,7 +63,7 @@ Shader "Custom/rainbow" {
 
         void vert (inout appdata_full v, out Input o) {       
           UNITY_INITIALIZE_OUTPUT(Input,o);
-          v.vertex += cnoise(v.vertex.xyz + _Time.yyy) * _NoiseScaler;
+        //  v.vertex += cnoise(v.vertex.xyz + _Time.yyy) * _NoiseScaler;
           o.vertex = v.vertex;
         }
 
@@ -97,9 +97,9 @@ Shader "Custom/rainbow" {
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
         // #pragma instancing_options assumeuniformscaling
-        UNITY_INSTANCING_BUFFER_START(Props)
+      //  UNITY_INSTANCING_BUFFER_START(Props)
             // put more per-instance properties here
-        UNITY_INSTANCING_BUFFER_END(Props)
+//        UNITY_INSTANCING_BUFFER_END(Props)
 
         void surf (Input IN, inout SurfaceOutputStandard o) {
             // Albedo comes from a texture tinted by color

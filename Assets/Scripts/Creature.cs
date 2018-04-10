@@ -8,6 +8,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(ThingMotor))]
 public class Creature : MonoBehaviour
 {
 
@@ -42,6 +43,8 @@ public class Creature : MonoBehaviour
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
 
+    private ThingMotor motor;
+
     private System.DateTime CurrentTime
     {
         get
@@ -70,11 +73,15 @@ public class Creature : MonoBehaviour
         TTTManager.OnSomeoneSparking -= OnSomeoneSparking;
     }
 
+
+    private void Awake()
+    {
+        gameObject.tag = "Thing";
+    }
+
     private void Start()
     {
 
-        //tag
-        gameObject.tag = "Thing";
 
         //neighbor detector
         neighborDetector = GetComponent<SphereCollider>();
@@ -97,9 +104,11 @@ public class Creature : MonoBehaviour
         audioSource.maxDistance = 35;
 
 
+        //motor
+        motor = GetComponent<ThingMotor>();
+
         //Init List
         neighborList = new List<GameObject>();
-
 
     }
 
@@ -111,7 +120,8 @@ public class Creature : MonoBehaviour
         //Mouse left key
         if (Input.GetMouseButtonUp(0))
         {
-            nmAgent.SetDestination(RandomVec3(-40, 40));
+            SetTarget(RandomVec3(-40, 40));
+            //nmAgent.SetDestination(RandomVec3(-40, 40));
         }
 
 
@@ -132,6 +142,10 @@ public class Creature : MonoBehaviour
     private void SetTarget(Vector3 target)
     {
         nmAgent.SetDestination(target);
+        //GameObject placeHolder = new GameObject();
+        //placeHolder.transform.position = target;
+        //Debug.Log(placeHolder);
+        //motor.target = placeHolder.transform;
     }
 
     private void RotateSelf(Vector3 angle)
@@ -159,7 +173,7 @@ public class Creature : MonoBehaviour
 
     public void Spark(Color particleColor, int numberOfParticles)
     {
-        
+
         var particleMain = explodePS.main;
         particleMain.startColor = particleColor;
 
@@ -262,7 +276,7 @@ public class Creature : MonoBehaviour
 
     public static Vector3 RandomVec3(float a, float b)
     {
-        return new Vector3(Random.Range(a, b), Random.Range(a, b), Random.Range(a, b));
+        return new Vector3(Random.Range(a, b), 0f, Random.Range(a, b));
     }
 
 
