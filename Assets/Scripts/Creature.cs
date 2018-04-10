@@ -8,7 +8,6 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(ThingMotor))]
 public class Creature : MonoBehaviour
 {
 
@@ -39,7 +38,6 @@ public class Creature : MonoBehaviour
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
 
-    private ThingMotor motor;
 
     private System.DateTime CurrentTime
     {
@@ -79,7 +77,7 @@ public class Creature : MonoBehaviour
 
     private void Start()
     {
-        
+
         //Init List
         neighborList = new List<GameObject>();
 
@@ -104,22 +102,19 @@ public class Creature : MonoBehaviour
         audioSource.maxDistance = 35;
 
 
-        //motor
-        motor = GetComponent<ThingMotor>();
-
-
 
         InvokeRepeating("RandomSetDestination", 5f, 15f);
 
     }
 
-    void RandomSetDestination(){
+    void RandomSetDestination()
+    {
         SetTarget(RandomVec3(-40, 40));
     }
 
     private void Update()
     {
-        
+
         //Mouse left key
         if (Input.GetMouseButtonUp(0))
         {
@@ -136,10 +131,6 @@ public class Creature : MonoBehaviour
     private void SetTarget(Vector3 target)
     {
         nmAgent.SetDestination(target);
-        //GameObject placeHolder = new GameObject();
-        //placeHolder.transform.position = target;
-        //Debug.Log(placeHolder);
-        //motor.target = placeHolder.transform;
     }
 
     private void RotateSelf(Vector3 angle)
@@ -183,10 +174,6 @@ public class Creature : MonoBehaviour
         audioSource.Play();
     }
 
-    private void PlayAnimation(string animationName)
-    {
-
-    }
 
     //---------------------------------------------------------------------------------
     //  EVENTS
@@ -203,18 +190,16 @@ public class Creature : MonoBehaviour
     {
         //when another Thing leaves you
         //do something
-        Speak("I am leaving from " + other.name, 2f);
+        Spark(Color.red, 15);
     }
 
     private void OnNeighborSpeaking()
     {
-        //IMPORTANT NOTE: DO NOT SPEAK HERE. OTHERWISE IT WILL BE A INFINITE LOOP AND CRASH THE PROGRAM
-        //Spark(Color.red, 10);
+        PlaySound("glitchedtones_Robot Chatter 01");
     }
 
     private void OnNeigborSparkingParticles()
     {
-        Debug.Log("neighbor sparked!");
         Speak("Hey You sparked!");
     }
 
