@@ -38,6 +38,8 @@ GameObject:
   - component: {fileID: 20099427793509566}
   - component: {fileID: 124207179705329206}
   - component: {fileID: 81739594977855350}
+  - component: {fileID: 114635981933852864}
+  - component: {fileID: 114716543793389492}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -59,6 +61,7 @@ GameObject:
   - component: {fileID: 81311908204382750}
   - component: {fileID: 114035660366867654}
   - component: {fileID: 114096025759675214}
+  - component: {fileID: 114783103142684606}
   m_Layer: 0
   m_Name: 3rdPersonCamera_Follow
   m_TagString: MainCamera
@@ -116,7 +119,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.369, g: 0.349, b: 0.341, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -125,9 +128,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 36.36
+  field of view: 34.4
+  orthographic: 0
+  orthographic size: 37.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -210,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offsetVector: {x: 0, y: 1.5, z: 0}
+  offsetVector: {x: 0, y: 3, z: 0}
   smartPivot: 1
   occlusionCheck: 1
   thicknessCheck: 1
@@ -247,10 +250,50 @@ MonoBehaviour:
   checkMotionForBackwards: 1
   backwardsMotionThreshold: 0.05
   angleThreshold: 170
-  tiltVector: {x: 0, y: 0, z: 0}
+  tiltVector: {x: 0, y: -0.28, z: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &114635981933852864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431157301338324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 34e35e5e6b56f44229f97d8f43e339eb, type: 2}
+--- !u!114 &114716543793389492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431157301338324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fca1647b8e5431e84a70530481a3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateAroundObject: {fileID: 0}
+  speed: 2
+  axis: {x: 0, y: 1, z: 0}
+  followThing: {fileID: 0}
+  followSomething: 0
+--- !u!114 &114783103142684606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983926594274202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 7e56c81d78852404f819e6d510ebdc78, type: 2}
 --- !u!114 &114808376128126118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,7 +307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 1431157301338324}
   followCam: {fileID: 1983926594274202}
-  intervals: 3
+  allThings: []
+  intervals: 28.6
 --- !u!124 &124207179705329206
 Behaviour:
   m_ObjectHideFlags: 1

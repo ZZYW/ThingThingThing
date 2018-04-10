@@ -21,7 +21,7 @@ public class NameLabel : MonoBehaviour
         Shader shader = Shader.Find("Custom/rainbow");
         rend.material.shader = shader;
 
-
+        //set shader
         rend.material.SetInt("_Rainbow", 1);
         rend.material.SetFloat("_TimeOffset", Random.Range(0.0f, 10.0f));
         rend.material.SetFloat("_TimeScale", Random.Range(10f, 100f));
@@ -30,15 +30,10 @@ public class NameLabel : MonoBehaviour
         rend.material.SetColor("_RainbowColor3", new Color32(0, 29, 255, 255));
 
 
-
- 
-        //rend.material.SetColor("_Color", labelColor);
-
-        transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
         //check after 3s, if this is not inited, then destroy
         Invoke("Check", 3f);
-
 
         rotateAxis = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
     }
@@ -59,11 +54,9 @@ public class NameLabel : MonoBehaviour
             Vector3 targetPos = target.transform.position;
             targetPos.y += yoffset;
             transform.position = targetPos;
+            transform.Rotate(rotateAxis, 5);
 
         }
-
-        transform.Rotate(rotateAxis, 5);
-  
 
     }
 

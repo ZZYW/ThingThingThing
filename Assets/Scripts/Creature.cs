@@ -27,9 +27,6 @@ public class Creature : MonoBehaviour
     public int desiredFollowDistance = 3;
     [Tooltip("how large is my neighbor awareness radar")]
     public int neighborDetectorRadius = 10;
-    [Tooltip("Distance from the chat balloon to the object center on Y axis")]
-    public int chatBalloonYOffset = 10;
-
 
 
     //PRIVATE
@@ -38,7 +35,6 @@ public class Creature : MonoBehaviour
     private ChatBalloon chatBalloon;
     private ParticleSystem explodePS;
     private AudioSource audioSource;
-    private GameObject parentObject;
 
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
@@ -77,11 +73,15 @@ public class Creature : MonoBehaviour
     private void Awake()
     {
         gameObject.tag = "Thing";
+
+
     }
 
     private void Start()
     {
-
+        
+        //Init List
+        neighborList = new List<GameObject>();
 
         //neighbor detector
         neighborDetector = GetComponent<SphereCollider>();
@@ -107,16 +107,19 @@ public class Creature : MonoBehaviour
         //motor
         motor = GetComponent<ThingMotor>();
 
-        //Init List
-        neighborList = new List<GameObject>();
 
+
+        InvokeRepeating("RandomSetDestination", 5f, 15f);
+
+    }
+
+    void RandomSetDestination(){
+        SetTarget(RandomVec3(-40, 40));
     }
 
     private void Update()
     {
-        //
-
-
+        
         //Mouse left key
         if (Input.GetMouseButtonUp(0))
         {
@@ -124,15 +127,6 @@ public class Creature : MonoBehaviour
             //nmAgent.SetDestination(RandomVec3(-40, 40));
         }
 
-
-        //if (CurrentTime.Hour > 9 && CurrentTime.Hour < 17)
-        //{
-        //    SetScale(new Vector3(0.5f, 0.5f, 0.5f));
-        //}
-        //else
-        //{
-        //    SetScale(new Vector3(1f, 1f, 1f));
-        //}
     }
 
     //---------------------------------------------------------------------------------
