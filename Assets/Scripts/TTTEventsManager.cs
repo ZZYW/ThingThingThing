@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This is the center of all broadcasting messages
 /// </summary>
-public class TTTManager : MonoBehaviour
+public class TTTEventsManager : MonoBehaviour
 {
 
 
@@ -13,7 +13,7 @@ public class TTTManager : MonoBehaviour
     public static event CreatureAction OnSomeoneSpeaking;
     public static event CreatureAction OnSomeoneSparking;
 
-    public static TTTManager main;
+    public static TTTEventsManager main;
 
     //public delegate void SpeakListener(GameObject which);
 

@@ -39,13 +39,13 @@ public class Creature : MonoBehaviour
     private string soundFilePath = "Sounds/";
 
 
-    private System.DateTime CurrentTime
-    {
-        get
-        {
-            return TOD_Data.main.CurrentDatetime;
-        }
-    }
+
+    //is it daytime?
+    //TOD_Data.main.IsDay;
+    //is it night time?
+    //TOD_Data.main.IsNight;
+
+
 
     private int NeighborCount
     {
@@ -57,22 +57,24 @@ public class Creature : MonoBehaviour
 
     private void OnEnable()
     {
-        TTTManager.OnSomeoneSpeaking += OnSomeoneSpeaking;
-        TTTManager.OnSomeoneSparking += OnSomeoneSparking;
+        TTTEventsManager.OnSomeoneSpeaking += OnSomeoneSpeaking;
+        TTTEventsManager.OnSomeoneSparking += OnSomeoneSparking;
+        TOD_Data.OnSunset += OnSunset;
+        TOD_Data.OnSunrise += OnSunrise;
     }
 
     private void OnDisable()
     {
-        TTTManager.OnSomeoneSpeaking -= OnSomeoneSpeaking;
-        TTTManager.OnSomeoneSparking -= OnSomeoneSparking;
+        TTTEventsManager.OnSomeoneSpeaking -= OnSomeoneSpeaking;
+        TTTEventsManager.OnSomeoneSparking -= OnSomeoneSparking;
+        TOD_Data.OnSunset -= OnSunset;
+        TOD_Data.OnSunrise -= OnSunrise;
     }
 
 
     private void Awake()
     {
         gameObject.tag = "Thing";
-
-
     }
 
     private void Start()
@@ -147,7 +149,7 @@ public class Creature : MonoBehaviour
     public void Speak(string content, float stayLength)
     {
         Debug.Log(gameObject.name + " speaks: " + content);
-        TTTManager.main.SomeoneSpoke(gameObject);
+        TTTEventsManager.main.SomeoneSpoke(gameObject);
         chatBalloon.SetTextAndActive(content, stayLength);
     }
 
@@ -165,7 +167,7 @@ public class Creature : MonoBehaviour
         var newBurst = new ParticleSystem.Burst(0f, numberOfParticles);
         explodePS.emission.SetBurst(0, newBurst);
         explodePS.Play();
-        TTTManager.main.SomeoneSparked(gameObject);
+        TTTEventsManager.main.SomeoneSparked(gameObject);
     }
 
     private void PlaySound(string soundName)
@@ -201,6 +203,18 @@ public class Creature : MonoBehaviour
     private void OnNeigborSparkingParticles()
     {
         Speak("Hey You sparked!");
+    }
+
+    private void OnSunset()
+    {
+        //RotateSelf
+        PlaySound("zapsplat_multimedia_game_blip_generic_tone_007_17643");
+        Speak("I love sunset!", 2f);
+    }
+
+    private void OnSunrise()
+    {
+        PlaySound("cartoon-pinch");
     }
 
     //---------------------------------------------------------------------------------

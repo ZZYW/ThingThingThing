@@ -32,4 +32,21 @@ https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/
 
 
 
+## Public Properties
+
+### Environment
+
+Regarding time, day, night:
+
+```csharp
+//time
+//e.x. 3:30PM will be represented as 15.5
+float TOD_Data.main.CurrentDatetime
+
+//day vs night
+bool TOD_Data.main.IsDay
+bool TOD_Data.main.IsNight
+```
+
+
 
