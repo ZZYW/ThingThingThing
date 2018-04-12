@@ -310,13 +310,6 @@ public class Creature : MonoBehaviour
     }
 
 
-
-
-
-
-
-
-
     public static Vector3 RandomVec3(float a, float b)
     {
         return new Vector3(Random.Range(a, b), 0f, Random.Range(a, b));
