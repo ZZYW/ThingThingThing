@@ -36,13 +36,15 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 
 ### Environment
 
-`float TOD_Data.main.TimeNow`
-
-e.x. 3:30PM will be represented as 15.5
+`float TOD_Data.main.TimeNow //e.x. 3:30PM will be represented as 15.5`
 
 `bool TOD_Data.main.IsDay`
 
 `bool TOD_Data.main.IsNight`
+
+### Social
+
+`int NeighborCount //how many neighbors do you have currently`
 
 ### Events
 
