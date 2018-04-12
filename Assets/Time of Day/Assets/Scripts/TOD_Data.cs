@@ -15,7 +15,7 @@ public class TOD_Data : MonoBehaviour
     public bool IsDay { get; private set; }
     public bool IsNight { get; private set; }
 
-    public float CurrentDatetime
+    public float TimeNow
     {
         get
         {
@@ -29,7 +29,6 @@ public class TOD_Data : MonoBehaviour
         {
             main = this;
         }
-
     }
 
     bool sunsetReported;

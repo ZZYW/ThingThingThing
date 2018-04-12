@@ -27,7 +27,7 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 
 ## Steps for participants:
 
-https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing
+[Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)
 
 
 
@@ -36,17 +36,48 @@ https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/
 
 ### Environment
 
-Regarding time, day, night:
+`float TOD_Data.main.TimeNow`
 
-```csharp
-//time
-//e.x. 3:30PM will be represented as 15.5
-float TOD_Data.main.CurrentDatetime
+e.x. 3:30PM will be represented as 15.5
 
-//day vs night
-bool TOD_Data.main.IsDay
-bool TOD_Data.main.IsNight
-```
+`bool TOD_Data.main.IsDay`
+
+`bool TOD_Data.main.IsNight`
+
+### Events
+
+`void OnSunset();`
+
+`void OnSunrise();`
+
+`void OnMeetingSomeone(GameObject other);`
+
+`void OnLeavingSomeone(GameObject other);`
+
+`void OnNeighborSpeaking();`
+
+`void OnNeigborSparkingParticles();`
+
+
+### Ready to Use Behaviours
+
+`void SetTarget(Vector3 target)`
+
+`void RotateSelf(Vector3 angle)`
+
+`void SetScale(Vector3 newScale)`
+
+`void Speak(string content, float stayLength)`
+`void Speak(string content)`
+
+`void Spark(Color particleColor, int numberOfParticles)`
+	
+`void PlaySound(string soundName)`
+
+
+
+
+
 
 
 
