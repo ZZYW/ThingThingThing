@@ -7,35 +7,66 @@ using UnityEngine;
 public class ThingMotor : MonoBehaviour
 {
 
+    public Vector3 Target { get; set; }
+    public float MaxSpeed { get; set; }
 
-    public Transform target;
-
-    public float speed = 0.1f;
-
+    float speed;
+    bool seekingTarget = true;
+    float rotationSmoothSpeed;
 
     Rigidbody rb;
 
-    // Use this for initialization
+
+    private void Awake()
+    {
+        //default value
+        MaxSpeed = 4;
+        speed = 2;
+        rotationSmoothSpeed = 3.14f / 3f;
+    }
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.freezeRotation = true;
     }
 
 
     void FixedUpdate()
     {
+
         Vector3 force = Vector3.zero;
 
-        if (target != null)
+        if (seekingTarget)
         {
-            Vector3 diff = target.transform.position - transform.position;
+            Vector3 diff = Target - transform.position;
             diff.Normalize();
             diff *= speed;
             force += diff;
+
+            Debug.DrawLine(transform.position, Target);
+
+
+            Quaternion targetRotation = Quaternion.LookRotation(diff);
+            Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothSpeed);
+            rb.rotation = newRotation;
+
+
+
         }
 
+        //Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * Time.fixedDeltaTime);
+        //rb.MoveRotation(rb.rotation * deltaRotation);
 
-        rb.AddForce(force);
+        //Vector3 deltaRot = Target - transform.forward;
+
+        if (rb.velocity.magnitude < MaxSpeed)
+        {
+            rb.AddForce(force + Vector3.up/3) ;
+        }
+
 
 
     }

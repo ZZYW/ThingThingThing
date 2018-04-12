@@ -8,6 +8,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(ThingMotor))]
 public class Creature : MonoBehaviour
 {
 
@@ -18,12 +19,18 @@ public class Creature : MonoBehaviour
     //how large is my neighbor awareness radar
     private int neighborDetectorRadius = 10;
     //nav mesh agent
-    private float moveSpeed = 1;
+    private float moveSpeed = 4;
     private float getNewDestinationInterval = 15; //seconds
+
+
+    //flags
+    private float speakCDLength;
+    private bool speakInCD;
 
 
     private NavMeshAgent nmAgent;
     private Rigidbody rb;
+    private ThingMotor motor;
     private SphereCollider neighborDetector;
     private ChatBalloon chatBalloon;
     private BoxCollider boxCollider;
@@ -81,14 +88,19 @@ public class Creature : MonoBehaviour
 
         //nav mesh agent
         nmAgent = GetComponent<NavMeshAgent>();
-        nmAgent.speed = moveSpeed;
+        motor.MaxSpeed = moveSpeed;
 
+        nmAgent.enabled = false;
+
+        //motor
+        motor = GetComponent<ThingMotor>();
 
         boxCollider = gameObject.AddComponent<BoxCollider>();
-        boxCollider.enabled = false;
+        boxCollider.enabled = true;
 
         //Chat Ballon
         chatBalloon = gameObject.GetComponentInChildren<ChatBalloon>();
+        speakCDLength = Random.Range(8f, 13f);
 
         //Instantiating Particle Object
         //TODO: add particle system prefab to each models
@@ -101,6 +113,16 @@ public class Creature : MonoBehaviour
 
 
         Init();
+    }
+    private void Update()
+    {
+        //avoid dropping
+        if (transform.position.y < -9)
+        {
+            rb.position = ThingManager.main.transform.position;
+        }
+
+        Repeat();
     }
 
     void RandomSetDestination()
@@ -122,25 +144,31 @@ public class Creature : MonoBehaviour
         InvokeRepeating("RandomSetDestination", 1, getNewDestinationInterval);
     }
 
-    private void Update()
+
+    void Repeat()
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
             Jump(3, 1f, 500);
         }
 
-        if(TOD_Data.main.IsNight)
+        if (TOD_Data.main.IsNight)
         {
-            
+
         }
 
         if (TOD_Data.main.IsDay)
         {
 
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RandomSetDestination();
+        }
     }
 
-
+    #region Events
     private void OnMeetingSomeone(GameObject other)
     {
         //DO STUFF
@@ -177,7 +205,7 @@ public class Creature : MonoBehaviour
         //DO STUFF
         PlaySound("cartoon-pinch");
     }
-
+    #endregion
     #endregion
 
     //---------------------------------------------------------------------------------
@@ -233,10 +261,13 @@ public class Creature : MonoBehaviour
     //---------------------------------------------------------------------------------
     //  BEHAVIOURS
     //---------------------------------------------------------------------------------
-
+    #region Behaviour Implementations
     private void SetTarget(Vector3 target)
     {
-        nmAgent.SetDestination(target);
+        //nmAgent.SetDestination(target);
+
+        motor.Target = target;
+
     }
 
     private void RotateSelf(Vector3 angle)
@@ -251,9 +282,12 @@ public class Creature : MonoBehaviour
 
     private void Speak(string content, float stayLength)
     {
+        if (speakInCD) return;
         Debug.Log(gameObject.name + " speaks: " + content);
         TTTEventsManager.main.SomeoneSpoke(gameObject);
         chatBalloon.SetTextAndActive(content, stayLength);
+        speakInCD = true;
+        Invoke("UnlockSpeakCD", speakCDLength);
     }
 
     private void Speak(string content)
@@ -296,17 +330,24 @@ public class Creature : MonoBehaviour
         }
         Invoke("AfterJump", 1f);
     }
-
+    #endregion
     //TODO: try add mesh coolider duringjump
-    void InitJump(){
+    void InitJump()
+    {
         boxCollider.enabled = true;
         nmAgent.enabled = false;
         rb.isKinematic = false;
     }
 
-    void AfterJump(){
+    void AfterJump()
+    {
         nmAgent.enabled = true;
         boxCollider.enabled = false;
+    }
+
+    void UnlockSpeakCD()
+    {
+        speakInCD = false;
     }
 
 
