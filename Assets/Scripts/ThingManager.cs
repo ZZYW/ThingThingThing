@@ -26,13 +26,10 @@ public class ThingManager : MonoBehaviour
         //Spawn Things
         foreach (GameObject thing in allThings)
         {
-            for (int i = 0; i < 10; i++)
-            {
+            GameObject newThing = Instantiate(thing, transform);
+            newThing.transform.parent = transform;
+            newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
 
-                GameObject newThing = Instantiate(thing, transform);
-                newThing.transform.parent = transform;
-                newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
-            }
         }
 
     }

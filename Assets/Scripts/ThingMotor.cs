@@ -34,7 +34,7 @@ public class ThingMotor : MonoBehaviour
 
     void Start()
     {
-        //rb.freezeRotation = true;
+        rb.freezeRotation = true;
         rb.angularDrag = 10f;
     }
 
