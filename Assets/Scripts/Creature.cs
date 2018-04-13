@@ -1,8 +1,27 @@
-﻿using System.Collections;
+﻿/*
+ * 2018 APR.
+ * BY ZZYW @ ASIA ART ARCHIVE
+ * ZHENZHEN / YANG WANG
+ * HI@ZZYWSTUDIO.COM
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+
+/*
+ * 
+ _________  ___   ___    ________  ___   __   _______      _________  ___   ___    ________  ___   __   _______      _________  ___   ___    ________  ___   __   _______     
+/________/\/__/\ /__/\  /_______/\/__/\ /__/\/______/\    /________/\/__/\ /__/\  /_______/\/__/\ /__/\/______/\    /________/\/__/\ /__/\  /_______/\/__/\ /__/\/______/\    
+\__.::.__\/\::\ \\  \ \ \__.::._\/\::\_\\  \ \::::__\/__  \__.::.__\/\::\ \\  \ \ \__.::._\/\::\_\\  \ \::::__\/__  \__.::.__\/\::\ \\  \ \ \__.::._\/\::\_\\  \ \::::__\/__  
+   \::\ \   \::\/_\ .\ \   \::\ \  \:. `-\  \ \:\ /____/\    \::\ \   \::\/_\ .\ \   \::\ \  \:. `-\  \ \:\ /____/\    \::\ \   \::\/_\ .\ \   \::\ \  \:. `-\  \ \:\ /____/\ 
+    \::\ \   \:: ___::\ \  _\::\ \__\:. _    \ \:\\_  _\/     \::\ \   \:: ___::\ \  _\::\ \__\:. _    \ \:\\_  _\/     \::\ \   \:: ___::\ \  _\::\ \__\:. _    \ \:\\_  _\/ 
+     \::\ \   \: \ \\::\ \/__\::\__/\\. \`-\  \ \:\_\ \ \      \::\ \   \: \ \\::\ \/__\::\__/\\. \`-\  \ \:\_\ \ \      \::\ \   \: \ \\::\ \/__\::\__/\\. \`-\  \ \:\_\ \ \ 
+      \__\/    \__\/ \::\/\________\/ \__\/ \__\/\_____\/       \__\/    \__\/ \::\/\________\/ \__\/ \__\/\_____\/       \__\/    \__\/ \::\/\________\/ \__\/ \__\/\_____\/ 
+                                                                                                                                                                              
+ */
 
 [RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(Rigidbody))]
@@ -10,23 +29,24 @@ using UnityEngine.Events;
 [RequireComponent(typeof(ThingMotor))]
 public class Creature : MonoBehaviour
 {
-
-    // YOU CAN TWEAK THOSE TO CUSTOMIZE YOUR OWN AVATAR
+    
     //distance from camera to object center on 3rd personn camera following mode
     [HideInInspector]
-    private int desiredFollowDistance = 3;
+    private int followCameraObserverDistance = 15;
     //how large is my neighbor awareness radar
     private int neighborDetectorRadius = 10;
-    //nav mesh agent
-    private float moveSpeed = 4;
-    private float getNewDestinationInterval = 15; //seconds
+
+    //movement stuff
+    private float acceleration = 5;
+    private float drag = 1.8f; // the bigger, the slower
+    private float mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
+    //how often to get a new target to run to
+    private float getNewDestinationInterval = 3; //seconds
 
 
     //flags
     private float speakCDLength;
     private bool speakInCD;
-
-    private Rigidbody rb;
     private ThingMotor motor;
     private SphereCollider neighborDetector;
     private ChatBalloon chatBalloon;
@@ -46,7 +66,7 @@ public class Creature : MonoBehaviour
     {
         get
         {
-            return desiredFollowDistance;
+            return followCameraObserverDistance;
         }
     }
 
@@ -69,14 +89,13 @@ public class Creature : MonoBehaviour
     private void Awake()
     {
         gameObject.tag = "Thing";
+        neighborList = new List<GameObject>();
     }
 
     private void Start()
     {
         //Init List
-        neighborList = new List<GameObject>();
-        rb = GetComponent<Rigidbody>();
-        rb.mass = 0.1f;
+
 
         //neighbor detector
         neighborDetector = GetComponent<SphereCollider>();
@@ -85,7 +104,10 @@ public class Creature : MonoBehaviour
 
         //motor
         motor = GetComponent<ThingMotor>();
-        motor.MaxSpeed = moveSpeed;
+        acceleration = Random.Range(3f, 4f);
+        motor.SetAccel(acceleration);
+        motor.rb.drag = drag;
+        motor.rb.mass = mass;
 
         boxCollider = gameObject.AddComponent<BoxCollider>();
         boxCollider.enabled = true;
@@ -111,7 +133,7 @@ public class Creature : MonoBehaviour
         //avoid dropping
         if (transform.position.y < -9)
         {
-            rb.position = ThingManager.main.transform.position;
+            motor.rb.position = ThingManager.main.transform.position;
         }
 
         Repeat();
@@ -133,7 +155,7 @@ public class Creature : MonoBehaviour
     void Init()
     {
         Speak("hello");
-        InvokeRepeating("RandomSetDestination", 1, getNewDestinationInterval);
+        InvokeRepeating("RandomSetDestination", 0, getNewDestinationInterval);
     }
 
 
@@ -141,7 +163,7 @@ public class Creature : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Jump(3, 1f, 500);
+
         }
 
         if (TOD_Data.main.IsNight)
@@ -256,8 +278,7 @@ public class Creature : MonoBehaviour
     #region Behaviour Implementations
     private void SetTarget(Vector3 target)
     {
-        motor.Target = target;
-
+        motor.SetTarget(target);
     }
 
     private void RotateSelf(Vector3 angle)
@@ -302,36 +323,9 @@ public class Creature : MonoBehaviour
         audioSource.Play();
     }
 
-    private void Jump(int times, float interval, float upForce)
-    {
-        if (times < 1 || interval < 0.1f || upForce < 1f) return;
-        //Debug.Log("Jump!");
-        InitJump();
-        StartCoroutine(CJump(times, interval, upForce));
-    }
 
-    private IEnumerator CJump(int times, float interval, float upForce)
-    {
-        for (int i = 0; i < times; i++)
-        {
-            Debug.Log(i);
-            rb.AddForce(Vector3.up * upForce);
-            yield return new WaitForSeconds(interval);
-        }
-        Invoke("AfterJump", 1f);
-    }
     #endregion
-    //TODO: try add mesh coolider duringjump
-    void InitJump()
-    {
-        boxCollider.enabled = true;
-        rb.isKinematic = false;
-    }
 
-    void AfterJump()
-    {
-        boxCollider.enabled = false;
-    }
 
     void UnlockSpeakCD()
     {

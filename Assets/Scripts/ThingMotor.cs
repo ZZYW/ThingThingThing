@@ -7,67 +7,61 @@ using UnityEngine;
 public class ThingMotor : MonoBehaviour
 {
 
-    public Vector3 Target { get; set; }
-    public float MaxSpeed { get; set; }
-
-    float speed;
+    Vector3 target;
+    float acceleration = 2;
     bool seekingTarget = true;
-    float rotationSmoothSpeed;
+    float rotationSmoothSpeed = 3.14f / 3f;
 
-    Rigidbody rb;
+    [HideInInspector]
+    public Rigidbody rb;
 
+
+    public void SetTarget(Vector3 target)
+    {
+        this.target = target;
+    }
+
+    public void SetAccel(float value)
+    {
+        acceleration = value;
+    }
 
     private void Awake()
     {
-        //default value
-        MaxSpeed = 4;
-        speed = 2;
-        rotationSmoothSpeed = 3.14f / 3f;
+        rb = GetComponent<Rigidbody>();
     }
 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.freezeRotation = true;
+        //rb.freezeRotation = true;
+        rb.angularDrag = 10f;
     }
 
 
     void FixedUpdate()
     {
-
         Vector3 force = Vector3.zero;
-
         if (seekingTarget)
         {
-            Vector3 diff = Target - transform.position;
+            Vector3 diff = target - transform.position;
+            if (diff.magnitude < 5) return;
             diff.Normalize();
-            diff *= speed;
+            diff *= acceleration;
             force += diff;
-
-            Debug.DrawLine(transform.position, Target);
-
 
             Quaternion targetRotation = Quaternion.LookRotation(diff);
             Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothSpeed);
             rb.rotation = newRotation;
-
-
-
         }
 
-        //Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * Time.fixedDeltaTime);
-        //rb.MoveRotation(rb.rotation * deltaRotation);
+        rb.AddForce(force);
 
-        //Vector3 deltaRot = Target - transform.forward;
+    }
 
-        if (rb.velocity.magnitude < MaxSpeed)
-        {
-            rb.AddForce(force + Vector3.up/3) ;
-        }
-
-
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, target);
+        Gizmos.DrawSphere(target, 1f);
     }
 }
