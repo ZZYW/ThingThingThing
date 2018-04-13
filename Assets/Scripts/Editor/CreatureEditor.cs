@@ -13,15 +13,15 @@ public class CreatureEditor : Editor
         DrawDefaultInspector();
 
         Creature creature = (Creature)target;
-        if (GUILayout.Button("Speak"))
-        {
-            creature.Speak("AHA!", 2f);
-        }
+        //if (GUILayout.Button("Speak"))
+        //{
+        //    creature.Speak("AHA!", 2f);
+        //}
 
-        if (GUILayout.Button("Spark"))
-        {
-            creature.Spark(Color.blue, 10);
-        }
+        //if (GUILayout.Button("Spark"))
+        //{
+        //    creature.Spark(Color.blue, 10);
+        //}
 
 
     }
