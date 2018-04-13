@@ -89,11 +89,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4892364537924048}
-  - component: {fileID: 64288905046237456}
   - component: {fileID: 54734363450837634}
   - component: {fileID: 114704805995821554}
   - component: {fileID: 82379949682577660}
-  - component: {fileID: 195761236912370910}
   - component: {fileID: 135460677037943988}
   - component: {fileID: 114716163380720346}
   m_Layer: 0
@@ -293,20 +291,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64288905046237456
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465013714392504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
 --- !u!82 &82379949682577660
 AudioSource:
   m_ObjectHideFlags: 1
@@ -588,27 +572,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.03
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &195761236912370910
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465013714392504}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!198 &198538835559105698
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -61,7 +61,6 @@ GameObject:
   - component: {fileID: 135039873268935726}
   - component: {fileID: 82436471216955988}
   - component: {fileID: 114493559642376220}
-  - component: {fileID: 195508563879936042}
   - component: {fileID: 114820486590293818}
   m_Layer: 0
   m_Name: Cliff
@@ -370,8 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76ceb0b021e94dcb943cceb377ad9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredFollowDistance: 10
-  neighborDetectorRadius: 10
 --- !u!114 &114506062515346616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -459,8 +456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d4c8c637cc6485490d3138de56adaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0.1
 --- !u!135 &135039873268935726
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -473,27 +468,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.9206033
   m_Center: {x: 0, y: -0.0000052452087, z: 0}
---- !u!195 &195508563879936042
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690230917902656}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 2.9206033
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2.988191
-  m_BaseOffset: 1.4940954
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!198 &198809869782164774
 ParticleSystem:
   m_ObjectHideFlags: 1

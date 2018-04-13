@@ -5,7 +5,6 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(SphereCollider))]
-[RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(ThingMotor))]
@@ -27,8 +26,6 @@ public class Creature : MonoBehaviour
     private float speakCDLength;
     private bool speakInCD;
 
-
-    private NavMeshAgent nmAgent;
     private Rigidbody rb;
     private ThingMotor motor;
     private SphereCollider neighborDetector;
@@ -86,14 +83,9 @@ public class Creature : MonoBehaviour
         neighborDetector.isTrigger = true;
         neighborDetector.radius = neighborDetectorRadius;
 
-        //nav mesh agent
-        nmAgent = GetComponent<NavMeshAgent>();
-        motor.MaxSpeed = moveSpeed;
-
-        nmAgent.enabled = false;
-
         //motor
         motor = GetComponent<ThingMotor>();
+        motor.MaxSpeed = moveSpeed;
 
         boxCollider = gameObject.AddComponent<BoxCollider>();
         boxCollider.enabled = true;
@@ -264,8 +256,6 @@ public class Creature : MonoBehaviour
     #region Behaviour Implementations
     private void SetTarget(Vector3 target)
     {
-        //nmAgent.SetDestination(target);
-
         motor.Target = target;
 
     }
@@ -335,13 +325,11 @@ public class Creature : MonoBehaviour
     void InitJump()
     {
         boxCollider.enabled = true;
-        nmAgent.enabled = false;
         rb.isKinematic = false;
     }
 
     void AfterJump()
     {
-        nmAgent.enabled = true;
         boxCollider.enabled = false;
     }
 

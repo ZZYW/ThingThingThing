@@ -26,14 +26,14 @@ public class ThingManager : MonoBehaviour
         //Spawn Things
         foreach (GameObject thing in allThings)
         {
-            for (int i = 0; i < 10; i++)
-            {
+            //for (int i = 0; i < 10; i++)
+            //{
 
 
                 GameObject newThing = Instantiate(thing, transform);
                 newThing.transform.parent = transform;
                 newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
-            }
+            //}
         }
 
     }
@@ -52,6 +52,7 @@ public class ThingManager : MonoBehaviour
         {
             GameObject labelCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             NameLabel nameLabel = labelCube.AddComponent<NameLabel>();
+            labelCube.GetComponent<Collider>().enabled = false;
             labelCube.transform.parent = labelContainers.transform;
             nameLabel.Init(thing.transform, 2);
         }
