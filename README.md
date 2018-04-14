@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [About The Event](#about-the-event)
+- [Steps for participants:](#steps-for-participants)
+- [Class `Creature`](#class-creature)
+  - [Properties/Fields](#propertiesfields)
+  - [Events](#events)
+  - [Ready to Use Methods](#ready-to-use-methods)
+- [Tips](#tips)
+  - [How to keep your cloned repository up to date](#how-to-keep-your-cloned-repository-up-to-date)
+  - [Where to put my files](#where-to-put-my-files)
+      - [Where to put my prefabs:](#where-to-put-my-prefabs)
+      - [Where to put my materials and scripts](#where-to-put-my-materials-and-scripts)
+      - [Where to put my sound files](#where-to-put-my-sound-files)
+  - [How to use your own sound files](#how-to-use-your-own-sound-files)
+  - [Some Basic about C# Programming](#some-basic-about-c-programming)
+  - [Some useful methods from Unity](#some-useful-methods-from-unity)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # About The Event
 
 Saturday, April 14 and Sunday, April 15, 1:00-5:00pm
