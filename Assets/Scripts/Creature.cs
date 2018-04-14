@@ -25,7 +25,7 @@ public class Creature : MonoBehaviour
     //private int neighborDetectorRadius = 10;
 
     //movement stuff
-    private float acceleration = 6;
+    private float acceleration = 4;
     private float drag = 1.8f; // the bigger, the slower
     private float mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
 
@@ -34,7 +34,9 @@ public class Creature : MonoBehaviour
     private int newDestinationRange = 40; // how far the new destination could be 
 
 
-    public bool InWater;
+    private bool inWater;
+    private bool stopWalkingAround;
+    private bool stopTalking;
     private int NeighborCount
     {
         get
@@ -68,7 +70,7 @@ public class Creature : MonoBehaviour
 
 
 
-    #region THING CUSTOMIZATION AREA
+
     //---------------------------------------------------------------------------------
     //  YOUR ZONE! DO MOST OF THE STUFF HERE
     //---------------------------------------------------------------------------------
@@ -76,7 +78,7 @@ public class Creature : MonoBehaviour
     //Only execute once at the start of the story
     void Init()
     {
-        Speak("hello");
+        Speak("I am born!");
         InvokeRepeating("RandomSetDestination", 0, getNewDestinationInterval);
     }
 
@@ -104,7 +106,7 @@ public class Creature : MonoBehaviour
         }
     }
 
-    #region Events
+
     private void OnMeetingSomeone(GameObject other)
     {
         //DO STUFF
@@ -125,14 +127,14 @@ public class Creature : MonoBehaviour
 
     public void OnTouchWater()
     {
-        InWater = true;
+        inWater = true;
         Invoke("RescueFromWater", 60f);
         Speak("I am in water!");
     }
 
     public void OnLeaveWater()
     {
-        InWater = false;
+        inWater = false;
         Speak("I am not in water anymore!");
     }
 
@@ -154,20 +156,11 @@ public class Creature : MonoBehaviour
         //DO STUFF
         PlaySound("cartoon-pinch");
     }
-    #endregion
-    #endregion
-
 
 
     //---------------------------------------------------------------------------------
     //  YOUR ZONE ENDS HERE!!!
     //---------------------------------------------------------------------------------
-
-
-
-
-
-
 
 
 
@@ -293,7 +286,41 @@ public class Creature : MonoBehaviour
 
     private void SetTarget(Vector3 target)
     {
-        motor.SetTarget(target);
+        if (!stopWalkingAround)
+        {
+            motor.SetTarget(target);
+        }
+    }
+
+    private void StopWalking()
+    {
+        stopWalkingAround = true;
+        motor.Stop();
+    }
+
+    /// <summary>
+    /// stop walking for certain seconds
+    /// </summary>
+    /// <param name="seconds">Seconds.</param>
+    private void StopWalking(float seconds)
+    {
+        StopWalking();
+        Invoke("RestartWalking", seconds);
+    }
+
+    private void Mute()
+    {
+        stopTalking = true;
+    }
+
+    private void DeMute()
+    {
+        stopTalking = false;
+    }
+
+    private void RestartWalking()
+    {
+        stopWalkingAround = false;
     }
 
     private void SetRandomTarget(float area)
@@ -313,12 +340,13 @@ public class Creature : MonoBehaviour
 
     private void Speak(string content, float stayLength)
     {
-        if (speakInCD) return;
-        //Debug.Log (gameObject.name + " speaks: " + content);
-        TTTEventsManager.main.SomeoneSpoke(gameObject);
-        chatBalloon.SetTextAndActive(content, stayLength);
-        speakInCD = true;
-        Invoke("UnlockSpeakCD", speakCDLength);
+        if (!speakInCD || !stopTalking)
+        {
+            TTTEventsManager.main.SomeoneSpoke(gameObject);
+            chatBalloon.SetTextAndActive(content, stayLength);
+            speakInCD = true;
+            Invoke("UnlockSpeakCD", speakCDLength);
+        }
     }
 
     private void Speak(string content)
@@ -335,6 +363,11 @@ public class Creature : MonoBehaviour
         explodePS.emission.SetBurst(0, newBurst);
         explodePS.Play();
         TTTEventsManager.main.SomeoneSparked(gameObject);
+    }
+
+    private void CreateCube()
+    {
+        //GameObject newCube = 
     }
 
     private void PlaySound(string soundName)
@@ -356,7 +389,7 @@ public class Creature : MonoBehaviour
 
     private void RescueFromWater()
     {
-        if (InWater)
+        if (inWater)
         {
             ResetPosition();
         }

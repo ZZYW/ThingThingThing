@@ -19,12 +19,12 @@ public class ThingManager : MonoBehaviour
 
         //init all things
         Object[] allThingPrefabs = Resources.LoadAll("Things/") as Object[];
-        var allThings = from t in allThingPrefabs
-                        where ((GameObject)t).GetComponent<Creature>() != null
-                        select t;
+        //var allThings = from t in allThingPrefabs
+                        //where ((GameObject)t).GetComponent<Creature>() != null
+                        //select t;
 
         //Spawn Things
-        foreach (GameObject thing in allThings)
+        foreach (GameObject thing in allThingPrefabs)
         {
             GameObject newThing = Instantiate(thing, transform);
             newThing.transform.parent = transform;

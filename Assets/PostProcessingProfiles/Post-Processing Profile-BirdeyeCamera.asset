@@ -42,8 +42,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 0.57
-      radius: 1.18
+      intensity: 0.47
+      radius: 1.8
       sampleCount: 3
       downsampling: 0
       forceForwardCompatibility: 0
@@ -281,10 +281,10 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.171
+      intensity: 0
   grain:
     m_Enabled: 0
     m_Settings:
@@ -296,11 +296,11 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0.21323532, g: 0.34888443, b: 1, a: 1}
+      color: {r: 0, g: 0.006896496, b: 1, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.43
-      smoothness: 0.193
-      roundness: 1
+      intensity: 0.392
+      smoothness: 0.126
+      roundness: 0.979
       mask: {fileID: 0}
       opacity: 1
       rounded: 0
