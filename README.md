@@ -1,5 +1,4 @@
-ThingThingThing: Unity Workshop and Collective Creation
-===================
+# About The Event
 
 Saturday, April 14 and Sunday, April 15, 1:00-5:00pm
 
@@ -25,26 +24,16 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 
 
 
-## Steps for participants:
+# Steps for participants:
 
 [Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)
 
 
-## Where to put my files
 
-#### Where to put my prefabs:
-`Resources/Things/[here]`
-
-#### Where to put my materials and scripts
-`CREATORS/[your first name]/[here]`
-
-#### Where to put my sound files
-`Resources/Sounds/[here]`
+# Class `Creature`
 
 
-
-
-## Properties
+## Properties/Fields
 
 
 ```csharp
@@ -52,7 +41,7 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 float TOD_Data.main.TimeNow; //e.x. 3:30PM will be represented as 15.5
 bool TOD_Data.main.IsDay;
 bool TOD_Data.main.IsNight; 
-bool InWater; //if is in water now
+bool inWater; //if is in water now
 int NeighborCount; //how many neighbors do you have currently
 ```
 
@@ -72,21 +61,53 @@ void OnLeaveWater();
 ## Ready to Use Methods
 
 ```csharp
+
+//movement
 void SetTarget(Vector3 target);
+void StopWalking();
+void StopWalking(float forHowManySeconds);
+void RestartWalking();
+void RandomSetDestination();//get a new random target
+void ResetPosition(); //change position to spawn point
+
+//shape and form
 void RotateSelf(Vector3 angle);
 void SetScale(Vector3 newScale);
+
+//social
 void Speak(string content, float stayLength);
 void Speak(string content);
 void Spark(Color particleColor, int numberOfParticles);
 void PlaySound(string soundName);
 
-void ResetPosition(); //change position to spawn point
-void RandomSetDestination();//get a new random target
+
 ```
 
 
 
 # Tips
+
+## How to keep your cloned repository up to date
+
+Only do this once
+
+`git remote add upstream https://github.com/ZZYW/thing-thing-thing.git`
+
+Do this to update
+
+`git pull upstream master`
+
+## Where to put my files
+
+#### Where to put my prefabs:
+`Resources/Things/[here]`
+
+#### Where to put my materials and scripts
+`CREATORS/[your first name]/[here]`
+
+#### Where to put my sound files
+`Resources/Sounds/[here]`
+
 
 ## How to use your own sound files
 
