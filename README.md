@@ -72,6 +72,8 @@ void ResetPosition(); //change position to spawn point
 
 //shape and form
 void SetScale(Vector3 newScale);
+void ChangeColor(Color newColor); //change color, might not work well if you have more than one renderer or more than one material
+void ResetColor(); //reset to original color
 
 //social
 void Speak(string content, float stayLength);
@@ -80,6 +82,7 @@ void Mute(); //Speak no longer works
 void DeMute(); //regain ability to Speak again
 void Spark(Color particleColor, int numberOfParticles);
 void PlaySound(string soundName);
+void CreateCube(); //throw a cube on the small ground
 
 
 ```

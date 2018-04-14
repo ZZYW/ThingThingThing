@@ -15,6 +15,8 @@ public class ThingPrinceZ : Thing
         mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
         getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
         newDestinationRange = 40; // how far the new destination could be 
+
+        myCubeColor = Color.green; //cube's color produced by you
     }
 
 

@@ -18,6 +18,7 @@ public class Thing : MonoBehaviour
     protected float mass = 0.2f;
     protected float getNewDestinationInterval = 5;
     protected int newDestinationRange = 40;
+    protected Color myCubeColor;
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
 
@@ -247,7 +248,11 @@ public class Thing : MonoBehaviour
 
     protected void CreateCube()
     {
-        //TODO
+        GameObject acube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        acube.transform.localScale = Vector3.one / 4;
+        acube.transform.position = transform.position;
+        acube.AddComponent<Rigidbody>();
+        acube.AddComponent<ProducedCube>().Init(myCubeColor);
     }
 
     protected void ResetColor()

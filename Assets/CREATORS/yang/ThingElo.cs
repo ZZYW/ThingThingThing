@@ -16,6 +16,8 @@ public class ThingElo : Thing
         mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
         getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
         newDestinationRange = 40; // how far the new destination could be 
+
+        myCubeColor = Color.red; //cube's color produced by you
     }
 
     protected override void TTTStart()
@@ -37,12 +39,12 @@ public class ThingElo : Thing
 
         if (TOD_Data.main.IsNight)
         {
-           
+
         }
 
         if (TOD_Data.main.IsDay)
         {
-            
+
         }
 
         if (InWater)
@@ -71,7 +73,7 @@ public class ThingElo : Thing
 
     protected override void OnNeighborSpeaking()
     {
-
+        CreateCube();
     }
 
     protected override void OnTouchWater()
@@ -86,11 +88,15 @@ public class ThingElo : Thing
 
     protected override void OnNeigborSparkingParticles()
     {
-
+        CreateCube();
     }
 
     protected override void OnSunset()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            CreateCube();
+        }
 
     }
 
