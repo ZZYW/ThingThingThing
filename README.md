@@ -30,6 +30,16 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 [Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)
 
 
+## Where to put my files
+
+### Where to put my prefabs:
+`Resources/Things/[here]`
+
+### Where to put my materials and scripts
+`CREATORS/[your first name]/[here]`
+
+### Where to put my sound files
+`Resources/Sounds/[here]`
 
 
 ## Public Properties

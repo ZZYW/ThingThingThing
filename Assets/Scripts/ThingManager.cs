@@ -29,7 +29,6 @@ public class ThingManager : MonoBehaviour
             GameObject newThing = Instantiate(thing, transform);
             newThing.transform.parent = transform;
             newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
-
         }
 
     }
@@ -38,8 +37,6 @@ public class ThingManager : MonoBehaviour
     void Start()
     {
         AllThings = GameObject.FindGameObjectsWithTag("Thing");
-
-
 
         //generate markers
         GameObject labelContainers = new GameObject("Label Containers");
@@ -52,8 +49,6 @@ public class ThingManager : MonoBehaviour
             labelCube.transform.parent = labelContainers.transform;
             nameLabel.Init(thing.transform, 2);
         }
-
-
     }
 
     // Update is called once per frame
