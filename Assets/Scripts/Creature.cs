@@ -21,8 +21,8 @@ public class Creature : MonoBehaviour
     //distance from camera to object center on 3rd personn camera following mode
     [HideInInspector]
     private int cameraOffset = 15;
-    //how large is my neighbor awareness radar
-    private int neighborDetectorRadius = 10;
+    ////how large is my neighbor awareness radar
+    //private int neighborDetectorRadius = 10;
 
     //movement stuff
     private float acceleration = 6;
@@ -198,7 +198,7 @@ public class Creature : MonoBehaviour
         //neighbor detector
         neighborDetector = GetComponent<SphereCollider>();
         neighborDetector.isTrigger = true;
-        neighborDetector.radius = neighborDetectorRadius;
+        //neighborDetector.radius = neighborDetectorRadius;
 
         //motor
         motor = GetComponent<ThingMotor>();
