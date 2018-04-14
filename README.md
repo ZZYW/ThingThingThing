@@ -42,6 +42,8 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 `Resources/Sounds/[here]`
 
 
+
+
 ## Properties
 
 
@@ -83,6 +85,53 @@ void RandomSetDestination();//get a new random target
 ```
 
 
+
+# Tips
+
+## How to use your own sound files
+
+Find a sound file that is one of the formats below
+
+- .Aif.
+- .wav.
+- .mp3.
+- .ogg.
+
+Compress it if necessary, make sure its file size is smaller than 2 MB, and move it into `Resources/Sounds` folder.
+
+Use `PlaySound(“filename”)` to play your sound.
+
+
+## Some Basic about C# Programming
+
+
+[If Else Statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else)
+AND
+[For Loop](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)
+
+OR
+
+[Everything Else About C#](https://docs.microsoft.com/en-us/dotnet/csharp/index)
+
+
+## Some useful methods from Unity
+
+```csharp
+
+//Print things to Console for debugging
+print(object message);
+
+//Invokes the method methodName in time seconds.
+Invoke(string methodName, float time);
+
+//Invokes the method methodName in time seconds, then repeatedly every repeatRate seconds.
+InvokeRepeating(string methodName, float time, float repeatRate);
+
+//Cancels all Invoke calls on this MonoBehaviour.
+CancelInvoke();
+
+
+```
 
 
 
