@@ -32,60 +32,55 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 
 ## Where to put my files
 
-### Where to put my prefabs:
+#### Where to put my prefabs:
 `Resources/Things/[here]`
 
-### Where to put my materials and scripts
+#### Where to put my materials and scripts
 `CREATORS/[your first name]/[here]`
 
-### Where to put my sound files
+#### Where to put my sound files
 `Resources/Sounds/[here]`
 
 
-## Public Properties
-
-### Environment
-
-`float TOD_Data.main.TimeNow //e.x. 3:30PM will be represented as 15.5`
-
-`bool TOD_Data.main.IsDay`
-
-`bool TOD_Data.main.IsNight`
-
-### Social
-
-`int NeighborCount //how many neighbors do you have currently`
-
-### Events
-
-`void OnSunset();`
-
-`void OnSunrise();`
-
-`void OnMeetingSomeone(GameObject other);`
-
-`void OnLeavingSomeone(GameObject other);`
-
-`void OnNeighborSpeaking();`
-
-`void OnNeigborSparkingParticles();`
+## Properties
 
 
-### Ready to Use Behaviours
+```csharp
+//Environment
+float TOD_Data.main.TimeNow; //e.x. 3:30PM will be represented as 15.5
+bool TOD_Data.main.IsDay;
+bool TOD_Data.main.IsNight; 
+bool InWater; //if is in water now
+int NeighborCount; //how many neighbors do you have currently
+```
 
-`void SetTarget(Vector3 target)`
+## Events
 
-`void RotateSelf(Vector3 angle)`
+```csharp
+void OnSunset();
+void OnSunrise();
+void OnMeetingSomeone(GameObject other);
+void OnLeavingSomeone(GameObject other);
+void OnNeighborSpeaking();
+void OnNeigborSparkingParticles();
+void OnTouchWater();
+void OnLeaveWater();
+```
 
-`void SetScale(Vector3 newScale)`
+## Ready to Use Methods
 
-`void Speak(string content, float stayLength)`
-`void Speak(string content)`
+```csharp
+void SetTarget(Vector3 target);
+void RotateSelf(Vector3 angle);
+void SetScale(Vector3 newScale);
+void Speak(string content, float stayLength);
+void Speak(string content);
+void Spark(Color particleColor, int numberOfParticles);
+void PlaySound(string soundName);
 
-`void Spark(Color particleColor, int numberOfParticles)`
-	
-`void PlaySound(string soundName)`
-
+void ResetPosition(); //change position to spawn point
+void RandomSetDestination();//get a new random target
+```
 
 
 
