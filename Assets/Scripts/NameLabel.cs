@@ -9,13 +9,11 @@ public class NameLabel : MonoBehaviour
     bool inited = false;
 
     Vector3 rotateAxis;
-    Color labelColor;
+
 
     // Use this for initialization
     void Start()
     {
-        labelColor = Color.HSVToRGB(Random.Range(0, 1f), 1, 1);
-        //labelColor = Color.white;
 
         Renderer rend = GetComponent<Renderer>();
         Shader shader = Shader.Find("Custom/rainbow");

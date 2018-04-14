@@ -79,7 +79,7 @@ public abstract class TOD_PostEffectsBase : MonoBehaviour
     {
         isSupported = true;
 
-        if (!SystemInfo.supportsImageEffects || !SystemInfo.supportsRenderTextures)
+        if (!SystemInfo.supportsImageEffects)
         {
             NotSupported();
             return false;

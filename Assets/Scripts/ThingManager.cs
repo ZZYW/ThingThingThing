@@ -19,9 +19,6 @@ public class ThingManager : MonoBehaviour
 
         //init all things
         Object[] allThingPrefabs = Resources.LoadAll("Things/") as Object[];
-        //var allThings = from t in allThingPrefabs
-                        //where ((GameObject)t).GetComponent<Creature>() != null
-                        //select t;
 
         //Spawn Things
         foreach (GameObject thing in allThingPrefabs)
@@ -38,17 +35,17 @@ public class ThingManager : MonoBehaviour
     {
         AllThings = GameObject.FindGameObjectsWithTag("Thing");
 
-        //generate markers
-        GameObject labelContainers = new GameObject("Label Containers");
-        labelContainers.transform.parent = transform;
-        foreach (GameObject thing in AllThings)
-        {
-            GameObject labelCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            NameLabel nameLabel = labelCube.AddComponent<NameLabel>();
-            labelCube.GetComponent<Collider>().enabled = false;
-            labelCube.transform.parent = labelContainers.transform;
-            nameLabel.Init(thing.transform, 2);
-        }
+        ////generate markers
+        //GameObject labelContainers = new GameObject("Label Containers");
+        //labelContainers.transform.parent = transform;
+        //foreach (GameObject thing in AllThings)
+        //{
+        //    GameObject labelCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //    NameLabel nameLabel = labelCube.AddComponent<NameLabel>();
+        //    labelCube.GetComponent<Collider>().enabled = false;
+        //    labelCube.transform.parent = labelContainers.transform;
+        //    nameLabel.Init(thing.transform, 2);
+        //}
     }
 
     // Update is called once per frame

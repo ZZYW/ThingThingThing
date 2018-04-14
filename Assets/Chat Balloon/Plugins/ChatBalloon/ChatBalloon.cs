@@ -22,7 +22,6 @@ public class ChatBalloon : MonoBehaviour {
 
 	//SetText Cache Variable
 	private Vector2 size = Vector2.zero;
-	private bool overFlow;
     [HideInInspector]
     float showTime = 1f;
 
@@ -54,7 +53,6 @@ public class ChatBalloon : MonoBehaviour {
 		//get inputfield content and fill the bubble text content
 		text.text = _text.Replace("\\n","\n");
 		size = Vector2.zero;
-		overFlow = false;
 
 		text.resizeTextForBestFit = false;
 		text.horizontalOverflow = HorizontalWrapMode.Wrap;

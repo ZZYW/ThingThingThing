@@ -71,7 +71,6 @@ void RandomSetDestination();//get a new random target
 void ResetPosition(); //change position to spawn point
 
 //shape and form
-void RotateSelf(Vector3 angle);
 void SetScale(Vector3 newScale);
 
 //social

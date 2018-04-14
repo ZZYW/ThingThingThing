@@ -9,7 +9,7 @@ public class WaterTriggerEventSender : MonoBehaviour
         if (other.gameObject.CompareTag("Thing"))
         {
             Creature thing = other.gameObject.GetComponent<Creature>();
-            thing.OnTouchWater();
+            thing.OnWaterEnter();
         }
     }
 
@@ -18,7 +18,7 @@ public class WaterTriggerEventSender : MonoBehaviour
         if (other.gameObject.CompareTag("Thing"))
         {
             Creature thing = other.gameObject.GetComponent<Creature>();
-            thing.OnLeaveWater();
+            thing.OnWaterExit();
         }
     }
 

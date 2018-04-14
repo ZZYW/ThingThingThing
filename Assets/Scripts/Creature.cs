@@ -1,10 +1,4 @@
-﻿/*
- * 2018 APR.
- * BY ZZYW @ ASIA ART ARCHIVE
- * HI@ZZYWSTUDIO.COM
- */
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,149 +12,28 @@ using UnityEngine.Events;
 public class Creature : MonoBehaviour
 {
 
-    //distance from camera to object center on 3rd personn camera following mode
-    [HideInInspector]
-    private int cameraOffset = 15;
-    ////how large is my neighbor awareness radar
-    //private int neighborDetectorRadius = 10;
+    protected int cameraOffset = 15;
+    protected float acceleration = 4;
+    protected float drag = 1.8f;
+    protected float mass = 0.2f;
+    protected float getNewDestinationInterval = 5;
+    protected int newDestinationRange = 40;
+    protected bool InWater { get; private set; }
+    protected int NeighborCount { get { return neighborList.Count; } }
 
-    //movement stuff
-    private float acceleration = 4;
-    private float drag = 1.8f; // the bigger, the slower
-    private float mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
-
-    //how often to get a new target to run to
-    private float getNewDestinationInterval = 5; //seconds
-    private int newDestinationRange = 40; // how far the new destination could be 
-
-
-    private bool inWater;
-    private bool stopWalkingAround;
-    private bool stopTalking;
-    private int NeighborCount
-    {
-        get
-        {
-            return neighborList.Count;
-        }
-    }
-
-
-    //flags
     private float speakCDLength;
     private bool speakInCD;
+    private bool stopWalkingAround;
+    private bool stopTalking;
     private ThingMotor motor;
     private SphereCollider neighborDetector;
     private ChatBalloon chatBalloon;
-    private BoxCollider boxCollider;
     private ParticleSystem explodePS;
     private AudioSource audioSource;
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
 
-
-    public int DesiredFollowDistance
-    {
-        get
-        {
-            return cameraOffset;
-        }
-    }
-
-
-
-
-
-    //---------------------------------------------------------------------------------
-    //  YOUR ZONE! DO MOST OF THE STUFF HERE
-    //---------------------------------------------------------------------------------
-
-    //Only execute once at the start of the story
-    void Init()
-    {
-        Speak("I am born!");
-        InvokeRepeating("RandomSetDestination", 0, getNewDestinationInterval);
-    }
-
-
-    void Repeat()
-    {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-
-        }
-
-        if (TOD_Data.main.IsNight)
-        {
-
-        }
-
-        if (TOD_Data.main.IsDay)
-        {
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SetRandomTarget(newDestinationRange);
-        }
-    }
-
-
-    private void OnMeetingSomeone(GameObject other)
-    {
-        //DO STUFF
-        Speak("I met " + other.name, 2f);
-    }
-
-    private void OnLeavingSomeone(GameObject other)
-    {
-        //DO STUFF
-        Spark(Color.red, 15);
-    }
-
-    private void OnNeighborSpeaking()
-    {
-        //DO STUFF
-        PlaySound("glitchedtones_Robot Chatter 01");
-    }
-
-    public void OnTouchWater()
-    {
-        inWater = true;
-        Invoke("RescueFromWater", 60f);
-        Speak("I am in water!");
-    }
-
-    public void OnLeaveWater()
-    {
-        inWater = false;
-        Speak("I am not in water anymore!");
-    }
-
-    private void OnNeigborSparkingParticles()
-    {
-        //DO STUFF
-        Speak("Hey You sparked!");
-    }
-
-    private void OnSunset()
-    {
-        //DO STUFF
-        PlaySound("zapsplat_multimedia_game_blip_generic_tone_007_17643");
-        Speak("I love sunset!", 2f);
-    }
-
-    private void OnSunrise()
-    {
-        //DO STUFF
-        PlaySound("cartoon-pinch");
-    }
-
-
-    //---------------------------------------------------------------------------------
-    //  YOUR ZONE ENDS HERE!!!
-    //---------------------------------------------------------------------------------
+    public int DesiredFollowDistance { get { return cameraOffset; } }
 
 
 
@@ -184,6 +57,7 @@ public class Creature : MonoBehaviour
     {
         gameObject.tag = "Thing";
         neighborList = new List<GameObject>();
+        TTTAwake();
     }
 
     private void Start()
@@ -191,23 +65,18 @@ public class Creature : MonoBehaviour
         //neighbor detector
         neighborDetector = GetComponent<SphereCollider>();
         neighborDetector.isTrigger = true;
-        //neighborDetector.radius = neighborDetectorRadius;
 
         //motor
         motor = GetComponent<ThingMotor>();
-        acceleration = Random.Range(3f, 4f);
         motor.SetAccel(acceleration);
         motor.rb.drag = drag;
         motor.rb.mass = mass;
-
-        boxCollider = gameObject.GetComponent<BoxCollider>();
 
         //Chat Ballon
         chatBalloon = gameObject.GetComponentInChildren<ChatBalloon>();
         speakCDLength = Random.Range(8f, 13f);
 
         //Instantiating Particle Object
-        //TODO: add particle system prefab to each models
         explodePS = GetComponentInChildren<ParticleSystem>();
 
         //Sound
@@ -215,8 +84,7 @@ public class Creature : MonoBehaviour
         audioSource.spatialBlend = 0.9f;
         audioSource.maxDistance = 35;
 
-
-        Init();
+        TTTStart();
     }
     private void Update()
     {
@@ -225,18 +93,9 @@ public class Creature : MonoBehaviour
         {
             ResetPosition();
         }
-        Repeat();
+        TTTUpdate();
     }
 
-
-
-
-
-    //---------------------------------------------------------------------------------
-    //---------------------------------------------------------------------------------
-    //---------------------------------------------------------------------------------
-    // ALERT:  DEVELOPER STUFF 
-    //---------------------------------------------------------------------------------
 
     private void OnSomeoneSpeaking(GameObject who)
     {
@@ -279,12 +138,37 @@ public class Creature : MonoBehaviour
         }
     }
 
+    private void RescueFromWater()
+    {
+        if (InWater)
+        {
+            ResetPosition();
+        }
+    }
 
-    //---------------------------------------------------------------------------------
-    //  BEHAVIOURS
-    //---------------------------------------------------------------------------------
+    private void UnlockSpeakCD()
+    {
+        speakInCD = false;
+    }
 
-    private void SetTarget(Vector3 target)
+
+
+    //TODO: not to be called directly by other classes
+    internal void OnWaterEnter()
+    {
+        InWater = true;
+        Invoke("RescueFromWater", 60f);
+        OnTouchWater();
+    }
+
+    internal void OnWaterExit()
+    {
+        InWater = false;
+        OnLeaveWater();
+    }
+
+
+    protected void SetTarget(Vector3 target)
     {
         if (!stopWalkingAround)
         {
@@ -292,53 +176,44 @@ public class Creature : MonoBehaviour
         }
     }
 
-    private void StopWalking()
+    protected void StopWalking()
     {
         stopWalkingAround = true;
         motor.Stop();
     }
 
-    /// <summary>
-    /// stop walking for certain seconds
-    /// </summary>
-    /// <param name="seconds">Seconds.</param>
-    private void StopWalking(float seconds)
+    protected void StopWalking(float seconds)
     {
         StopWalking();
         Invoke("RestartWalking", seconds);
     }
 
-    private void Mute()
+    protected void Mute()
     {
         stopTalking = true;
     }
 
-    private void DeMute()
+    protected void DeMute()
     {
         stopTalking = false;
     }
 
-    private void RestartWalking()
+    protected void RestartWalking()
     {
         stopWalkingAround = false;
     }
 
-    private void SetRandomTarget(float area)
+    protected void SetRandomTarget(float area)
     {
         SetTarget(new Vector3(Random.Range(-area, area), 0, Random.Range(-area, area)));
     }
 
-    private void RotateSelf(Vector3 angle)
-    {
-        transform.Rotate(angle);
-    }
-
-    private void SetScale(Vector3 newScale)
+    protected void SetScale(Vector3 newScale)
     {
         transform.localScale = newScale;
     }
 
-    private void Speak(string content, float stayLength)
+    protected void Speak(string content, float stayLength)
     {
         if (!speakInCD || !stopTalking)
         {
@@ -349,56 +224,69 @@ public class Creature : MonoBehaviour
         }
     }
 
-    private void Speak(string content)
+    protected void Speak(string content)
     {
         Speak(content, 2f);
     }
 
-    private void Spark(Color particleColor, int numberOfParticles)
+    protected void Spark(Color particleColor, int numberOfParticles)
     {
         var particleMain = explodePS.main;
         particleMain.startColor = particleColor;
-
         var newBurst = new ParticleSystem.Burst(0f, numberOfParticles);
         explodePS.emission.SetBurst(0, newBurst);
         explodePS.Play();
         TTTEventsManager.main.SomeoneSparked(gameObject);
     }
 
-    private void CreateCube()
+    protected void CreateCube()
     {
-        //GameObject newCube = 
+        //TODO
     }
 
-    private void PlaySound(string soundName)
+    protected void ResetColor()
+    {
+        //TODO
+    }
+
+    protected void ChangeColor(Color c)
+    {
+        //TODO
+    }
+
+    protected void PlaySound(string soundName)
     {
         audioSource.clip = Resources.Load(soundFilePath + soundName) as AudioClip;
         audioSource.Play();
     }
 
-    private void RandomSetDestination()
+    protected void RandomSetDestination()
     {
         SetRandomTarget(newDestinationRange);
     }
 
-    private void ResetPosition()
+    protected void ResetPosition()
     {
         motor.rb.position = ThingManager.main.transform.position;
+        print(gameObject.name + " position reset");
     }
 
 
-    private void RescueFromWater()
-    {
-        if (inWater)
-        {
-            ResetPosition();
-        }
-    }
 
 
-    private void UnlockSpeakCD()
-    {
-        speakInCD = false;
-    }
+    //VIRTUAL
+    protected virtual void TTTAwake() { }
+    protected virtual void TTTStart() { }
+    protected virtual void TTTUpdate() { }
+    protected virtual void OnMeetingSomeone(GameObject other) { }
+    protected virtual void OnLeavingSomeone(GameObject other) { }
+    protected virtual void OnNeighborSpeaking() { }
+    protected virtual void OnNeigborSparkingParticles() { }
+    protected virtual void OnTouchWater() { }
+    protected virtual void OnLeaveWater() { }
+    protected virtual void OnSunset() { }
+    protected virtual void OnSunrise() { }
+
+
 
 }
