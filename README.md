@@ -30,54 +30,108 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 [Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)
 
 
+## Where to put my files
 
+#### Where to put my prefabs:
+`Resources/Things/[here]`
 
-## Public Properties
+#### Where to put my materials and scripts
+`CREATORS/[your first name]/[here]`
 
-### Environment
-
-`float TOD_Data.main.TimeNow //e.x. 3:30PM will be represented as 15.5`
-
-`bool TOD_Data.main.IsDay`
-
-`bool TOD_Data.main.IsNight`
-
-### Social
-
-`int NeighborCount //how many neighbors do you have currently`
-
-### Events
-
-`void OnSunset();`
-
-`void OnSunrise();`
-
-`void OnMeetingSomeone(GameObject other);`
-
-`void OnLeavingSomeone(GameObject other);`
-
-`void OnNeighborSpeaking();`
-
-`void OnNeigborSparkingParticles();`
-
-
-### Ready to Use Behaviours
-
-`void SetTarget(Vector3 target)`
-
-`void RotateSelf(Vector3 angle)`
-
-`void SetScale(Vector3 newScale)`
-
-`void Speak(string content, float stayLength)`
-`void Speak(string content)`
-
-`void Spark(Color particleColor, int numberOfParticles)`
-	
-`void PlaySound(string soundName)`
+#### Where to put my sound files
+`Resources/Sounds/[here]`
 
 
 
+
+## Properties
+
+
+```csharp
+//Environment
+float TOD_Data.main.TimeNow; //e.x. 3:30PM will be represented as 15.5
+bool TOD_Data.main.IsDay;
+bool TOD_Data.main.IsNight; 
+bool InWater; //if is in water now
+int NeighborCount; //how many neighbors do you have currently
+```
+
+## Events
+
+```csharp
+void OnSunset();
+void OnSunrise();
+void OnMeetingSomeone(GameObject other);
+void OnLeavingSomeone(GameObject other);
+void OnNeighborSpeaking();
+void OnNeigborSparkingParticles();
+void OnTouchWater();
+void OnLeaveWater();
+```
+
+## Ready to Use Methods
+
+```csharp
+void SetTarget(Vector3 target);
+void RotateSelf(Vector3 angle);
+void SetScale(Vector3 newScale);
+void Speak(string content, float stayLength);
+void Speak(string content);
+void Spark(Color particleColor, int numberOfParticles);
+void PlaySound(string soundName);
+
+void ResetPosition(); //change position to spawn point
+void RandomSetDestination();//get a new random target
+```
+
+
+
+# Tips
+
+## How to use your own sound files
+
+Find a sound file that is one of the formats below
+
+- .Aif.
+- .wav.
+- .mp3.
+- .ogg.
+
+Compress it if necessary, make sure its file size is smaller than 2 MB, and move it into `Resources/Sounds` folder.
+
+Use `PlaySound(“filename”)` to play your sound.
+
+
+## Some Basic about C# Programming
+
+
+[If Else Statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else)
+AND
+[For Loop](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for)
+
+OR
+
+[Everything Else About C#](https://docs.microsoft.com/en-us/dotnet/csharp/index)
+
+
+## Some useful methods from Unity
+
+```csharp
+
+//Print things to Console for debugging
+print(object message);
+
+//Invokes the method methodName in time seconds.
+Invoke(string methodName, float time);
+
+//Invokes the method methodName in time seconds, then repeatedly every repeatRate seconds.
+InvokeRepeating(string methodName, float time, float repeatRate);
+
+//Cancels all Invoke calls on this MonoBehaviour.
+CancelInvoke();
+
+
+```
 
 
 

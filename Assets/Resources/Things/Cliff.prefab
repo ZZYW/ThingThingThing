@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 82436471216955988}
   - component: {fileID: 114493559642376220}
   - component: {fileID: 114820486590293818}
+  - component: {fileID: 65675290740083498}
   m_Layer: 0
   m_Name: Cliff
   m_TagString: Untagged
@@ -187,6 +188,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65675290740083498
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690230917902656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7290623, y: 2.9882014, z: 5.8412066}
+  m_Center: {x: 0, y: -0.0000052452087, z: 0}
 --- !u!82 &82205340522454160
 AudioSource:
   m_ObjectHideFlags: 1
@@ -456,6 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d4c8c637cc6485490d3138de56adaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!135 &135039873268935726
 SphereCollider:
   m_ObjectHideFlags: 1
