@@ -48,7 +48,7 @@ public class CameraSwitcher : MonoBehaviour
         camController.target = oneRandomThing.transform;
 
         float desiredFollowDistance = 1;
-        desiredFollowDistance =  oneRandomThing.GetComponent<Creature>().DesiredFollowDistance;
+        desiredFollowDistance =  oneRandomThing.GetComponent<Thing>().DesiredFollowDistance;
         camController.desiredDistance = desiredFollowDistance;
     }
 

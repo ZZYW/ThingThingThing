@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThingDummy : Creature {
+public class ThingDummy : Thing {
 
     protected override void TTTAwake()
     {
@@ -17,12 +17,14 @@ public class ThingDummy : Creature {
         newDestinationRange = 40; // how far the new destination could be 
     }
 
+    //only run once at the start
     protected override void TTTStart()
     {
         //we recommend keep this one, or you can write your own rule of moving
         InvokeRepeating("RandomSetDestination", 0, getNewDestinationInterval); //call "RandomSetDestination" method every "getNewDestinationInterval" seconds
     }
 
+    //run about 40~60 times per second, infinitely
     protected override void TTTUpdate()
     {
 

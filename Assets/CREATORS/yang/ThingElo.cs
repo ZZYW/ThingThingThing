@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThingElo : Creature
+public class ThingElo : Thing
 {
 
     protected override void TTTAwake()

@@ -9,7 +9,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(ThingMotor))]
-public class Creature : MonoBehaviour
+public class Thing : MonoBehaviour
 {
 
     protected int cameraOffset = 15;
@@ -176,15 +176,15 @@ public class Creature : MonoBehaviour
         }
     }
 
-    protected void StopWalking()
+    protected void StopMoving()
     {
         stopWalkingAround = true;
         motor.Stop();
     }
 
-    protected void StopWalking(float seconds)
+    protected void StopMoving(float seconds)
     {
-        StopWalking();
+        StopMoving();
         Invoke("RestartWalking", seconds);
     }
 
@@ -268,7 +268,7 @@ public class Creature : MonoBehaviour
     protected void ResetPosition()
     {
         motor.rb.position = ThingManager.main.transform.position;
-        print(gameObject.name + " position reset");
+        Debug.LogWarning(gameObject.name + " position reset");
     }
 
 

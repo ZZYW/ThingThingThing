@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(Creature))]
+[CustomEditor(typeof(Thing))]
 public class CreatureEditor : Editor
 {
 
@@ -12,7 +12,7 @@ public class CreatureEditor : Editor
     {
         DrawDefaultInspector();
 
-        Creature creature = (Creature)target;
+        Thing creature = (Thing)target;
         //if (GUILayout.Button("Speak"))
         //{
         //    creature.Speak("AHA!", 2f);

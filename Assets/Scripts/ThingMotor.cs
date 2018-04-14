@@ -8,7 +8,7 @@ public class ThingMotor : MonoBehaviour
 {
 
     Vector3 target;
-    float acceleration = 2;
+    float acceleration;
     bool seekingTarget = true;
     float rotationSmoothSpeed = 3.14f / 2f;
 
@@ -61,8 +61,8 @@ public class ThingMotor : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        //Gizmos.DrawLine(transform.position, target);
-        //Gizmos.DrawSphere(target, 1f);
+        Gizmos.DrawLine(transform.position, target);
+        Gizmos.DrawSphere(target, 0.2f);
     }
 
     public void Stop()

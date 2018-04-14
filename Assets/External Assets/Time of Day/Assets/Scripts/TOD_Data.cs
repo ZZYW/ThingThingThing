@@ -51,7 +51,7 @@ public class TOD_Data : MonoBehaviour
         float hour = sky.Cycle.Hour;
         if (hour > 19f && hour < 19.2f && !sunsetReported)
         {
-            Debug.Log("sunset!");
+            print("------Sunset------");
             if (OnSunset != null) OnSunset();
             sunsetReported = true;
             IsDay = false;
@@ -61,7 +61,7 @@ public class TOD_Data : MonoBehaviour
 
         if (hour > 7f && hour < 7.2f && !sunriseReported)
         {
-            Debug.Log("sunrise");
+            print("------Sunrise------");
             if (OnSunrise != null) OnSunrise();
             IsDay = true;
             IsNight = false;
