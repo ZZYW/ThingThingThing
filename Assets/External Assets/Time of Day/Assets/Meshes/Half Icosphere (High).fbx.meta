@@ -12,6 +12,7 @@ ModelImporter:
     4300002: Icosphere
     7400000: Default Take
     9500000: //RootNode
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 0
