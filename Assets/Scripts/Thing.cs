@@ -32,7 +32,8 @@ public class Thing : MonoBehaviour
     private AudioSource audioSource;
     private List<GameObject> neighborList;
     private string soundFilePath = "Sounds/";
-
+    private Color originalColor;
+    private Renderer rend;
     public int DesiredFollowDistance { get { return cameraOffset; } }
 
 
@@ -83,6 +84,11 @@ public class Thing : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.spatialBlend = 0.9f;
         audioSource.maxDistance = 35;
+
+        //color
+        rend = GetComponent<Renderer>();
+        if (rend == null) rend = GetComponentInChildren<Renderer>();
+        originalColor = rend.material.color;
 
         TTTStart();
     }
@@ -246,12 +252,12 @@ public class Thing : MonoBehaviour
 
     protected void ResetColor()
     {
-        //TODO
+        rend.material.color = originalColor;
     }
 
     protected void ChangeColor(Color c)
     {
-        //TODO
+        rend.material.color = c;
     }
 
     protected void PlaySound(string soundName)

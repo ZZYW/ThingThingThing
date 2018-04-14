@@ -11,7 +11,7 @@ public class ThingElo : Thing
         cameraOffset = 15; //distance from camera to object center on 3rd personn camera following mode
 
         //Movement
-        acceleration = Random.Range(3.5f, 5f); //use Random.range to get a random number within a range
+        acceleration = 3f; //use Random.range to get a random number within a range
         drag = 1.8f; // the bigger, the slower
         mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
         getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
@@ -37,12 +37,12 @@ public class ThingElo : Thing
 
         if (TOD_Data.main.IsNight)
         {
-
+           
         }
 
         if (TOD_Data.main.IsDay)
         {
-
+            
         }
 
         if (InWater)
@@ -76,12 +76,12 @@ public class ThingElo : Thing
 
     protected override void OnTouchWater()
     {
-
+        ChangeColor(Color.blue);
     }
 
     protected override void OnLeaveWater()
     {
-
+        ResetColor();
     }
 
     protected override void OnNeigborSparkingParticles()

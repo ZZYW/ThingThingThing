@@ -10,7 +10,7 @@ public class ThingDummy : Thing {
         cameraOffset = 15; //distance from camera to object center on 3rd personn camera following mode
 
         //Movement
-        acceleration = Random.Range(3.5f, 5f); //use Random.range to get a random number within a range
+        acceleration = Random.Range(2.5f, 3f); //use Random.range to get a random number within a range
         drag = 1.8f; // the bigger, the slower
         mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
         getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
