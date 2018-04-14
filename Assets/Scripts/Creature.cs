@@ -235,10 +235,7 @@ public class Creature : MonoBehaviour
         Repeat();
     }
 
-    void RandomSetDestination()
-    {
-        SetRandomTarget(newDestinationRange);
-    }
+
 
 
 
@@ -263,7 +260,6 @@ public class Creature : MonoBehaviour
             OnNeigborSparkingParticles();
         }
     }
-
 
 
     private void OnTriggerEnter(Collider other)
@@ -347,6 +343,17 @@ public class Creature : MonoBehaviour
         audioSource.Play();
     }
 
+    private void RandomSetDestination()
+    {
+        SetRandomTarget(newDestinationRange);
+    }
+
+    private void ResetPosition()
+    {
+        motor.rb.position = ThingManager.main.transform.position;
+    }
+
+
     private void RescueFromWater()
     {
         if (InWater)
@@ -355,10 +362,6 @@ public class Creature : MonoBehaviour
         }
     }
 
-    private void ResetPosition()
-    {
-        motor.rb.position = ThingManager.main.transform.position;
-    }
 
     private void UnlockSpeakCD()
     {
