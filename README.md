@@ -77,6 +77,8 @@ void SetScale(Vector3 newScale);
 //social
 void Speak(string content, float stayLength);
 void Speak(string content);
+void Mute(); //Speak no longer works
+void DeMute(); //regain ability to Speak again
 void Spark(Color particleColor, int numberOfParticles);
 void PlaySound(string soundName);
 

@@ -40,6 +40,8 @@ public class TOD_Data : MonoBehaviour
     void Start()
     {
         sky = GetComponent<TOD_Sky>();
+        IsDay = true;
+        IsNight = false;
     }
 
     // Update is called once per frame
