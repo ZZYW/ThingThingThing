@@ -11,6 +11,15 @@ public class ThingJMParticle : Thing {
 	//Protected , other function cannot intrude
 
 	//f for float
+	// Use this for initialization
+
+	public float degreePerSecond =15.0f;
+	public float amplitude =10.0f;
+	public float frequency = 1f;
+	//position storage variables
+	Vector3 posOffset = new Vector3 ();
+	Vector3 tempPos = new Vector3 ();
+
 
 	protected override void TTTAwake()
 	{
@@ -18,7 +27,7 @@ public class ThingJMParticle : Thing {
 		// how far the following camera will be from muy object
 		cameraOffset = 15;
 		acceleration = 2f;
-		drag = 1.0f; //the bigger the drag is, the slower your thing moves
+		drag = 0.2f; //the bigger the drag is, the slower your thing moves
 		mass = 0.2f;
 
 
@@ -36,6 +45,11 @@ public class ThingJMParticle : Thing {
 
 		Speak ("Uh La La ~! Moon is here.");
 		InvokeRepeating ("RandomSetDestination", 0f, 10f);
+		cameraOffset = 15;
+		acceleration = 3f;
+		drag = 0.2f; //the bigger the drag is, the slower your thing moves
+		mass = 0.2f;
+
 	}
 
 	protected override void TTTUpdate()
@@ -43,6 +57,9 @@ public class ThingJMParticle : Thing {
 		//		base.TTTUpdate();
 		//		everythin inside this code block will be exe many times
 		//		about ~60sec
+
+		posOffset = transform.position;
+		floating();
 	}
 		
 		//	below are MakeAllRainbow events
@@ -88,7 +105,7 @@ public class ThingJMParticle : Thing {
 
 	protected override void OnNeighborSpeaking()
 	{
-		for(int i = 0; i<5; i++)//exe 5 times at a time
+		for(int i = 0; i<3; i++)//exe 5 times at a time
 		{
 			
 		CreateCube ();
@@ -98,6 +115,17 @@ public class ThingJMParticle : Thing {
 	protected override void OnNeigborSparkingParticles()
 	{
 		//base.OnNeigborSparkingParticles();
+	}
+
+	void floating(){
+		transform.Rotate (new Vector3 (0f, Time.deltaTime * degreePerSecond, 0f), Space.World);
+
+
+		//Float up/down with a Sin()
+		tempPos = posOffset;
+		tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+		transform.position = tempPos;
 	}
 
 }
