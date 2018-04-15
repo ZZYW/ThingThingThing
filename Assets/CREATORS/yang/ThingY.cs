@@ -5,6 +5,9 @@ using UnityEngine;
 public class ThingY : Thing
 {
 
+    Vector3 originalScale;
+
+    float sinIndex = 0;
 
     //once
     protected override void TTTAwake()
@@ -31,7 +34,9 @@ public class ThingY : Thing
         Speak("I am born!!!!!!!!!!!!!!!");
 
         InvokeRepeating("RandomSetDestination", 0f, 10f);
+        InvokeRepeating("UpUp", 0, 3f);
 
+        originalScale = transform.localScale;
     }
 
     protected override void TTTUpdate()
@@ -39,6 +44,15 @@ public class ThingY : Thing
         //base.TTTUpdate();
         // evertying inside this code block will be exe many many times
         // about ~ 60 times per second
+
+
+
+    }
+
+    void UpUp()
+    {
+        float upforwardForceMag = 50;
+        AddForce(Vector3.up * upforwardForceMag);
     }
 
     // below are all events
@@ -59,20 +73,25 @@ public class ThingY : Thing
 
     protected override void OnSunset()
     {
-        // this code will be triggered when the sun is setting
-        //base.OnSunset();
+        for (int i = 0; i < 2; i++)
+        {
+            CreateCube();
+        }
+
+        transform.localScale = originalScale * 2;
     }
 
     protected override void OnSunrise()
     {
-        Spark(Color.yellow, 50);
-        Speak("i love the sun");
+        transform.localScale = originalScale;
+
+        Speak("aaaaa");
     }
 
     protected override void OnTouchWater()
     {
-        //base.OnTouchWater();
         ChangeColor(Color.red);
+        PlaySound("zapsplat_multimedia_game_blip_generic_tone_007_17643");
     }
 
     protected override void OnLeaveWater()
@@ -83,16 +102,11 @@ public class ThingY : Thing
 
     protected override void OnNeighborSpeaking()
     {
-        //base.OnNeighborSpeaking();
-        for (int i = 0; i < 5; i++)
-        {
-            CreateCube();
-        }
-
+        CreateCube();
     }
     protected override void OnNeigborSparkingParticles()
     {
-        //base.OnNeigborSparkingParticles();
+        CreateCube();
     }
 
 

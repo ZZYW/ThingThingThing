@@ -11,6 +11,7 @@ public class ThingMotor : MonoBehaviour
     float acceleration;
     bool seekingTarget = true;
     float rotationSmoothSpeed = 3.14f / 2f;
+    bool facingTarget = true;
 
     [HideInInspector]
     public Rigidbody rb;
@@ -50,9 +51,13 @@ public class ThingMotor : MonoBehaviour
             diff *= acceleration;
             force += diff;
 
-            Quaternion targetRotation = Quaternion.LookRotation(diff);
-            Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothSpeed);
-            rb.rotation = newRotation;
+            if (facingTarget)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(diff);
+                Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothSpeed);
+                rb.rotation = newRotation;
+            }
+
         }
 
         rb.AddForce(force);
@@ -63,6 +68,11 @@ public class ThingMotor : MonoBehaviour
     {
         Gizmos.DrawLine(transform.position, target);
         Gizmos.DrawSphere(target, 0.2f);
+    }
+
+    public void FacingTarget(bool value)
+    {
+        facingTarget = value;
     }
 
     public void Stop()

@@ -18,6 +18,7 @@ public class Thing : MonoBehaviour
     protected float mass = 0.2f;
     protected float getNewDestinationInterval = 5;
     protected int newDestinationRange = 40;
+    protected bool alwaysFacingTarget = true;
     protected Color myCubeColor;
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
@@ -73,6 +74,7 @@ public class Thing : MonoBehaviour
         motor.SetAccel(acceleration);
         motor.rb.drag = drag;
         motor.rb.mass = mass;
+        motor.FacingTarget(alwaysFacingTarget);
 
         //Chat Ballon
         chatBalloon = gameObject.GetComponentInChildren<ChatBalloon>();
@@ -215,6 +217,11 @@ public class Thing : MonoBehaviour
         SetTarget(new Vector3(Random.Range(-area, area), 0, Random.Range(-area, area)));
     }
 
+    protected void AddForce(Vector3 f)
+    {
+        motor.rb.AddForce(f);
+    }
+
     protected void SetScale(Vector3 newScale)
     {
         transform.localScale = newScale;
@@ -253,6 +260,7 @@ public class Thing : MonoBehaviour
         acube.transform.position = transform.position;
         acube.AddComponent<Rigidbody>();
         acube.AddComponent<ProducedCube>().Init(myCubeColor);
+        Hud.main.OneMoreCube();
     }
 
     protected void ResetColor()
