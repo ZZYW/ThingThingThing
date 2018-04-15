@@ -97,8 +97,7 @@ public class Thing : MonoBehaviour
     }
     private void Update()
     {
-        //avoid dropping
-        if (transform.position.y < -9)
+        if (transform.position.y < -9 || transform.position.y > 157)
         {
             ResetPosition();
         }
@@ -279,7 +278,8 @@ public class Thing : MonoBehaviour
         audioSource.Play();
     }
 
-    protected ThingMotor GetMotor(){
+    protected ThingMotor GetMotor()
+    {
         return motor;
     }
 
