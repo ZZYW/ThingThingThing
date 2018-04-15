@@ -279,6 +279,10 @@ public class Thing : MonoBehaviour
         audioSource.Play();
     }
 
+    protected ThingMotor GetMotor(){
+        return motor;
+    }
+
     protected void RandomSetDestination()
     {
         SetRandomTarget(newDestinationRange);
