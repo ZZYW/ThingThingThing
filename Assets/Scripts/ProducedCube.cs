@@ -27,7 +27,7 @@ public class ProducedCube : MonoBehaviour
         rend.material.SetColor("_RainbowColor2", Color.white);
         rend.material.SetColor("_RainbowColor3", c);
 
-        Invoke("DeleteMyself", 600);
+        Invoke("DeleteMyself", 60);
     }
 
 
