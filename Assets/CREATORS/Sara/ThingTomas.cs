@@ -76,10 +76,7 @@ public class ThingTomas : Thing {
 
 	protected override void OnNeighborSpeaking()
 	{
-		//base.OnNeighborSpeaking();
-		for (int i = 0; 1 < 5; i++) {
-			CreateCube ();
-		}
+		CreateCube ();
 	}
 
 	protected override void OnNeigborSparkingParticles()
