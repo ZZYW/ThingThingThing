@@ -10,9 +10,9 @@ public class Sheep_mushy : Thing {
 		// how far the following camera will be from my object
 		cameraOffset = 15;
 
-		acceleration = 70f;
-		drag = 3f; // the bigger the drag is, the slower your thing moves
-		mass = 0.2f;
+		acceleration = 60f;
+		drag = 1f; // the bigger the drag is, the slower your thing moves
+		mass = 0.1f;
 
 		getNewDestinationInterval = 5; // in seconds
 		newDestinationRange = 100;
@@ -55,17 +55,19 @@ public class Sheep_mushy : Thing {
 	protected override void OnLeavingSomeone(GameObject other)
 	{
 		//base.OnLeavingSomeone(other);
+		Speak ("Bye bye!");
 	}
 
 	protected override void OnSunset()
 	{
 		//this code will be triggered when the sun is setting
 		//base.OnSunset()
+		ChangeColor(Color.white);
 	}
 
 	protected override void OnSunrise()
 	{
-		Spark (Color.yellow, 50);
+		Spark (Color.red, 50);
 		Speak ("Alo Alo");
 	}
 
@@ -73,24 +75,25 @@ public class Sheep_mushy : Thing {
 	{
 		//base.OnTouchWater();
 		ChangeColor(Color.red);
+		StopMoving ();
 	}
 
 	protected override void OnLeaveWater()
 	{
 		//base.OnNeighborSpeaking();
+		Spark (Color.blue, 30);
 	}
 
 	protected override void OnNeighborSpeaking()
 	{
 		//base.OnNeighborSpeaking();
-		for (int i = 0; i < 5; i++) {
-			CreateCube ();
-		}
+		CreateCube();
 
 	}
 
 	protected override void OnNeigborSparkingParticles()
 	{
 		//base.OnNeighborSparkingParticles();
+		Speak ("That looks awesome!");
 	}
 }
