@@ -60,4 +60,11 @@ public class JZ : Thing {
 
 
 
+
+protected override void OnNeighborSpeaking(){
+	CreateCube ();
+
+}
+
+
 }
