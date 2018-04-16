@@ -2,9 +2,11 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [About The Event](#about-the-event)
+- [About The Project](#about-the-project)
+- [Collaborators and Their _Things_](#collaborators-and-their-_things_)
+- [Past Events](#past-events)
 - [Steps for participants:](#steps-for-participants)
-- [Class `Creature`](#class-creature)
+- [Code Document](#code-document)
   - [Properties/Fields](#propertiesfields)
   - [Events](#events)
   - [Ready to Use Methods](#ready-to-use-methods)
@@ -20,19 +22,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# About The Event
 
-Saturday, April 14 and Sunday, April 15, 1:00-5:00pm
+# About The Project
 
-Asia Art Archive in America
-
-43 Remsen Street, Brooklyn, NY 11201
-
-
-
-This event is free and open to the public, but space is limited and registration is required
-
-Please register [here](https://www.eventbrite.com/e/thingthingthing-unity-workshop-and-collective-creation-tickets-44722475127)
 
 An art video game is like daydreaming – a dream that one can go back to over and over again. Objects within the Game are external manifestations of their creators’ spirits. While their creators are tied up with the reality of life, these tiny Objects awaken in this wondrous space of “grandeur” (Gustave Bachelard, 1948), brought to life through the imagination of the Game creators. They twist, turn, wiggle, roll around. On a sunny day, they wander within the Game land, make a friend, sing a song by the river. Gently, they bring together heaven and earth, and open their creators up to the future of reality.
 
@@ -45,6 +37,37 @@ Day Two (Sunday, April 15): participants will be supplied with simple computer c
 Throughout the entire workshop, the artists will collect the 3D models, or “Things”, made by the participants and place them into a virtual world. At the end of the two-day workshop, we will play the final version of the Game in AAAinA’s screening room and watch our models explore their world and meet each other – thing to thing, while we also get to know one another, human to human.
 
 
+----------
+
+# Collaborators and Their _Things_
+
+- Zhenzhen  `PrinceZ`
+- Yang `Elo` & `Dummy`
+- Jingling `JZ` & `JZPig`
+- Evian `Cloud Cloud` & `Sheep_Mushy`
+- Sara `Margarita` & `Tomas`
+- JHMun `Chicken`
+
+----------
+
+
+# Past Events
+
+-  Saturday, April 14 and Sunday, April 15, 1:00-5:00pm    |   Asia Art Archive in America   |   43 Remsen Street, Brooklyn, NY 11201
+
+
+
+----------
+
+
+#Release
+
+[v1.0](https://github.com/ZZYW/thing-thing-thing/releases)
+[Video](https://vimeo.com/264903915)
+
+
+------------
+
 
 # Steps for participants:
 
@@ -52,7 +75,10 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 
 
 
-# Class `Creature`
+----------
+
+
+#  Technical Document
 
 
 ## Properties/Fields
@@ -112,6 +138,10 @@ void CreateCube(); //throw a cube on the small ground
 
 
 # Tips
+
+
+----------
+
 
 ## How to keep your cloned repository up to date
 
@@ -179,7 +209,6 @@ CancelInvoke();
 
 
 ```
-
 
 
 
