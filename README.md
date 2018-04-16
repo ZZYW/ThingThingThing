@@ -60,7 +60,7 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 ----------
 
 
-#Release
+# Release
 
 [v1.0](https://github.com/ZZYW/thing-thing-thing/releases)
 [Video](https://vimeo.com/264903915)
