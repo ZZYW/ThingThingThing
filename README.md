@@ -114,8 +114,8 @@ void OnLeaveWater();
 
 //movement
 void SetTarget(Vector3 target);
-void StopWalking();
-void StopWalking(float forHowManySeconds);
+void StopMoving();
+void StopMoving(float forHowManySeconds);
 void RestartWalking();
 void RandomSetDestination();//get a new random target
 void ResetPosition(); //change position to spawn point
