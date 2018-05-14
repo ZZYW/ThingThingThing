@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AmbientColorInfluence: 0.5
+    - _AmbientColorInfluence: 0.215
     - _BumpScale: 1
     - _ColorChangeCutoff: 0.5
     - _ColorSculpt: 0
@@ -114,7 +114,7 @@ Material:
     - _heightFogEnd: 1
     - _heightFogStart: 0
     m_Colors:
-    - _Color: {r: 0.13235295, g: 0.13235295, b: 0.13235295, a: 1}
+    - _Color: {r: 0.09558821, g: 0.09558821, b: 0.09558821, a: 1}
     - _DustColor: {r: 0.16176468, g: 0.052335635, b: 0.052335635, a: 0}
     - _DustDirection: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
