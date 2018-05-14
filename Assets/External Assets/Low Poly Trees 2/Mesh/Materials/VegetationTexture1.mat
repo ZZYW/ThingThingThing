@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VegetationTexture1
-  m_Shader: {fileID: 4800000, guid: a9face1d2e534934a801438ae253ba8a, type: 3}
+  m_Shader: {fileID: 4800000, guid: de1e8eb6aea0d469abac8370e8164433, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -59,13 +59,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AmbientColorInfluence: 0.331
     - _BumpScale: 1
+    - _ColorSculpt: 0
     - _Cutoff: 0.5
+    - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.42
     - _GlossyReflections: 1
+    - _LightColorBrightness: 1
+    - _LightCutoff: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -79,6 +84,11 @@ Material:
     - _UVSec: 0
     - _YOffset: 0.26
     - _ZWrite: 1
+    - _node_2797: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.7655171, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GlitchColor: {r: 1, g: 0, b: 0, a: 1}
+    - _node_2284: {r: 0, g: 0, b: 0, a: 1}
+    - _node_8193: {r: 0, g: 0.21379304, b: 1, a: 1}
+    - _shadowcolor: {r: 0, g: 0, b: 0, a: 1}

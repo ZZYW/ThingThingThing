@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: field-green
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 4800000, guid: de1e8eb6aea0d469abac8370e8164433, type: 3}
+  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _REPLACEVCS_ON _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,22 +55,41 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AmbientColorInfluence: 0.5
     - _BumpScale: 1
+    - _ColorSculpt: 0
     - _Cutoff: 0.5
+    - _DarkColorBrightness: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FOGTOGGLE: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.88
     - _GlossyReflections: 0
+    - _LightColorBrightness: 1
+    - _LightCutoff: 0.83
     - _Metallic: 0.57
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _REPLACEVCs: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _heightFogEnd: 1
+    - _heightFogStart: 0
+    - _node_2797: 0.734
     m_Colors:
-    - _Color: {r: 0.19999993, g: 1, b: 0, a: 1}
+    - _Color: {r: 0, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GlitchColor: {r: 1, g: 0, b: 0, a: 1}
+    - _HIGHLIGHTCOLORreplaceVCblue: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightFogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _MainColor: {r: 0.15862082, g: 1, b: 0, a: 1}
+    - _PRIMARYCOLORreplaceVCblack: {r: 1, g: 0, b: 0, a: 1}
+    - _SECONDARYCOLORreplaceVCred: {r: 0, g: 0, b: 0, a: 1}
+    - _node_2284: {r: 0, g: 0, b: 0, a: 1}
+    - _node_8193: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _shadowcolor: {r: 0, g: 0, b: 0, a: 1}

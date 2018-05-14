@@ -8,7 +8,7 @@ public class ThingManager : MonoBehaviour
 {
     public static ThingManager main;
     public GameObject[] AllThings;
-
+    public bool generateThings;
     //public Transform spawnBox;
 
     int spawnAreaRadius = 40;
@@ -20,13 +20,17 @@ public class ThingManager : MonoBehaviour
         //init all things
         Object[] allThingPrefabs = Resources.LoadAll("Things/") as Object[];
 
-        //Spawn Things
-        foreach (GameObject thing in allThingPrefabs)
+        if (generateThings)
         {
-            GameObject newThing = Instantiate(thing, transform);
-            newThing.transform.parent = transform;
-            newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
+            //Spawn Things
+            foreach (GameObject thing in allThingPrefabs)
+            {
+                GameObject newThing = Instantiate(thing, transform);
+                newThing.transform.parent = transform;
+                newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
+            }
         }
+
 
     }
 

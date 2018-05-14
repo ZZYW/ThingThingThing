@@ -40,7 +40,7 @@ MonoBehaviour:
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       intensity: 0.48
       radius: 0.77
@@ -286,14 +286,14 @@ MonoBehaviour:
       spectralTexture: {fileID: 0}
       intensity: 0.193
   grain:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       colored: 1
-      intensity: 0.5
-      size: 1
-      luminanceContribution: 0.8
+      intensity: 0.45
+      size: 0.65
+      luminanceContribution: 0.28
   vignette:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       mode: 0
       color: {r: 0.21323532, g: 0.34888443, b: 1, a: 1}
