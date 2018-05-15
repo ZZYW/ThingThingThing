@@ -30,32 +30,7 @@ public class ThingElo : Thing
 
     protected override void TTTUpdate()
     {
-        // a bunch of examples:
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-
-        }
-
-        if (TOD_Data.main.IsNight)
-        {
-
-        }
-
-        if (TOD_Data.main.IsDay)
-        {
-
-        }
-
-        if (InWater)
-        {
-            ChangeColor(Color.blue);
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SetRandomTarget(newDestinationRange);
-        }
     }
 
 

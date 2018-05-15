@@ -255,11 +255,12 @@ public class Thing : MonoBehaviour
     protected void CreateCube()
     {
         GameObject acube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
         acube.transform.localScale = Vector3.one / 4;
         acube.transform.position = transform.position;
         acube.AddComponent<Rigidbody>();
         acube.AddComponent<ProducedCube>().Init(myCubeColor);
-        Hud.main.OneMoreCube();
+        //Hud.main.OneMoreCube();
     }
 
     protected void ResetColor()
@@ -275,7 +276,11 @@ public class Thing : MonoBehaviour
     protected void PlaySound(string soundName)
     {
         audioSource.clip = Resources.Load(soundFilePath + soundName) as AudioClip;
-        audioSource.Play();
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
+
     }
 
     protected ThingMotor GetMotor()
@@ -291,7 +296,7 @@ public class Thing : MonoBehaviour
     protected void ResetPosition()
     {
         motor.rb.position = ThingManager.main.transform.position;
-        Debug.LogWarning(gameObject.name + " position reset");
+        //Debug.LogWarning(gameObject.name + " position reset");
     }
 
 

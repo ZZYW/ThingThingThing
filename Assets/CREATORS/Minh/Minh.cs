@@ -18,7 +18,7 @@ public class Minh : Thing {
 	protected override void TTTStart()
 	{
 		Speak ("Hello World!!!");
-		InvokeRepeating ("RandomSetDestination", 1f, 5f);
+		InvokeRepeating ("RandomSetDestination", 2f, 5f);
 	}
 
 	protected override void OnMeetingSomeone(GameObject other)
@@ -28,17 +28,18 @@ public class Minh : Thing {
 
 	protected override void OnLeavingSomeone(GameObject other)
 	{
-		PlaySound ("zapsplat_animals_bird_cockatiel_single_chirp_003_17575");
+        PlaySound ("zapsplat_animals_bird_cockatiel_single_chirp_003_17575");
 	}
 
 	protected override void OnSunrise()
 	{
-		StopMoving();
+		//StopMoving();
+        Spark(Color.yellow, 4);
 	}
 
 	protected override void OnNeighborSpeaking()
 	{
-		Spark(Color.yellow, 100);
+		
 	}
 
 }
