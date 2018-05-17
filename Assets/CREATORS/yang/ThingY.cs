@@ -7,7 +7,7 @@ public class ThingY : Thing
 
     Vector3 originalScale;
 
-    float sinIndex = 0;
+    //float sinIndex = 0;
 
     //once
     protected override void TTTAwake()

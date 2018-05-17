@@ -22,6 +22,7 @@ Shader "ThingThingThing/Main" {
         Tags {
             "RenderType"="Opaque"
         }
+        LOD 200
         Pass {
             Name "FORWARD"
             Tags {

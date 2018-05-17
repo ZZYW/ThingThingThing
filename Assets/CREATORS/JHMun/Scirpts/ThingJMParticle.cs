@@ -18,8 +18,8 @@ public class ThingJMParticle : Thing
     public float amplitude = 1f;
     public float frequency = 1f;
     //position storage variables
-    Vector3 posOffset = new Vector3();
-    Vector3 tempPos = new Vector3();
+    //Vector3 posOffset = new Vector3();
+    //Vector3 tempPos = new Vector3();
 
 
     protected override void TTTAwake()
@@ -59,7 +59,7 @@ public class ThingJMParticle : Thing
         //		everythin inside this code block will be exe many times
         //		about ~60sec
         Floating();
-        posOffset = transform.position;
+        //posOffset = transform.position;
     }
 
     //	below are MakeAllRainbow events
