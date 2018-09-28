@@ -127,6 +127,7 @@ public class Thing : MonoBehaviour
         if (other.gameObject.CompareTag("Thing"))
         {
             OnMeetingSomeone(other.gameObject);
+            TTTConsole.A.Log(gameObject.name + " is meeting " + other.name);
             if (!neighborList.Contains(other.gameObject))
             {
                 neighborList.Add(other.gameObject);

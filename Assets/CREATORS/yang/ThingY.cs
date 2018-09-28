@@ -33,6 +33,8 @@ public class ThingY : Thing
 
         Speak("I am born!!!!!!!!!!!!!!!");
 
+     
+
         InvokeRepeating("RandomSetDestination", 0f, 10f);
         InvokeRepeating("UpUp", 0, 3f);
 
