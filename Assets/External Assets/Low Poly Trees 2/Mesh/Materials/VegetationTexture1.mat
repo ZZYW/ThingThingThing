@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VegetationTexture1
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
@@ -83,6 +83,7 @@ Material:
     - _SwayMax: 0.029
     - _UVSec: 0
     - _UseRainbowColors: 0
+    - _UseVertexColor: 0
     - _VertexOffset: 1
     - _VertexOffsetIntensity: 0
     - _VertexoffsetTimeScale: 1000

@@ -4,58 +4,42 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-public class ThingManager : MonoBehaviour
-{
+public class ThingManager : MonoBehaviour {
     public static ThingManager main;
-    public GameObject[] AllThings;
+
+    
+    public List<GameObject> AllThings;
+
     public bool generateThings;
     //public Transform spawnBox;
 
     int spawnAreaRadius = 40;
 
-    private void Awake()
-    {
+    private void Awake () {
         main = this;
 
         //init all things
-        Object[] allThingPrefabs = Resources.LoadAll("Things/") as Object[];
+        Object[] allThingPrefabs = Resources.LoadAll ("Things/") as Object[];
 
-        if (generateThings)
-        {
+        if (generateThings) {
             //Spawn Things
-            foreach (GameObject thing in allThingPrefabs)
-            {
-                GameObject newThing = Instantiate(thing, transform);
+            foreach (GameObject thing in allThingPrefabs) {
+                GameObject newThing = Instantiate (thing, transform);
                 newThing.transform.parent = transform;
-                newThing.transform.position = new Vector3(Random.Range(-spawnAreaRadius, spawnAreaRadius), 0, Random.Range(-spawnAreaRadius, spawnAreaRadius));
+                newThing.transform.position = new Vector3 (Random.Range (-spawnAreaRadius, spawnAreaRadius), 0, Random.Range (-spawnAreaRadius, spawnAreaRadius));
+                AllThings.Add (newThing);
             }
         }
-
 
     }
 
     // Use this for initialization
-    void Start()
-    {
-        AllThings = GameObject.FindGameObjectsWithTag("Thing");
+    void Start () {
 
-        ////generate markers
-        //GameObject labelContainers = new GameObject("Label Containers");
-        //labelContainers.transform.parent = transform;
-        //foreach (GameObject thing in AllThings)
-        //{
-        //    GameObject labelCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        //    NameLabel nameLabel = labelCube.AddComponent<NameLabel>();
-        //    labelCube.GetComponent<Collider>().enabled = false;
-        //    labelCube.transform.parent = labelContainers.transform;
-        //    nameLabel.Init(thing.transform, 2);
-        //}
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update () {
 
     }
 }

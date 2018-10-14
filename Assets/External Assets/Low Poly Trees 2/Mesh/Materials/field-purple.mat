@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: field-purple
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
@@ -110,6 +110,7 @@ Material:
     - _TimeScale: 30
     - _UVSec: 0
     - _UseRainbowColors: 0
+    - _UseVertexColor: 0
     - _VertexOffset: 0
     - _VertexOffsetIntensity: 0
     - _YOffset: 0.5
