@@ -10,27 +10,22 @@ public class TTTConsole : MonoBehaviour
 
     public static TTTConsole A;
 
-
+    //reference
     public Text consoleText;
     public ScrollRect scrollRect;
     public int maxLength = 2000;
 
+    //variables
     [Range(0, 1)]
     public float verticalNormalizedPosition;
 
-
-    StringBuilder stringBuilder = new StringBuilder();
-
-
-    public bool test;
-
-    //reference
-    private TextAsset log;
-
+    //fields
+    StringBuilder stringBuilder;
 
     private void Awake()
     {
         A = this;
+        stringBuilder = new StringBuilder();
     }
 
     // Use this for initialization
