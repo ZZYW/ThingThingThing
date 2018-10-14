@@ -6,7 +6,7 @@
 - [Collaborators and Their _Things_](#collaborators-and-their-_things_)
 - [Past Events](#past-events)
 - [Steps for participants:](#steps-for-participants)
-- [Code Document](#code-document)
+- [Technical Document](#technical-document)
   - [Properties/Fields](#propertiesfields)
   - [Events](#events)
   - [Ready to Use Methods](#ready-to-use-methods)
@@ -25,17 +25,14 @@
 
 # About The Project
 
+Making an art game is like daydreaming - one that we can go back to over and over again. Game Objects are external manifestations of creators’ spirits. When their creators are tied up with the reality of life, these tiny things awake in the wondrous space of “grandeur” (Gustave Bachelard, 1948) created through the imagination of their creators. They wonder around, make a friend or some weird sound. 
+ 
 
-An art video game is like daydreaming – a dream that one can go back to over and over again. Objects within the Game are external manifestations of their creators’ spirits. While their creators are tied up with the reality of life, these tiny Objects awaken in this wondrous space of “grandeur” (Gustave Bachelard, 1948), brought to life through the imagination of the Game creators. They twist, turn, wiggle, roll around. On a sunny day, they wander within the Game land, make a friend, sing a song by the river. Gently, they bring together heaven and earth, and open their creators up to the future of reality.
+ThingThingThing is an experimental collaboration between artist duo ZZYW, formed by Yang Wang and Zhenzhen Qi, with multiple art & technology insitutions and organizations. A group of participants will attend an artist-led presentation and workshop, learning fundamentals of video game development, and make a collective art game along the way. At the end of the workshop, the result is a film that generates it own plots in real time, composed by all participants using Unity, a video game development platform and C# as the programming language. The latest version will always be downloadable from Github.
 
-ThingThingThing is an experimental collaboration between Asia Art Archive in America and the artist duo ZZYW, formed by Yang Wang and Zhenzhen Qi. Participants will spend two action-packed days at AAAinA, learning the fundamentals of video game development and making a collective art game along the way. At the end of the two days, the result is a film of the Game that generates its own plot in real time, created by all of the participants using Unity, a video game development platform, and C# as the programming language.
-
-Day One (Saturday, April 14): participants will be supplied with virtual 3D models that roughly invoke humans, animals, or objects. They will learn about creating materials, editing textures, as well as using computer code to manipulate the location, movement, rotation, and size of the models.
-
-Day Two (Sunday, April 15): participants will be supplied with simple computer code, which can be attached to the 3D model and give instructions for how the model should act, such as “make a sound” when it approaches the river or “disperse tiny stars” when meeting a new friend. Participants are also welcome to modify or write their own code to create more involved Game play.
-
-Throughout the entire workshop, the artists will collect the 3D models, or “Things”, made by the participants and place them into a virtual world. At the end of the two-day workshop, we will play the final version of the Game in AAAinA’s screening room and watch our models explore their world and meet each other – thing to thing, while we also get to know one another, human to human.
-
+制作艺术游戏有点像做梦 —— 一个可以反复回顾的白日梦。游戏里的角色就像是创作者某种的精神上的化身。当创作者们为现实生活忙的团团转时，他们的“精神化身”则在一个广阔无限的，在创作者们的想象力构建的虚拟空间里苏醒。它们逛来逛去，和其它的“物(Thing)”们相聚，或时不时的发出怪异的响声。
+ 
+《物物物》是艺术家组合zzyw（汪洋+漆贞贞）的一个实验性项目。通过与美术馆，艺术机构和组织合作，举办参与式工作坊。参与者们将参加由两位艺术家带领的媒体艺术工作坊，学习使用版本控制Git，编程语言C#，和游戏开发引擎Unity编写一个自己的虚拟的物 (Thing)，并使用代码赋予其独特的样子和行为、逻辑模式，当工作坊结束时，所有参与者的物都会被放入“物物物”的主世界。物物物将得到一次版本更新。
 
 ----------
 
@@ -55,17 +52,6 @@ Throughout the entire workshop, the artists will collect the 3D models, or “Th
 
 -  Saturday, April 14 and Sunday, April 15, 1:00-5:00pm    |   Asia Art Archive in America   |   43 Remsen Street, Brooklyn, NY 11201
 
-
-
-----------
-
-
-# Release
-
-[v1.0 for Mac](https://github.com/ZZYW/thing-thing-thing/releases)
-
-
-[Video](https://vimeo.com/264903915)
 
 
 ------------
