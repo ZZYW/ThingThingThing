@@ -84,14 +84,14 @@ int NeighborCount; //how many neighbors do you have currently
 ## Events
 
 ```csharp
-void OnSunset();
-void OnSunrise();
-void OnMeetingSomeone(GameObject other);
-void OnLeavingSomeone(GameObject other);
-void OnNeighborSpeaking();
-void OnNeigborSparkingParticles();
-void OnTouchWater();
-void OnLeaveWater();
+protected override void OnSunset(){}
+protected override void OnSunrise(){}
+protected override void OnMeetingSomeone(GameObject other){}
+protected override void OnLeavingSomeone(GameObject other){}
+protected override void OnNeighborSpeaking(){}
+protected override void OnNeigborSparkingParticles(){}
+protected override void OnTouchWater(){}
+protected override void OnLeaveWater(){}
 ```
 
 ## Ready to Use Methods
@@ -99,26 +99,26 @@ void OnLeaveWater();
 ```csharp
 
 //movement
-void SetTarget(Vector3 target);
-void StopMoving();
-void StopMoving(float forHowManySeconds);
-void RestartWalking();
-void RandomSetDestination();//get a new random target
-void ResetPosition(); //change position to spawn point
+SetTarget(Vector3 target);
+StopMoving();
+StopMoving(float forHowManySeconds);
+RestartWalking();
+RandomSetDestination();//get a new random target
+ResetPosition(); //change position to spawn point
 
 //shape and form
-void SetScale(Vector3 newScale);
-void ChangeColor(Color newColor); //change color, might not work well if you have more than one renderer or more than one material
-void ResetColor(); //reset to original color
+SetScale(Vector3 newScale);
+ChangeColor(Color newColor); //change color, might not work well if you have more than one renderer or more than one material
+ResetColor(); //reset to original color
 
 //social
-void Speak(string content, float stayLength);
-void Speak(string content);
-void Mute(); //Speak no longer works
-void DeMute(); //regain ability to Speak again
-void Spark(Color particleColor, int numberOfParticles);
-void PlaySound(string soundName);
-void CreateCube(); //throw a cube on the small ground
+Speak(string content, float stayLength);
+Speak(string content);
+Mute(); //Speak no longer works
+DeMute(); //regain ability to Speak again
+Spark(Color particleColor, int numberOfParticles);
+PlaySound(string soundName);
+CreateCube(); //throw a cube on the small ground
 
 
 ```
