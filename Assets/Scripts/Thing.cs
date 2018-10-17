@@ -35,6 +35,7 @@ public class Thing : MonoBehaviour {
     private string soundFilePath = "Sounds/";
     private Color originalColor;
     private Renderer rend;
+    private static GameObject generatedCubeContainer;
     public int DesiredFollowDistance { get { return cameraOffset; } }
 
     private void OnEnable () {
@@ -220,6 +221,15 @@ public class Thing : MonoBehaviour {
 
         acube.transform.localScale = Vector3.one / 4;
         acube.transform.position = transform.position;
+
+        if (generatedCubeContainer == null) {
+            generatedCubeContainer = new GameObject ();
+            generatedCubeContainer.name = "Generated Cube Container";
+            generatedCubeContainer.AddComponent<ChildrenCounter> ();
+        }
+
+        acube.transform.parent = generatedCubeContainer.transform;
+
         acube.AddComponent<Rigidbody> ();
         acube.AddComponent<ProducedCube> ().Init (myCubeColor);
         //Hud.main.OneMoreCube();
@@ -252,7 +262,7 @@ public class Thing : MonoBehaviour {
 
     protected void ResetPosition () {
         motor.rb.position = ThingManager.main.transform.position;
-        ThingConsole.Log(gameObject.name + " position was reset");
+        ThingConsole.Log (gameObject.name + " position was reset");
     }
 
     //VIRTUAL
