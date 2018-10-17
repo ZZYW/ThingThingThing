@@ -4,11 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VegetationTexture1
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
-  m_ShaderKeywords: _VERTEXOFFSET_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -59,9 +59,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AmbientColorInfluence: 0.331
+    - _AmbientColorInfluence: 1
     - _BumpScale: 1
-    - _ColorSculpt: 0
+    - _ColorSculpt: 0.167
     - _Cutoff: 0.5
     - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1
@@ -84,8 +84,11 @@ Material:
     - _UVSec: 0
     - _UseRainbowColors: 0
     - _UseVertexColor: 0
-    - _VertexOffset: 1
-    - _VertexOffsetIntensity: 0
+    - _VertexOffset: 0
+    - _VertexOffsetIntensity: 4
+    - _VertexOffsetPara01: 344
+    - _VertexOffsetSmoothFactor: 0.812
+    - _VertexOffsetTimeMulti: 0.45
     - _VertexoffsetTimeScale: 1000
     - _YOffset: 0.26
     - _ZWrite: 1
