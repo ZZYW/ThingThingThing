@@ -16,6 +16,13 @@ public class ControlableCameraController : MonoBehaviour {
     private Vector3 motion;
     private Vector3 rot;
 
+    //
+    Vector2 leftAxis;
+    Vector2 rightAxis;
+    
+
+    
+
     // Use this for initialization
     void Start () {
         // characterController = GetComponent<CharacterController>();
@@ -24,8 +31,11 @@ public class ControlableCameraController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        motion.x = Input.GetAxis ("Horizontal");
-        motion.z = Input.GetAxis ("Vertical");
+        leftAxis.x = Input.GetAxis("JoyStickLeftX");
+        leftAxis.y = Input.GetAxis("JoyStickLeftY");
+        rightAxis.x = Input.GetAxis("JoyStickRightX");
+        rightAxis.y = Input.GetAxis("JoyStickRightY");
+        
 
         motion *= speedFactor * Time.deltaTime;
 
@@ -35,7 +45,8 @@ public class ControlableCameraController : MonoBehaviour {
 
         // motion.y -= gravity * Time.deltaTime;
 
-        transform.Translate (motion);
+        transform.Translate(motion, Space.Self);
+
 
         // characterController.Move(motion * Time.deltaTime);
 
