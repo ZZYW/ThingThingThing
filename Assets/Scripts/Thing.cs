@@ -229,6 +229,7 @@ public class Thing : MonoBehaviour {
         }
 
         acube.transform.parent = generatedCubeContainer.transform;
+        generatedCubeContainer.GetComponent<ChildrenCounter> ().list.Add (acube);
 
         acube.AddComponent<Rigidbody> ();
         acube.AddComponent<ProducedCube> ().Init (myCubeColor);
