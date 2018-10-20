@@ -20,6 +20,19 @@ public class ThingConsole : MonoBehaviour {
         scrollRect = GetComponentInChildren<ScrollRect> ();
     }
 
+    public static void LogWarning(string content)
+    {
+        string colorCode = "yellow";
+        content = "<color=" + colorCode + ">" + content + "</color>";
+        Log(content);
+    }
+
+    public static void LogError(string content)
+    {
+        string colorCode = "red";
+        content = "<color=" + colorCode + ">" + content + "</color>";
+        Log(content);
+    }
 
     public static void Log (string content) {
 
