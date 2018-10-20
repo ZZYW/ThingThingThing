@@ -302,7 +302,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0
+    dead: 0.01
     sensitivity: 1
     snap: 0
     invert: 0
@@ -318,15 +318,15 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0
+    dead: 0.01
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: JoyStickRightY
+    m_Name: JoyStickRightX
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -334,7 +334,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0
+    dead: 0.01
     sensitivity: 1
     snap: 0
     invert: 0
@@ -350,10 +350,10 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0
+    dead: 0.01
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
-    axis: 3
+    axis: 5
     joyNum: 0

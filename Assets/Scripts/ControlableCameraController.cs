@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class ControlableCameraController : MonoBehaviour {
 
-    [Range (0, 5)]
+    [Range (0, 50)]
     public float speedFactor = 0.1f;
+
+    [Range(0, 100)]
+    public float rotateSpeedFactor = 80;
+
     [Range (1, 10)]
     public float jumpSpeed = 8.0f;
     [Range (1, 20)]
     public float gravity = 20.0f;
 
-    // public CharacterController characterController;
-
-    private Vector3 motion;
-    private Vector3 rot;
-
-    //
-    Vector2 leftAxis;
-    Vector2 rightAxis;
+    
+    private Vector2 leftAxis;
+    private Vector2 rightAxis;
     
 
     
@@ -35,17 +34,20 @@ public class ControlableCameraController : MonoBehaviour {
         leftAxis.y = Input.GetAxis("JoyStickLeftY");
         rightAxis.x = Input.GetAxis("JoyStickRightX");
         rightAxis.y = Input.GetAxis("JoyStickRightY");
+
+
+        Debug.Log("left axis: " + leftAxis + "    right axis:  " + rightAxis);
         
 
-        motion *= speedFactor * Time.deltaTime;
+        leftAxis *= speedFactor * Time.deltaTime;
+        rightAxis *= rotateSpeedFactor * Time.deltaTime;
 
-        // if (Input.GetButton ("Jump")) {
-        //     motion.y = jumpSpeed;
-        // }
+        
 
-        // motion.y -= gravity * Time.deltaTime;
+        transform.Translate(new Vector3(leftAxis.x, 0, leftAxis.y), Space.Self);
+        transform.Rotate(Vector3.up, rightAxis.x);
+        transform.Rotate(Vector3.left, rightAxis.y);
 
-        transform.Translate(motion, Space.Self);
 
 
         // characterController.Move(motion * Time.deltaTime);
