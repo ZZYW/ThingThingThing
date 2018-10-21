@@ -4,45 +4,36 @@ using UnityEngine;
 
 public class richard : Thing {
 
-	protected override void TTTAwake()
-	{
-		cameraOffset = 10;
+	protected override void TTTAwake () {
+		settings.cameraOffset = 10;
 
-		acceleration = 10;
-		drag = 5f;
-		mass = 0.2f;
+		settings.acceleration = 10;
+		settings.drag = 5f;
+		settings.mass = 0.2f;
 
-		getNewDestinationInterval = 5;
-		newDestinationRange = 100;
+		settings.getNewDestinationInterval = 5;
+		settings.newDestinationRange = 100;
 
-		myCubeColor = new Color (0.8f, 0.2f, 0.1f);
-	
-		
+		settings.myCubeColor = new Color (0.8f, 0.2f, 0.1f);
+
 	}
 
-	protected override void TTTStart()
-	{
+	protected override void TTTStart () {
 		Speak ("I am alive!!");
 		InvokeRepeating ("RandomSetDestination", 1f, 5f);
 	}
 
-
-	protected override void OnMeetingSomeone(GameObject other)
-	{
+	protected override void OnMeetingSomeone (GameObject other) {
 		Speak ("Salut! I am Richard, the Cloud. $%#kfjladkjf&8420");
 		CreateCube ();
 	}
 
-	protected override void OnLeavingSomeone(GameObject other)
-	{
+	protected override void OnLeavingSomeone (GameObject other) {
 		PlaySound ("zapsplat_multimedia_game_blip_generic_tone_007_17643");
 	}
 
-		
-	protected override void OnNeigborSparkingParticles()
-	{
-		Spark(Color.white, 50);
+	protected override void OnNeigborSparkingParticles () {
+		Spark (Color.white, 50);
 	}
-
 
 }

@@ -7,16 +7,16 @@ public class ThingPrinceZ : Thing
     protected override void TTTAwake()
     {
         //camera
-        cameraOffset = 15; //distance from camera to object center on 3rd personn camera following mode
+        settings.cameraOffset = 15; //distance from camera to object center on 3rd personn camera following mode
 
         //Movement
-        acceleration = Random.Range(3.5f, 5f); //use Random.range to get a random number within a range
-        drag = 1.8f; // the bigger, the slower
-        mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
-        getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
-        newDestinationRange = 40; // how far the new destination could be 
+        settings.acceleration = Random.Range(3.5f, 5f); //use Random.range to get a random number within a range
+        settings.drag = 1.8f; // the bigger, the slower
+        settings.mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
+        settings.getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
+        settings.newDestinationRange = 40; // how far the new destination could be 
 
-        myCubeColor = Color.green; //cube's color produced by you
+        settings.myCubeColor = Color.green; //cube's color produced by you
     }
 
 
@@ -36,7 +36,7 @@ public class ThingPrinceZ : Thing
         //examples:
         Speak("I am born!");
         //we recommend keep this one, or you can write your own rule of moving
-        InvokeRepeating("RandomSetDestination", 0, getNewDestinationInterval); //call "RandomSetDestination" method every "getNewDestinationInterval" seconds
+        InvokeRepeating("RandomSetDestination", 0, settings.getNewDestinationInterval); //call "RandomSetDestination" method every "getNewDestinationInterval" seconds
     }
 
     protected override void TTTUpdate()
@@ -65,7 +65,7 @@ public class ThingPrinceZ : Thing
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SetRandomTarget(newDestinationRange);
+            SetRandomTarget(settings.newDestinationRange);
         }
     }
 

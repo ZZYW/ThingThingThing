@@ -26,16 +26,16 @@ public class ThingJMParticle : Thing
     {
         //		base.TTTAwake();
         // how far the following camera will be from muy object
-        cameraOffset = 15;
-        acceleration = 2f;
-        drag = 0.2f; //the bigger the drag is, the slower your thing moves
-        mass = 0.2f;
+        settings.cameraOffset = 15;
+        settings.acceleration = 2f;
+        settings.drag = 0.2f; //the bigger the drag is, the slower your thing moves
+        settings.mass = 0.2f;
 
 
-        getNewDestinationInterval = 5; //in seconds
-        newDestinationRange = 40;
+        settings.getNewDestinationInterval = 5; //in seconds
+        settings.newDestinationRange = 40;
 
-        myCubeColor = new Color(1, 0.2f, 0); //r, g, b  0-1
+        settings.myCubeColor = new Color(1, 0.2f, 0); //r, g, b  0-1
 
 
     }
@@ -46,10 +46,10 @@ public class ThingJMParticle : Thing
 
         Speak("Uh La La ~! Moon is here.");
         InvokeRepeating("RandomSetDestination", 0f, 10f);
-        cameraOffset = 15;
-        acceleration = 3.0f;
-        drag = 0.2f; //the bigger the drag is, the slower your thing moves
-        mass = 0.2f;
+        settings.cameraOffset = 15;
+        settings.acceleration = 3.0f;
+        settings.drag = 0.2f; //the bigger the drag is, the slower your thing moves
+        settings.mass = 0.2f;
 
     }
 

@@ -9,13 +9,13 @@ public class JZPig : Thing
 
     protected override void TTTAwake()
     {
-        cameraOffset = 30;
-        acceleration = 6;
-        drag = 1f;
-        mass = 0.5f;
-        getNewDestinationInterval = 3;
-        newDestinationRange = 300;
-        myCubeColor = new Color(0.45f, 0.2f, 0.25f);
+        settings.cameraOffset = 30;
+        settings.acceleration = 6;
+        settings.drag = 1f;
+        settings.mass = 0.5f;
+        settings.getNewDestinationInterval = 3;
+        settings.newDestinationRange = 300;
+        settings.myCubeColor = new Color(0.45f, 0.2f, 0.25f);
     }
 
     protected override void TTTStart()
@@ -42,7 +42,7 @@ public class JZPig : Thing
 
     protected override void OnSunset()
     {
-        myCubeColor = new Color(0.7f, 0f, 0f);
+        settings.myCubeColor = new Color(0.7f, 0f, 0f);
 
     }
 

@@ -8,16 +8,16 @@ public class Sheep_mushy : Thing {
 	protected override void TTTAwake()
 	{
 		// how far the following camera will be from my object
-		cameraOffset = 15;
+		settings.cameraOffset = 15;
 
-		acceleration = 60f;
-		drag = 1f; // the bigger the drag is, the slower your thing moves
-		mass = 0.1f;
+		settings.acceleration = 60f;
+		settings.drag = 1f; // the bigger the drag is, the slower your thing moves
+		settings.mass = 0.1f;
 
-		getNewDestinationInterval = 5; // in seconds
-		newDestinationRange = 100;
+		settings.getNewDestinationInterval = 5; // in seconds
+		settings.newDestinationRange = 100;
 
-		myCubeColor = new Color (1, 0, 0); //RGB range is 0-1
+		settings.myCubeColor = new Color (1, 0, 0); //RGB range is 0-1
 	}
 
 	//once

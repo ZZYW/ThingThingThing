@@ -6,16 +6,16 @@ public class Cloud_a : Thing {
 
 	protected override void TTTAwake()
 	{
-		cameraOffset = 15;
+		settings.cameraOffset = 15;
 
-		acceleration = 50;
-		drag = 5f;
-		mass = 0.2f;
+		settings.acceleration = 50;
+		settings.drag = 5f;
+		settings.mass = 0.2f;
 
-		getNewDestinationInterval = 5;
-		newDestinationRange = 200;
+		settings.getNewDestinationInterval = 5;
+		settings.newDestinationRange = 200;
 
-		myCubeColor = new Color (0.8f, 0.2f, 0.1f);
+		settings.myCubeColor = new Color (0.8f, 0.2f, 0.1f);
 	}
 
 	protected override void TTTStart()

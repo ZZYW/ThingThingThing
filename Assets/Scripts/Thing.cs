@@ -11,14 +11,29 @@ using UnityEngine.Events;
 [RequireComponent (typeof (ThingMotor))]
 public class Thing : MonoBehaviour {
 
-    protected int cameraOffset = 15;
-    protected float acceleration = 4;
-    protected float drag = 1.8f;
-    protected float mass = 0.2f;
-    protected float getNewDestinationInterval = 5;
-    protected int newDestinationRange = 40;
-    protected bool alwaysFacingTarget = true;
-    protected Color myCubeColor;
+    protected class Settings {
+        internal int cameraOffset = 15;
+        internal float acceleration = 4;
+        internal float drag = 1.8f;
+        internal float mass = 0.2f;
+        internal float getNewDestinationInterval = 5;
+        internal int newDestinationRange = 40;
+        internal bool alwaysFacingTarget = true;
+        internal Color myCubeColor;
+
+        public Settings () {
+            cameraOffset = 15;
+            acceleration = 4;
+            drag = 1.8f;
+            mass = 0.2f;
+            getNewDestinationInterval = 5;
+            newDestinationRange = 40;
+            alwaysFacingTarget = true;
+        }
+    }
+
+    protected Settings settings { get; set; }
+
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
 
@@ -36,7 +51,7 @@ public class Thing : MonoBehaviour {
     private Color originalColor;
     private Renderer rend;
     private static GameObject generatedCubeContainer;
-    public int DesiredFollowDistance { get { return cameraOffset; } }
+    public int DesiredFollowDistance { get { return settings.cameraOffset; } }
 
     private void OnEnable () {
         TTTEventsManager.OnSomeoneSpeaking += OnSomeoneSpeaking;
@@ -53,6 +68,7 @@ public class Thing : MonoBehaviour {
     }
 
     private void Awake () {
+        settings = new Settings ();
         gameObject.tag = "Thing";
         neighborList = new List<GameObject> ();
         TTTAwake ();
@@ -65,10 +81,10 @@ public class Thing : MonoBehaviour {
 
         //motor
         motor = GetComponent<ThingMotor> ();
-        motor.SetAccel (acceleration);
-        motor.rb.drag = drag;
-        motor.rb.mass = mass;
-        motor.FacingTarget (alwaysFacingTarget);
+        motor.SetAccel (settings.acceleration);
+        motor.rb.drag = settings.drag;
+        motor.rb.mass = settings.mass;
+        motor.FacingTarget (settings.alwaysFacingTarget);
 
         //Chat Ballon
         chatBalloon = gameObject.GetComponentInChildren<ChatBalloon> ();
@@ -169,12 +185,12 @@ public class Thing : MonoBehaviour {
 
     protected void Mute () {
         stopTalking = true;
-        ThingConsole.Log (gameObject.name + "is being muted");
+        ThingConsole.LogWarning (gameObject.name + "is being muted");
     }
 
     protected void DeMute () {
         stopTalking = false;
-        ThingConsole.Log (gameObject.name + "can speak again.");
+        ThingConsole.LogWarning (gameObject.name + "can speak again.");
     }
 
     protected void RestartWalking () {
@@ -232,7 +248,7 @@ public class Thing : MonoBehaviour {
         generatedCubeContainer.GetComponent<ChildrenCounter> ().list.Add (acube);
 
         acube.AddComponent<Rigidbody> ();
-        acube.AddComponent<ProducedCube> ().Init (myCubeColor);
+        acube.AddComponent<ProducedCube> ().Init (settings.myCubeColor);
         //Hud.main.OneMoreCube();
     }
 
@@ -258,7 +274,7 @@ public class Thing : MonoBehaviour {
     }
 
     protected void RandomSetDestination () {
-        SetRandomTarget (newDestinationRange);
+        SetRandomTarget (settings.newDestinationRange);
     }
 
     protected void ResetPosition () {

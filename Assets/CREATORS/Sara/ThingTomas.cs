@@ -9,17 +9,17 @@ public class ThingTomas : Thing {
 	protected override void TTTAwake ()
 	{
 		// how far the following camera will be from my object
-		cameraOffset = 15;
+		settings.cameraOffset = 15;
 
-		acceleration = 4f;
-		drag = 0f; //the bigger the drag is, the slower your thing moves
-		mass = 0.2f; 
+		settings.acceleration = 4f;
+		settings.drag = 0f; //the bigger the drag is, the slower your thing moves
+		settings.mass = 0.2f; 
 
 
-		getNewDestinationInterval = 5; //in seconds
-		newDestinationRange = 40;
+		settings.getNewDestinationInterval = 5; //in seconds
+		settings.newDestinationRange = 40;
 
-		myCubeColor = new Color (0, 0, 1); // red green blue 0-1
+		settings.myCubeColor = new Color (0, 0, 1); // red green blue 0-1
 	}
 
 	//once

@@ -8,18 +8,18 @@ public class JZ : Thing
     //program will run before start. Only once.
     {
 
-        cameraOffset = 15;
+        settings.cameraOffset = 15;
         //you have a big object, the distance needs to be longer.
         //how far the following camera will be from my object.
-        acceleration = 4f;
+        settings.acceleration = 4f;
         //the larger number, the faster it accelerates.
-        drag = 0.1f; //the bigger the drag is, the slower you thing moves.
-        mass = 0.2f;
+        settings.drag = 0.1f; //the bigger the drag is, the slower you thing moves.
+        settings.mass = 0.2f;
 
-        getNewDestinationInterval = 5; //in seconds 
-        newDestinationRange = 100;
+        settings.getNewDestinationInterval = 5; //in seconds 
+        settings.newDestinationRange = 100;
 
-        myCubeColor = new Color(1f, 0f, 0.25f);//red green blue 0-1
+        settings.myCubeColor = new Color(1f, 0f, 0.25f);//red green blue 0-1
 
     }
 

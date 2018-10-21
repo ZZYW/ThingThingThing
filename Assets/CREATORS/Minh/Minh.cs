@@ -5,14 +5,14 @@ using UnityEngine;
 public class Minh : Thing {
 	protected override void TTTAwake()
 	{
-		cameraOffset = 10;
+		settings.cameraOffset = 10;
 
-		acceleration = 10;
-		drag = 5f;
-		mass = 0.2f;
+		settings.acceleration = 10;
+		settings.drag = 5f;
+		settings.mass = 0.2f;
 
-		getNewDestinationInterval = 5;
-		newDestinationRange = 100;
+		settings.getNewDestinationInterval = 5;
+		settings.newDestinationRange = 100;
 	}
 
 	protected override void TTTStart()
