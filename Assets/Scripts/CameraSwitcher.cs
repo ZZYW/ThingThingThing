@@ -6,7 +6,7 @@ public class CameraSwitcher : MonoBehaviour {
 
     public GameObject mainCam;
     public GameObject followCam;
-
+    public bool switching = true;
     ThirdPersonCamera.CameraController camController;
 
     public List<GameObject> allThings;
@@ -47,6 +47,8 @@ public class CameraSwitcher : MonoBehaviour {
     }
 
     void ChangeCamera () {
+
+        if (!switching) return;
         //randomly choose one Thing
         if (!useMain) AssignFollowTarget ();
 

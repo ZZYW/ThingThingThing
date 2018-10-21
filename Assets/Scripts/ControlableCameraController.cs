@@ -36,7 +36,7 @@ public class ControlableCameraController : MonoBehaviour {
         rightAxis.y = Input.GetAxis("JoyStickRightY");
 
 
-        Debug.Log("left axis: " + leftAxis + "    right axis:  " + rightAxis);
+        // Debug.Log("left axis: " + leftAxis + "    right axis:  " + rightAxis);
         
 
         leftAxis *= speedFactor * Time.deltaTime;
