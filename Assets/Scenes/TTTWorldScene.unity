@@ -436,7 +436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000015724402, y: -921.0507}
+  m_AnchoredPosition: {x: -0.0000015724402, y: -857.176}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &14502161
@@ -11663,7 +11663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 2121162003}
   followCam: {fileID: 1210948033}
-  switching: 0
+  switching: 1
   allThings: []
   intervals: 60
 --- !u!4 &776806222
@@ -12164,7 +12164,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1732947069}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.28963527
+  m_Size: 0.14491272
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17773,9 +17773,8 @@ GameObject:
   - component: {fileID: 1210948039}
   - component: {fileID: 1210948038}
   - component: {fileID: 1210948037}
-  - component: {fileID: 1210948036}
-  - component: {fileID: 1210948035}
   - component: {fileID: 1210948034}
+  - component: {fileID: 1210948035}
   m_Layer: 0
   m_Name: 3rdPersonCamera_Follow
   m_TagString: MainCamera
@@ -17803,51 +17802,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210948033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b151fed8390d324b9e4a82eca518d8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fff104caae0b421a81e322e5fab9ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow: 1
-  alignOnSlopes: 1
-  rotationSpeed: 1
-  rotationSpeedSlopes: 0.5
-  lookBackwards: 0
-  checkMotionForBackwards: 1
-  backwardsMotionThreshold: 0.05
-  angleThreshold: 170
-  tiltVector: {x: 0, y: 0, z: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
---- !u!114 &1210948036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210948033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d8440be0a77bb4a9e2848603292c4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  offsetVector: {x: 0, y: 0, z: 0}
-  smartPivot: 1
-  occlusionCheck: 1
-  thicknessCheck: 1
-  desiredDistance: 5
-  collisionDistance: 0.5
-  maxThickness: 0.3
-  maxThicknessIterations: 5
-  zoomOutStepValue: 1
-  zoomOutStepValuePerFrame: 0.1
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  playerLayer: 8
-  playerCollision: 0
-  cameraNormalMode: 0
-  bGroundHit: 0
-  startingY: 0
+  followTarget: {fileID: 0}
+  followDistance: 20
+  elevation: 20
 --- !u!81 &1210948037
 AudioListener:
   m_ObjectHideFlags: 0
@@ -28489,7 +28449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400a323968ddb4086bedd35d4999b19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedFactor: 0.1
+  speedFactor: 22.2
   rotateSpeedFactor: 80
   jumpSpeed: 8
   gravity: 20

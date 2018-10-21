@@ -7,7 +7,7 @@ public class CameraSwitcher : MonoBehaviour {
     public GameObject mainCam;
     public GameObject followCam;
     public bool switching = true;
-    ThirdPersonCamera.CameraController camController;
+    CameraFollowThing cameraFollowThing;
 
     public List<GameObject> allThings;
 
@@ -18,7 +18,7 @@ public class CameraSwitcher : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        camController = followCam.GetComponent<ThirdPersonCamera.CameraController> ();
+        cameraFollowThing = followCam.GetComponent<CameraFollowThing> ();
 
         allThings = ThingManager.main.AllThings;
 
@@ -39,11 +39,11 @@ public class CameraSwitcher : MonoBehaviour {
 
     void AssignFollowTarget () {
         GameObject oneRandomThing = allThings[(int) Random.Range (0, allThings.Count)];
-        camController.target = oneRandomThing.transform;
+        cameraFollowThing.followTarget = oneRandomThing.transform;
 
         float desiredFollowDistance = 1;
         desiredFollowDistance = oneRandomThing.GetComponent<Thing> ().DesiredFollowDistance;
-        camController.desiredDistance = desiredFollowDistance;
+        cameraFollowThing.followDistance = desiredFollowDistance;
     }
 
     void ChangeCamera () {
