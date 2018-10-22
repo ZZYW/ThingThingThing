@@ -17,6 +17,9 @@ public class CameraFollowThing : MonoBehaviour {
 	void Update () {
 		if (followTarget == null) return;
 		transform.position = followTarget.position - (followDistance * followTarget.forward) + new Vector3 (0, elevation, 0);
+
 		transform.LookAt (followTarget);
+
 	}
+
 }

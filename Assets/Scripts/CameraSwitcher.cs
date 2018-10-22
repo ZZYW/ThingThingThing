@@ -13,7 +13,7 @@ public class CameraSwitcher : MonoBehaviour {
 
     bool useMain = true;
 
-    [Range (1, 60)]
+    [Range (1, 200)]
     public float intervals = 20f;
 
     // Use this for initialization
