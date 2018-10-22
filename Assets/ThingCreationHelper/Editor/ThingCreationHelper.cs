@@ -18,6 +18,16 @@ public class ThingCreationHelper : EditorWindow {
         EditorWindow.GetWindow (typeof (ThingCreationHelper));
     }
 
+    [MenuItem ("(｡・`ω´・) ThingThingThing/Open Main World Scene")]
+    static void OpenMainWorldScene () {
+        UnityEditor.SceneManagement.EditorSceneManager.OpenScene (Application.dataPath + "/Scenes/TTTWorldScene.unity");
+    }
+
+    [MenuItem ("(｡・`ω´・) ThingThingThing/Open Test Scene")]
+    static void OpenTestScene () {
+        UnityEditor.SceneManagement.EditorSceneManager.OpenScene (Application.dataPath + "/Test/TEST.unity");
+    }
+
     void OnGUI () {
         GUILayout.Label ("Prepare my directory", EditorStyles.boldLabel);
         thingName = EditorGUILayout.TextField ("Name of the THING", thingName);
