@@ -126,6 +126,7 @@ Mute(); //Speak no longer works
 DeMute(); //regain ability to Speak again
 Spark(Color particleColor, int numberOfParticles);
 PlaySound(int soundEffectId); // Range: 1 ... 102
+PlaySound(string soundFileName);
 CreateCube(); //throw a cube on the small ground
 ```
 

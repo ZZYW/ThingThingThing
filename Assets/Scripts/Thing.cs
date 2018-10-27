@@ -94,8 +94,9 @@ public class Thing : MonoBehaviour {
 
         //Sound
         audioSource = gameObject.GetComponent<AudioSource> ();
+        audioSource.rolloffMode = AudioRolloffMode.Linear;
         audioSource.spatialBlend = 1f;
-        audioSource.maxDistance = 15;
+        audioSource.maxDistance = 50;
 
         //color
         rend = GetComponent<Renderer> ();
@@ -262,9 +263,12 @@ public class Thing : MonoBehaviour {
 
     protected int PlaySound (int soundFileID) {
         if (soundFileID < 1 || soundFileID > 102) Debug.LogWarning ("sound file id exceed the range, range is 1->102, you are calling " + soundFileID);
+        return PlaySound (soundFileID.ToString ());
+    }
 
-        string soundUrl = soundFilePath + soundFileID.ToString ();
-
+    protected int PlaySound (string soundFileName) {
+        if (audioSource.isPlaying) return 2;
+        string soundUrl = soundFilePath + soundFileName;
         audioSource.clip = Resources.Load (soundUrl) as AudioClip;
         if (audioSource.clip != null) {
             audioSource.Play ();
