@@ -125,7 +125,7 @@ Speak(string content);
 Mute(); //Speak no longer works
 DeMute(); //regain ability to Speak again
 Spark(Color particleColor, int numberOfParticles);
-PlaySound(string soundName);
+PlaySound(int soundEffectId); // Range: 1 ... 102
 CreateCube(); //throw a cube on the small ground
 ```
 
@@ -168,7 +168,7 @@ Find a sound file that is one of the formats below
 
 Compress it if necessary, make sure its file size is smaller than 2 MB, and move it into `Resources/Sounds` folder.
 
-Use `PlaySound(“filename”)` to play your sound.
+Use `PlaySound(“filename”)` to play your sound, no extension name needed.
 
 ## Some Basic about C# Programming
 
