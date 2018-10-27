@@ -62,7 +62,7 @@ public class ThingY : Thing
     {
         //base.OnMeetingSomeone(other);
 
-        PlaySound("zapsplat_animals_bird_cockatiel_single_chirp_003_17575");
+        PlaySound(34);
 
         //evething inside this code block will be triggered/called
         //when my thing meets anyone
@@ -93,7 +93,7 @@ public class ThingY : Thing
     protected override void OnTouchWater()
     {
         ChangeColor(Color.red);
-        PlaySound("zapsplat_multimedia_game_blip_generic_tone_007_17643");
+        PlaySound(9);
     }
 
     protected override void OnLeaveWater()

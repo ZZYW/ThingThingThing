@@ -28,7 +28,7 @@ public class Minh : Thing {
 
 	protected override void OnLeavingSomeone(GameObject other)
 	{
-        PlaySound ("zapsplat_animals_bird_cockatiel_single_chirp_003_17575");
+        PlaySound (61);
 	}
 
 	protected override void OnSunrise()

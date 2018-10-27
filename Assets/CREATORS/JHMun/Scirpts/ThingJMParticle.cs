@@ -70,14 +70,14 @@ public class ThingJMParticle : Thing
         //		everything inside this code block willl be triggered/called
         //		when my thing meets anyine
         Speak("Get out of my way!!!!");
-        PlaySound("zapsplat_multimedia_game_collect_pick_up_tone_17875");
+        PlaySound(2);
 
     }
 
     protected override void OnLeavingSomeone(GameObject other)
     {
         //	base.OnLeavingSomeone (other);
-        PlaySound("zapsplat_multimedia_game_ascend_climb_jump_synthesized_17873");
+        PlaySound(98);
     }
 
     protected override void OnSunset()

@@ -33,7 +33,6 @@ public class Thing : MonoBehaviour {
     }
 
     protected Settings settings { get; set; }
-
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
 
@@ -95,8 +94,8 @@ public class Thing : MonoBehaviour {
 
         //Sound
         audioSource = gameObject.GetComponent<AudioSource> ();
-        audioSource.spatialBlend = 0.9f;
-        audioSource.maxDistance = 35;
+        audioSource.spatialBlend = 1f;
+        audioSource.maxDistance = 15;
 
         //color
         rend = GetComponent<Renderer> ();
@@ -261,12 +260,18 @@ public class Thing : MonoBehaviour {
         rend.material.color = c;
     }
 
-    protected void PlaySound (string soundName) {
-        audioSource.clip = Resources.Load (soundFilePath + soundName) as AudioClip;
+    protected int PlaySound (int soundFileID) {
+        if (soundFileID < 1 || soundFileID > 102) Debug.LogWarning ("sound file id exceed the range, range is 1->102, you are calling " + soundFileID);
+
+        string soundUrl = soundFilePath + soundFileID.ToString ();
+
+        audioSource.clip = Resources.Load (soundUrl) as AudioClip;
         if (audioSource.clip != null) {
             audioSource.Play ();
+            return 0;
+        } else {
+            return 1;
         }
-
     }
 
     protected ThingMotor GetMotor () {

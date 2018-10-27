@@ -30,7 +30,7 @@ public class jq : Thing {
 
     protected override void OnLeavingSomeone(GameObject other)
     {
-        PlaySound("cartoon-pinch");
+        PlaySound(2);
 
     }
 

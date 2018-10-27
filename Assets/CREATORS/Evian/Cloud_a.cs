@@ -32,7 +32,7 @@ public class Cloud_a : Thing {
 
 	protected override void OnLeavingSomeone(GameObject other)
 	{
-		PlaySound ("glitchedtones_Robot Chatter 03");
+		PlaySound (20);
 		CreateCube ();
 	}
 

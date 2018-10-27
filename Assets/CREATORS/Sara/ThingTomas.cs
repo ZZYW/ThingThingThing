@@ -45,7 +45,7 @@ public class ThingTomas : Thing {
 	protected override void OnMeetingSomeone ( GameObject other)
 	{
 		//base.OnMeetingSomeone(other);
-		PlaySound("glitchedtones_Robot Chatter 03");
+		PlaySound(100);
 
 		//everything inside this code block will be triggered/called
 		//when my thing meets anyone

@@ -45,7 +45,7 @@ public class rainbowChicken : Thing {
 
 	protected override void OnNeighborSpeaking()
 	{
-		PlaySound("glitchedtones_Robot Chatter 02");
+		PlaySound(93);
 	}
 
 	protected override void OnTouchWater()

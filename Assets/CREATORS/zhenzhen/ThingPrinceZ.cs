@@ -110,7 +110,7 @@ public class ThingPrinceZ : Thing
     protected override void OnSunrise()
     {
         //Example:
-        PlaySound("cartoon-pinch");
+        PlaySound(22);
     }
 
 

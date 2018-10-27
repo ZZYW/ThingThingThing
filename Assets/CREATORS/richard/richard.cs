@@ -29,7 +29,7 @@ public class richard : Thing {
 	}
 
 	protected override void OnLeavingSomeone (GameObject other) {
-		PlaySound ("zapsplat_multimedia_game_blip_generic_tone_007_17643");
+		PlaySound (82);
 	}
 
 	protected override void OnNeigborSparkingParticles () {

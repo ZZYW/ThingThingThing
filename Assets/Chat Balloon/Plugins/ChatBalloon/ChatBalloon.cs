@@ -114,16 +114,16 @@ public class ChatBalloon : MonoBehaviour {
 
 	IEnumerator incrementString(string completeString){
 		int substringIndex = 0;
-		if (completeString != "") {
-			sound.Play ();
-		}
+		// if (completeString != "") {
+		// 	sound.Play ();
+		// }
 
 		while(substringIndex < completeString.Length+1){
 			string currentString = completeString.Substring (0, substringIndex);
 
-			if ( currentString!="" && char.IsWhiteSpace (currentString[currentString.Length - 1])) {
-				sound.Play ();
-			}
+			// if ( currentString!="" && char.IsWhiteSpace (currentString[currentString.Length - 1])) {
+			// 	sound.Play ();
+			// }
 			text.text = currentString;
 			substringIndex++;
 			if (substringIndex == completeString.Length + 1) {

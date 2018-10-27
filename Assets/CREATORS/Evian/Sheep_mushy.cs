@@ -46,7 +46,7 @@ public class Sheep_mushy : Thing {
 	{
 		//base.OnMeetingSomeone(other);
 
-		PlaySound ("zapsplat_multimedia_game_ascend_climb_jump_synthesized_17873");
+		PlaySound (44);
 
 		//everything inside this code block will be triggered/called
 		//when my thing meets anyone

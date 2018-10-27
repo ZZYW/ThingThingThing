@@ -56,7 +56,7 @@ public class ThingMargarita : Thing {
 	protected override void OnMeetingSomeone ( GameObject other)
 	{
 		//base.OnMeetingSomeone(other);
-		PlaySound("wine-glass");
+		PlaySound(24);
 
 		//everything inside this code block will be triggered/called
 		//when my thing meets anyone

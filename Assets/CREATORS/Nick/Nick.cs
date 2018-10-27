@@ -28,7 +28,7 @@ public class Nick : Thing {
     }
 
     protected override void OnLeavingSomeone (GameObject other) {
-        PlaySound ("glitchedtones_Robot Chatter 01");
+        PlaySound (1);
         //Speak ("hello" + other.name);
         //CreateCube ();
     }
