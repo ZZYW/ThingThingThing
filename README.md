@@ -1,7 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [About The Project](#about-the-project)
 - [Past Events](#past-events)
 - [Steps for participants:](#steps-for-participants)
@@ -97,6 +96,7 @@ settings.cameraOffset = 15;
 settings.acceleration = 4;
 settings.drag = 1.8f;
 settings.mass = 0.2f;
+settings.chatBubbleOffsetHeight = 2; //!important! chat bubble offset on Y axis, adjust to avoid chat bubble being blocked by your model
 settings.getNewDestinationInterval = 5;
 settings.newDestinationRange = 40;
 settings.alwaysFacingTarget = true;
@@ -126,7 +126,7 @@ Mute(); //Speak no longer works
 DeMute(); //regain ability to Speak again
 Spark(Color particleColor, int numberOfParticles);
 PlaySound(int soundEffectId); // Range: 1 ... 102
-PlaySound(string soundFileName);
+PlaySound(string soundFileName); //if you want to play your own sound. but pls make your sound short!!!
 CreateCube(); //throw a cube on the small ground
 ```
 
@@ -152,7 +152,7 @@ Do this to update
 
 #### Where to put my materials and scripts
 
-`CREATORS/[your first name]/[here]`
+`CREATORS/[your name]/[put here]`
 
 #### Where to put my own sound files
 
@@ -169,7 +169,7 @@ Find a sound file that is one of the formats below
 
 Compress it if necessary, make sure its file size is smaller than 2 MB, and move it into `Resources/Sounds` folder.
 
-Use `PlaySound(“filename”)` to play your sound, no extension name needed.
+Use `PlaySound(“filename”)` to play your sound, *no extension name needed*.
 
 ## Some Basic about C# Programming
 

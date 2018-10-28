@@ -32,7 +32,6 @@ public class ThingManager : MonoBehaviour {
                 AllThings.Add (newThing);
             }
         }
-
     }
 
     // Use this for initialization
@@ -46,9 +45,9 @@ public class ThingManager : MonoBehaviour {
     }
 
     void AddDigalogueBubble (GameObject target) {
-        
+
         Transform existingChatBubble = target.transform.Find ("Chat Balloon");
-        Vector3 bubblePosition = Vector3.zero;
+        Vector3 bubblePosition = Vector3.up * target.GetComponent<Thing> ().settings.chatBubbleOffsetHeight; //default position
 
         if (existingChatBubble != null) {
             bubblePosition = existingChatBubble.transform.localPosition;

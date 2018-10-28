@@ -11,28 +11,30 @@ using UnityEngine.Events;
 [RequireComponent (typeof (ThingMotor))]
 public class Thing : MonoBehaviour {
 
-    protected class Settings {
-        internal int cameraOffset = 15;
-        internal float acceleration = 4;
-        internal float drag = 1.8f;
-        internal float mass = 0.2f;
-        internal float getNewDestinationInterval = 5;
-        internal int newDestinationRange = 40;
-        internal bool alwaysFacingTarget = true;
-        internal Color myCubeColor;
+    public class Settings {
+        public int cameraOffset;
+        public float acceleration;
+        public float drag;
+        public float mass;
+        public float chatBubbleOffsetHeight;
+        public float getNewDestinationInterval;
+        public int newDestinationRange;
+        public bool alwaysFacingTarget;
+        public Color myCubeColor;
 
         public Settings () {
             cameraOffset = 15;
             acceleration = 4;
             drag = 1.8f;
             mass = 0.2f;
+            chatBubbleOffsetHeight = 2;
             getNewDestinationInterval = 5;
             newDestinationRange = 40;
             alwaysFacingTarget = true;
         }
     }
 
-    protected Settings settings { get; set; }
+    public Settings settings { get; protected set; }
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
 
@@ -155,13 +157,13 @@ public class Thing : MonoBehaviour {
     }
 
     //TODO: not to be called directly by other classes
-    internal void OnWaterEnter () {
+    public void OnWaterEnter () {
         InWater = true;
         Invoke ("RescueFromWater", 60f);
         OnTouchWater ();
     }
 
-    internal void OnWaterExit () {
+    public void OnWaterExit () {
         InWater = false;
         OnLeaveWater ();
         ThingConsole.Log (gameObject.name + " left water.");
@@ -260,7 +262,7 @@ public class Thing : MonoBehaviour {
     }
 
     protected void ChangeColor (Color c) {
-        rend.material.color = c;
+        rend.material.SetColor ("_Color", c);
     }
 
     protected int PlaySound (int soundFileID) {
