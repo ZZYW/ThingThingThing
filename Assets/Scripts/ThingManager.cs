@@ -7,7 +7,8 @@ using UnityEngine.AI;
 public class ThingManager : MonoBehaviour {
     public static ThingManager main;
 
-    
+    public GameObject ChatBubblePrefab;
+
     public List<GameObject> AllThings;
 
     public bool generateThings;
@@ -27,6 +28,7 @@ public class ThingManager : MonoBehaviour {
                 GameObject newThing = Instantiate (thing, transform);
                 newThing.transform.parent = transform;
                 newThing.transform.position = new Vector3 (Random.Range (-spawnAreaRadius, spawnAreaRadius), 0, Random.Range (-spawnAreaRadius, spawnAreaRadius));
+                AddDigalogueBubble (newThing);
                 AllThings.Add (newThing);
             }
         }
@@ -41,5 +43,20 @@ public class ThingManager : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+    }
+
+    void AddDigalogueBubble (GameObject target) {
+        
+        Transform existingChatBubble = target.transform.Find ("Chat Balloon");
+        Vector3 bubblePosition = Vector3.zero;
+
+        if (existingChatBubble != null) {
+            bubblePosition = existingChatBubble.transform.localPosition;
+            Destroy (existingChatBubble.gameObject);
+        }
+
+        GameObject nChatBubble = Instantiate (ChatBubblePrefab, Vector3.zero, Quaternion.identity);
+        nChatBubble.transform.SetParent (target.transform, true);
+        nChatBubble.transform.localPosition = bubblePosition;
     }
 }

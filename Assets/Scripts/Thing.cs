@@ -64,6 +64,7 @@ public class Thing : MonoBehaviour {
         TTTEventsManager.OnSomeoneSparking -= OnSomeoneSparking;
         TOD_Data.OnSunset -= OnSunset;
         TOD_Data.OnSunrise -= OnSunrise;
+        CancelInvoke ();
     }
 
     private void Awake () {
@@ -86,7 +87,7 @@ public class Thing : MonoBehaviour {
         motor.FacingTarget (settings.alwaysFacingTarget);
 
         //Chat Ballon
-        chatBalloon = gameObject.GetComponentInChildren<ChatBalloon> ();
+
         speakCDLength = Random.Range (8f, 13f);
 
         //Instantiating Particle Object
@@ -212,6 +213,7 @@ public class Thing : MonoBehaviour {
     protected void Speak (string content, float stayLength) {
         if (!speakInCD || !stopTalking) {
             TTTEventsManager.main.SomeoneSpoke (gameObject);
+            if (chatBalloon == null) chatBalloon = gameObject.GetComponentInChildren<ChatBalloon> ();
             chatBalloon.SetTextAndActive (content, stayLength);
             speakInCD = true;
             Invoke ("UnlockSpeakCD", speakCDLength);
