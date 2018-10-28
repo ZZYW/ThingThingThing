@@ -4,10 +4,10 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: field-purple
-  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
+  m_Shader: {fileID: 4800000, guid: a303ba9b91d1bbe4ba98ca4fe55419e5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -113,10 +113,15 @@ Material:
     - _UseVertexColor: 0
     - _VertexOffset: 0
     - _VertexOffsetIntensity: 0
+    - _VertexOffsetSmoothFactor: 0
+    - _VertexOffsetTimeMulti: 0
+    - _VertexOffset_UVMult: 1
     - _YOffset: 0.5
     - _ZWrite: 1
+    - _displacement: 100
     - _heightFogEnd: 1
     - _heightFogStart: 0
+    - _samplingRate: 1
     m_Colors:
     - _Color: {r: 0.03676468, g: 0.03676468, b: 0.03676468, a: 1}
     - _DustColor: {r: 0.16176468, g: 0.052335635, b: 0.052335635, a: 0}

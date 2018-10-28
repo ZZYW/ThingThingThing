@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mountains 1
-  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
+  m_Shader: {fileID: 4800000, guid: a303ba9b91d1bbe4ba98ca4fe55419e5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -59,6 +59,8 @@ Material:
     - _BumpScale: 1
     - _ColorSculpt: 0.33
     - _Cutoff: 0.5
+    - _Cutoff1: 0.1
+    - _Cutoff2: 0.12
     - _DarkColorBrightness: 0.29
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -69,6 +71,9 @@ Material:
     - _LightCutoff: 0.3
     - _Metallic: 1
     - _Mode: 0
+    - _Multiplier1: 100
+    - _Multiplier2: 1
+    - _Mutiplier2: 20
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -76,7 +81,16 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _UseRainbowColors: 0
+    - _UseVertexColor: 0
+    - _VertexOffset: 0
+    - _VertexOffsetIntensity: 0
+    - _VertexOffsetSmoothFactor: 0
+    - _VertexOffsetTimeMulti: 0
+    - _VertexOffset_UVMult: 1
     - _ZWrite: 1
+    - _density: 30
+    - _displacement: 100
+    - _samplingRate: 1
     m_Colors:
     - _Color: {r: 0.07586192, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0.03448248, g: 0, b: 1, a: 1}
