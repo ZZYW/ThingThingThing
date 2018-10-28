@@ -63,7 +63,7 @@ Material:
     - _BumpScale: 1
     - _ColorSculpt: 0.167
     - _Cutoff: 0.5
-    - _Cutoff1: 0.0134
+    - _Cutoff1: 0.05
     - _Cutoff2: 0.1
     - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1
@@ -77,6 +77,8 @@ Material:
     - _Mode: 0
     - _Multiplier1: 100
     - _Multiplier2: 1
+    - _Multiplier_displacement: 8.3
+    - _Multiplier_time: 5
     - _Mutiplier2: 20
     - _OcclusionStrength: 1
     - _Parallax: 0.02

@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: field-purple
+  m_Name: terrain2mat
   m_Shader: {fileID: 4800000, guid: a303ba9b91d1bbe4ba98ca4fe55419e5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -70,6 +70,7 @@ Material:
     - _CrossGradientFactor: 0.25
     - _CrossGradientScaler: 0.25
     - _Cutoff: 0.5
+    - _Cutoff1: 0
     - _DarkColor: 0.2
     - _DarkColorBrightness: 1
     - _DetailNormalMapScale: 1
@@ -90,6 +91,8 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _ModulationSpeed: 0.5
+    - _Multiplier_displacement: 0
+    - _Multiplier_time: 0
     - _NoiseGradient: 0.5
     - _NoiseResolution: 50
     - _NoiseScaler: 0
