@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VegetationTexture1
-  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
+  m_Shader: {fileID: 4800000, guid: a303ba9b91d1bbe4ba98ca4fe55419e5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -63,6 +63,8 @@ Material:
     - _BumpScale: 1
     - _ColorSculpt: 0.167
     - _Cutoff: 0.5
+    - _Cutoff1: 0.0134
+    - _Cutoff2: 0.1
     - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -73,6 +75,9 @@ Material:
     - _LightCutoff: 1
     - _Metallic: 0
     - _Mode: 0
+    - _Multiplier1: 100
+    - _Multiplier2: 1
+    - _Mutiplier2: 20
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Rigidness: 25
@@ -87,12 +92,16 @@ Material:
     - _VertexOffset: 0
     - _VertexOffsetIntensity: 4
     - _VertexOffsetPara01: 344
-    - _VertexOffsetSmoothFactor: 0.812
+    - _VertexOffsetSmoothFactor: 0.192
     - _VertexOffsetTimeMulti: 0.45
+    - _VertexOffset_UVMult: 1
     - _VertexoffsetTimeScale: 1000
     - _YOffset: 0.26
     - _ZWrite: 1
+    - _density: 2.36
+    - _displacement: 0.491
     - _node_2797: 0
+    - _samplingRate: 1
     m_Colors:
     - _Color: {r: 1, g: 0.891, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
