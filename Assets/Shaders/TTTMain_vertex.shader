@@ -24,9 +24,11 @@ Shader "ThingThingThing/Main_Vertex" {
 		
 		//shader displacement and sampling rate
 		_Cutoff1 ("Cutoff", Range(0, 1)) = 0.1
-		_Multiplier_displacement ("multiplier_displacement", Range(0, 100)) = 20
+		_Multiplier_displacement ("multiplier_displacement", Float) = 20
 		_Multiplier_time ("multiplier_Time", Range(0, 20)) = 1
 
+		[NoScaleOffset] _MainTex ("Texture", 2D) = "white" {} //texture
+		 _LerpScaler("lerp between material and texture color", Range(0, 1)) = 0
 
     }
     SubShader {
@@ -54,7 +56,6 @@ Shader "ThingThingThing/Main_Vertex" {
 			#include "ClassicNoise2D.hlsl"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 3.0
 
             uniform float _LightCutoff;
@@ -69,26 +70,31 @@ Shader "ThingThingThing/Main_Vertex" {
             uniform float4 _rainbowcolor3;
             uniform fixed _UseVertexColor;
             struct VertexInput {
-                float4 vertex : POSITION;
+                
+				float4 vertex : POSITION;
                 float3 normal : NORMAL;
+				float2 texcoord0 : TEXCOORD0; //texture input
                 float4 vertexColor : COLOR;
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
-                float4 posWorld : TEXCOORD0;
-                float3 normalDir : TEXCOORD1;
+				float2 uv0 : TEXCOORD0; //texure output
+                float4 posWorld : TEXCOORD1;
+                float3 normalDir : TEXCOORD2;
                 float4 vertexColor : COLOR;
-                LIGHTING_COORDS(2,3)
-                UNITY_FOG_COORDS(4)
+				
+                LIGHTING_COORDS(3,4)
+                UNITY_FOG_COORDS(5)
             };
 
 		
 			float _Cutoff;
-	
 			float _Multiplier_time;
 			float _Multiplier_displacement;
+			
 
             VertexOutput vert (VertexInput v) {
+				
 				float _thresh = pnoise(v.vertex.xy + _Time.xx * _Multiplier_time, v.vertex.xy);
 				float _displacement = pnoise(v.vertex.xy + _Time.xx * _Multiplier_time , v.vertex.xy);
 				if(_thresh<_Cutoff){
@@ -100,15 +106,21 @@ Shader "ThingThingThing/Main_Vertex" {
 				//}
 			
                 VertexOutput o = (VertexOutput)0;
+				o.uv0 = v.texcoord0;
                 o.vertexColor = v.vertexColor;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                o.posWorld = mul(unity_ObjectToWorld, v.vertex);
+                //o.posWorld = mul(unity_ObjectToWorld, v.vertex);
+				float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
-                TRANSFER_VERTEX_TO_FRAGMENT(o)
+                TRANSFER_VERTEX_TO_FRAGMENT(o);
+				
                 return o;
             }
+
+			sampler2D _MainTex; //sample texture to this variable
+			float _LerpScaler;
             float4 frag(VertexOutput i, float facing : VFACE) : COLOR {
 				
                 float isFrontFace = ( facing >= 0 ? 1 : 0 );
@@ -122,14 +134,18 @@ Shader "ThingThingThing/Main_Vertex" {
                 float attenuation = LIGHT_ATTENUATION(i);
                 float4 node_9272 = _Time;
                 float node_55 = (sin((i.posWorld.g+node_9272.g))*0.5+0.5);
-                float3 _UseRainbowColors_var = lerp( lerp( _Color.rgb, i.vertexColor.rgb, _UseVertexColor ), lerp(lerp(_rainbowcolor1.rgb,_rainbowcolor2.rgb,node_55),lerp(_rainbowcolor2.rgb,_rainbowcolor3.rgb,node_55),node_55), _UseRainbowColors );
-                float node_7044_if_leA = step(0.5*dot(lightDirection,normalDirection)+0.5,_ColorSculpt);
+
+				fixed4 col = tex2D(_MainTex, i.uv0); //unpacking each pixel color
+				fixed4 _Color_texture = lerp(_Color, col, _LerpScaler); //lerp between material and texture color
+
+                float3 _UseRainbowColors_var = lerp( lerp( _Color_texture.rgb, i.vertexColor.rgb, _UseVertexColor ), lerp(lerp(_rainbowcolor1.rgb,_rainbowcolor2.rgb,node_55),lerp(_rainbowcolor2.rgb,_rainbowcolor3.rgb,node_55),node_55), _UseRainbowColors );
+				float node_7044_if_leA = step(0.5*dot(lightDirection,normalDirection)+0.5,_ColorSculpt);
                 float node_7044_if_leB = step(_ColorSculpt,0.5*dot(lightDirection,normalDirection)+0.5);
                 float node_4160 = clamp(_LightColorBrightness,_ColorSculpt,1.0);
                 float3 finalColor = ((_UseRainbowColors_var*lerp(float4(1,1,1,1),float4(UNITY_LIGHTMODEL_AMBIENT.rgb,0.0),_AmbientColorInfluence))+((_UseRainbowColors_var*_LightColor0.rgb)*lerp((node_7044_if_leA*clamp(_DarkColorBrightness,0.0,_ColorSculpt))+(node_7044_if_leB*node_4160),node_4160,node_7044_if_leA*node_7044_if_leB)*(step(_LightCutoff,attenuation)*attenuation))).rgb;
                 fixed4 finalRGBA = fixed4(finalColor,1);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
-                return finalRGBA;
+				return finalRGBA;
             }
             ENDCG
         }
