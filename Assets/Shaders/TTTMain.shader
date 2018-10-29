@@ -11,6 +11,7 @@ Shader "ThingThingThing/Main" {
         _rainbowcolor2 ("rainbow color 2", Color) = (0.07586192,0,1,1)
         _rainbowcolor3 ("rainbow color 3", Color) = (0,1,0.006896496,1)
 		
+        
 		//shader displacement and sampling rate
          [MaterialToggle] _VertexOffset ("UseVertexColor", Float ) = 1
 		_Cutoff ("Glitch Density", Range(0, 1)) = 0.1
