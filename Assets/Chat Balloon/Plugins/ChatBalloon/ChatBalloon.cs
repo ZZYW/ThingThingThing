@@ -23,9 +23,9 @@ public class ChatBalloon : MonoBehaviour {
 	float showTime = 1f;
 
 	public void SetTextAndActive (string s, float showTime) {
-		this.showTime = showTime;
-		SetText (s);
-		SetActive (true);
+		// this.showTime = showTime;
+		// SetText (s);
+		// SetActive (true);;
 	}
 
 	public void SetTextAndActive (string s) {

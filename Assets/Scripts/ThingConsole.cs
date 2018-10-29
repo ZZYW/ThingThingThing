@@ -17,14 +17,18 @@ public class ThingConsole : MonoBehaviour {
 
     static StringBuilder stringBuilder;
 
-    static bool disableLogging = true;
+    static bool disableLogging = false;
 
     static string logFilePath;
+    static int writtenLength = 0;
 
     private void Awake () {
         logFilePath = Application.dataPath + "/StreamingAssets/tttLog.txt";
         if (File.Exists (logFilePath)) {
             File.Delete (logFilePath);
+            Debug.Log ("exist");
+        } else {
+            File.Create (logFilePath);
         }
         stringBuilder = new StringBuilder ();
         stringBuilder.Capacity = 4000;
@@ -40,7 +44,6 @@ public class ThingConsole : MonoBehaviour {
 
         if (Input.GetKeyDown (KeyCode.H)) {
             Destroy (gameObject);
-
         }
     }
 
@@ -61,7 +64,13 @@ public class ThingConsole : MonoBehaviour {
         if (disableLogging) return;
 
         using (StreamWriter writer = new StreamWriter (logFilePath, true)) {
+            writtenLength += content.Length;
             writer.WriteLine (content);
+        }
+        if (writtenLength > maxLength * 3) {
+                File.Delete (logFilePath);
+                File.Create (logFilePath);
+            writtenLength = 0;
         }
 
         // using(StreamReader reader = new StreamReader(logFilePath)){
