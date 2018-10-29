@@ -5,24 +5,22 @@ using UnityEngine;
 public class ProducedCube : MonoBehaviour {
 
     Color c;
+    Material material;
 
     // Use this for initialization
     internal void Init (Color _c) {
-
         c = _c;
-
-        Renderer rend = GetComponent<Renderer> ();
+        material = GetComponent<Renderer> ().material;
         Shader shader = Shader.Find ("ThingThingThing/Main");
-        rend.material.shader = shader;
+        material.shader = shader;
+        material.SetInt ("_UseRainbowColors", 1);
+        material.SetColor ("_rainbowcolor1", c);
+        material.SetColor ("_rainbowcolor2", Color.white);
+        material.SetColor ("_rainbowcolor3", c);
+    }
 
-        //set shader
-        rend.material.SetInt ("_UseRainbowColors", 1);
-        //rend.material.SetFloat("_TimeOffset", Random.Range(0.0f, 10.0f));
-        //rend.material.SetFloat("_TimeScale", Random.Range(10f, 100f));
-        rend.material.SetColor ("_rainbowcolor1", c);
-        rend.material.SetColor ("_rainbowcolor2", Color.white);
-        rend.material.SetColor ("_rainbowcolor3", c);
-
+    void OnDisable () {
+        Destroy(material);
     }
 
 }

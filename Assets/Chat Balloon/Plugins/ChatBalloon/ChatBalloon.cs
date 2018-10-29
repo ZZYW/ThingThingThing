@@ -43,10 +43,6 @@ public class ChatBalloon : MonoBehaviour {
 		StopAllCoroutines ();
 	}
 
-	void SetBox (Sprite _boxSprite) {
-		box.sprite = _boxSprite;
-	}
-
 	void SetText (string _text) {
 
 		Reset ();
@@ -98,7 +94,12 @@ public class ChatBalloon : MonoBehaviour {
 		float targetWidth = targetSize.x;
 		float targetHeight = targetSize.y;
 
+	
+
 		while (Mathf.Abs (widthNow - targetWidth) > 2 || Mathf.Abs (heightNow - targetHeight) > 2) {
+
+			Debug.Log("animating witdh");
+
 			widthNow = box.rectTransform.sizeDelta.x;
 			heightNow = box.rectTransform.sizeDelta.y;
 
@@ -112,6 +113,9 @@ public class ChatBalloon : MonoBehaviour {
 		int substringIndex = 0;
 
 		while (substringIndex < completeString.Length + 1) {
+
+				Debug.Log("incrementing string ");
+
 			string currentString = completeString.Substring (0, substringIndex);
 			text.text = currentString;
 			substringIndex++;
@@ -160,15 +164,5 @@ public class ChatBalloon : MonoBehaviour {
 		resetSizes ();
 	}
 
-	void SetRenderLayer (string layerName) {
-		canvas.sortingLayerName = layerName;
-	}
 
-	void SetRenderLayer (int layerIndex) {
-		canvas.sortingLayerID = layerIndex;
-	}
-
-	void SetRenderOrder (int order) {
-		canvas.sortingOrder = order;
-	}
 }

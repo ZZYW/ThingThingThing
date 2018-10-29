@@ -13,7 +13,9 @@ public class WorldSuperviser : MonoBehaviour {
 	}
 
 	void Update () {
-
+			
+		//	System.GC.Collect();
+			
 	
 
 	}

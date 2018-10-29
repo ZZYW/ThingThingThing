@@ -12,38 +12,69 @@ public class ThingConsole : MonoBehaviour {
     static ScrollRect scrollRect;
     static int maxLength = 3000;
 
+    static StringBuilder warningString;
+    static StringBuilder errorString;
+
     static StringBuilder stringBuilder;
 
+    static bool disableLogging = true;
+
+    static string logFilePath;
+
     private void Awake () {
+        logFilePath = Application.dataPath + "/StreamingAssets/tttLog.txt";
+        if (File.Exists (logFilePath)) {
+            File.Delete (logFilePath);
+        }
         stringBuilder = new StringBuilder ();
+        stringBuilder.Capacity = 4000;
+        warningString = new StringBuilder ();
+        errorString = new StringBuilder ();
         consoleText = GetComponentInChildren<Text> ();
         scrollRect = GetComponentInChildren<ScrollRect> ();
     }
+    void Update () {
+        if (Input.GetKeyDown (KeyCode.G)) {
+            disableLogging = !disableLogging;
+        }
 
-    public static void LogWarning(string content)
-    {
-        string colorCode = "yellow";
-        content = "<color=" + colorCode + ">" + content + "</color>";
-        Log(content);
+        if (Input.GetKeyDown (KeyCode.H)) {
+            Destroy (gameObject);
+
+        }
     }
 
-    public static void LogError(string content)
-    {
-        string colorCode = "red";
-        content = "<color=" + colorCode + ">" + content + "</color>";
-        Log(content);
+    public static void LogWarning (string content) {
+        warningString.Length = 0;
+        warningString.AppendFormat ("<color=yellow>{0}</color>\n", content);
+        Log (warningString.ToString ());
+    }
+
+    public static void LogError (string content) {
+        errorString.Length = 0;
+        errorString.AppendFormat ("<color=red>{0}</color>\n", content);
+        Log (errorString.ToString ());
     }
 
     public static void Log (string content) {
 
-        stringBuilder.Append (content);
-        consoleText.text = stringBuilder.ToString ();
+        if (disableLogging) return;
 
-        if (stringBuilder.Length > maxLength) {
-            stringBuilder.Remove (0, stringBuilder.Length - maxLength);
+        using (StreamWriter writer = new StreamWriter (logFilePath, true)) {
+            writer.WriteLine (content);
         }
 
-        scrollRect.verticalNormalizedPosition = verticalNormalizedPosition;
+        // using(StreamReader reader = new StreamReader(logFilePath)){
+        //     consoleText.text = reader.ReadToEnd();
+        // }
+
+        // stringBuilder.AppendLine (content);
+
+        // if (stringBuilder.Length > maxLength) {
+        //     stringBuilder.Remove (0, stringBuilder.Length - maxLength);
+        // }
+
+        //   consoleText.text = stringBuilder.ToString ();
 
     }
 }

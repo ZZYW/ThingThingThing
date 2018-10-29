@@ -15,7 +15,6 @@ public class EnvironmentGenerator : MonoBehaviour {
 	void Awake () {
 		foreach (GameObject terrain in terrains) {
 			ChangeMesh (terrain);
-			// ChangeMaterialColor (terrain);
 		}
 	}
 
@@ -43,10 +42,7 @@ public class EnvironmentGenerator : MonoBehaviour {
 		meshCollider.sharedMesh = mesh;
 	}
 
-	void ChangeMaterialColor (GameObject targetGO) {
-		Color col = Color.HSVToRGB (Random.Range (0f, 1f), 1, 1);
-		targetGO.GetComponent<Renderer> ().material.SetColor ("_Color", col);
-	}
+	
 
 	void Start () {
 

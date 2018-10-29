@@ -27,7 +27,8 @@ public class ThingPrinceZ : Thing
         GameObject body = transform.Find("default").gameObject;
         if (body != null)
         {
-            body.GetComponent<Renderer>().material.color = tempColor;
+            //todo: material with transparency
+           // body.GetComponent<Renderer>().material.color = tempColor;
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -37,9 +38,11 @@ public class Thing : MonoBehaviour {
     public Settings settings { get; protected set; }
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
+    protected string MyName { get; private set; }
 
-    private float speakCDLength;
-    private bool speakInCD;
+    private static float speakCDLength = 5; //seconds
+    [SerializeField] private bool speakInCD;
+    private float spokeTimeStamp;
     private bool stopWalkingAround;
     private bool stopTalking;
     private ThingMotor motor;
@@ -48,10 +51,15 @@ public class Thing : MonoBehaviour {
     private ParticleSystem explodePS;
     private AudioSource audioSource;
     private List<GameObject> neighborList;
-    private string soundFilePath = "Sounds/";
+    private static string soundFilePath = "Sounds/";
+    private static string matColor = "_Color";
     private Color originalColor;
-    private Renderer rend;
+    private StringBuilder stringBuilder;
+
+    [Header ("Your Main Material For Color Changing")]
+    [SerializeField] private Material mMat;
     private static GameObject generatedCubeContainer;
+    private static string thingTag = "Thing";
     public int DesiredFollowDistance { get { return settings.cameraOffset; } }
 
     private void OnEnable () {
@@ -70,8 +78,10 @@ public class Thing : MonoBehaviour {
     }
 
     private void Awake () {
+        MyName = gameObject.name;
         settings = new Settings ();
-        gameObject.tag = "Thing";
+        stringBuilder = new StringBuilder ();
+        gameObject.tag = thingTag;
         neighborList = new List<GameObject> ();
         TTTAwake ();
     }
@@ -88,15 +98,12 @@ public class Thing : MonoBehaviour {
         motor.rb.mass = settings.mass;
         motor.FacingTarget (settings.alwaysFacingTarget);
 
-        //Chat Ballon
-
-        speakCDLength = Random.Range (8f, 13f);
-
         //Instantiating Particle Object
         explodePS = GetComponentInChildren<ParticleSystem> ();
-        if (explodePS == null)
-        {
-            Debug.LogError(gameObject.name + " doesn't have a particle system!!!!!!!!!");
+        if (explodePS == null) {
+            stringBuilder.Length = 0;
+            stringBuilder.AppendFormat ("{0} doesn't have a particle system?!", MyName);
+            ThingConsole.LogWarning (stringBuilder.ToString ());
         }
 
         //Sound
@@ -105,14 +112,14 @@ public class Thing : MonoBehaviour {
         audioSource.spatialBlend = 1f;
         audioSource.maxDistance = 50;
 
-        //color
-        rend = GetComponent<Renderer> ();
-        if (rend == null) rend = GetComponentInChildren<Renderer> ();
-        originalColor = rend.material.color;
-
         TTTStart ();
     }
     private void Update () {
+
+        if (speakInCD && Time.time - spokeTimeStamp > speakCDLength) {
+            speakInCD = false;
+        }
+
         if (transform.position.y < -9 || transform.position.y > 157) {
             ResetPosition ();
         }
@@ -132,9 +139,9 @@ public class Thing : MonoBehaviour {
     }
 
     private void OnTriggerEnter (Collider other) {
-        if (other.gameObject.CompareTag ("Thing")) {
+        if (other.gameObject.CompareTag (thingTag)) {
             OnMeetingSomeone (other.gameObject);
-            ThingConsole.Log (gameObject.name + " is meeting " + other.name);
+            //  ThingConsole.Log (gameObject.name + " is meeting " + other.name);
             if (!neighborList.Contains (other.gameObject)) {
                 neighborList.Add (other.gameObject);
             }
@@ -142,7 +149,7 @@ public class Thing : MonoBehaviour {
     }
 
     private void OnTriggerExit (Collider other) {
-        if (other.gameObject.CompareTag ("Thing")) {
+        if (other.gameObject.CompareTag (thingTag)) {
             OnLeavingSomeone (other.gameObject);
             if (neighborList.Contains (other.gameObject)) {
                 neighborList.Remove (other.gameObject);
@@ -156,10 +163,6 @@ public class Thing : MonoBehaviour {
         }
     }
 
-    private void UnlockSpeakCD () {
-        speakInCD = false;
-    }
-
     //TODO: not to be called directly by other classes
     public void OnWaterEnter () {
         InWater = true;
@@ -170,7 +173,11 @@ public class Thing : MonoBehaviour {
     public void OnWaterExit () {
         InWater = false;
         OnLeaveWater ();
-        ThingConsole.Log (gameObject.name + " left water.");
+
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} left water.", MyName);
+        ThingConsole.Log (stringBuilder.ToString ());
+
     }
 
     protected void SetTarget (Vector3 target) {
@@ -182,7 +189,9 @@ public class Thing : MonoBehaviour {
     protected void StopMoving () {
         stopWalkingAround = true;
         motor.Stop ();
-        ThingConsole.Log (gameObject.name + " stopped moving");
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} stopped moving", MyName);
+        ThingConsole.Log (stringBuilder.ToString ());
     }
 
     protected void StopMoving (float seconds) {
@@ -192,12 +201,16 @@ public class Thing : MonoBehaviour {
 
     protected void Mute () {
         stopTalking = true;
-        ThingConsole.LogWarning (gameObject.name + "is being muted");
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} is being muted.", MyName);
+        ThingConsole.LogWarning (stringBuilder.ToString ());
     }
 
     protected void DeMute () {
         stopTalking = false;
-        ThingConsole.LogWarning (gameObject.name + "can speak again.");
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} can speak again", MyName);
+        ThingConsole.Log (stringBuilder.ToString ());
     }
 
     protected void RestartWalking () {
@@ -217,14 +230,20 @@ public class Thing : MonoBehaviour {
     }
 
     protected void Speak (string content, float stayLength) {
-        if (!speakInCD || !stopTalking) {
-            TTTEventsManager.main.SomeoneSpoke (gameObject);
-            if (chatBalloon == null) chatBalloon = gameObject.GetComponentInChildren<ChatBalloon> ();
-            chatBalloon.SetTextAndActive (content, stayLength);
-            speakInCD = true;
-            Invoke ("UnlockSpeakCD", speakCDLength);
-        }
-        ThingConsole.Log (gameObject.name + "is speaking: " + content);
+        if (stopTalking) return;
+        if (speakInCD) return;
+
+        TTTEventsManager.main.SomeoneSpoke (gameObject);
+        if (chatBalloon == null) chatBalloon = gameObject.GetComponentInChildren<ChatBalloon> ();
+        chatBalloon.SetTextAndActive (content, stayLength);
+
+        speakInCD = true;
+        spokeTimeStamp = Time.time;
+
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} is speaking {1}", MyName, content);
+        ThingConsole.Log (stringBuilder.ToString ());
+
     }
 
     protected void Speak (string content) {
@@ -232,9 +251,8 @@ public class Thing : MonoBehaviour {
     }
 
     protected void Spark (Color particleColor, int numberOfParticles) {
-        if (explodePS == null)
-        {
-            explodePS = GetComponentInChildren<ParticleSystem>();
+        if (explodePS == null) {
+            explodePS = GetComponentInChildren<ParticleSystem> ();
         }
 
         ParticleSystem.MainModule particleMain = explodePS.main;
@@ -262,16 +280,20 @@ public class Thing : MonoBehaviour {
 
         acube.AddComponent<Rigidbody> ();
         acube.AddComponent<ProducedCube> ().Init (settings.myCubeColor);
-        //Hud.main.OneMoreCube();
+
     }
 
     protected void ResetColor () {
-        rend.material.color = originalColor;
-        ThingConsole.Log (gameObject.name + "reset its color");
+        if (mMat == null) return;
+        mMat.color = originalColor;
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} reset its own color", MyName);
+        ThingConsole.Log (stringBuilder.ToString ());
     }
 
     protected void ChangeColor (Color c) {
-        rend.material.SetColor ("_Color", c);
+        if (mMat == null) return;
+        mMat.SetColor (matColor, c);
     }
 
     protected int PlaySound (int soundFileID) {
@@ -301,7 +323,9 @@ public class Thing : MonoBehaviour {
 
     protected void ResetPosition () {
         motor.rb.position = ThingManager.main.transform.position;
-        ThingConsole.Log (gameObject.name + " position was reset");
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("{0} position was reset", MyName);
+        ThingConsole.Log (stringBuilder.ToString ());
     }
 
     //VIRTUAL

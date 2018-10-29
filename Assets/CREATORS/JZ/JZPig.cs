@@ -20,7 +20,7 @@ public class JZPig : Thing
 
     protected override void TTTStart()
     {
-        Speak("为什么?");
+        Speak("why");
         InvokeRepeating("RandomSetDestination", 3f, 2f);
     }
     protected override void OnMeetingSomeone(GameObject other)
@@ -33,7 +33,7 @@ public class JZPig : Thing
 
     protected override void OnLeavingSomeone(GameObject other)
     {
-        Speak("再见!");
+        Speak("zai jian!");
         RandomSetDestination();
         InvokeRepeating("RandomSetDestination", 5f, 2f);
         SetScale(new Vector3(15, 15, 15));
