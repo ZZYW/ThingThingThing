@@ -23,9 +23,9 @@ public class ChatBalloon : MonoBehaviour {
 	float showTime = 1f;
 
 	public void SetTextAndActive (string s, float showTime) {
-		// this.showTime = showTime;
-		// SetText (s);
-		// SetActive (true);;
+		this.showTime = showTime;
+		SetText (s);
+		SetActive (true);;
 	}
 
 	public void SetTextAndActive (string s) {
@@ -35,7 +35,7 @@ public class ChatBalloon : MonoBehaviour {
 	void Awake () {
 		Reset ();
 		box.color = bubbleColor;
-		text.color = new Color (0.0f, 0.0f, 0.0f, 0.0f); //set text as transparent
+		text.color = textColor;
 		Hide ();
 	}
 
@@ -49,10 +49,7 @@ public class ChatBalloon : MonoBehaviour {
 		text.text = _text.Replace ("\\n", "\n");
 		size = Vector2.zero;
 
-		//config Text
-		text.resizeTextForBestFit = false;
-		text.horizontalOverflow = HorizontalWrapMode.Wrap;
-		text.verticalOverflow = VerticalWrapMode.Truncate;
+
 
 		//Debug.Log("before everything:   Text Box Size:\n" + text.rectTransform.sizeDelta);
 		//Adjust Width of size
@@ -80,10 +77,9 @@ public class ChatBalloon : MonoBehaviour {
 		//adjust text bound box
 		text.rectTransform.sizeDelta = size;
 
-		text.text = "";
-		text.color = textColor;
+	//	text.text = "";
 
-		StartCoroutine ("IncrementString", _text.Replace ("\\n", "\n"));
+	//	StartCoroutine ("IncrementString", _text.Replace ("\\n", "\n"));
 
 	}
 
@@ -95,10 +91,9 @@ public class ChatBalloon : MonoBehaviour {
 		float targetHeight = targetSize.y;
 
 	
-
 		while (Mathf.Abs (widthNow - targetWidth) > 2 || Mathf.Abs (heightNow - targetHeight) > 2) {
 
-			Debug.Log("animating witdh");
+			// Debug.Log("animating witdh");
 
 			widthNow = box.rectTransform.sizeDelta.x;
 			heightNow = box.rectTransform.sizeDelta.y;
@@ -107,25 +102,6 @@ public class ChatBalloon : MonoBehaviour {
 			box.rectTransform.sizeDelta = tempSize;
 			yield return null;
 		}
-	}
-
-	IEnumerator IncrementString (string completeString) {
-		int substringIndex = 0;
-
-		while (substringIndex < completeString.Length + 1) {
-
-				Debug.Log("incrementing string ");
-
-			string currentString = completeString.Substring (0, substringIndex);
-			text.text = currentString;
-			substringIndex++;
-			if (substringIndex == completeString.Length + 1) {
-				Invoke ("Hide", showTime);
-			}
-
-			yield return null;
-		}
-
 	}
 
 	void Update () {

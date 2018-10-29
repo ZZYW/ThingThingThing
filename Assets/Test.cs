@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class Test : MonoBehaviour {
 
-	public List<Renderer> renderers = new List<Renderer> ();
+	const int n = 30;
+	GameObject[] ob = new GameObject[n];
+	SimpleChatBubble[] bubbles;
 
-	public Text text;
+	public GameObject bubblePrefab;
 
-	// Use this for initialization
 	void Start () {
+		for (int i = 0; i < n; i++) {
+			ob[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
+			ob[i].transform.position = new Vector3 (i * 100, 0, 0);
 
+			GameObject chatBubbleGO = GameObject.Instantiate (bubblePrefab, Vector3.zero, Quaternion.identity);
+			chatBubbleGO.transform.SetParent (transform);
+			chatBubbleGO.transform.position = ob[i].transform.position;
+
+		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-		// if( text )
-		text.text = Random.Range(10000,1000).ToString();
-	}
 }

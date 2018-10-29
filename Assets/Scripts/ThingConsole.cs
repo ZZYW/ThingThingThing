@@ -17,7 +17,7 @@ public class ThingConsole : MonoBehaviour {
 
     static StringBuilder stringBuilder;
 
-    static bool disableLogging = false;
+    static bool disableLogging = true;
 
     static string logFilePath;
     static int writtenLength = 0;
@@ -65,12 +65,11 @@ public class ThingConsole : MonoBehaviour {
 
         using (StreamWriter writer = new StreamWriter (logFilePath, true)) {
             writtenLength += content.Length;
+            if (writtenLength > maxLength * 3) {
+                File.WriteAllText(logFilePath,"");
+                writtenLength = 0;
+            }
             writer.WriteLine (content);
-        }
-        if (writtenLength > maxLength * 3) {
-                File.Delete (logFilePath);
-                File.Create (logFilePath);
-            writtenLength = 0;
         }
 
         // using(StreamReader reader = new StreamReader(logFilePath)){

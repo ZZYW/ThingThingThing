@@ -490,6 +490,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114877563933615056, guid: dc4b9cecb37fb4905a60d31e1461c924,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 223453906897703690, guid: dc4b9cecb37fb4905a60d31e1461c924,
+        type: 2}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc4b9cecb37fb4905a60d31e1461c924, type: 2}
   m_IsPrefabAsset: 0
