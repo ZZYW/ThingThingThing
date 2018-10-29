@@ -94,6 +94,10 @@ public class Thing : MonoBehaviour {
 
         //Instantiating Particle Object
         explodePS = GetComponentInChildren<ParticleSystem> ();
+        if (explodePS == null)
+        {
+            Debug.LogError(gameObject.name + " doesn't have a particle system!!!!!!!!!");
+        }
 
         //Sound
         audioSource = gameObject.GetComponent<AudioSource> ();
@@ -228,7 +232,12 @@ public class Thing : MonoBehaviour {
     }
 
     protected void Spark (Color particleColor, int numberOfParticles) {
-        var particleMain = explodePS.main;
+        if (explodePS == null)
+        {
+            explodePS = GetComponentInChildren<ParticleSystem>();
+        }
+
+        ParticleSystem.MainModule particleMain = explodePS.main;
         particleMain.startColor = particleColor;
         var newBurst = new ParticleSystem.Burst (0f, numberOfParticles);
         explodePS.emission.SetBurst (0, newBurst);
