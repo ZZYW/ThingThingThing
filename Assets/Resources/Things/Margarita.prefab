@@ -1174,7 +1174,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1198,7 +1198,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &82440754263732558
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1337,8 +1337,12 @@ MonoBehaviour:
   canvas: {fileID: 223639677993644876}
   text: {fileID: 114446787234462872}
   box: {fileID: 114016291070520684}
-  sound: {fileID: 82440754263732558}
-  inputText: {fileID: 0}
+  minWidth: 20
+  maxWidth: 300
+  minHeight: 66
+  maxHeight: 10000
+  widthBorder: 50
+  heightBorder: 50
 --- !u!114 &114156335883995250
 MonoBehaviour:
   m_ObjectHideFlags: 1
