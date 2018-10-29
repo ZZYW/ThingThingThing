@@ -63,13 +63,6 @@ public class ThingMotor : MonoBehaviour
         rb.AddForce(force);
 
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(transform.position, target);
-        Gizmos.DrawSphere(target, 0.2f);
-    }
-
     public void FacingTarget(bool value)
     {
         facingTarget = value;

@@ -58,7 +58,7 @@ Material:
     - _AmbientColorInfluence: 1
     - _BumpScale: 1
     - _ColorSculpt: 0.666
-    - _Cutoff: 0.5
+    - _Cutoff: 0
     - _Cutoff1: 0
     - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1

@@ -5,6 +5,7 @@ Shader "ThingThingThing/Main" {
         _LightColorBrightness ("Light Color Brightness", Range(0, 1)) = 1
         _DarkColorBrightness ("Dark Color Brightness", Range(0, 1)) = 0.3932824
         _Color ("Color", Color) = (0,0,1,1)
+        [MaterialToggle] _UseVertexColor ("Use Vertex Color Instead", Float) = 0
         _AmbientColorInfluence ("Ambient Color Influence", Range(0, 1)) = 0.5
         [MaterialToggle] _UseRainbowColors ("UseRainbowColors", Float ) = 0
         _rainbowcolor1 ("rainbow color 1", Color) = (1,0,0,1)
@@ -13,13 +14,13 @@ Shader "ThingThingThing/Main" {
 		
         
 		//shader displacement and sampling rate
-         [MaterialToggle] _VertexOffset ("UseVertexColor", Float ) = 1
+         [MaterialToggle] _VertexOffset ("Toggle Vertex Offset", Float ) = 1
 		_Cutoff ("Glitch Density", Range(0, 1)) = 0.1
 		_Multiplier_displacement ("Glitch Displacement", Float) = 0.5
 		_Multiplier_time ("Glitch Frequency", Range(0, 20)) = 1
 
 		[NoScaleOffset] _MainTex ("Texture", 2D) = "white" {} //texture
-		 _LerpScaler("Lerp between material color and texture color", Range(0, 1)) = 0
+		_LerpScaler("Lerp between material color and texture color", Range(0, 1)) = 0
     }
 
     SubShader {
@@ -82,16 +83,18 @@ Shader "ThingThingThing/Main" {
 			float _Cutoff;
 			float _Multiplier_time;
 			float _Multiplier_displacement;
-			
+			float _VertexOffset;
 
             VertexOutput vert (VertexInput v) {
 				
-				float thresh = pnoise(v.vertex.xy + _Time.xx * _Multiplier_time, v.vertex.xy);
-				float displacement = pnoise(v.vertex.xy + _Time.xx * _Multiplier_time , v.vertex.xy);
-				if(thresh < _Cutoff){
-					//models'displayed along y axis
-					v.vertex.y += displacement * _Multiplier_displacement;
-				}
+                if(_VertexOffset==1){
+                    float thresh = pnoise(v.vertex.xy + _Time.xx * _Multiplier_time, v.vertex.xy);
+                    float displacement = pnoise(v.vertex.xy + _Time.xx * _Multiplier_time , v.vertex.xy);
+                    if(thresh < _Cutoff){
+                        //models'displayed along y axis
+                        v.vertex.y += displacement * _Multiplier_displacement;
+                    }
+                }
 			
 			
                 VertexOutput o = (VertexOutput)0;

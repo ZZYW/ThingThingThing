@@ -75,7 +75,7 @@ Material:
     - _LightCutoff: 0.33
     - _Metallic: 0
     - _Mode: 0
-    - _Multiplier_displacement: 20
+    - _Multiplier_displacement: 1
     - _Multiplier_time: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02

@@ -69,7 +69,7 @@ Material:
     - _ColorSculpt: 0
     - _CrossGradientFactor: 0.25
     - _CrossGradientScaler: 0.25
-    - _Cutoff: 0.5
+    - _Cutoff: 0
     - _Cutoff1: 0
     - _DarkColor: 0.2
     - _DarkColorBrightness: 1

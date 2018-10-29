@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Mountain01
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _VERTEXOFFSET_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -58,7 +58,7 @@ Material:
     - _AmbientColorInfluence: 0.163
     - _BumpScale: 1
     - _ColorSculpt: 0.5193893
-    - _Cutoff: 0.5
+    - _Cutoff: 0.091
     - _Cutoff1: 0.1
     - _DarkColorBrightness: 0.3932824
     - _DetailNormalMapScale: 1
@@ -71,8 +71,8 @@ Material:
     - _LightCutoff: 0.33
     - _Metallic: 0
     - _Mode: 0
-    - _Multiplier_displacement: 20
-    - _Multiplier_time: 1
+    - _Multiplier_displacement: 3.8
+    - _Multiplier_time: 0.08
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -81,7 +81,7 @@ Material:
     - _UVSec: 0
     - _UseRainbowColors: 0
     - _UseVertexColor: 0
-    - _VertexOffset: 0
+    - _VertexOffset: 1
     - _VertexOffsetIntensity: 0
     - _VertexOffsetSmoothFactor: 0
     - _VertexOffsetTimeMulti: 0
