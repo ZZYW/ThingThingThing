@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 11 - Default
-  m_Shader: {fileID: 4800000, guid: a303ba9b91d1bbe4ba98ca4fe55419e5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
   m_ShaderKeywords: _RAINBOW_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -74,12 +74,15 @@ Material:
     - _HeightFog: 0
     - _HeightFogEnd: 1
     - _HeightFogStart: 1
+    - _LerpScaler: 0
     - _LightColorBrightness: 1
     - _LightCutoff: 0
     - _Metallic: 0.31
     - _Mode: 0
     - _Multiplier1: 100
     - _Multiplier2: 1
+    - _Multiplier_displacement: 20
+    - _Multiplier_time: 1
     - _Mutiplier2: 20
     - _NoiseScaler: 0.27
     - _OcclusionStrength: 1
