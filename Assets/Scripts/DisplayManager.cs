@@ -17,6 +17,7 @@ public class DisplayManager : MonoBehaviour
             {
                 Debug.Log("trying to active display number: " + i);
                 Display.displays[i].Activate();
+              
             }
             catch (System.Exception e)
             {

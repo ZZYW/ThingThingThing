@@ -14,11 +14,11 @@ public class Test : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < n; i++) {
 			ob[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-			ob[i].transform.position = new Vector3 (i * 100, 0, 0);
+			ob[i].transform.position = new Vector3 (i * 5, 0, 0);
 
 			GameObject chatBubbleGO = GameObject.Instantiate (bubblePrefab, Vector3.zero, Quaternion.identity);
 			chatBubbleGO.transform.SetParent (transform);
-			chatBubbleGO.transform.position = ob[i].transform.position;
+			chatBubbleGO.transform.position = ob[i].transform.position+Vector3.up;
 
 		}
 	}

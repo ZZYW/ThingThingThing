@@ -35,7 +35,7 @@ public class rainbowChicken : Thing {
 
 	protected override void OnMeetingSomeone(GameObject other)
 	{
-		Speak("I met " + other.name, 2f);
+		Speak("I met " + other.name);
 	}
 
 	protected override void OnLeavingSomeone(GameObject other)

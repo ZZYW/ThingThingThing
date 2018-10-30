@@ -49,15 +49,11 @@ public class ThingPrinceZ : Thing
 
         }
 
-        if (TOD_Data.main.IsNight)
-        {
-
-        }
-
-        if (TOD_Data.main.IsDay)
-        {
-            ChangeAlpha();
-        }
+      
+        // if (TOD_Data.main.IsDay)
+        // {
+        //     ChangeAlpha();
+        // }
 
         if (InWater)
         {
@@ -74,7 +70,7 @@ public class ThingPrinceZ : Thing
     protected override void OnMeetingSomeone(GameObject other)
     {
         //Example
-        Speak("I met " + other.name, 2f);
+        Speak("I met " + other.name);
     }
 
     protected override void OnLeavingSomeone(GameObject other)

@@ -14,7 +14,11 @@ public class WorldSuperviser : MonoBehaviour {
 
 	void Update () {
 			
-		//	System.GC.Collect();
+			System.GC.CollectionCount(1000);
+
+			if(Input.GetKey(KeyCode.R)){
+			 SceneManager.LoadScene(0);
+			}
 			
 	
 

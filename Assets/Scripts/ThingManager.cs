@@ -7,7 +7,8 @@ using UnityEngine.AI;
 public class ThingManager : MonoBehaviour {
     public static ThingManager main;
 
-    public GameObject ChatBubblePrefab;
+    public GameObject chatBubblePrefab;
+    public Transform chatBubbleCanvas;
 
     public List<GameObject> AllThings;
 
@@ -46,16 +47,20 @@ public class ThingManager : MonoBehaviour {
 
     void AddDigalogueBubble (GameObject target) {
 
+        //if it has chatbubble(old one), destroy it and remember its position
         Transform existingChatBubble = target.transform.Find ("Chat Balloon");
         Vector3 bubblePosition = Vector3.up * target.GetComponent<Thing> ().settings.chatBubbleOffsetHeight; //default position
-
         if (existingChatBubble != null) {
             bubblePosition = existingChatBubble.transform.localPosition;
             Destroy (existingChatBubble.gameObject);
         }
 
-        GameObject nChatBubble = Instantiate (ChatBubblePrefab, Vector3.zero, Quaternion.identity);
-        nChatBubble.transform.SetParent (target.transform, true);
-        nChatBubble.transform.localPosition = bubblePosition;
+        GameObject nChatBubble = Instantiate (chatBubblePrefab, Vector3.zero, Quaternion.identity);
+        nChatBubble.transform.SetParent (chatBubbleCanvas, true);
+
+        //let chatbubble and thing know who each other.p
+        nChatBubble.GetComponent<SimpleChatBubble> ().host = target.transform;
+        nChatBubble.GetComponent<SimpleChatBubble> ().offsetPos = bubblePosition;
+        target.GetComponent<Thing> ().chatBubble = nChatBubble.GetComponent<SimpleChatBubble> ();
     }
 }

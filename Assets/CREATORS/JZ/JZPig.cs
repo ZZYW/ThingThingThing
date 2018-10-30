@@ -27,15 +27,15 @@ public class JZPig : Thing
     {
         Speak("Hehe");
 
-        InvokeRepeating("RandomSetDestination", 2f, 4f);
-        InvokeRepeating("ResetPosition", 4f, 6f);
+        // InvokeRepeating("RandomSetDestination", 2f, 4f);
+        // InvokeRepeating("ResetPosition", 4f, 6f);
     }
 
     protected override void OnLeavingSomeone(GameObject other)
     {
         Speak("zai jian!");
         RandomSetDestination();
-        InvokeRepeating("RandomSetDestination", 5f, 2f);
+        // InvokeRepeating("RandomSetDestination", 5f, 2f);
         SetScale(new Vector3(15, 15, 15));
     }
 

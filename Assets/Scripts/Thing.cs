@@ -47,7 +47,7 @@ public class Thing : MonoBehaviour {
     private bool stopTalking;
     private ThingMotor motor;
     private SphereCollider neighborDetector;
-    private ChatBalloon chatBalloon;
+    public SimpleChatBubble chatBubble;
     private ParticleSystem explodePS;
     private AudioSource audioSource;
     private List<GameObject> neighborList;
@@ -123,6 +123,7 @@ public class Thing : MonoBehaviour {
         if (transform.position.y < -9 || transform.position.y > 157) {
             ResetPosition ();
         }
+
         TTTUpdate ();
     }
 
@@ -229,25 +230,21 @@ public class Thing : MonoBehaviour {
         transform.localScale = newScale;
     }
 
-    protected void Speak (string content, float stayLength) {
+    protected void Speak (string content) {
         if (stopTalking) return;
         if (speakInCD) return;
 
         TTTEventsManager.main.SomeoneSpoke (gameObject);
-        if (chatBalloon == null) chatBalloon = gameObject.GetComponentInChildren<ChatBalloon> ();
-        chatBalloon.SetTextAndActive (content, stayLength);
+
+        chatBubble.Speak (content);
 
         speakInCD = true;
         spokeTimeStamp = Time.time;
 
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} is speaking {1}", MyName, content);
-        ThingConsole.Log (stringBuilder.ToString ());
+        // stringBuilder.Length = 0;
+        // stringBuilder.AppendFormat ("{0} is speaking {1}", MyName, content);
+        // ThingConsole.Log (stringBuilder.ToString ());
 
-    }
-
-    protected void Speak (string content) {
-        Speak (content, 2f);
     }
 
     protected void Spark (Color particleColor, int numberOfParticles) {

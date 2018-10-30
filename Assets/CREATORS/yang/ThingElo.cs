@@ -37,7 +37,7 @@ public class ThingElo : Thing
     protected override void OnMeetingSomeone(GameObject other)
     {
         //Example
-        Speak("I met " + other.name, 2f);
+        Speak("I met " + other.name);
     }
 
     protected override void OnLeavingSomeone(GameObject other)
