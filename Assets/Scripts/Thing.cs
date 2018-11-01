@@ -161,6 +161,9 @@ public class Thing : MonoBehaviour {
     private void RescueFromWater () {
         if (InWater) {
             ResetPosition ();
+            stringBuilder.Length = 0;
+            stringBuilder.AppendFormat ("{0} is rescued from water", MyName);
+            ThingConsole.LogWarning (stringBuilder.ToString ());
         }
     }
 
@@ -172,6 +175,7 @@ public class Thing : MonoBehaviour {
 
     public void OnWaterExit () {
         InWater = false;
+        CancelInvoke ("RescueFromWater");
         OnLeaveWater ();
 
         stringBuilder.Length = 0;
@@ -240,9 +244,9 @@ public class Thing : MonoBehaviour {
         speakInCD = true;
         spokeTimeStamp = Time.time;
 
-        // stringBuilder.Length = 0;
-        // stringBuilder.AppendFormat ("{0} is speaking {1}", MyName, content);
-        // ThingConsole.Log (stringBuilder.ToString ());
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("<color=orange>{0}</color> is speaking {1}", MyName, content);
+        ThingConsole.Log (stringBuilder.ToString ());
 
     }
 
@@ -319,9 +323,9 @@ public class Thing : MonoBehaviour {
 
     protected void ResetPosition () {
         motor.rb.position = ThingManager.main.transform.position;
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} position was reset", MyName);
-        ThingConsole.Log (stringBuilder.ToString ());
+        // stringBuilder.Length = 0;
+        // stringBuilder.AppendFormat ("{0} position was reset", MyName);
+        // ThingConsole.Log (stringBuilder.ToString ());
     }
 
     //VIRTUAL
