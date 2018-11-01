@@ -265,6 +265,7 @@ public class Thing : MonoBehaviour {
 
     protected void CreateCube () {
         GameObject acube = GameObject.CreatePrimitive (PrimitiveType.Cube);
+        acube.layer = 12;
 
         acube.transform.localScale = Vector3.one / 4;
         acube.transform.position = transform.position;
