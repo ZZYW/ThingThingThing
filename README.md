@@ -59,6 +59,7 @@ Prior _ThingThingthing_ collaborations also include
 # Steps for participants:
 
 [Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)
+[石墨文档](https://shimo.im/docs/DhxNEZhaCGgABntM/)
 
 ---
 
