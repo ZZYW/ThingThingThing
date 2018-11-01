@@ -9,18 +9,17 @@ public class SimpleChatBubble : MonoBehaviour {
 	public Image bubble;
 
 	public Transform host;
-	
+
 	[SerializeField] private Vector3 offsetPos;
 
 	// public Vector3 defaultOffsetPos;
 
-	void Awake () {
-		// defaultOffsetPos = Vector3.zero;
-		// offsetPos = defaultOffsetPos;
+	void Start () {
+		Init();
 	}
 
-	void Start () {
-
+	void Init () {
+		Disappear ();
 	}
 
 	public void SetOffsetPos (Vector3 vec3) {
