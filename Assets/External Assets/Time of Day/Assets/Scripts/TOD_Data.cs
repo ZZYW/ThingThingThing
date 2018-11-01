@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TOD_Data : MonoBehaviour
-{
+public class TOD_Data : MonoBehaviour {
 
     public static System.Action OnSunrise;
     public static System.Action OnSunset;
@@ -15,18 +14,14 @@ public class TOD_Data : MonoBehaviour
     public bool IsDay { get; private set; }
     public bool IsNight { get; private set; }
 
-    public float TimeNow
-    {
-        get
-        {
-            return GetComponent<TOD_Sky>().Cycle.Hour;
+    public float TimeNow {
+        get {
+            return GetComponent<TOD_Sky> ().Cycle.Hour;
         }
     }
 
-    private void Awake()
-    {
-        if (main == null)
-        {
+    private void Awake () {
+        if (main == null) {
             main = this;
         }
     }
@@ -37,49 +32,43 @@ public class TOD_Data : MonoBehaviour
     float reportCoolDown = 5f;
 
     // Use this for initialization
-    void Start()
-    {
-        sky = GetComponent<TOD_Sky>();
+    void Start () {
+        sky = GetComponent<TOD_Sky> ();
         IsDay = true;
         IsNight = false;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update () {
 
         float hour = sky.Cycle.Hour;
-        if (hour > 19f && hour < 19.2f && !sunsetReported)
-        {
-            print("------Sunset------");
-            if (OnSunset != null) OnSunset();
+        if (hour > 19f && hour < 19.2f && !sunsetReported) {
+            print ("------Sunset------");
+            if (OnSunset != null) OnSunset ();
+            ThingConsole.LogWarning ("Sunset");
             sunsetReported = true;
             IsDay = false;
             IsNight = true;
-            Invoke("ResetSunsetReportFlag", reportCoolDown);
+            Invoke ("ResetSunsetReportFlag", reportCoolDown);
         }
 
-        if (hour > 7f && hour < 7.2f && !sunriseReported)
-        {
-            print("------Sunrise------");
-            if (OnSunrise != null) OnSunrise();
+        if (hour > 7f && hour < 7.2f && !sunriseReported) {
+            print ("------Sunrise------");
+            if (OnSunrise != null) OnSunrise ();
+            ThingConsole.LogWarning ("Sunrise");
             IsDay = true;
             IsNight = false;
             sunriseReported = true;
-            Invoke("ResetSunriseReportFlag", reportCoolDown);
+            Invoke ("ResetSunriseReportFlag", reportCoolDown);
         }
-
 
     }
 
-
-    void ResetSunsetReportFlag()
-    {
+    void ResetSunsetReportFlag () {
         sunsetReported = false;
     }
 
-    void ResetSunriseReportFlag()
-    {
+    void ResetSunriseReportFlag () {
         sunriseReported = false;
     }
 }

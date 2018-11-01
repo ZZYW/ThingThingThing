@@ -28,7 +28,7 @@ public class Thing : MonoBehaviour {
             acceleration = 4;
             drag = 1.8f;
             mass = 0.2f;
-            chatBubbleOffsetHeight = 2;
+            chatBubbleOffsetHeight = 3;
             getNewDestinationInterval = 5;
             newDestinationRange = 40;
             alwaysFacingTarget = true;
@@ -164,7 +164,6 @@ public class Thing : MonoBehaviour {
         }
     }
 
-    //TODO: not to be called directly by other classes
     public void OnWaterEnter () {
         InWater = true;
         Invoke ("RescueFromWater", 60f);

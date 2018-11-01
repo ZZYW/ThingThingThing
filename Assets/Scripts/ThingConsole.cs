@@ -7,36 +7,26 @@ using UnityEngine.UI;
 
 public class ThingConsole : MonoBehaviour {
 
-    static float verticalNormalizedPosition = 0;
     static Text consoleText;
-    static ScrollRect scrollRect;
     static int maxLength = 1000;
 
     static StringBuilder warningString;
     static StringBuilder errorString;
+    static StringBuilder normalString;
 
-    static StringBuilder stringBuilder;
+    static StringBuilder mainStringBuilder;
 
     static bool disableLogging = false;
 
-    static string logFilePath;
-    static int writtenLength = 0;
-
     private void Awake () {
-        // logFilePath = Application.dataPath + "/StreamingAssets/tttLog.txt";
-        // if (File.Exists (logFilePath)) {
-        //     File.Delete (logFilePath);
-        //     Debug.Log ("exist");
-        // } else {
-        //     File.Create (logFilePath);
-        // }
-        stringBuilder = new StringBuilder ();
-        stringBuilder.Capacity = 4000;
+        mainStringBuilder = new StringBuilder ();
+        mainStringBuilder.Capacity = 4000;
         warningString = new StringBuilder ();
         errorString = new StringBuilder ();
+        normalString = new StringBuilder ();
         consoleText = GetComponentInChildren<Text> ();
-        scrollRect = GetComponentInChildren<ScrollRect> ();
     }
+
     void Update () {
         if (Input.GetKeyDown (KeyCode.G)) {
             disableLogging = !disableLogging;
@@ -63,26 +53,17 @@ public class ThingConsole : MonoBehaviour {
 
         if (disableLogging) return;
 
-        // using (StreamWriter writer = new StreamWriter (logFilePath, true)) {
-        //     writtenLength += content.Length;
-        //     if (writtenLength > maxLength * 3) {
-        //         File.WriteAllText(logFilePath,"");
-        //         writtenLength = 0;
-        //     }
-        //     writer.WriteLine (content);
-        // }
+        normalString.Length = 0;
+        normalString.Append ("<color=green><b>ThingThingThing</b></color> -> ");
+        normalString.Append (content);
 
-        // using(StreamReader reader = new StreamReader(logFilePath)){
-        //     consoleText.text = reader.ReadToEnd();
-        // }
+        mainStringBuilder.AppendLine (normalString.ToString ());
 
-        stringBuilder.AppendLine (content);
-
-        if (stringBuilder.Length > maxLength) {
-            stringBuilder.Remove (0, stringBuilder.Length - maxLength);
+        if (mainStringBuilder.Length > maxLength) {
+            mainStringBuilder.Remove (0, mainStringBuilder.Length - maxLength);
         }
 
-         consoleText.text = stringBuilder.ToString ();
+        consoleText.text = mainStringBuilder.ToString ();
 
     }
 }

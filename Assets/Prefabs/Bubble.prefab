@@ -157,7 +157,7 @@ MonoBehaviour:
   text: {fileID: 114332298540498788}
   bubble: {fileID: 114375178102511662}
   host: {fileID: 0}
-  offsetPos: {x: 0, y: 0, z: 0}
+  offsetPos: {x: 0, y: 100, z: 0}
 --- !u!222 &222312492127395116
 CanvasRenderer:
   m_ObjectHideFlags: 1

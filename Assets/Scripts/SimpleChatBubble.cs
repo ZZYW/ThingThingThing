@@ -9,10 +9,22 @@ public class SimpleChatBubble : MonoBehaviour {
 	public Image bubble;
 
 	public Transform host;
-	public Vector3 offsetPos = new Vector3 ();
+	
+	[SerializeField] private Vector3 offsetPos;
+
+	// public Vector3 defaultOffsetPos;
+
+	void Awake () {
+		// defaultOffsetPos = Vector3.zero;
+		// offsetPos = defaultOffsetPos;
+	}
 
 	void Start () {
 
+	}
+
+	public void SetOffsetPos (Vector3 vec3) {
+		offsetPos = vec3;
 	}
 
 	// Update is called once per frame

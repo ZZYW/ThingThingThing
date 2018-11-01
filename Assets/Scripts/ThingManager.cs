@@ -49,18 +49,21 @@ public class ThingManager : MonoBehaviour {
 
         //if it has chatbubble(old one), destroy it and remember its position
         Transform existingChatBubble = target.transform.Find ("Chat Balloon");
-        Vector3 bubblePosition = Vector3.up * target.GetComponent<Thing> ().settings.chatBubbleOffsetHeight; //default position
+
+        //default position
+        Vector3 bubblePosition = Vector3.up * target.GetComponent<Thing> ().settings.chatBubbleOffsetHeight;
+
         if (existingChatBubble != null) {
-            bubblePosition = existingChatBubble.transform.localPosition;
+            bubblePosition = existingChatBubble.transform.localPosition * target.transform.localScale.y;
             Destroy (existingChatBubble.gameObject);
         }
 
         GameObject nChatBubble = Instantiate (chatBubblePrefab, Vector3.zero, Quaternion.identity);
         nChatBubble.transform.SetParent (chatBubbleCanvas, true);
 
-        //let chatbubble and thing know who each other.p
+        //let chatbubble and thing know who each other
         nChatBubble.GetComponent<SimpleChatBubble> ().host = target.transform;
-        nChatBubble.GetComponent<SimpleChatBubble> ().offsetPos = bubblePosition;
+        nChatBubble.GetComponent<SimpleChatBubble> ().SetOffsetPos (bubblePosition);
         target.GetComponent<Thing> ().chatBubble = nChatBubble.GetComponent<SimpleChatBubble> ();
     }
 }
