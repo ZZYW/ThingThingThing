@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VegetationTexture1
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
@@ -62,7 +62,7 @@ Material:
     - _AmbientColorInfluence: 1
     - _BumpScale: 1
     - _ColorSculpt: 0.167
-    - _Cutoff: 0.27
+    - _Cutoff: 0.404
     - _Cutoff1: 0.05
     - _Cutoff2: 0.1
     - _DarkColorBrightness: 0
@@ -78,8 +78,8 @@ Material:
     - _Mode: 0
     - _Multiplier1: 100
     - _Multiplier2: 1
-    - _Multiplier_displacement: 2.43
-    - _Multiplier_time: 0.65
+    - _Multiplier_displacement: 2
+    - _Multiplier_time: 10
     - _Mutiplier2: 20
     - _OcclusionStrength: 1
     - _Parallax: 0.02
