@@ -5,25 +5,20 @@ using UnityEngine.UI;
 
 public class SimpleChatBubble : MonoBehaviour {
 
-	public Text text;
-	public Image bubble;
-
 	public Transform host;
-
-	[SerializeField] private Vector3 offsetPos;
+	public Vector3 offsetPos;
+	
+	[SerializeField] private Text text;
+	[SerializeField] private Image bubble;
 
 	// public Vector3 defaultOffsetPos;
 
 	void Start () {
-		Init();
+		Init ();
 	}
 
 	void Init () {
 		Disappear ();
-	}
-
-	public void SetOffsetPos (Vector3 vec3) {
-		offsetPos = vec3;
 	}
 
 	// Update is called once per frame
@@ -37,12 +32,9 @@ public class SimpleChatBubble : MonoBehaviour {
 	}
 
 	public void Speak (string content) {
-
 		text.enabled = true;
 		bubble.enabled = true;
-
 		text.text = content;
-
 		Invoke ("Disappear", 2f);
 	}
 

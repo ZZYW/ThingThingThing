@@ -7,8 +7,7 @@ using UnityEngine.AI;
 public class ThingManager : MonoBehaviour {
     public static ThingManager main;
 
-    public GameObject chatBubblePrefab;
-    public Transform chatBubbleCanvas;
+    // public Transform chatBubbleCanvas;
 
     public List<GameObject> AllThings;
 
@@ -29,23 +28,18 @@ public class ThingManager : MonoBehaviour {
                 GameObject newThing = Instantiate (thing, transform);
                 newThing.transform.parent = transform;
                 newThing.transform.position = new Vector3 (Random.Range (-spawnAreaRadius, spawnAreaRadius), 0, Random.Range (-spawnAreaRadius, spawnAreaRadius));
-                AddDigalogueBubble (newThing);
+                GetBubblePosition (newThing); //for old THINGs
                 AllThings.Add (newThing);
+
             }
         }
-    }
 
-    // Use this for initialization
-    void Start () {
-
-    }
-
-    // Update is called once per frame
-    void Update () {
+        //Instantiate chat bubble objects
+        ChatBubbleManager.main.Init (allThingPrefabs.Length);
 
     }
 
-    void AddDigalogueBubble (GameObject target) {
+    void GetBubblePosition (GameObject target) {
 
         //if it has chatbubble(old one), destroy it and remember its position
         Transform existingChatBubble = target.transform.Find ("Chat Balloon");
@@ -57,13 +51,11 @@ public class ThingManager : MonoBehaviour {
             bubblePosition = existingChatBubble.transform.localPosition * target.transform.localScale.y;
             Destroy (existingChatBubble.gameObject);
         }
+        target.GetComponent<Thing> ().bubbleOffsetPosition = bubblePosition;
 
-        GameObject nChatBubble = Instantiate (chatBubblePrefab, Vector3.zero, Quaternion.identity);
-        nChatBubble.transform.SetParent (chatBubbleCanvas, true);
-
-        //let chatbubble and thing know who each other
-        nChatBubble.GetComponent<SimpleChatBubble> ().host = target.transform;
-        nChatBubble.GetComponent<SimpleChatBubble> ().SetOffsetPos (bubblePosition);
-        target.GetComponent<Thing> ().chatBubble = nChatBubble.GetComponent<SimpleChatBubble> ();
+        // //let chatbubble and thing know who each other
+        // nChatBubble.GetComponent<SimpleChatBubble> ().host = target.transform;
+        // nChatBubble.GetComponent<SimpleChatBubble> ().SetOffsetPos (bubblePosition);
+        // target.GetComponent<Thing> ().chatBubble = nChatBubble.GetComponent<SimpleChatBubble> ();
     }
 }

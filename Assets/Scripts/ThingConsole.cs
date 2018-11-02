@@ -24,6 +24,10 @@ public class ThingConsole : MonoBehaviour {
     static int lineCount = 0;
     const int maxLineCount = 13;
 
+    Canvas canvas;
+
+ 
+
     private void Awake () {
         mainStringBuilder = new StringBuilder ();
         mainStringBuilder.Capacity = 4000;
@@ -31,7 +35,9 @@ public class ThingConsole : MonoBehaviour {
         errorString = new StringBuilder ();
         normalString = new StringBuilder ();
         consoleText = GetComponentInChildren<Text> ();
+        canvas = GetComponentInChildren<Canvas> ();
     }
+
 
     void Update () {
         if (Input.GetKeyDown (KeyCode.G)) {
@@ -74,6 +80,7 @@ public class ThingConsole : MonoBehaviour {
 
         if (disableLogging) return;
         if (cooldown) { return; }
+        if (consoleText.text == null) return;
 
         normalString.Length = 0;
         normalString.AppendFormat ("[<i>{0}</i>]<color=cyan> <b>ThingThingThing</b> </color> -> {1}", System.DateTime.Now.ToString (), content);

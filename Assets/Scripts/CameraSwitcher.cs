@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour {
-
+    
+    [Range (1, 200)]
+    public float intervals = 20f;
     public GameObject mainCam;
     public GameObject followCam;
     public bool switching = true;
-    CameraFollowThing cameraFollowThing;
 
     public List<GameObject> allThings;
+    public static System.Action OnCameraSwitch;
 
     bool useMain = true;
-
-    [Range (1, 200)]
-    public float intervals = 20f;
+    CameraFollowThing cameraFollowThing;
 
     // Use this for initialization
     void Start () {
@@ -60,6 +60,7 @@ public class CameraSwitcher : MonoBehaviour {
     void SetActiveCameras () {
         mainCam.SetActive (useMain);
         followCam.SetActive (!useMain);
+        if (OnCameraSwitch != null) OnCameraSwitch ();
     }
 
 }

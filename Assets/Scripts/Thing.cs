@@ -35,7 +35,11 @@ public class Thing : MonoBehaviour {
         }
     }
 
+    public SimpleChatBubble myChatBubble;
     public Settings settings { get; protected set; }
+
+    [HideInInspector] public Vector3 bubbleOffsetPosition;
+
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
     protected string MyName { get; private set; }
@@ -47,7 +51,7 @@ public class Thing : MonoBehaviour {
     private bool stopTalking;
     private ThingMotor motor;
     private SphereCollider neighborDetector;
-    public SimpleChatBubble chatBubble;
+
     private ParticleSystem explodePS;
     private AudioSource audioSource;
     private List<GameObject> neighborList;
@@ -234,12 +238,13 @@ public class Thing : MonoBehaviour {
     }
 
     protected void Speak (string content) {
+        if (myChatBubble == null) return;
         if (stopTalking) return;
         if (speakInCD) return;
 
         TTTEventsManager.main.SomeoneSpoke (gameObject);
 
-        chatBubble.Speak (content);
+        myChatBubble.Speak (content);
 
         speakInCD = true;
         spokeTimeStamp = Time.time;
