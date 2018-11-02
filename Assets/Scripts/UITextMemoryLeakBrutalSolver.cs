@@ -24,19 +24,19 @@ public class UITextMemoryLeakBrutalSolver : MonoBehaviour {
 	}
 
 	void DeleteAllCanvases () {
-		DestroyTTTConsole ();
+		// DestroyTTTConsole ();
 		DestroyChatBubbles ();
 	}
 
 	//tttconsole
-	void DestroyTTTConsole () {
-		Destroy (TTTConsoleGameobject);
-		Invoke ("ReinstTConsole", TConsoleRebornWait);
-	}
+	// void DestroyTTTConsole () {
+	// 	Destroy (TTTConsoleGameobject);
+	// 	Invoke ("ReinstTConsole", TConsoleRebornWait);
+	// }
 
-	void ReinstTConsole () {
-		TTTConsoleGameobject = GameObject.Instantiate (TTTConsolePrefab, Vector3.zero, Quaternion.identity);
-	}
+	// void ReinstTConsole () {
+	// 	TTTConsoleGameobject = GameObject.Instantiate (TTTConsolePrefab, Vector3.zero, Quaternion.identity);
+	// }
 
 	//chatbubbles
 	void DestroyChatBubbles () {
