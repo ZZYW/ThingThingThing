@@ -34,7 +34,7 @@ public class Treasure : Thing {
 
     private float max = 20;
     private float min = 10;
-    private float scale = 15;
+    private float scale = 10;
 
     protected override void OnMeetingSomeone(GameObject other)
     {
