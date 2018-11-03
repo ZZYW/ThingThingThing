@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class ThingConsole : MonoBehaviour {
 
     static Text consoleText;
-    // static int maxLength = 2000;
 
     static StringBuilder warningString;
     static StringBuilder errorString;
@@ -27,7 +26,6 @@ public class ThingConsole : MonoBehaviour {
     Canvas canvas;
 
  
-
     private void Awake () {
         mainStringBuilder = new StringBuilder ();
         mainStringBuilder.Capacity = 4000;

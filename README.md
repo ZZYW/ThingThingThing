@@ -1,6 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [About The Project](#about-the-project)
 - [Past Events](#past-events)
 - [Steps for participants:](#steps-for-participants)
@@ -58,7 +59,7 @@ Prior _ThingThingthing_ collaborations also include
 
 # Steps for participants:
 
-[Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)
+[Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)  
 [石墨文档](https://shimo.im/docs/DhxNEZhaCGgABntM/)
 
 ---
@@ -79,56 +80,56 @@ int NeighborCount; //how many neighbors do you have currently
 ## Events You can Use to Fill Code Inside
 
 ```csharp
-protected override void OnSunset(){}
-protected override void OnSunrise(){}
-protected override void OnMeetingSomeone(GameObject other){}
-protected override void OnLeavingSomeone(GameObject other){}
-protected override void OnNeighborSpeaking(){}
-protected override void OnNeigborSparkingParticles(){}
-protected override void OnTouchWater(){}
-protected override void OnLeaveWater(){}
+protected override void OnSunset(){}//日落时
+protected override void OnSunrise(){}//日出时
+protected override void OnMeetingSomeone(GameObject other){}//碰到其他物时
+protected override void OnLeavingSomeone(GameObject other){}//离开了其他物时
+protected override void OnNeighborSpeaking(){}//有邻居说话时
+protected override void OnNeigborSparkingParticles(){}//有邻居发出发光时
+protected override void OnTouchWater(){}//进入水时
+protected override void OnLeaveWater(){}//离开水时
 ```
 
 ## Settings of your Thing you can change
 
 ```csharp
 //value is the default setting
-settings.cameraOffset = 15;
-settings.acceleration = 4;
-settings.drag = 1.8f;
-settings.mass = 0.2f;
-settings.chatBubbleOffsetHeight = 2; //!important! chat bubble offset on Y axis, adjust to avoid chat bubble being blocked by your model
+settings.cameraOffset = 15; //追踪相机离我的距离
+settings.acceleration = 4;//加速度
+settings.drag = 1.8f;//速度阻力
+settings.mass = 0.2f;//质量
+settings.chatBubbleOffsetHeight = 2; //!important! chat bubble offset on Y axis, adjust to avoid chat bubble being blocked by your model 重要！！！！我的对话泡泡的高度！！注意测试调整
 settings.getNewDestinationInterval = 5;
-settings.newDestinationRange = 40;
+settings.newDestinationRange = 40;//随机寻找新目的的时候新目的的范围半径
 settings.alwaysFacingTarget = true;
-settings.myCubeColor;
+settings.myCubeColor;//我生产出来的小方块的颜色
 ```
 
 ## Ready to Use Methods
 
 ```csharp
 //movement
-SetTarget(Vector3 target);
-StopMoving();
-StopMoving(float forHowManySeconds);
-RestartWalking();
-RandomSetDestination();//get a new random target
-ResetPosition(); //change position to spawn point
+SetTarget(Vector3 target); //设定一个目的地
+StopMoving(); //不再移动
+StopMoving(float forHowManySeconds); //不再移动（并制定一个时间，这个时间后自动开始移动）
+RestartWalking(); //重新开始移动
+RandomSetDestination();//get a new random target  随机指定一个目的地
+ResetPosition(); //change position to spawn point 重置位置
 
 //shape and form
-SetScale(Vector3 newScale);
-ChangeColor(Color newColor); //change color, might not work well if you have more than one renderer or more than one material
-ResetColor(); //reset to original color
+SetScale(Vector3 newScale); //设定尺寸，注意参考你现在的尺寸
+ChangeColor(Color newColor); //change color, might not work well if you have more than one renderer or more than one material 更改颜色
+ResetColor(); //reset to original color 重制颜色到默认值
 
 //social
-Speak(string content, float stayLength);
+Speak(string content, float stayLength); //
 Speak(string content);
-Mute(); //Speak no longer works
-DeMute(); //regain ability to Speak again
+Mute(); //Speak no longer works //开始沉默，不再讲话
+DeMute(); //regain ability to Speak again //不再沉默
 Spark(Color particleColor, int numberOfParticles);
-PlaySound(int soundEffectId); // Range: 1 ... 102
-PlaySound(string soundFileName); //if you want to play your own sound. but pls make your sound short!!!
-CreateCube(); //throw a cube on the small ground
+PlaySound(int soundEffectId); // Range: 1 ... 102 //播放一个音效，从1-102中选择
+PlaySound(string soundFileName); //if you want to play your own sound. but pls make your sound short!!!//播放一个音效，如果你要用自己的声音文件
+CreateCube(); //throw a cube on the small ground//制造一个小方块
 ```
 
 # Tips
@@ -170,7 +171,7 @@ Find a sound file that is one of the formats below
 
 Compress it if necessary, make sure its file size is smaller than 2 MB, and move it into `Resources/Sounds` folder.
 
-Use `PlaySound(“filename”)` to play your sound, *no extension name needed*.
+Use `PlaySound(“filename”)` to play your sound, _no extension name needed_.
 
 ## Some Basic about C# Programming
 
