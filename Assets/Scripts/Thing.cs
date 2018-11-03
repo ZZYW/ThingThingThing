@@ -105,9 +105,7 @@ public class Thing : MonoBehaviour {
         //Instantiating Particle Object
         explodePS = GetComponentInChildren<ParticleSystem> ();
         if (explodePS == null) {
-            stringBuilder.Length = 0;
-            stringBuilder.AppendFormat ("{0} doesn't have a particle system?!", MyName);
-            ThingConsole.LogWarning (stringBuilder.ToString ());
+            ThingConsole.LogWarning (FormatString ("{0} doesn't have a particle system?!", MyName));
         }
 
         //Sound
@@ -162,12 +160,17 @@ public class Thing : MonoBehaviour {
         }
     }
 
+    //use string builder to concat string to avoid memory leak
+    private string FormatString (string format, params object[] args) {
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat (format, args);
+        return stringBuilder.ToString ();
+    }
+
     private void RescueFromWater () {
         if (InWater) {
             ResetPosition ();
-            stringBuilder.Length = 0;
-            stringBuilder.AppendFormat ("{0} is rescued from water", MyName);
-            ThingConsole.LogWarning (stringBuilder.ToString ());
+            ThingConsole.LogWarning (FormatString ("{0} is rescued from water", MyName));
         }
     }
 
@@ -181,25 +184,20 @@ public class Thing : MonoBehaviour {
         InWater = false;
         CancelInvoke ("RescueFromWater");
         OnLeaveWater ();
-
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} left water.", MyName);
-        ThingConsole.Log (stringBuilder.ToString ());
-
+        ThingConsole.Log (FormatString ("<color=orange>{0}</color> left <color=blue>water</color>.", MyName));
     }
 
     protected void SetTarget (Vector3 target) {
         if (!stopWalkingAround) {
             motor.SetTarget (target);
+            ThingConsole.Log (FormatString ("<color=orange>{0}</color> gained a <color=red>new</color> target.", MyName));
         }
     }
 
     protected void StopMoving () {
         stopWalkingAround = true;
         motor.Stop ();
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} stopped moving", MyName);
-        ThingConsole.Log (stringBuilder.ToString ());
+        ThingConsole.Log (FormatString ("{0} stopped moving", MyName));
     }
 
     protected void StopMoving (float seconds) {
@@ -209,16 +207,12 @@ public class Thing : MonoBehaviour {
 
     protected void Mute () {
         stopTalking = true;
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} is being muted.", MyName);
-        ThingConsole.LogWarning (stringBuilder.ToString ());
+        ThingConsole.LogWarning (FormatString ("{0} is being muted.", MyName));
     }
 
     protected void DeMute () {
         stopTalking = false;
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} can speak again", MyName);
-        ThingConsole.Log (stringBuilder.ToString ());
+        ThingConsole.Log (FormatString ("{0} can speak again", MyName));
     }
 
     protected void RestartWalking () {
@@ -249,9 +243,7 @@ public class Thing : MonoBehaviour {
         speakInCD = true;
         spokeTimeStamp = Time.time;
 
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("<color=orange>{0}</color> is speaking {1}", MyName, content);
-        ThingConsole.Log (stringBuilder.ToString ());
+        ThingConsole.Log (FormatString ("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
 
     }
 
@@ -292,9 +284,7 @@ public class Thing : MonoBehaviour {
     protected void ResetColor () {
         if (mMat == null) return;
         mMat.color = originalColor;
-        stringBuilder.Length = 0;
-        stringBuilder.AppendFormat ("{0} reset its own color", MyName);
-        ThingConsole.Log (stringBuilder.ToString ());
+        ThingConsole.Log (FormatString ("{0} reset its own color", MyName));
     }
 
     protected void ChangeColor (Color c) {

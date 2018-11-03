@@ -5644,22 +5644,22 @@ Prefab:
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 510
+      value: 1020
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1890
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
@@ -16772,9 +16772,7 @@ MonoBehaviour:
     type: 2}
   ChatBubbleManagerPrefab: {fileID: 1659979672569126, guid: 783297188b0794cc9bcfbb8e363a12f7,
     type: 2}
-  TConsoleDestroyInterval: 3000
   TConsoleRebornWait: 2
-  ChatBubbleDestroyInterval: 300
   ChatbubbleRebornWait: 10
 --- !u!1 &1138032181
 GameObject:
