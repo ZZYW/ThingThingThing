@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 54332910768259730}
   - component: {fileID: 82863500824606698}
   - component: {fileID: 65120185773602148}
-  - component: {fileID: 135131030516457090}
   - component: {fileID: 114540137033249136}
   - component: {fileID: 114054606556510444}
   m_Layer: 0
@@ -42,7 +41,7 @@ Transform:
   m_GameObject: {fileID: 1861766054159016}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -5.9, y: -2.1, z: 26.9}
-  m_LocalScale: {x: 2356.4846, y: 2356.4846, z: 2746.3037}
+  m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -237,17 +236,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myChatBubble: {fileID: 0}
   bubbleOffsetPosition: {x: 0, y: 0, z: 0}
-  speakInCD: 0
   mMat: {fileID: 0}
---- !u!135 &135131030516457090
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1861766054159016}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 0.00042500754, y: 0.00039033004, z: 0.0044405917}

@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThingElo : Thing
-{
+public class ThingElo : Thing {
 
-    protected override void TTTAwake()
-    {
+    protected override void TTTAwake () {
         //camera
         settings.cameraOffset = 15; //distance from camera to object center on 3rd personn camera following mode
 
@@ -20,69 +18,52 @@ public class ThingElo : Thing
         settings.myCubeColor = Color.red; //cube's color produced by you
     }
 
-    protected override void TTTStart()
-    {
+    protected override void TTTStart () {
         //examples:
-        Speak("I am born!");
+        Speak ("I am born!");
         //we recommend keep this one, or you can write your own rule of moving
-        InvokeRepeating("RandomSetDestination", 0, settings.getNewDestinationInterval); //call "RandomSetDestination" method every "getNewDestinationInterval" seconds
+        InvokeRepeating ("RandomSetDestination", 0, settings.getNewDestinationInterval); //call "RandomSetDestination" method every "getNewDestinationInterval" seconds
     }
 
-    protected override void TTTUpdate()
-    {
+    protected override void TTTUpdate () {
 
     }
 
-
-    protected override void OnMeetingSomeone(GameObject other)
-    {
+    protected override void OnMeetingSomeone (GameObject other) {
         //Example
-        Speak("I met " + other.name);
+        Speak ("I met " + other.name);
     }
 
-    protected override void OnLeavingSomeone(GameObject other)
-    {
+    protected override void OnLeavingSomeone (GameObject other) {
         //Example:
-        Spark(Color.red, 15);
+        Spark (Color.red, 15);
     }
 
-    protected override void OnNeighborSpeaking()
-    {
-        CreateCube();
+    protected override void OnNeighborSpeaking () {
+        CreateCube ();
     }
 
-    protected override void OnTouchWater()
-    {
-        ChangeColor(Color.blue);
+    protected override void OnTouchWater () {
+        ChangeColor (Color.blue);
     }
 
-    protected override void OnLeaveWater()
-    {
-        ResetColor();
+    protected override void OnLeaveWater () {
+        ResetColor ();
     }
 
-    protected override void OnNeigborSparkingParticles()
-    {
-        CreateCube();
+    protected override void OnNeigborSparkingParticles () {
+        CreateCube ();
     }
 
-    protected override void OnSunset()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            CreateCube();
-        }
+    protected override void OnSunset () {
+
+        CreateCube ();
 
     }
 
-    protected override void OnSunrise()
-    {
+    protected override void OnSunrise () {
         //Example:
-        PlaySound(6);
+        PlaySound (6);
     }
-
-
-
-
 
 }

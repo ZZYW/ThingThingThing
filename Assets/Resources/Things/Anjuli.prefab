@@ -88,7 +88,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4513002590133992}
   - component: {fileID: 114920358113443022}
-  - component: {fileID: 135732457552180690}
   - component: {fileID: 65737749037762456}
   - component: {fileID: 54864172453552486}
   - component: {fileID: 82954301276654042}
@@ -576,7 +575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myChatBubble: {fileID: 0}
   bubbleOffsetPosition: {x: 0, y: 0, z: 0}
-  speakInCD: 0
   mMat: {fileID: 0}
 --- !u!114 &114954788710965004
 MonoBehaviour:
@@ -590,18 +588,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54864172453552486}
---- !u!135 &135732457552180690
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1588996020094292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.29474315
-  m_Center: {x: 0.010737179, y: 0.35550356, z: -0.008987188}
 --- !u!198 &198615953952013854
 ParticleSystem:
   m_ObjectHideFlags: 1

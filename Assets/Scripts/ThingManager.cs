@@ -14,7 +14,7 @@ public class ThingManager : MonoBehaviour {
     public bool generateThings;
     //public Transform spawnBox;
 
-    int spawnAreaRadius = 40;
+    int spawnAreaRadius = 80;
 
     private void Awake () {
         main = this;

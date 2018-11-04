@@ -20,11 +20,10 @@ public class Interessant : Thing {
 	protected override void OnMeetingSomeone(GameObject other){
 		SetScale(new Vector3(1,1,1)); 
 		Speak("Bitte," + other.name);
-
 	}
 
 	protected override void OnNeighborSpeaking(){
-		Spark(Color.red,100);
+		Spark(Color.red, 10);
 		CreateCube();
 	}
 

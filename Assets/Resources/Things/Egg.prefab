@@ -73,11 +73,10 @@ GameObject:
   - component: {fileID: 54342213878794400}
   - component: {fileID: 82462071560203034}
   - component: {fileID: 65509791206943294}
-  - component: {fileID: 135784534137379340}
   - component: {fileID: 114926012924197702}
   - component: {fileID: 114728527744564532}
   m_Layer: 0
-  m_Name: egg 1
+  m_Name: Egg
   m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,21 +585,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae9a5950d17d47d397e851375a936ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakInCD: 0
-  chatBubble: {fileID: 0}
+  myChatBubble: {fileID: 0}
+  bubbleOffsetPosition: {x: 0, y: 0, z: 0}
   mMat: {fileID: 0}
---- !u!135 &135784534137379340
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1485574558559012}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198692346588985870
 ParticleSystem:
   m_ObjectHideFlags: 1

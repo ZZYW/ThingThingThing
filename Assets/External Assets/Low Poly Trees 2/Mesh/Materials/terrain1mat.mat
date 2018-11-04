@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: terrain1mat
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
@@ -57,8 +57,8 @@ Material:
     m_Floats:
     - _AmbientColorInfluence: 1
     - _BumpScale: 1
-    - _ColorSculpt: 0.666
-    - _Cutoff: 0
+    - _ColorSculpt: 0
+    - _Cutoff: 0.187
     - _Cutoff1: 0
     - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1
@@ -69,11 +69,11 @@ Material:
     - _GlossyReflections: 0
     - _LerpScaler: 0
     - _LightColorBrightness: 1
-    - _LightCutoff: 1
+    - _LightCutoff: 0.86
     - _Metallic: 0
     - _Mode: 0
-    - _Multiplier_displacement: 0
-    - _Multiplier_time: 0
+    - _Multiplier_displacement: 9.1
+    - _Multiplier_time: 16.98
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _REPLACEVCs: 1
@@ -94,7 +94,7 @@ Material:
     - _heightFogStart: 0
     - _node_2797: 0.734
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0.496552, a: 1}
+    - _Color: {r: 0, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlitchColor: {r: 1, g: 0, b: 0, a: 1}
     - _HIGHLIGHTCOLORreplaceVCblue: {r: 1, g: 1, b: 1, a: 1}

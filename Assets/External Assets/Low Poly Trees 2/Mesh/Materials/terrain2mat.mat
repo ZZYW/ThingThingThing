@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: terrain2mat
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
@@ -127,7 +127,7 @@ Material:
     - _heightFogStart: 0
     - _samplingRate: 1
     m_Colors:
-    - _Color: {r: 0.03676468, g: 0.03676468, b: 0.03676468, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _DustColor: {r: 0.16176468, g: 0.052335635, b: 0.052335635, a: 0}
     - _DustDirection: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

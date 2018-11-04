@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MyFavoriteThings : Thing {
 
-	protected override void TTTStart() {
+	protected override void TTTStart () {
 		settings.mass = 0.1f;
 		settings.acceleration = 1;
 		settings.drag = 5;
@@ -12,11 +12,11 @@ public class MyFavoriteThings : Thing {
 		settings.chatBubbleOffsetHeight = 20;
 		settings.newDestinationRange = 100;
 		settings.myCubeColor = Color.red;
-		Speak("Debug Complete.");
-		InvokeRepeating("RandomSetDestination", 2, 2);
+		Speak ("Debug Complete.");
+		InvokeRepeating ("RandomSetDestination", 2, 2);
 	}
 
-	protected override void TTTUpdate() {
+	protected override void TTTUpdate () {
 		if (settings.mass < 5) {
 			settings.mass += 0.01f;
 		}
@@ -25,22 +25,20 @@ public class MyFavoriteThings : Thing {
 		}
 	}
 
-	protected override void OnMeetingSomeone(GameObject other) {
-		Speak("Grrrrrrrr!");
-		PlaySound(75);
-		Spark(Color.yellow, 20);
-	}
-	
-	protected override void OnTouchWater() {
-		PlaySound(82);
-		for (int i=0; i<5; i++) {
-			CreateCube();
-		}
+	protected override void OnMeetingSomeone (GameObject other) {
+		Speak ("Grrrrrrrr!");
+		PlaySound (75);
+		Spark (Color.yellow, 20);
 	}
 
-	protected override void OnNeigborSparkingParticles() {
-		Speak("These are a few of my favorite things.");
-		PlaySound(26);
+	protected override void OnTouchWater () {
+		PlaySound (82);
+		CreateCube ();
+	}
+
+	protected override void OnNeigborSparkingParticles () {
+		Speak ("These are a few of my favorite things.");
+		PlaySound (26);
 	}
 
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-[RequireComponent (typeof (SphereCollider))]
+// [RequireComponent (typeof (SphereCollider))]
 [RequireComponent (typeof (BoxCollider))]
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (AudioSource))]
@@ -22,6 +22,7 @@ public class Thing : MonoBehaviour {
         public int newDestinationRange;
         public bool alwaysFacingTarget;
         public Color myCubeColor;
+        public int neighborDetectorRadius;
 
         public Settings () {
             cameraOffset = 15;
@@ -32,6 +33,7 @@ public class Thing : MonoBehaviour {
             getNewDestinationInterval = 5;
             newDestinationRange = 40;
             alwaysFacingTarget = true;
+            neighborDetectorRadius = 5;
         }
     }
 
@@ -44,9 +46,15 @@ public class Thing : MonoBehaviour {
     protected int NeighborCount { get { return neighborList.Count; } }
     protected string MyName { get; private set; }
 
-    private static float speakCDLength = 5; //seconds
-    [SerializeField] private bool speakInCD;
+    //cool down stuff to avoid crash
+    private float speakCooldown;
+    private bool speakInCD;
     private float spokeTimeStamp;
+
+    private float detectEnterExitCooldown;
+    private bool detectingEnter;
+    private bool detectingExit;
+
     private bool stopWalkingAround;
     private bool stopTalking;
     private ThingMotor motor;
@@ -82,18 +90,24 @@ public class Thing : MonoBehaviour {
     }
 
     private void Awake () {
+        speakCooldown = Random.Range (5f, 20f);
         MyName = gameObject.name;
         settings = new Settings ();
         stringBuilder = new StringBuilder ();
         gameObject.tag = thingTag;
+        gameObject.layer = 14;
         neighborList = new List<GameObject> ();
         TTTAwake ();
     }
 
     private void Start () {
         //neighbor detector
-        neighborDetector = GetComponent<SphereCollider> ();
-        neighborDetector.isTrigger = true;
+        // neighborDetector = GetComponent<SphereCollider> ();
+        // neighborDetector.isTrigger = true;
+        //no longer use sphere collider as neighbor detector
+        if (GetComponent<SphereCollider> ()) {
+            Destroy (GetComponent<SphereCollider> ());
+        }
 
         //motor
         motor = GetComponent<ThingMotor> ();
@@ -118,12 +132,27 @@ public class Thing : MonoBehaviour {
     }
     private void Update () {
 
-        if (speakInCD && Time.time - spokeTimeStamp > speakCDLength) {
+        if (speakInCD && Time.time - spokeTimeStamp > speakCooldown) {
             speakInCD = false;
         }
 
         if (transform.position.y < -9 || transform.position.y > 157) {
             ResetPosition ();
+        }
+
+        foreach (GameObject t in ThingManager.main.AllThings) {
+            float dist = Vector3.Distance (transform.position, t.transform.position);
+            if (dist < settings.neighborDetectorRadius) {
+                if (!neighborList.Contains (t)) {
+                    neighborList.Add (t);
+                    OnMeetingSomeone (t);
+                }
+            } else {
+                if (neighborList.Contains (t)) {
+                    neighborList.Remove (t);
+                    OnLeavingSomeone (t);
+                }
+            }
         }
 
         TTTUpdate ();
@@ -141,24 +170,24 @@ public class Thing : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter (Collider other) {
-        if (other.gameObject.CompareTag (thingTag)) {
-            OnMeetingSomeone (other.gameObject);
-            //  ThingConsole.Log (gameObject.name + " is meeting " + other.name);
-            if (!neighborList.Contains (other.gameObject)) {
-                neighborList.Add (other.gameObject);
-            }
-        }
-    }
+    // private void OnTriggerEnter (Collider other) {
+    //     if (other.gameObject.CompareTag (thingTag)) {
+    //         OnMeetingSomeone (other.gameObject);
+    //         //  ThingConsole.Log (gameObject.name + " is meeting " + other.name);
+    //         if (!neighborList.Contains (other.gameObject)) {
+    //             neighborList.Add (other.gameObject);
+    //         }
+    //     }
+    // }
 
-    private void OnTriggerExit (Collider other) {
-        if (other.gameObject.CompareTag (thingTag)) {
-            OnLeavingSomeone (other.gameObject);
-            if (neighborList.Contains (other.gameObject)) {
-                neighborList.Remove (other.gameObject);
-            }
-        }
-    }
+    // private void OnTriggerExit (Collider other) {
+    //     if (other.gameObject.CompareTag (thingTag)) {
+    //         OnLeavingSomeone (other.gameObject);
+    //         if (neighborList.Contains (other.gameObject)) {
+    //             neighborList.Remove (other.gameObject);
+    //         }
+    //     }
+    // }
 
     //use string builder to concat string to avoid memory leak
     private string FormatString (string format, params object[] args) {
@@ -248,8 +277,10 @@ public class Thing : MonoBehaviour {
     }
 
     protected void Spark (Color particleColor, int numberOfParticles) {
+
         if (explodePS == null) {
             explodePS = GetComponentInChildren<ParticleSystem> ();
+            if (explodePS == null) return;
         }
 
         ParticleSystem.MainModule particleMain = explodePS.main;

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Treasure : Thing {
-    protected override void TTTAwake()
-    {
+    public Transform model;
+    protected override void TTTAwake () {
         //camera
         settings.cameraOffset = 30; //distance from camera to object center on 3rd personn camera following mode
 
@@ -21,9 +21,8 @@ public class Treasure : Thing {
         settings.myCubeColor = Color.red; //cube's color produced by you
     }
 
-    protected override void TTTStart()
-    {   
-        InvokeRepeating("RandomSetDestination", 0.5f, 0.5f);   
+    protected override void TTTStart () {
+        InvokeRepeating ("RandomSetDestination", 0.5f, 10f);
         //InvokeRepeating("RandomSetTarget", 1f, 1f);    
     }
 
@@ -32,30 +31,26 @@ public class Treasure : Thing {
         //Speak("###################");
     }*/
 
-    private float max = 20;
-    private float min = 10;
-    private float scale = 10;
+    private float max = 1.5f;
+    private float min = 0.5f;
+    private float scale = 1;
 
-    protected override void OnMeetingSomeone(GameObject other)
-    {
-        Speak("侬好 #" + other.name.GetHashCode());
+    protected override void OnMeetingSomeone (GameObject other) {
+        Speak ("侬好 #" + other.name.GetHashCode ());
         //float s = Random.Range(10, 20);
-        if(scale == min)
-        {
+        if (scale == min) {
             scale = max;
-        }
-        else
-        {
+        } else {
             scale = min;
         }
-        SetScale(new Vector3(scale, scale, scale));
+
+        model.localScale = new Vector3 (scale, scale, scale);
     }
 
-    protected override void OnLeavingSomeone(GameObject other)
-    {
-        PlaySound(75);
-        Spark(Color.white, 100);
-        SetTarget(new Vector3(0f,0f,0f));
+    protected override void OnLeavingSomeone (GameObject other) {
+        PlaySound (75);
+        Spark (Color.white, 100);
+        SetTarget (new Vector3 (0f, 0f, 0f));
         //ResetPosition();
     }
 }

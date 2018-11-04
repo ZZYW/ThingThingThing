@@ -68,6 +68,10 @@ public class TOD_Data : MonoBehaviour {
         sunsetReported = false;
     }
 
+    void OnGUI () {
+        GUI.Label (new Rect (Screen.width - 100, Screen.height - 100, 100, 100), "Time in ThingThingThing: " + TimeNow.ToString ());
+    }
+
     void ResetSunriseReportFlag () {
         sunriseReported = false;
     }

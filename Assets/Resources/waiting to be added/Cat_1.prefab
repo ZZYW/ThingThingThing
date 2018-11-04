@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 82546154535743720}
   - component: {fileID: 114045610465384200}
   m_Layer: 0
-  m_Name: Cat 1
+  m_Name: Cat_1
   m_TagString: Thing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,8 +690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd4c5f6568c56a4aa8f66f445d703be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myChatBubble: {fileID: 0}
+  bubbleOffsetPosition: {x: 0, y: 0, z: 0}
   speakInCD: 0
-  chatBubble: {fileID: 0}
   mMat: {fileID: 0}
 --- !u!135 &135718520243192006
 SphereCollider:

@@ -13,23 +13,13 @@ public class Belfort : Thing
 		settings.acceleration = Random.Range(3.5f, 5f); //use Random.range to get a random number within a range
 		settings.drag = 1.8f; // the bigger, the slower
 		settings.mass = 0.2f; // the bigger, the heavier, the more acceleration it needs to get this moving, also can push away lighter THINGS
-		settings.getNewDestinationInterval = 5; //how often to get a new target to run to, in (seconds)
+		settings.getNewDestinationInterval = 10; //how often to get a new target to run to, in (seconds)
 		settings.newDestinationRange = 40; // how far the new destination could be 
 
 		settings.myCubeColor = Color.green; //cube's color produced by you
 	}
 
 
-	private void ChangeAlpha()
-	{
-		float tempAlpha = Mathf.Sin(Time.time) + 1;
-		Color tempColor = new Color(0.2F, 0.3F, 0.4F, tempAlpha);
-		GameObject body = transform.Find("default").gameObject;
-		if (body != null)
-		{
-			body.GetComponent<Renderer>().material.color = tempColor;
-		}
-	}
 
 	protected override void TTTStart()
 	{
@@ -43,37 +33,13 @@ public class Belfort : Thing
 	{
 		// a bunch of examples:
 
-		if (Input.GetKeyDown(KeyCode.J))
-		{
-
-		}
-
-		if (TOD_Data.main.IsNight)
-		{
-
-		}
-
-		if (TOD_Data.main.IsDay)
-		{
-			ChangeAlpha();
-		}
-
-		if (InWater)
-		{
-
-		}
-
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			SetRandomTarget(settings.newDestinationRange);
-		}
 	}
 
 
 	protected override void OnMeetingSomeone(GameObject other)
 	{
 		//Example
-		Speak("I met " + other.name, 2f);
+		Speak("I met " + other.name);
 	}
 
 	protected override void OnLeavingSomeone(GameObject other)
