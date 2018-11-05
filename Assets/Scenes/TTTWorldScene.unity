@@ -5693,22 +5693,22 @@ Prefab:
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1764
+      value: 389
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -1002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
