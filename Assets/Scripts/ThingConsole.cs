@@ -19,14 +19,19 @@ public class ThingConsole : MonoBehaviour {
 
     static bool cooldown;
     static float lastTimelogStamp;
-    float cooldownTime = 1f; //minimal log interval is 1s;
+    float cooldownTime = 0.1f; //minimal log interval is 1s;
     static int lineCount = 0;
     const int maxLineCount = 13;
 
     Canvas canvas;
 
- 
     private void Awake () {
+
+        if (Display.displays.Length < 3 && !Application.isEditor) {
+            Debug.Log ("destroying thingconsole");
+            Destroy (gameObject);
+        }
+
         mainStringBuilder = new StringBuilder ();
         mainStringBuilder.Capacity = 4000;
         warningString = new StringBuilder ();
@@ -35,7 +40,6 @@ public class ThingConsole : MonoBehaviour {
         consoleText = GetComponentInChildren<Text> ();
         canvas = GetComponentInChildren<Canvas> ();
     }
-
 
     void Update () {
         if (Input.GetKeyDown (KeyCode.G)) {

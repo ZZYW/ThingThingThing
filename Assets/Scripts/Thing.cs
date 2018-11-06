@@ -90,7 +90,7 @@ public class Thing : MonoBehaviour {
     }
 
     private void Awake () {
-        speakCooldown = Random.Range (5f, 20f);
+        speakCooldown = Random.Range (5f, 10f);
         MyName = gameObject.name;
         settings = new Settings ();
         stringBuilder = new StringBuilder ();

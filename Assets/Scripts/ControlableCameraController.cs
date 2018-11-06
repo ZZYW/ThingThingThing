@@ -29,6 +29,12 @@ public class ControlableCameraController : MonoBehaviour {
     [Range (1, 100)] public float timeTillResetPosition;
     private bool idle = true;
 
+    void Awake () {
+        if (Display.displays.Length < 2 && !Application.isEditor) {
+            Debug.LogWarning ("destroying controlableCameraController");
+            Destroy (gameObject);
+        }
+    }
     // Use this for initialization
     void Start () {
         // rb = GetComponent<Rigidbody> ();
@@ -49,8 +55,6 @@ public class ControlableCameraController : MonoBehaviour {
             rightAxis.x = Input.GetAxis ("Mouse X");
             rightAxis.y = Input.GetAxis ("Mouse Y");
         }
-
-       
 
         // if (leftAxis.x < 0.001f && leftAxis.y < 0.001f && rightAxis.x < 0.001f && rightAxis.y < 0.001f && !idle) {
         //     unusedStartTimeStamp = Time.time;
