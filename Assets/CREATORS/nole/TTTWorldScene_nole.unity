@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 1.0877782, g: 1.0060126, b: 0.9095097, a: 1}
+  m_FogColor: {r: 1.0816748, g: 0.96626246, b: 0.82232594, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.007
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.7333879, g: 0.50795233, b: 0.14573589, a: 1}
+  m_AmbientSkyColor: {r: 0.7333879, g: 0.33356243, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2238639}
   - component: {fileID: 2238641}
   - component: {fileID: 2238640}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 5519245}
   - component: {fileID: 5519247}
   - component: {fileID: 5519246}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 10581665}
   - component: {fileID: 10581667}
   - component: {fileID: 10581666}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree336
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 10960201}
   - component: {fileID: 10960203}
   - component: {fileID: 10960202}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 16981278}
   - component: {fileID: 16981280}
   - component: {fileID: 16981279}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto352
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 21761622}
   - component: {fileID: 21761624}
   - component: {fileID: 21761623}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto336
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 47505813}
   - component: {fileID: 47505815}
   - component: {fileID: 47505814}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree196
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 68
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &47505814
 MeshRenderer:
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 55536018}
   - component: {fileID: 55536020}
   - component: {fileID: 55536019}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_057
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 56305057}
   - component: {fileID: 56305059}
   - component: {fileID: 56305058}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto300
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 60230627}
   - component: {fileID: 60230626}
   - component: {fileID: 60230628}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mountain009 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 60433148}
   - component: {fileID: 60433150}
   - component: {fileID: 60433149}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto253
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 64430612}
   - component: {fileID: 64430614}
   - component: {fileID: 64430613}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto242
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 65408546}
   - component: {fileID: 65408548}
   - component: {fileID: 65408547}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree198
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000002, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 70
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &65408547
 MeshRenderer:
@@ -1076,7 +1076,7 @@ GameObject:
   - component: {fileID: 75573945}
   - component: {fileID: 75573947}
   - component: {fileID: 75573946}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 78222455}
   - component: {fileID: 78222457}
   - component: {fileID: 78222456}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree207
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 79
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &78222456
 MeshRenderer:
@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 80028698}
   - component: {fileID: 80028700}
   - component: {fileID: 80028699}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto286
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 85270501}
   - component: {fileID: 85270503}
   - component: {fileID: 85270502}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock061
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1364,7 @@ GameObject:
   - component: {fileID: 88116121}
   - component: {fileID: 88116123}
   - component: {fileID: 88116122}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto268
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 93254174}
   - component: {fileID: 93254176}
   - component: {fileID: 93254175}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto310
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1508,7 +1508,7 @@ GameObject:
   - component: {fileID: 95939160}
   - component: {fileID: 95939162}
   - component: {fileID: 95939161}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1526,7 +1526,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 83
+  m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &95939161
 MeshRenderer:
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 98617247}
   - component: {fileID: 98617249}
   - component: {fileID: 98617248}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_138
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1727,7 @@ GameObject:
   - component: {fileID: 117171648}
   - component: {fileID: 117171650}
   - component: {fileID: 117171649}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock059
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1799,7 +1799,7 @@ GameObject:
   - component: {fileID: 122471538}
   - component: {fileID: 122471540}
   - component: {fileID: 122471539}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_080
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 127745795}
   - component: {fileID: 127745794}
   - component: {fileID: 127745796}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mountain009 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1959,7 +1959,7 @@ GameObject:
   - component: {fileID: 131805893}
   - component: {fileID: 131805895}
   - component: {fileID: 131805894}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto237
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2031,7 +2031,7 @@ GameObject:
   - component: {fileID: 135180803}
   - component: {fileID: 135180805}
   - component: {fileID: 135180804}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 145997870}
   - component: {fileID: 145997872}
   - component: {fileID: 145997871}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree297
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2175,7 +2175,7 @@ GameObject:
   - component: {fileID: 146405745}
   - component: {fileID: 146405747}
   - component: {fileID: 146405746}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_137
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 147093772}
   - component: {fileID: 147093774}
   - component: {fileID: 147093773}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2319,7 +2319,7 @@ GameObject:
   - component: {fileID: 169386265}
   - component: {fileID: 169386267}
   - component: {fileID: 169386266}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_121
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2391,7 +2391,7 @@ GameObject:
   - component: {fileID: 171178857}
   - component: {fileID: 171178859}
   - component: {fileID: 171178858}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,7 +2463,7 @@ GameObject:
   - component: {fileID: 172100211}
   - component: {fileID: 172100213}
   - component: {fileID: 172100212}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto263
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,7 +2535,7 @@ GameObject:
   - component: {fileID: 184224949}
   - component: {fileID: 184224951}
   - component: {fileID: 184224950}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2607,7 +2607,7 @@ GameObject:
   - component: {fileID: 185265524}
   - component: {fileID: 185265526}
   - component: {fileID: 185265525}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto303
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,7 +2679,7 @@ GameObject:
   - component: {fileID: 207425339}
   - component: {fileID: 207425341}
   - component: {fileID: 207425340}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree262
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,7 +2751,7 @@ GameObject:
   - component: {fileID: 208106132}
   - component: {fileID: 208106134}
   - component: {fileID: 208106133}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto297
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,7 +2823,7 @@ GameObject:
   - component: {fileID: 218358877}
   - component: {fileID: 218358879}
   - component: {fileID: 218358878}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_116
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2893,7 +2893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 226099090}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pastos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2923,7 +2923,7 @@ GameObject:
   - component: {fileID: 230883833}
   - component: {fileID: 230883835}
   - component: {fileID: 230883834}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto258
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2995,7 +2995,7 @@ GameObject:
   - component: {fileID: 233005559}
   - component: {fileID: 233005561}
   - component: {fileID: 233005560}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock071
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3067,7 +3067,7 @@ GameObject:
   - component: {fileID: 236907066}
   - component: {fileID: 236907068}
   - component: {fileID: 236907067}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3129,6 +3129,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236907065}
   m_Mesh: {fileID: 4300200, guid: db0f68394f136764a962e843a5ff7fc5, type: 3}
+--- !u!1001 &249135476
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.187877
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.1100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.3271976
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 67f1a344a07bbca4a8308d41604305ba, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &255380497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,7 +3180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 255380498}
   - component: {fileID: 255380499}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Forest4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3299,7 +3341,7 @@ GameObject:
   - component: {fileID: 281944682}
   - component: {fileID: 281944684}
   - component: {fileID: 281944683}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3317,7 +3359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.9999999, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 65
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &281944683
 MeshRenderer:
@@ -3371,7 +3413,7 @@ GameObject:
   - component: {fileID: 286076505}
   - component: {fileID: 286076507}
   - component: {fileID: 286076506}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_071
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3485,7 @@ GameObject:
   - component: {fileID: 289454559}
   - component: {fileID: 289454561}
   - component: {fileID: 289454560}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock072
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3515,7 +3557,7 @@ GameObject:
   - component: {fileID: 296422907}
   - component: {fileID: 296422909}
   - component: {fileID: 296422908}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree273
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3587,7 +3629,7 @@ GameObject:
   - component: {fileID: 300327266}
   - component: {fileID: 300327268}
   - component: {fileID: 300327267}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree288
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3659,7 +3701,7 @@ GameObject:
   - component: {fileID: 309258774}
   - component: {fileID: 309258776}
   - component: {fileID: 309258775}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree291
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3731,7 +3773,7 @@ GameObject:
   - component: {fileID: 312446982}
   - component: {fileID: 312446984}
   - component: {fileID: 312446983}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto283
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3803,7 +3845,7 @@ GameObject:
   - component: {fileID: 325012393}
   - component: {fileID: 325012395}
   - component: {fileID: 325012394}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto271
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3875,7 +3917,7 @@ GameObject:
   - component: {fileID: 326412321}
   - component: {fileID: 326412323}
   - component: {fileID: 326412322}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto315
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3947,7 +3989,7 @@ GameObject:
   - component: {fileID: 333296756}
   - component: {fileID: 333296758}
   - component: {fileID: 333296757}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_096
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3965,7 +4007,7 @@ Transform:
   m_LocalScale: {x: 1.0000023, y: 1.0000015, z: 0.9999961}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &333296757
 MeshRenderer:
@@ -4019,7 +4061,7 @@ GameObject:
   - component: {fileID: 334335406}
   - component: {fileID: 334335408}
   - component: {fileID: 334335407}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree329
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4091,7 +4133,7 @@ GameObject:
   - component: {fileID: 338573109}
   - component: {fileID: 338573111}
   - component: {fileID: 338573110}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree203
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4109,7 +4151,7 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 1.0000002, z: 0.9999998}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 75
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &338573110
 MeshRenderer:
@@ -4163,7 +4205,7 @@ GameObject:
   - component: {fileID: 341499236}
   - component: {fileID: 341499238}
   - component: {fileID: 341499237}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4181,7 +4223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 69
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &341499237
 MeshRenderer:
@@ -4235,7 +4277,7 @@ GameObject:
   - component: {fileID: 341966344}
   - component: {fileID: 341966346}
   - component: {fileID: 341966345}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock057
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4297,6 +4339,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341966343}
   m_Mesh: {fileID: 4300098, guid: 2c0920231f91c9d41935fce976ec60e0, type: 3}
+--- !u!1001 &342522959
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07097292
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &342773332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,7 +4391,7 @@ GameObject:
   - component: {fileID: 342773333}
   - component: {fileID: 342773335}
   - component: {fileID: 342773334}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree290
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4379,7 +4463,7 @@ GameObject:
   - component: {fileID: 346347850}
   - component: {fileID: 346347852}
   - component: {fileID: 346347851}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree305
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4451,7 +4535,7 @@ GameObject:
   - component: {fileID: 356416456}
   - component: {fileID: 356416458}
   - component: {fileID: 356416457}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree177
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4469,7 +4553,7 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 1, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 53
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &356416457
 MeshRenderer:
@@ -4523,7 +4607,7 @@ GameObject:
   - component: {fileID: 358034469}
   - component: {fileID: 358034471}
   - component: {fileID: 358034470}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4595,7 +4679,7 @@ GameObject:
   - component: {fileID: 362570609}
   - component: {fileID: 362570611}
   - component: {fileID: 362570610}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4613,7 +4697,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &362570610
 MeshRenderer:
@@ -4667,7 +4751,7 @@ GameObject:
   - component: {fileID: 368221551}
   - component: {fileID: 368221553}
   - component: {fileID: 368221552}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto295
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4739,7 +4823,7 @@ GameObject:
   - component: {fileID: 372266775}
   - component: {fileID: 372266777}
   - component: {fileID: 372266776}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree299
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4811,7 +4895,7 @@ GameObject:
   - component: {fileID: 373505970}
   - component: {fileID: 373505972}
   - component: {fileID: 373505971}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto251
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4883,7 +4967,7 @@ GameObject:
   - component: {fileID: 378909954}
   - component: {fileID: 378909956}
   - component: {fileID: 378909955}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto307
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4955,7 +5039,7 @@ GameObject:
   - component: {fileID: 384879217}
   - component: {fileID: 384879219}
   - component: {fileID: 384879218}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto350
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,7 +5111,7 @@ GameObject:
   - component: {fileID: 390456944}
   - component: {fileID: 390456946}
   - component: {fileID: 390456945}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto235
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5099,7 +5183,7 @@ GameObject:
   - component: {fileID: 394316676}
   - component: {fileID: 394316678}
   - component: {fileID: 394316677}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree272
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5171,7 +5255,7 @@ GameObject:
   - component: {fileID: 394651074}
   - component: {fileID: 394651076}
   - component: {fileID: 394651075}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5243,7 +5327,7 @@ GameObject:
   - component: {fileID: 409461823}
   - component: {fileID: 409461825}
   - component: {fileID: 409461824}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_135
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5315,7 +5399,7 @@ GameObject:
   - component: {fileID: 414170082}
   - component: {fileID: 414170084}
   - component: {fileID: 414170083}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree216
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5333,7 +5417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 87
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &414170083
 MeshRenderer:
@@ -5387,7 +5471,7 @@ GameObject:
   - component: {fileID: 418332436}
   - component: {fileID: 418332438}
   - component: {fileID: 418332437}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto314
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5449,55 +5533,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 418332435}
   m_Mesh: {fileID: 4300024, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
---- !u!1 &422774569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 422774570}
-  - component: {fileID: 422774572}
-  - component: {fileID: 422774571}
-  m_Layer: 0
-  m_Name: invisible world wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &422774570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 422774569}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3738, y: 0, z: 1354}
-  m_LocalScale: {x: 9999.005, y: 9999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533256952}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &422774571
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 422774569}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &422774572
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 422774569}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &443781651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,7 +5543,7 @@ GameObject:
   - component: {fileID: 443781652}
   - component: {fileID: 443781654}
   - component: {fileID: 443781653}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5580,7 +5615,7 @@ GameObject:
   - component: {fileID: 445193023}
   - component: {fileID: 445193025}
   - component: {fileID: 445193024}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree190
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5598,7 +5633,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 63
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &445193024
 MeshRenderer:
@@ -5679,7 +5714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4436116662215406, guid: e20d12704938641218edd2d038cebfbd, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1699148914313916, guid: e20d12704938641218edd2d038cebfbd, type: 2}
       propertyPath: m_Name
@@ -5693,22 +5728,22 @@ Prefab:
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1878
+      value: 725
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -1066
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
@@ -5733,7 +5768,7 @@ GameObject:
   - component: {fileID: 450040450}
   - component: {fileID: 450040452}
   - component: {fileID: 450040451}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto249
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5805,7 +5840,7 @@ GameObject:
   - component: {fileID: 452620280}
   - component: {fileID: 452620282}
   - component: {fileID: 452620281}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto305
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5877,7 +5912,7 @@ GameObject:
   - component: {fileID: 457383647}
   - component: {fileID: 457383649}
   - component: {fileID: 457383648}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5895,7 +5930,7 @@ Transform:
   m_LocalScale: {x: 1.0000042, y: 1.0000004, z: 0.99999535}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &457383648
 MeshRenderer:
@@ -5949,7 +5984,7 @@ GameObject:
   - component: {fileID: 465046684}
   - component: {fileID: 465046686}
   - component: {fileID: 465046685}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_131
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6021,7 +6056,7 @@ GameObject:
   - component: {fileID: 472407150}
   - component: {fileID: 472407152}
   - component: {fileID: 472407151}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree266
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6093,7 +6128,7 @@ GameObject:
   - component: {fileID: 473680419}
   - component: {fileID: 473680421}
   - component: {fileID: 473680420}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree174
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6111,7 +6146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 51
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &473680420
 MeshRenderer:
@@ -6165,7 +6200,7 @@ GameObject:
   - component: {fileID: 474190060}
   - component: {fileID: 474190062}
   - component: {fileID: 474190061}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto265
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6237,7 +6272,7 @@ GameObject:
   - component: {fileID: 474417857}
   - component: {fileID: 474417859}
   - component: {fileID: 474417858}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto333
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6309,7 +6344,7 @@ GameObject:
   - component: {fileID: 476273721}
   - component: {fileID: 476273723}
   - component: {fileID: 476273722}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree324
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6381,7 +6416,7 @@ GameObject:
   - component: {fileID: 484113590}
   - component: {fileID: 484113592}
   - component: {fileID: 484113591}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6503,7 +6538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498678127
 GameObject:
@@ -6515,7 +6550,7 @@ GameObject:
   - component: {fileID: 498678128}
   - component: {fileID: 498678130}
   - component: {fileID: 498678129}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6600,11 +6635,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 500637096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.82, z: 36}
+  m_LocalPosition: {x: 0, y: 1.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &500637098
 MonoBehaviour:
@@ -6629,7 +6664,7 @@ GameObject:
   - component: {fileID: 501142660}
   - component: {fileID: 501142662}
   - component: {fileID: 501142661}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto266
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6701,7 +6736,7 @@ GameObject:
   - component: {fileID: 508387250}
   - component: {fileID: 508387252}
   - component: {fileID: 508387251}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6773,7 +6808,7 @@ GameObject:
   - component: {fileID: 517976044}
   - component: {fileID: 517976046}
   - component: {fileID: 517976045}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto238
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6845,7 +6880,7 @@ GameObject:
   - component: {fileID: 526610051}
   - component: {fileID: 526610053}
   - component: {fileID: 526610052}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_063
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6907,40 +6942,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 526610050}
   m_Mesh: {fileID: 4300170, guid: db0f68394f136764a962e843a5ff7fc5, type: 3}
---- !u!1 &533256951
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 533256952}
-  m_Layer: 0
-  m_Name: WorldCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &533256952
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533256951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1184358894}
-  - {fileID: 422774570}
-  - {fileID: 832978795}
-  - {fileID: 862805374}
-  - {fileID: 940375805}
-  - {fileID: 966927349}
-  m_Father: {fileID: 1100451695}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533707572
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,7 +6952,7 @@ GameObject:
   - component: {fileID: 533707573}
   - component: {fileID: 533707575}
   - component: {fileID: 533707574}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto326
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7023,7 +7024,7 @@ GameObject:
   - component: {fileID: 544239544}
   - component: {fileID: 544239546}
   - component: {fileID: 544239545}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7100,7 +7101,7 @@ GameObject:
   - component: {fileID: 547540769}
   - component: {fileID: 547540771}
   - component: {fileID: 547540770}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7172,7 +7173,7 @@ GameObject:
   - component: {fileID: 554415859}
   - component: {fileID: 554415861}
   - component: {fileID: 554415860}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto296
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7244,7 +7245,7 @@ GameObject:
   - component: {fileID: 556844190}
   - component: {fileID: 556844192}
   - component: {fileID: 556844191}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock063
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7316,7 +7317,7 @@ GameObject:
   - component: {fileID: 557139131}
   - component: {fileID: 557139133}
   - component: {fileID: 557139132}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto321
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7388,7 +7389,7 @@ GameObject:
   - component: {fileID: 558418216}
   - component: {fileID: 558418218}
   - component: {fileID: 558418217}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock060
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7460,7 +7461,7 @@ GameObject:
   - component: {fileID: 566413222}
   - component: {fileID: 566413224}
   - component: {fileID: 566413223}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree4_047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7532,7 +7533,7 @@ GameObject:
   - component: {fileID: 567845744}
   - component: {fileID: 567845746}
   - component: {fileID: 567845745}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto278
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7605,7 +7606,7 @@ GameObject:
   - component: {fileID: 569476220}
   - component: {fileID: 569476219}
   - component: {fileID: 569476221}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mountain010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7692,7 +7693,7 @@ GameObject:
   - component: {fileID: 572325415}
   - component: {fileID: 572325417}
   - component: {fileID: 572325416}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7764,7 +7765,7 @@ GameObject:
   - component: {fileID: 574001234}
   - component: {fileID: 574001236}
   - component: {fileID: 574001235}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto294
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7836,7 +7837,7 @@ GameObject:
   - component: {fileID: 574773616}
   - component: {fileID: 574773618}
   - component: {fileID: 574773617}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_095
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7854,7 +7855,7 @@ Transform:
   m_LocalScale: {x: 1.0000031, y: 1.000002, z: 0.9999972}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &574773617
 MeshRenderer:
@@ -7908,7 +7909,7 @@ GameObject:
   - component: {fileID: 575112881}
   - component: {fileID: 575112883}
   - component: {fileID: 575112882}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock077
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7980,7 +7981,7 @@ GameObject:
   - component: {fileID: 577265020}
   - component: {fileID: 577265022}
   - component: {fileID: 577265021}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree189
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7998,7 +7999,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 62
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &577265021
 MeshRenderer:
@@ -8052,7 +8053,7 @@ GameObject:
   - component: {fileID: 577338511}
   - component: {fileID: 577338513}
   - component: {fileID: 577338512}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto276
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8323,7 +8324,7 @@ GameObject:
   - component: {fileID: 581355953}
   - component: {fileID: 581355955}
   - component: {fileID: 581355954}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_064
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8395,7 +8396,7 @@ GameObject:
   - component: {fileID: 581536219}
   - component: {fileID: 581536221}
   - component: {fileID: 581536220}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_094
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8413,7 +8414,7 @@ Transform:
   m_LocalScale: {x: 0.99999565, y: 0.9999997, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 38
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &581536220
 MeshRenderer:
@@ -8467,7 +8468,7 @@ GameObject:
   - component: {fileID: 583131611}
   - component: {fileID: 583131613}
   - component: {fileID: 583131612}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock054
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8539,7 +8540,7 @@ GameObject:
   - component: {fileID: 584171109}
   - component: {fileID: 584171111}
   - component: {fileID: 584171110}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto279
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8611,7 +8612,7 @@ GameObject:
   - component: {fileID: 585022106}
   - component: {fileID: 585022108}
   - component: {fileID: 585022107}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree322
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8683,7 +8684,7 @@ GameObject:
   - component: {fileID: 600098270}
   - component: {fileID: 600098272}
   - component: {fileID: 600098271}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree309
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8755,7 +8756,7 @@ GameObject:
   - component: {fileID: 607575669}
   - component: {fileID: 607575671}
   - component: {fileID: 607575670}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree335
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8827,7 +8828,7 @@ GameObject:
   - component: {fileID: 613422966}
   - component: {fileID: 613422968}
   - component: {fileID: 613422967}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree289
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8899,7 +8900,7 @@ GameObject:
   - component: {fileID: 618196685}
   - component: {fileID: 618196687}
   - component: {fileID: 618196686}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree199
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8917,7 +8918,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 71
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &618196686
 MeshRenderer:
@@ -8971,7 +8972,7 @@ GameObject:
   - component: {fileID: 618311783}
   - component: {fileID: 618311785}
   - component: {fileID: 618311784}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree319
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9043,7 +9044,7 @@ GameObject:
   - component: {fileID: 619490388}
   - component: {fileID: 619490390}
   - component: {fileID: 619490389}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree300
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9115,7 +9116,7 @@ GameObject:
   - component: {fileID: 632196394}
   - component: {fileID: 632196396}
   - component: {fileID: 632196395}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto277
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9187,7 +9188,7 @@ GameObject:
   - component: {fileID: 638825932}
   - component: {fileID: 638825934}
   - component: {fileID: 638825933}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree318
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9283,7 +9284,7 @@ GameObject:
   - component: {fileID: 653857343}
   - component: {fileID: 653857345}
   - component: {fileID: 653857344}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto327
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9355,7 +9356,7 @@ GameObject:
   - component: {fileID: 655386488}
   - component: {fileID: 655386490}
   - component: {fileID: 655386489}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9427,7 +9428,7 @@ GameObject:
   - component: {fileID: 657297490}
   - component: {fileID: 657297492}
   - component: {fileID: 657297491}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9499,7 +9500,7 @@ GameObject:
   - component: {fileID: 662205568}
   - component: {fileID: 662205570}
   - component: {fileID: 662205569}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_083
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9571,7 +9572,7 @@ GameObject:
   - component: {fileID: 674121458}
   - component: {fileID: 674121460}
   - component: {fileID: 674121459}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_099
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9643,7 +9644,7 @@ GameObject:
   - component: {fileID: 681164082}
   - component: {fileID: 681164084}
   - component: {fileID: 681164083}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9661,7 +9662,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 50
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &681164083
 MeshRenderer:
@@ -9715,7 +9716,7 @@ GameObject:
   - component: {fileID: 684079992}
   - component: {fileID: 684079994}
   - component: {fileID: 684079993}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto244
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9777,6 +9778,172 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684079991}
   m_Mesh: {fileID: 4300376, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
+--- !u!1 &696294478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 194278, guid: a059c4ac190b41743b10d5c9ddf4ae00,
+    type: 2}
+  m_PrefabInternal: {fileID: 736178341}
+--- !u!114 &696294479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696294478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d472849fc5347599d106be049ad7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myChatBubble: {fileID: 0}
+  bubbleOffsetPosition: {x: 0, y: 0, z: 0}
+  speakInCD: 0
+  mMat: {fileID: 0}
+--- !u!114 &696294480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696294478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d4c8c637cc6485490d3138de56adaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+--- !u!82 &696294485
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696294478}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3.5666447
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 1
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!54 &696294486
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696294478}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &696294487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696294478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04832803, y: 0.025375044, z: 0.032477904}
+  m_Center: {x: 0.000049281913, y: 0.00027563, z: 0.016096558}
+--- !u!135 &696294488
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696294478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &697642946
 GameObject:
   m_ObjectHideFlags: 0
@@ -9787,7 +9954,7 @@ GameObject:
   - component: {fileID: 697642947}
   - component: {fileID: 697642949}
   - component: {fileID: 697642948}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9805,7 +9972,7 @@ Transform:
   m_LocalScale: {x: 1.0000031, y: 0.99999535, z: 0.9999966}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &697642948
 MeshRenderer:
@@ -9858,7 +10025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698187846}
   - component: {fileID: 698187847}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Land
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9907,7 +10074,7 @@ GameObject:
   - component: {fileID: 704077795}
   - component: {fileID: 704077797}
   - component: {fileID: 704077796}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto313
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9979,7 +10146,7 @@ GameObject:
   - component: {fileID: 706961847}
   - component: {fileID: 706961849}
   - component: {fileID: 706961848}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9997,7 +10164,7 @@ Transform:
   m_LocalScale: {x: 1.0000036, y: 1.0000005, z: 0.9999993}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &706961848
 MeshRenderer:
@@ -10051,7 +10218,7 @@ GameObject:
   - component: {fileID: 709077874}
   - component: {fileID: 709077876}
   - component: {fileID: 709077875}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto325
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10113,78 +10280,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709077873}
   m_Mesh: {fileID: 4300132, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
---- !u!1 &709771057
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 709771058}
-  - component: {fileID: 709771060}
-  - component: {fileID: 709771059}
-  m_Layer: 13
-  m_Name: Tree10_049
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &709771058
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 709771057}
-  m_LocalRotation: {x: -0.031650584, y: 0.005450152, z: -0.014215619, w: 0.9993831}
-  m_LocalPosition: {x: 286.755, y: 406.00012, z: -68.61321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2110894316}
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &709771059
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 709771057}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: 32ebbcdd289039e4c8cd225a3de24057, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &709771060
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 709771057}
-  m_Mesh: {fileID: 4300174, guid: db0f68394f136764a962e843a5ff7fc5, type: 3}
 --- !u!1 &713253820
 GameObject:
   m_ObjectHideFlags: 0
@@ -10195,7 +10290,7 @@ GameObject:
   - component: {fileID: 713253821}
   - component: {fileID: 713253823}
   - component: {fileID: 713253822}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto245
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10267,7 +10362,7 @@ GameObject:
   - component: {fileID: 713611664}
   - component: {fileID: 713611666}
   - component: {fileID: 713611665}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock055
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10338,7 +10433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577581820}
   - component: {fileID: 714470094}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Forest3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10428,7 +10523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4034312049924482, guid: 029d27d341a9740618831ad663effaf4, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1433695525608346, guid: 029d27d341a9740618831ad663effaf4, type: 2}
       propertyPath: m_Name
@@ -10436,33 +10531,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
-      propertyPath: Day.AmbientColor.r
+      propertyPath: World.SetFogColor
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+    - target: {fileID: 114757963698744534, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
-      propertyPath: Day.AmbientColor.g
-      value: 0.9203929
+      propertyPath: DayLengthInMinutes
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
-      propertyPath: Day.AmbientColor.b
-      value: 0.6367924
-      objectReference: {fileID: 0}
-    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
-        type: 2}
-      propertyPath: Day.SunLightColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
-        type: 2}
-      propertyPath: Day.SunLightColor.g
-      value: 0.8647583
-      objectReference: {fileID: 0}
-    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
-        type: 2}
-      propertyPath: Day.SunLightColor.b
-      value: 0.5707547
+      propertyPath: Cycle.Hour
+      value: 12.27
       objectReference: {fileID: 0}
     - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
@@ -10472,12 +10552,12 @@ Prefab:
     - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.68537164
+      value: 0.47034773
       objectReference: {fileID: 0}
     - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.28780705
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
@@ -10486,21 +10566,268 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
-      propertyPath: m_Color.a
+      propertyPath: m_Shadows.m_Strength
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 64671779780663340, guid: 029d27d341a9740618831ad663effaf4,
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.1183966
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.18538713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.94152135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.2552477
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.12830664
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.40953276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914425301161808, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.9032277
+      objectReference: {fileID: 0}
+    - target: {fileID: 23537975891716656, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.067930385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.9731389
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.21397768
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.05098731
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.12830664
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.40953282
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886695088777462, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.9032277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.20888838
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.068933114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.014762556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9753953
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.12830664
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.40953276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163965652168636, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.9032277
+      objectReference: {fileID: 0}
+    - target: {fileID: 23354565041911504, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.MoonLightColor.r
+      value: 0.1544118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.MoonLightColor.g
+      value: 0.4401624
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.MoonLightColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.ShadowStrength
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.MoonLightIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Day.SunLightIntensity
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Day.AdditiveColor.r
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Day.AdditiveColor.g
+      value: 0.7543253
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Day.AdditiveColor.b
+      value: 0.7543253
+      objectReference: {fileID: 0}
+    - target: {fileID: 23177125977279510, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.AdditiveColor.r
+      value: 0.0024870269
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.AdditiveColor.g
+      value: 0.060374673
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: Night.AdditiveColor.b
+      value: 0.33823532
+      objectReference: {fileID: 0}
+    - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Shadows.m_Bias
+      value: 0.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433695525608346, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108040253425027254, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23370336847566902, guid: 029d27d341a9740618831ad663effaf4,
         type: 2}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 64671779780663340, guid: 029d27d341a9740618831ad663effaf4, type: 2}
+    - target: {fileID: 114661438450105922, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957076970117550, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: MeshQuality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33897526687608968, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: cd9ecb4203db9401eadb5a03d8f30585, type: 3}
+    - target: {fileID: 33186020312111530, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: cd9ecb4203db9401eadb5a03d8f30585, type: 3}
+    - target: {fileID: 33020541707273488, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 4c4c32028b61a48ce945c3c8ab9124b9, type: 3}
+    - target: {fileID: 33597989870047044, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300002, guid: e2e20e1c5eb5a4dab9e8293670751154, type: 3}
+    - target: {fileID: 114177196902527720, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: CloudQuality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23516242471378072, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96275e4b9ddd1421bb1aba50171a3d17, type: 2}
+    - target: {fileID: 114757963698744534, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: UpdateInterval
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757963698744534, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: ProgressDate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 119097834356180282, guid: 029d27d341a9740618831ad663effaf4,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: c5d8926cb8d1e4771ba087e03bb41d9e, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 029d27d341a9740618831ad663effaf4, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &717713952
@@ -10513,7 +10840,7 @@ GameObject:
   - component: {fileID: 717713953}
   - component: {fileID: 717713955}
   - component: {fileID: 717713954}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree224
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10531,7 +10858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 92
+  m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &717713954
 MeshRenderer:
@@ -10585,7 +10912,7 @@ GameObject:
   - component: {fileID: 725771998}
   - component: {fileID: 725772000}
   - component: {fileID: 725771999}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree267
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10657,7 +10984,7 @@ GameObject:
   - component: {fileID: 728408692}
   - component: {fileID: 728408694}
   - component: {fileID: 728408693}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10719,6 +11046,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728408691}
   m_Mesh: {fileID: 4300150, guid: 2c0920231f91c9d41935fce976ec60e0, type: 3}
+--- !u!1001 &736178341
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 449912, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356244, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 388beaf1edf2d446e90e307e7db99a52, type: 2}
+    - target: {fileID: 6478042, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a059c4ac190b41743b10d5c9ddf4ae00, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &748111109
 GameObject:
   m_ObjectHideFlags: 0
@@ -10729,7 +11106,7 @@ GameObject:
   - component: {fileID: 748111110}
   - component: {fileID: 748111112}
   - component: {fileID: 748111111}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto349
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10801,7 +11178,7 @@ GameObject:
   - component: {fileID: 748399199}
   - component: {fileID: 748399201}
   - component: {fileID: 748399200}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree298
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10873,7 +11250,7 @@ GameObject:
   - component: {fileID: 753453054}
   - component: {fileID: 753453056}
   - component: {fileID: 753453055}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10945,7 +11322,7 @@ GameObject:
   - component: {fileID: 758604844}
   - component: {fileID: 758604846}
   - component: {fileID: 758604845}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10963,7 +11340,7 @@ Transform:
   m_LocalScale: {x: 1.0000005, y: 0.9999992, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &758604845
 MeshRenderer:
@@ -11017,7 +11394,7 @@ GameObject:
   - component: {fileID: 763464270}
   - component: {fileID: 763464272}
   - component: {fileID: 763464271}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto292
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11089,7 +11466,7 @@ GameObject:
   - component: {fileID: 764344036}
   - component: {fileID: 764344038}
   - component: {fileID: 764344037}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree330
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11161,7 +11538,7 @@ GameObject:
   - component: {fileID: 765923874}
   - component: {fileID: 765923876}
   - component: {fileID: 765923875}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto259
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11233,7 +11610,7 @@ GameObject:
   - component: {fileID: 769126787}
   - component: {fileID: 769126789}
   - component: {fileID: 769126788}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto334
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11305,7 +11682,7 @@ GameObject:
   - component: {fileID: 770513479}
   - component: {fileID: 770513481}
   - component: {fileID: 770513480}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree264
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11367,6 +11744,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770513478}
   m_Mesh: {fileID: 4300392, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
+--- !u!1 &771913401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771913402}
+  - component: {fileID: 771913403}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &771913402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771913401}
+  m_LocalRotation: {x: 0.6312689, y: -0.63767385, z: 0.4083318, w: 0.16773993}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1100451695}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 132.9, y: -26.3, z: 78.95}
+--- !u!108 &771913403
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771913401}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.77337533, b: 0.2783019, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &774125241
 GameObject:
   m_ObjectHideFlags: 0
@@ -11377,7 +11820,7 @@ GameObject:
   - component: {fileID: 774125242}
   - component: {fileID: 774125244}
   - component: {fileID: 774125243}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto323
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11478,7 +11921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775688a31b4b14c6f8cc1b1bd2031c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intervals: 20
+  intervals: 60
   mainCam: {fileID: 2121162003}
   followCam: {fileID: 1210948033}
   switching: 1
@@ -11496,7 +11939,7 @@ Transform:
   - {fileID: 1210948041}
   - {fileID: 2121162010}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779186733
 GameObject:
@@ -11508,7 +11951,7 @@ GameObject:
   - component: {fileID: 779186734}
   - component: {fileID: 779186736}
   - component: {fileID: 779186735}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree328
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11580,7 +12023,7 @@ GameObject:
   - component: {fileID: 780007685}
   - component: {fileID: 780007687}
   - component: {fileID: 780007686}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree321
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11652,7 +12095,7 @@ GameObject:
   - component: {fileID: 782491066}
   - component: {fileID: 782491068}
   - component: {fileID: 782491067}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree294
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11724,7 +12167,7 @@ GameObject:
   - component: {fileID: 782970409}
   - component: {fileID: 782970411}
   - component: {fileID: 782970410}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto319
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11796,7 +12239,7 @@ GameObject:
   - component: {fileID: 783361292}
   - component: {fileID: 783361294}
   - component: {fileID: 783361293}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree202
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11814,7 +12257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 74
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &783361293
 MeshRenderer:
@@ -11868,7 +12311,7 @@ GameObject:
   - component: {fileID: 785103410}
   - component: {fileID: 785103412}
   - component: {fileID: 785103411}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11940,7 +12383,7 @@ GameObject:
   - component: {fileID: 795916091}
   - component: {fileID: 795916093}
   - component: {fileID: 795916092}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto241
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12012,7 +12455,7 @@ GameObject:
   - component: {fileID: 809155028}
   - component: {fileID: 809155030}
   - component: {fileID: 809155029}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree314
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12084,7 +12527,7 @@ GameObject:
   - component: {fileID: 811016619}
   - component: {fileID: 811016621}
   - component: {fileID: 811016620}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree344
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12156,7 +12599,7 @@ GameObject:
   - component: {fileID: 814509023}
   - component: {fileID: 814509025}
   - component: {fileID: 814509024}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto304
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12228,7 +12671,7 @@ GameObject:
   - component: {fileID: 823762561}
   - component: {fileID: 823762563}
   - component: {fileID: 823762562}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree275
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12290,55 +12733,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 823762560}
   m_Mesh: {fileID: 4300198, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
---- !u!1 &832978794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 832978795}
-  - component: {fileID: 832978797}
-  - component: {fileID: 832978796}
-  m_Layer: 0
-  m_Name: invisible world wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &832978795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 832978794}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2562, y: 0, z: 1354}
-  m_LocalScale: {x: 9999.013, y: 9999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533256952}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &832978796
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 832978794}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &832978797
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 832978794}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &843045461
 GameObject:
   m_ObjectHideFlags: 0
@@ -12349,7 +12743,7 @@ GameObject:
   - component: {fileID: 843045462}
   - component: {fileID: 843045464}
   - component: {fileID: 843045463}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12421,7 +12815,7 @@ GameObject:
   - component: {fileID: 853374768}
   - component: {fileID: 853374770}
   - component: {fileID: 853374769}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_139
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12493,7 +12887,7 @@ GameObject:
   - component: {fileID: 856072137}
   - component: {fileID: 856072139}
   - component: {fileID: 856072138}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto282
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12565,7 +12959,7 @@ GameObject:
   - component: {fileID: 856521205}
   - component: {fileID: 856521207}
   - component: {fileID: 856521206}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto309
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12637,7 +13031,7 @@ GameObject:
   - component: {fileID: 858759828}
   - component: {fileID: 858759830}
   - component: {fileID: 858759829}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12699,55 +13093,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858759827}
   m_Mesh: {fileID: 4300108, guid: 2c0920231f91c9d41935fce976ec60e0, type: 3}
---- !u!1 &862805373
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 862805374}
-  - component: {fileID: 862805376}
-  - component: {fileID: 862805375}
-  m_Layer: 0
-  m_Name: invisible world wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &862805374
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 862805373}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4851}
-  m_LocalScale: {x: 9999, y: 9999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533256952}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &862805375
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 862805373}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &862805376
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 862805373}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &866133731
 Transform:
   m_ObjectHideFlags: 0
@@ -12760,7 +13105,7 @@ Transform:
   m_LocalScale: {x: 1000, y: 1, z: 1000}
   m_Children: []
   m_Father: {fileID: 1100451695}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &881980642
 GameObject:
@@ -12772,7 +13117,7 @@ GameObject:
   - component: {fileID: 881980643}
   - component: {fileID: 881980645}
   - component: {fileID: 881980644}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12844,7 +13189,7 @@ GameObject:
   - component: {fileID: 885403229}
   - component: {fileID: 885403231}
   - component: {fileID: 885403230}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree332
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12916,7 +13261,7 @@ GameObject:
   - component: {fileID: 887169838}
   - component: {fileID: 887169840}
   - component: {fileID: 887169839}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_068
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12988,7 +13333,7 @@ GameObject:
   - component: {fileID: 887691097}
   - component: {fileID: 887691099}
   - component: {fileID: 887691098}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto284
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13060,7 +13405,7 @@ GameObject:
   - component: {fileID: 892582310}
   - component: {fileID: 892582312}
   - component: {fileID: 892582311}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree191
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13078,7 +13423,7 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999998}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 64
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &892582311
 MeshRenderer:
@@ -13160,7 +13505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899517799
 GameObject:
@@ -13172,7 +13517,7 @@ GameObject:
   - component: {fileID: 899517800}
   - component: {fileID: 899517802}
   - component: {fileID: 899517801}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto351
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13244,7 +13589,7 @@ GameObject:
   - component: {fileID: 900478785}
   - component: {fileID: 900478787}
   - component: {fileID: 900478786}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_093
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13262,7 +13607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &900478786
 MeshRenderer:
@@ -13321,7 +13666,7 @@ GameObject:
   - component: {fileID: 904296817}
   - component: {fileID: 904296819}
   - component: {fileID: 904296818}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree276
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13393,7 +13738,7 @@ GameObject:
   - component: {fileID: 908032668}
   - component: {fileID: 908032670}
   - component: {fileID: 908032669}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13464,7 +13809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 912011915}
   - component: {fileID: 912011914}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mointains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13518,7 +13863,7 @@ GameObject:
   - component: {fileID: 912898934}
   - component: {fileID: 912898936}
   - component: {fileID: 912898935}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13590,7 +13935,7 @@ GameObject:
   - component: {fileID: 925667117}
   - component: {fileID: 925667119}
   - component: {fileID: 925667118}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto261
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13697,7 +14042,7 @@ Prefab:
     - target: {fileID: 224450098100668598, guid: 783297188b0794cc9bcfbb8e363a12f7,
         type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 224450098100668598, guid: 783297188b0794cc9bcfbb8e363a12f7,
         type: 2}
@@ -13762,7 +14107,7 @@ GameObject:
   - component: {fileID: 939381253}
   - component: {fileID: 939381255}
   - component: {fileID: 939381254}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13834,7 +14179,7 @@ GameObject:
   - component: {fileID: 940036157}
   - component: {fileID: 940036159}
   - component: {fileID: 940036158}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree295
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13896,55 +14241,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940036156}
   m_Mesh: {fileID: 4300298, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
---- !u!1 &940375804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 940375805}
-  - component: {fileID: 940375807}
-  - component: {fileID: 940375806}
-  m_Layer: 0
-  m_Name: invisible world wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &940375805
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940375804}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4764, z: 1742}
-  m_LocalScale: {x: 9999, y: 9999.005, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533256952}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!65 &940375806
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940375804}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &940375807
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940375804}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &953539456
 GameObject:
   m_ObjectHideFlags: 0
@@ -13955,7 +14251,7 @@ GameObject:
   - component: {fileID: 953539457}
   - component: {fileID: 953539459}
   - component: {fileID: 953539458}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto272
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14027,7 +14323,7 @@ GameObject:
   - component: {fileID: 956317663}
   - component: {fileID: 956317665}
   - component: {fileID: 956317664}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree184
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14045,7 +14341,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 59
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &956317664
 MeshRenderer:
@@ -14099,7 +14395,7 @@ GameObject:
   - component: {fileID: 958807289}
   - component: {fileID: 958807291}
   - component: {fileID: 958807290}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock058
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14171,7 +14467,7 @@ GameObject:
   - component: {fileID: 961258052}
   - component: {fileID: 961258054}
   - component: {fileID: 961258053}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14233,55 +14529,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961258051}
   m_Mesh: {fileID: 4300068, guid: 2c0920231f91c9d41935fce976ec60e0, type: 3}
---- !u!1 &966927348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 966927349}
-  - component: {fileID: 966927351}
-  - component: {fileID: 966927350}
-  m_Layer: 0
-  m_Name: invisible world wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &966927349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 966927348}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -555, z: 1742}
-  m_LocalScale: {x: 9999, y: 9999.013, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533256952}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!65 &966927350
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 966927348}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &966927351
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 966927348}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &967225659
 GameObject:
   m_ObjectHideFlags: 0
@@ -14292,7 +14539,7 @@ GameObject:
   - component: {fileID: 967225660}
   - component: {fileID: 967225662}
   - component: {fileID: 967225661}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree325
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14364,7 +14611,7 @@ GameObject:
   - component: {fileID: 976998484}
   - component: {fileID: 976998486}
   - component: {fileID: 976998485}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto291
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14436,7 +14683,7 @@ GameObject:
   - component: {fileID: 978640246}
   - component: {fileID: 978640248}
   - component: {fileID: 978640247}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14508,7 +14755,7 @@ GameObject:
   - component: {fileID: 981586679}
   - component: {fileID: 981586681}
   - component: {fileID: 981586680}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree179
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14526,7 +14773,7 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 54
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &981586680
 MeshRenderer:
@@ -14580,7 +14827,7 @@ GameObject:
   - component: {fileID: 983074330}
   - component: {fileID: 983074332}
   - component: {fileID: 983074331}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_149
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14652,7 +14899,7 @@ GameObject:
   - component: {fileID: 992162741}
   - component: {fileID: 992162743}
   - component: {fileID: 992162742}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto290
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14724,7 +14971,7 @@ GameObject:
   - component: {fileID: 993460664}
   - component: {fileID: 993460666}
   - component: {fileID: 993460665}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto341
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14812,7 +15059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998849221
 GameObject:
@@ -14824,7 +15071,7 @@ GameObject:
   - component: {fileID: 998849222}
   - component: {fileID: 998849224}
   - component: {fileID: 998849223}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14896,7 +15143,7 @@ GameObject:
   - component: {fileID: 1001062235}
   - component: {fileID: 1001062237}
   - component: {fileID: 1001062236}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14968,7 +15215,7 @@ GameObject:
   - component: {fileID: 1016274166}
   - component: {fileID: 1016274168}
   - component: {fileID: 1016274167}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14986,7 +15233,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1016274167
 MeshRenderer:
@@ -15040,7 +15287,7 @@ GameObject:
   - component: {fileID: 1023341432}
   - component: {fileID: 1023341434}
   - component: {fileID: 1023341433}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree171
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15058,7 +15305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1023341433
 MeshRenderer:
@@ -15112,7 +15359,7 @@ GameObject:
   - component: {fileID: 1025660496}
   - component: {fileID: 1025660498}
   - component: {fileID: 1025660497}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree182
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15130,7 +15377,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 57
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1025660497
 MeshRenderer:
@@ -15184,7 +15431,7 @@ GameObject:
   - component: {fileID: 1025920919}
   - component: {fileID: 1025920921}
   - component: {fileID: 1025920920}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto236
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15256,7 +15503,7 @@ GameObject:
   - component: {fileID: 1037082642}
   - component: {fileID: 1037082644}
   - component: {fileID: 1037082643}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15328,7 +15575,7 @@ GameObject:
   - component: {fileID: 1040408399}
   - component: {fileID: 1040408401}
   - component: {fileID: 1040408400}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock064
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15400,7 +15647,7 @@ GameObject:
   - component: {fileID: 1046845261}
   - component: {fileID: 1046845263}
   - component: {fileID: 1046845262}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_122
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15472,7 +15719,7 @@ GameObject:
   - component: {fileID: 1047934142}
   - component: {fileID: 1047934144}
   - component: {fileID: 1047934143}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree208
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15490,7 +15737,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 80
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1047934143
 MeshRenderer:
@@ -15544,7 +15791,7 @@ GameObject:
   - component: {fileID: 1058345192}
   - component: {fileID: 1058345194}
   - component: {fileID: 1058345193}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_098
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15562,7 +15809,7 @@ Transform:
   m_LocalScale: {x: 0.99999714, y: 1.0000012, z: 1.0000055}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1058345193
 MeshRenderer:
@@ -15616,7 +15863,7 @@ GameObject:
   - component: {fileID: 1058660662}
   - component: {fileID: 1058660664}
   - component: {fileID: 1058660663}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree210
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15634,7 +15881,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 82
+  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1058660663
 MeshRenderer:
@@ -15688,7 +15935,7 @@ GameObject:
   - component: {fileID: 1071090596}
   - component: {fileID: 1071090598}
   - component: {fileID: 1071090597}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto281
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15760,7 +16007,7 @@ GameObject:
   - component: {fileID: 1071208979}
   - component: {fileID: 1071208981}
   - component: {fileID: 1071208980}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree331
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15832,7 +16079,7 @@ GameObject:
   - component: {fileID: 1076016226}
   - component: {fileID: 1076016228}
   - component: {fileID: 1076016227}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto324
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15904,7 +16151,7 @@ GameObject:
   - component: {fileID: 1086671322}
   - component: {fileID: 1086671324}
   - component: {fileID: 1086671323}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto328
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15992,7 +16239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1096700084
 GameObject:
@@ -16004,7 +16251,7 @@ GameObject:
   - component: {fileID: 1096700085}
   - component: {fileID: 1096700087}
   - component: {fileID: 1096700086}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16022,7 +16269,7 @@ Transform:
   m_LocalScale: {x: 1.0000051, y: 1.0000095, z: 0.9999958}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1096700086
 MeshRenderer:
@@ -16076,7 +16323,7 @@ GameObject:
   - component: {fileID: 1100117555}
   - component: {fileID: 1100117557}
   - component: {fileID: 1100117556}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree312
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16168,11 +16415,11 @@ Transform:
   - {fileID: 912011915}
   - {fileID: 1881495851}
   - {fileID: 698187846}
+  - {fileID: 771913402}
   - {fileID: 1134751574}
   - {fileID: 866133731}
-  - {fileID: 533256952}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1101723226
 GameObject:
@@ -16184,7 +16431,7 @@ GameObject:
   - component: {fileID: 1101723227}
   - component: {fileID: 1101723229}
   - component: {fileID: 1101723228}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16202,7 +16449,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 72
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1101723228
 MeshRenderer:
@@ -16256,7 +16503,7 @@ GameObject:
   - component: {fileID: 1104844582}
   - component: {fileID: 1104844584}
   - component: {fileID: 1104844583}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_136
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16328,7 +16575,7 @@ GameObject:
   - component: {fileID: 1105878607}
   - component: {fileID: 1105878609}
   - component: {fileID: 1105878608}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree220
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16346,7 +16593,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 89
+  m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1105878608
 MeshRenderer:
@@ -16400,7 +16647,7 @@ GameObject:
   - component: {fileID: 1107618919}
   - component: {fileID: 1107618921}
   - component: {fileID: 1107618920}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto287
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16472,7 +16719,7 @@ GameObject:
   - component: {fileID: 1117047234}
   - component: {fileID: 1117047236}
   - component: {fileID: 1117047235}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree181
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16490,7 +16737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 56
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1117047235
 MeshRenderer:
@@ -16544,7 +16791,7 @@ GameObject:
   - component: {fileID: 1120316979}
   - component: {fileID: 1120316981}
   - component: {fileID: 1120316980}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto301
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16616,7 +16863,7 @@ GameObject:
   - component: {fileID: 1122002822}
   - component: {fileID: 1122002824}
   - component: {fileID: 1122002823}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto306
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16692,8 +16939,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1134949685}
   - component: {fileID: 1134949684}
+  - component: {fileID: 1134949686}
+  - component: {fileID: 1134949687}
   m_Layer: 0
-  m_Name: Display Manager
+  m_Name: World Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16721,8 +16970,38 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1134949686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1134949683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a4db9af76804c758ebddf6b77eea11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1134949687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1134949683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c36f29acfd84e9c8709fe859362615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TTTConsoleGameobject: {fileID: 1901975438}
+  ChatBubbleCanvasGameobject: {fileID: 903163815}
+  TTTConsolePrefab: {fileID: 1699148914313916, guid: e20d12704938641218edd2d038cebfbd,
+    type: 2}
+  ChatBubbleManagerPrefab: {fileID: 1659979672569126, guid: 783297188b0794cc9bcfbb8e363a12f7,
+    type: 2}
+  TConsoleRebornWait: 2
+  ChatbubbleRebornWait: 10
 --- !u!1 &1138032181
 GameObject:
   m_ObjectHideFlags: 0
@@ -16733,7 +17012,7 @@ GameObject:
   - component: {fileID: 1138032182}
   - component: {fileID: 1138032184}
   - component: {fileID: 1138032183}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree188
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16751,7 +17030,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 61
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1138032183
 MeshRenderer:
@@ -16805,7 +17084,7 @@ GameObject:
   - component: {fileID: 1139986373}
   - component: {fileID: 1139986375}
   - component: {fileID: 1139986374}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16877,7 +17156,7 @@ GameObject:
   - component: {fileID: 1141546335}
   - component: {fileID: 1141546337}
   - component: {fileID: 1141546336}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock073
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16949,7 +17228,7 @@ GameObject:
   - component: {fileID: 1147689012}
   - component: {fileID: 1147689014}
   - component: {fileID: 1147689013}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree269
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17021,7 +17300,7 @@ GameObject:
   - component: {fileID: 1149379507}
   - component: {fileID: 1149379509}
   - component: {fileID: 1149379508}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock076
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17117,7 +17396,7 @@ GameObject:
   - component: {fileID: 1179541624}
   - component: {fileID: 1179541626}
   - component: {fileID: 1179541625}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto275
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17189,7 +17468,7 @@ GameObject:
   - component: {fileID: 1179980888}
   - component: {fileID: 1179980890}
   - component: {fileID: 1179980889}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree310
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17261,7 +17540,7 @@ GameObject:
   - component: {fileID: 1181176502}
   - component: {fileID: 1181176504}
   - component: {fileID: 1181176503}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_058
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17323,55 +17602,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1181176501}
   m_Mesh: {fileID: 4300014, guid: 2c0920231f91c9d41935fce976ec60e0, type: 3}
---- !u!1 &1184358893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1184358894}
-  - component: {fileID: 1184358896}
-  - component: {fileID: 1184358895}
-  m_Layer: 0
-  m_Name: invisible world wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1184358894
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184358893}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2143.9998}
-  m_LocalScale: {x: 9999, y: 9999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 533256952}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1184358895
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184358893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1184358896
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184358893}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1195206365
 GameObject:
   m_ObjectHideFlags: 0
@@ -17382,7 +17612,7 @@ GameObject:
   - component: {fileID: 1195206366}
   - component: {fileID: 1195206368}
   - component: {fileID: 1195206367}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto246
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17454,7 +17684,7 @@ GameObject:
   - component: {fileID: 1200044667}
   - component: {fileID: 1200044669}
   - component: {fileID: 1200044668}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17526,7 +17756,7 @@ GameObject:
   - component: {fileID: 1208776411}
   - component: {fileID: 1208776413}
   - component: {fileID: 1208776412}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto247
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17621,7 +17851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 34e35e5e6b56f44229f97d8f43e339eb, type: 2}
+  profile: {fileID: 11400000, guid: 7e56c81d78852404f819e6d510ebdc78, type: 2}
 --- !u!114 &1210948035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17697,7 +17927,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1847
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -17732,7 +17962,7 @@ GameObject:
   - component: {fileID: 1210996572}
   - component: {fileID: 1210996574}
   - component: {fileID: 1210996573}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree215
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17750,7 +17980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 86
+  m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1210996573
 MeshRenderer:
@@ -17804,7 +18034,7 @@ GameObject:
   - component: {fileID: 1211482825}
   - component: {fileID: 1211482827}
   - component: {fileID: 1211482826}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_150
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17877,7 +18107,7 @@ GameObject:
   - component: {fileID: 1212660515}
   - component: {fileID: 1212660514}
   - component: {fileID: 1212660516}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mountain010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17964,7 +18194,7 @@ GameObject:
   - component: {fileID: 1224525445}
   - component: {fileID: 1224525447}
   - component: {fileID: 1224525446}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18036,7 +18266,7 @@ GameObject:
   - component: {fileID: 1232770995}
   - component: {fileID: 1232770997}
   - component: {fileID: 1232770996}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18108,7 +18338,7 @@ GameObject:
   - component: {fileID: 1235855959}
   - component: {fileID: 1235855961}
   - component: {fileID: 1235855960}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree282
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18180,7 +18410,7 @@ GameObject:
   - component: {fileID: 1241240559}
   - component: {fileID: 1241240561}
   - component: {fileID: 1241240560}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_132
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18252,7 +18482,7 @@ GameObject:
   - component: {fileID: 1247965173}
   - component: {fileID: 1247965175}
   - component: {fileID: 1247965174}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18270,7 +18500,7 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1247965174
 MeshRenderer:
@@ -18324,7 +18554,7 @@ GameObject:
   - component: {fileID: 1252901852}
   - component: {fileID: 1252901854}
   - component: {fileID: 1252901853}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree341
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18412,7 +18642,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257631478
 GameObject:
@@ -18424,7 +18654,7 @@ GameObject:
   - component: {fileID: 1257631479}
   - component: {fileID: 1257631481}
   - component: {fileID: 1257631480}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree301
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18496,7 +18726,7 @@ GameObject:
   - component: {fileID: 1262726779}
   - component: {fileID: 1262726781}
   - component: {fileID: 1262726780}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18568,7 +18798,7 @@ GameObject:
   - component: {fileID: 1265012081}
   - component: {fileID: 1265012083}
   - component: {fileID: 1265012082}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto254
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18640,7 +18870,7 @@ GameObject:
   - component: {fileID: 1269593003}
   - component: {fileID: 1269593005}
   - component: {fileID: 1269593004}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_092
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18658,7 +18888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1269593004
 MeshRenderer:
@@ -18712,7 +18942,7 @@ GameObject:
   - component: {fileID: 1288715859}
   - component: {fileID: 1288715861}
   - component: {fileID: 1288715860}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto322
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18784,7 +19014,7 @@ GameObject:
   - component: {fileID: 1290187784}
   - component: {fileID: 1290187786}
   - component: {fileID: 1290187785}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_067
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18856,7 +19086,7 @@ GameObject:
   - component: {fileID: 1300228300}
   - component: {fileID: 1300228302}
   - component: {fileID: 1300228301}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18928,7 +19158,7 @@ GameObject:
   - component: {fileID: 1310657447}
   - component: {fileID: 1310657449}
   - component: {fileID: 1310657448}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree172
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18946,7 +19176,7 @@ Transform:
   m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 49
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1310657448
 MeshRenderer:
@@ -19000,7 +19230,7 @@ GameObject:
   - component: {fileID: 1314377739}
   - component: {fileID: 1314377741}
   - component: {fileID: 1314377740}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19072,7 +19302,7 @@ GameObject:
   - component: {fileID: 1326254705}
   - component: {fileID: 1326254707}
   - component: {fileID: 1326254706}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree209
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19090,7 +19320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 81
+  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1326254706
 MeshRenderer:
@@ -19144,7 +19374,7 @@ GameObject:
   - component: {fileID: 1326787047}
   - component: {fileID: 1326787049}
   - component: {fileID: 1326787048}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto330
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19216,7 +19446,7 @@ GameObject:
   - component: {fileID: 1327116518}
   - component: {fileID: 1327116520}
   - component: {fileID: 1327116519}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree306
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19288,7 +19518,7 @@ GameObject:
   - component: {fileID: 1329318510}
   - component: {fileID: 1329318512}
   - component: {fileID: 1329318511}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19360,7 +19590,7 @@ GameObject:
   - component: {fileID: 1336479016}
   - component: {fileID: 1336479018}
   - component: {fileID: 1336479017}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto280
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19432,7 +19662,7 @@ GameObject:
   - component: {fileID: 1348391721}
   - component: {fileID: 1348391723}
   - component: {fileID: 1348391722}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto342
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19504,7 +19734,7 @@ GameObject:
   - component: {fileID: 1353544226}
   - component: {fileID: 1353544228}
   - component: {fileID: 1353544227}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree217
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19522,7 +19752,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 88
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1353544227
 MeshRenderer:
@@ -19576,7 +19806,7 @@ GameObject:
   - component: {fileID: 1353763746}
   - component: {fileID: 1353763748}
   - component: {fileID: 1353763747}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto264
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19648,7 +19878,7 @@ GameObject:
   - component: {fileID: 1356496015}
   - component: {fileID: 1356496017}
   - component: {fileID: 1356496016}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto299
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19720,7 +19950,7 @@ GameObject:
   - component: {fileID: 1362185497}
   - component: {fileID: 1362185499}
   - component: {fileID: 1362185498}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto273
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19792,7 +20022,7 @@ GameObject:
   - component: {fileID: 1371609762}
   - component: {fileID: 1371609764}
   - component: {fileID: 1371609763}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto293
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19864,7 +20094,7 @@ GameObject:
   - component: {fileID: 1373842150}
   - component: {fileID: 1373842152}
   - component: {fileID: 1373842151}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto257
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19936,7 +20166,7 @@ GameObject:
   - component: {fileID: 1374402272}
   - component: {fileID: 1374402274}
   - component: {fileID: 1374402273}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto285
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20008,7 +20238,7 @@ GameObject:
   - component: {fileID: 1379598922}
   - component: {fileID: 1379598924}
   - component: {fileID: 1379598923}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree333
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20080,7 +20310,7 @@ GameObject:
   - component: {fileID: 1379787654}
   - component: {fileID: 1379787656}
   - component: {fileID: 1379787655}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20152,7 +20382,7 @@ GameObject:
   - component: {fileID: 1388137625}
   - component: {fileID: 1388137627}
   - component: {fileID: 1388137626}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20170,7 +20400,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 66
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1388137626
 MeshRenderer:
@@ -20224,7 +20454,7 @@ GameObject:
   - component: {fileID: 1388902971}
   - component: {fileID: 1388902973}
   - component: {fileID: 1388902972}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree265
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20296,7 +20526,7 @@ GameObject:
   - component: {fileID: 1392231200}
   - component: {fileID: 1392231202}
   - component: {fileID: 1392231201}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto311
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20368,7 +20598,7 @@ GameObject:
   - component: {fileID: 1395660797}
   - component: {fileID: 1395660799}
   - component: {fileID: 1395660798}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree205
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20386,7 +20616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 77
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1395660798
 MeshRenderer:
@@ -20440,7 +20670,7 @@ GameObject:
   - component: {fileID: 1399321235}
   - component: {fileID: 1399321237}
   - component: {fileID: 1399321236}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20512,7 +20742,7 @@ GameObject:
   - component: {fileID: 1400645751}
   - component: {fileID: 1400645753}
   - component: {fileID: 1400645752}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto335
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20584,7 +20814,7 @@ GameObject:
   - component: {fileID: 1402194911}
   - component: {fileID: 1402194913}
   - component: {fileID: 1402194912}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree285
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20672,7 +20902,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428512750
 GameObject:
@@ -20684,7 +20914,7 @@ GameObject:
   - component: {fileID: 1428512751}
   - component: {fileID: 1428512753}
   - component: {fileID: 1428512752}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree268
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20756,7 +20986,7 @@ GameObject:
   - component: {fileID: 1428516382}
   - component: {fileID: 1428516384}
   - component: {fileID: 1428516383}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto340
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20828,7 +21058,7 @@ GameObject:
   - component: {fileID: 1437865365}
   - component: {fileID: 1437865367}
   - component: {fileID: 1437865366}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_091
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20900,7 +21130,7 @@ GameObject:
   - component: {fileID: 1444739000}
   - component: {fileID: 1444739002}
   - component: {fileID: 1444739001}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto337
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20972,7 +21202,7 @@ GameObject:
   - component: {fileID: 1465924030}
   - component: {fileID: 1465924032}
   - component: {fileID: 1465924031}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_117
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21044,7 +21274,7 @@ GameObject:
   - component: {fileID: 1469208336}
   - component: {fileID: 1469208338}
   - component: {fileID: 1469208337}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21116,7 +21346,7 @@ GameObject:
   - component: {fileID: 1473915330}
   - component: {fileID: 1473915332}
   - component: {fileID: 1473915331}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21188,7 +21418,7 @@ GameObject:
   - component: {fileID: 1482466211}
   - component: {fileID: 1482466213}
   - component: {fileID: 1482466212}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_081
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21260,7 +21490,7 @@ GameObject:
   - component: {fileID: 1483731159}
   - component: {fileID: 1483731161}
   - component: {fileID: 1483731160}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree345
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21384,6 +21614,52 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1590a863f3564381a6a090f68cbeac3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1499495096
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.628355
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.1100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.985308
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+      propertyPath: m_Name
+      value: 2 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 744caddc2ca0e3247b1c15871fb959df, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &1499581637
 GameObject:
   m_ObjectHideFlags: 0
@@ -21394,7 +21670,7 @@ GameObject:
   - component: {fileID: 1499581638}
   - component: {fileID: 1499581640}
   - component: {fileID: 1499581639}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto339
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21466,7 +21742,7 @@ GameObject:
   - component: {fileID: 1499672065}
   - component: {fileID: 1499672067}
   - component: {fileID: 1499672066}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree183
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21484,7 +21760,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 58
+  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1499672066
 MeshRenderer:
@@ -21538,7 +21814,7 @@ GameObject:
   - component: {fileID: 1516692133}
   - component: {fileID: 1516692135}
   - component: {fileID: 1516692134}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21610,7 +21886,7 @@ GameObject:
   - component: {fileID: 1529178175}
   - component: {fileID: 1529178177}
   - component: {fileID: 1529178176}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree214
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21628,7 +21904,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 85
+  m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1529178176
 MeshRenderer:
@@ -21682,7 +21958,7 @@ GameObject:
   - component: {fileID: 1529772728}
   - component: {fileID: 1529772730}
   - component: {fileID: 1529772729}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree274
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21754,7 +22030,7 @@ GameObject:
   - component: {fileID: 1544657762}
   - component: {fileID: 1544657764}
   - component: {fileID: 1544657763}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_069
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21826,7 +22102,7 @@ GameObject:
   - component: {fileID: 1552745702}
   - component: {fileID: 1552745704}
   - component: {fileID: 1552745703}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto354
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21898,7 +22174,7 @@ GameObject:
   - component: {fileID: 1558975228}
   - component: {fileID: 1558975230}
   - component: {fileID: 1558975229}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree204
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21916,7 +22192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 76
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1558975229
 MeshRenderer:
@@ -21970,7 +22246,7 @@ GameObject:
   - component: {fileID: 1566345832}
   - component: {fileID: 1566345834}
   - component: {fileID: 1566345833}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto332
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22042,7 +22318,7 @@ GameObject:
   - component: {fileID: 1566680578}
   - component: {fileID: 1566680580}
   - component: {fileID: 1566680579}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree221
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22060,7 +22336,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 90
+  m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1566680579
 MeshRenderer:
@@ -22114,7 +22390,7 @@ GameObject:
   - component: {fileID: 1581404070}
   - component: {fileID: 1581404072}
   - component: {fileID: 1581404071}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto269
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22186,7 +22462,7 @@ GameObject:
   - component: {fileID: 1581444376}
   - component: {fileID: 1581444378}
   - component: {fileID: 1581444377}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_141
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22258,7 +22534,7 @@ GameObject:
   - component: {fileID: 1581628036}
   - component: {fileID: 1581628038}
   - component: {fileID: 1581628037}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto255
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22330,7 +22606,7 @@ GameObject:
   - component: {fileID: 1582173580}
   - component: {fileID: 1582173582}
   - component: {fileID: 1582173581}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree9_082
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22402,7 +22678,7 @@ GameObject:
   - component: {fileID: 1596060697}
   - component: {fileID: 1596060699}
   - component: {fileID: 1596060698}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22474,7 +22750,7 @@ GameObject:
   - component: {fileID: 1598537339}
   - component: {fileID: 1598537341}
   - component: {fileID: 1598537340}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto343
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22546,7 +22822,7 @@ GameObject:
   - component: {fileID: 1612237058}
   - component: {fileID: 1612237060}
   - component: {fileID: 1612237059}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto288
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22618,7 +22894,7 @@ GameObject:
   - component: {fileID: 1612850434}
   - component: {fileID: 1612850436}
   - component: {fileID: 1612850435}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree212
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22636,7 +22912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.9999999, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 84
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1612850435
 MeshRenderer:
@@ -22690,7 +22966,7 @@ GameObject:
   - component: {fileID: 1625987080}
   - component: {fileID: 1625987082}
   - component: {fileID: 1625987081}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree4_050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22762,7 +23038,7 @@ GameObject:
   - component: {fileID: 1627242797}
   - component: {fileID: 1627242799}
   - component: {fileID: 1627242798}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock070
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22834,7 +23110,7 @@ GameObject:
   - component: {fileID: 1632873846}
   - component: {fileID: 1632873848}
   - component: {fileID: 1632873847}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto262
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22906,7 +23182,7 @@ GameObject:
   - component: {fileID: 1637334397}
   - component: {fileID: 1637334399}
   - component: {fileID: 1637334398}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto260
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22978,7 +23254,7 @@ GameObject:
   - component: {fileID: 1637470605}
   - component: {fileID: 1637470607}
   - component: {fileID: 1637470606}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree194
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22996,7 +23272,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 67
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1637470606
 MeshRenderer:
@@ -23050,7 +23326,7 @@ GameObject:
   - component: {fileID: 1652269860}
   - component: {fileID: 1652269862}
   - component: {fileID: 1652269861}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock062
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23122,7 +23398,7 @@ GameObject:
   - component: {fileID: 1661663329}
   - component: {fileID: 1661663331}
   - component: {fileID: 1661663330}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree4_049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23184,6 +23460,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661663328}
   m_Mesh: {fileID: 4300214, guid: db0f68394f136764a962e843a5ff7fc5, type: 3}
+--- !u!1 &1667314164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1474496150019290, guid: 029d27d341a9740618831ad663effaf4,
+    type: 2}
+  m_PrefabInternal: {fileID: 717204516}
+--- !u!64 &1667314168
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1667314164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: cd9ecb4203db9401eadb5a03d8f30585, type: 3}
 --- !u!1 &1668727207
 GameObject:
   m_ObjectHideFlags: 0
@@ -23194,7 +23489,7 @@ GameObject:
   - component: {fileID: 1668727208}
   - component: {fileID: 1668727210}
   - component: {fileID: 1668727209}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto289
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23266,7 +23561,7 @@ GameObject:
   - component: {fileID: 1671179005}
   - component: {fileID: 1671179007}
   - component: {fileID: 1671179006}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree326
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23338,7 +23633,7 @@ GameObject:
   - component: {fileID: 1672033500}
   - component: {fileID: 1672033502}
   - component: {fileID: 1672033501}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto344
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23410,7 +23705,7 @@ GameObject:
   - component: {fileID: 1674995052}
   - component: {fileID: 1674995054}
   - component: {fileID: 1674995053}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree293
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23482,7 +23777,7 @@ GameObject:
   - component: {fileID: 1676903276}
   - component: {fileID: 1676903278}
   - component: {fileID: 1676903277}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_076
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23554,7 +23849,7 @@ GameObject:
   - component: {fileID: 1679264151}
   - component: {fileID: 1679264153}
   - component: {fileID: 1679264152}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock068
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23626,7 +23921,7 @@ GameObject:
   - component: {fileID: 1680885104}
   - component: {fileID: 1680885106}
   - component: {fileID: 1680885105}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree339
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23698,7 +23993,7 @@ GameObject:
   - component: {fileID: 1684523554}
   - component: {fileID: 1684523556}
   - component: {fileID: 1684523555}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23770,7 +24065,7 @@ GameObject:
   - component: {fileID: 1685716341}
   - component: {fileID: 1685716343}
   - component: {fileID: 1685716342}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree4_051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23842,7 +24137,7 @@ GameObject:
   - component: {fileID: 1690944146}
   - component: {fileID: 1690944148}
   - component: {fileID: 1690944147}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto270
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23914,7 +24209,7 @@ GameObject:
   - component: {fileID: 1696669273}
   - component: {fileID: 1696669275}
   - component: {fileID: 1696669274}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto252
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23986,7 +24281,7 @@ GameObject:
   - component: {fileID: 1712934834}
   - component: {fileID: 1712934836}
   - component: {fileID: 1712934835}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24004,7 +24299,7 @@ Transform:
   m_LocalScale: {x: 1.0000008, y: 0.99999624, z: 1.0000006}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1712934835
 MeshRenderer:
@@ -24058,7 +24353,7 @@ GameObject:
   - component: {fileID: 1717352422}
   - component: {fileID: 1717352424}
   - component: {fileID: 1717352423}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_062
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24130,7 +24425,7 @@ GameObject:
   - component: {fileID: 1719677234}
   - component: {fileID: 1719677236}
   - component: {fileID: 1719677235}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock065
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24202,7 +24497,7 @@ GameObject:
   - component: {fileID: 1729929472}
   - component: {fileID: 1729929474}
   - component: {fileID: 1729929473}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24274,7 +24569,7 @@ GameObject:
   - component: {fileID: 1734860245}
   - component: {fileID: 1734860247}
   - component: {fileID: 1734860246}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree317
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24346,7 +24641,7 @@ GameObject:
   - component: {fileID: 1753645961}
   - component: {fileID: 1753645963}
   - component: {fileID: 1753645962}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24418,7 +24713,7 @@ GameObject:
   - component: {fileID: 1766048837}
   - component: {fileID: 1766048839}
   - component: {fileID: 1766048838}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto274
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24490,7 +24785,7 @@ GameObject:
   - component: {fileID: 1774668311}
   - component: {fileID: 1774668313}
   - component: {fileID: 1774668312}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_088
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24508,7 +24803,7 @@ Transform:
   m_LocalScale: {x: 1.0000029, y: 0.99999505, z: 1.0000007}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1774668312
 MeshRenderer:
@@ -24562,7 +24857,7 @@ GameObject:
   - component: {fileID: 1780469056}
   - component: {fileID: 1780469058}
   - component: {fileID: 1780469057}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24634,7 +24929,7 @@ GameObject:
   - component: {fileID: 1784795780}
   - component: {fileID: 1784795782}
   - component: {fileID: 1784795781}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree343
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24706,7 +25001,7 @@ GameObject:
   - component: {fileID: 1792031327}
   - component: {fileID: 1792031329}
   - component: {fileID: 1792031328}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto345
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24778,7 +25073,7 @@ GameObject:
   - component: {fileID: 1803716988}
   - component: {fileID: 1803716990}
   - component: {fileID: 1803716989}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree186
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24796,7 +25091,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 60
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1803716989
 MeshRenderer:
@@ -24850,7 +25145,7 @@ GameObject:
   - component: {fileID: 1816793867}
   - component: {fileID: 1816793869}
   - component: {fileID: 1816793868}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto346
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24922,7 +25217,7 @@ GameObject:
   - component: {fileID: 1817889889}
   - component: {fileID: 1817889891}
   - component: {fileID: 1817889890}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto318
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24994,7 +25289,7 @@ GameObject:
   - component: {fileID: 1824222418}
   - component: {fileID: 1824222420}
   - component: {fileID: 1824222419}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree271
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25066,7 +25361,7 @@ GameObject:
   - component: {fileID: 1825698975}
   - component: {fileID: 1825698977}
   - component: {fileID: 1825698976}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25138,7 +25433,7 @@ GameObject:
   - component: {fileID: 1834225044}
   - component: {fileID: 1834225046}
   - component: {fileID: 1834225045}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree296
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25210,7 +25505,7 @@ GameObject:
   - component: {fileID: 1835067308}
   - component: {fileID: 1835067310}
   - component: {fileID: 1835067309}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree281
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25282,7 +25577,7 @@ GameObject:
   - component: {fileID: 1835229977}
   - component: {fileID: 1835229979}
   - component: {fileID: 1835229978}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree340
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25355,7 +25650,7 @@ GameObject:
   - component: {fileID: 1841175074}
   - component: {fileID: 1841175073}
   - component: {fileID: 1841175075}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mountain010 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25442,7 +25737,7 @@ GameObject:
   - component: {fileID: 1855594442}
   - component: {fileID: 1855594444}
   - component: {fileID: 1855594443}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_070
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25514,7 +25809,7 @@ GameObject:
   - component: {fileID: 1855621372}
   - component: {fileID: 1855621374}
   - component: {fileID: 1855621373}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto353
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25586,7 +25881,7 @@ GameObject:
   - component: {fileID: 1866592866}
   - component: {fileID: 1866592868}
   - component: {fileID: 1866592867}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25658,7 +25953,7 @@ GameObject:
   - component: {fileID: 1866634942}
   - component: {fileID: 1866634944}
   - component: {fileID: 1866634943}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto316
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25730,7 +26025,7 @@ GameObject:
   - component: {fileID: 1870981597}
   - component: {fileID: 1870981599}
   - component: {fileID: 1870981598}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree223
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25748,7 +26043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 91
+  m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1870981598
 MeshRenderer:
@@ -25802,7 +26097,7 @@ GameObject:
   - component: {fileID: 1879458190}
   - component: {fileID: 1879458192}
   - component: {fileID: 1879458191}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_059
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25874,7 +26169,7 @@ GameObject:
   - component: {fileID: 1879920641}
   - component: {fileID: 1879920643}
   - component: {fileID: 1879920642}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock069
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25944,7 +26239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1881495851}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: forests
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25977,7 +26272,7 @@ GameObject:
   - component: {fileID: 1882694505}
   - component: {fileID: 1882694507}
   - component: {fileID: 1882694506}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree327
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26049,7 +26344,7 @@ GameObject:
   - component: {fileID: 1887638390}
   - component: {fileID: 1887638392}
   - component: {fileID: 1887638391}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26121,7 +26416,7 @@ GameObject:
   - component: {fileID: 1895001625}
   - component: {fileID: 1895001627}
   - component: {fileID: 1895001626}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26193,7 +26488,7 @@ GameObject:
   - component: {fileID: 1895854689}
   - component: {fileID: 1895854691}
   - component: {fileID: 1895854690}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree175
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26211,7 +26506,7 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 52
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1895854690
 MeshRenderer:
@@ -26270,7 +26565,7 @@ GameObject:
   - component: {fileID: 1902901021}
   - component: {fileID: 1902901023}
   - component: {fileID: 1902901022}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26342,7 +26637,7 @@ GameObject:
   - component: {fileID: 1916571142}
   - component: {fileID: 1916571144}
   - component: {fileID: 1916571143}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26414,7 +26709,7 @@ GameObject:
   - component: {fileID: 1919268052}
   - component: {fileID: 1919268054}
   - component: {fileID: 1919268053}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26486,7 +26781,7 @@ GameObject:
   - component: {fileID: 1919793204}
   - component: {fileID: 1919793206}
   - component: {fileID: 1919793205}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock067
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26558,7 +26853,7 @@ GameObject:
   - component: {fileID: 1938230366}
   - component: {fileID: 1938230368}
   - component: {fileID: 1938230367}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26630,7 +26925,7 @@ GameObject:
   - component: {fileID: 1942234335}
   - component: {fileID: 1942234337}
   - component: {fileID: 1942234336}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto338
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26702,7 +26997,7 @@ GameObject:
   - component: {fileID: 1946592156}
   - component: {fileID: 1946592158}
   - component: {fileID: 1946592157}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto233
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26774,7 +27069,7 @@ GameObject:
   - component: {fileID: 1950204850}
   - component: {fileID: 1950204852}
   - component: {fileID: 1950204851}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree287
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26886,11 +27181,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 9886328882c9e43b3925934543f02338, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: acb0c1bc5729d4b44864d068159b0765, type: 2}
-    - target: {fileID: 100000, guid: 9886328882c9e43b3925934543f02338, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 388beaf1edf2d446e90e307e7db99a52, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 9886328882c9e43b3925934543f02338, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9886328882c9e43b3925934543f02338, type: 3}
@@ -26905,7 +27196,7 @@ GameObject:
   - component: {fileID: 1958069175}
   - component: {fileID: 1958069177}
   - component: {fileID: 1958069176}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto267
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26977,7 +27268,7 @@ GameObject:
   - component: {fileID: 1959386528}
   - component: {fileID: 1959386530}
   - component: {fileID: 1959386529}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26995,7 +27286,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 78
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1959386529
 MeshRenderer:
@@ -27049,7 +27340,7 @@ GameObject:
   - component: {fileID: 1966609222}
   - component: {fileID: 1966609224}
   - component: {fileID: 1966609223}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto348
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27121,7 +27412,7 @@ GameObject:
   - component: {fileID: 1968983447}
   - component: {fileID: 1968983449}
   - component: {fileID: 1968983448}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27193,7 +27484,7 @@ GameObject:
   - component: {fileID: 1984204781}
   - component: {fileID: 1984204783}
   - component: {fileID: 1984204782}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27266,7 +27557,7 @@ GameObject:
   - component: {fileID: 1986929335}
   - component: {fileID: 1986929334}
   - component: {fileID: 1986929336}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Mountain009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27353,7 +27644,7 @@ GameObject:
   - component: {fileID: 1993335744}
   - component: {fileID: 1993335746}
   - component: {fileID: 1993335745}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree7_105
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27425,7 +27716,7 @@ GameObject:
   - component: {fileID: 2003307607}
   - component: {fileID: 2003307609}
   - component: {fileID: 2003307608}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree2_147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27497,7 +27788,7 @@ GameObject:
   - component: {fileID: 2006733288}
   - component: {fileID: 2006733290}
   - component: {fileID: 2006733289}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree284
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27569,7 +27860,7 @@ GameObject:
   - component: {fileID: 2010171699}
   - component: {fileID: 2010171701}
   - component: {fileID: 2010171700}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27678,7 +27969,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1847
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
@@ -27697,12 +27988,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2018599031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.49, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 545696924}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2018599035
 MonoBehaviour:
@@ -27731,7 +28022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
+  profile: {fileID: 11400000, guid: 7e56c81d78852404f819e6d510ebdc78, type: 2}
 --- !u!143 &2018599037
 CharacterController:
   m_ObjectHideFlags: 0
@@ -27759,7 +28050,7 @@ GameObject:
   - component: {fileID: 2028376202}
   - component: {fileID: 2028376204}
   - component: {fileID: 2028376203}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree279
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27831,7 +28122,7 @@ GameObject:
   - component: {fileID: 2030722557}
   - component: {fileID: 2030722559}
   - component: {fileID: 2030722558}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27849,7 +28140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2030722558
 MeshRenderer:
@@ -27952,10 +28243,6 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3299c2b90baee4af588a5e3abcbd00f0, type: 2}
-    - target: {fileID: 100000, guid: 9886328882c9e43b3925934543f02338, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 9886328882c9e43b3925934543f02338, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9886328882c9e43b3925934543f02338, type: 3}
@@ -27970,7 +28257,7 @@ GameObject:
   - component: {fileID: 2045348359}
   - component: {fileID: 2045348361}
   - component: {fileID: 2045348360}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto329
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28032,66 +28319,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045348358}
   m_Mesh: {fileID: 4300118, guid: 5516a59f591dfac40b324e22a1736d8a, type: 3}
---- !u!1 &2049433134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2049433138}
-  - component: {fileID: 2049433136}
-  - component: {fileID: 2049433135}
-  m_Layer: 0
-  m_Name: World Managers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2049433135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049433134}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c36f29acfd84e9c8709fe859362615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TTTConsoleGameobject: {fileID: 1901975438}
-  ChatBubbleCanvasGameobject: {fileID: 903163815}
-  TTTConsolePrefab: {fileID: 1699148914313916, guid: e20d12704938641218edd2d038cebfbd,
-    type: 2}
-  ChatBubbleManagerPrefab: {fileID: 1659979672569126, guid: 783297188b0794cc9bcfbb8e363a12f7,
-    type: 2}
-  TConsoleRebornWait: 2
-  ChatbubbleRebornWait: 10
---- !u!114 &2049433136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049433134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19a4db9af76804c758ebddf6b77eea11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2049433138
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2049433134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.987732, y: -6.568329, z: 34.94217}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056531494
 GameObject:
   m_ObjectHideFlags: 0
@@ -28102,7 +28329,7 @@ GameObject:
   - component: {fileID: 2056531495}
   - component: {fileID: 2056531497}
   - component: {fileID: 2056531496}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree313
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28174,7 +28401,7 @@ GameObject:
   - component: {fileID: 2060644483}
   - component: {fileID: 2060644485}
   - component: {fileID: 2060644484}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28192,7 +28419,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 55
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2060644484
 MeshRenderer:
@@ -28246,7 +28473,7 @@ GameObject:
   - component: {fileID: 2065023634}
   - component: {fileID: 2065023636}
   - component: {fileID: 2065023635}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_091
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28264,7 +28491,7 @@ Transform:
   m_LocalScale: {x: 0.9999997, y: 1.0000045, z: 1.0000008}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2065023635
 MeshRenderer:
@@ -28318,7 +28545,7 @@ GameObject:
   - component: {fileID: 2066217492}
   - component: {fileID: 2066217494}
   - component: {fileID: 2066217493}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto298
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28390,7 +28617,7 @@ GameObject:
   - component: {fileID: 2071927963}
   - component: {fileID: 2071927965}
   - component: {fileID: 2071927964}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto320
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28462,7 +28689,7 @@ GameObject:
   - component: {fileID: 2081717116}
   - component: {fileID: 2081717118}
   - component: {fileID: 2081717117}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree10_046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28534,7 +28761,7 @@ GameObject:
   - component: {fileID: 2088368058}
   - component: {fileID: 2088368060}
   - component: {fileID: 2088368059}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto347
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28606,7 +28833,7 @@ GameObject:
   - component: {fileID: 2090333172}
   - component: {fileID: 2090333174}
   - component: {fileID: 2090333173}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28678,7 +28905,7 @@ GameObject:
   - component: {fileID: 2093667430}
   - component: {fileID: 2093667432}
   - component: {fileID: 2093667431}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Rock043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28750,7 +28977,7 @@ GameObject:
   - component: {fileID: 2107146684}
   - component: {fileID: 2107146686}
   - component: {fileID: 2107146685}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Pasto331
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28821,7 +29048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110894316}
   - component: {fileID: 2110894317}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Forest1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28866,7 +29093,6 @@ Transform:
   - {fileID: 2081717116}
   - {fileID: 1473915330}
   - {fileID: 236907066}
-  - {fileID: 709771058}
   - {fileID: 2030722557}
   - {fileID: 1247965173}
   - {fileID: 1016274166}
@@ -28962,7 +29188,7 @@ GameObject:
   - component: {fileID: 2112706775}
   - component: {fileID: 2112706777}
   - component: {fileID: 2112706776}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28980,7 +29206,7 @@ Transform:
   m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 73
+  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2112706776
 MeshRenderer:
@@ -29034,7 +29260,7 @@ GameObject:
   - component: {fileID: 2119586833}
   - component: {fileID: 2119586835}
   - component: {fileID: 2119586834}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree12_107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29052,7 +29278,7 @@ Transform:
   m_LocalScale: {x: 1.0000044, y: 0.9999956, z: 0.9999979}
   m_Children: []
   m_Father: {fileID: 2110894316}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2119586834
 MeshRenderer:
@@ -29106,7 +29332,7 @@ GameObject:
   - component: {fileID: 2120995045}
   - component: {fileID: 2120995047}
   - component: {fileID: 2120995046}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Tree346
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29250,12 +29476,12 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 73
-  orthographic: 1
-  orthographic size: 44.18
+  orthographic: 0
+  orthographic size: 70
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1847
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
