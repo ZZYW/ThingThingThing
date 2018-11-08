@@ -25,13 +25,13 @@ Material:
     m_Floats:
     - _AmbientColorInfluence: 0
     - _ColorSculpt: 0
-    - _Cutoff: 0.427
+    - _Cutoff: 0.105
     - _DarkColorBrightness: 0
     - _LerpScaler: 0
     - _LightColorBrightness: 1
     - _LightCutoff: 1
-    - _Multiplier_displacement: 10
-    - _Multiplier_time: 15.7
+    - _Multiplier_displacement: 1.9
+    - _Multiplier_time: 13.29
     - _UseRainbowColors: 1
     - _UseVertexColor: 0
     - _VertexOffset: 1
