@@ -5729,7 +5729,7 @@ Prefab:
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1878
+      value: 1576
       objectReference: {fileID: 0}
     - target: {fileID: 224893889669335190, guid: e20d12704938641218edd2d038cebfbd,
         type: 2}
@@ -9896,7 +9896,7 @@ MonoBehaviour:
   terrains:
   - {fileID: 1178112199}
   - {fileID: 644347599}
-  divider: 126
+  divider: 434
   meshYOffset: 803
   meshYOffsetRandomRange: 80.3
 --- !u!1 &704077794

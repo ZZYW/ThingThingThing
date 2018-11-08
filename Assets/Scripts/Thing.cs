@@ -140,7 +140,7 @@ public class Thing : MonoBehaviour {
             speakInCD = false;
         }
 
-        if (Vector3.Distance (transform.position, transform.parent.position) > 100) {
+        if (Vector3.Distance (transform.position, transform.parent.position) > 200) {
             ResetPosition ();
         }
 
