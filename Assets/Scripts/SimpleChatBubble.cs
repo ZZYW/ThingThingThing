@@ -21,10 +21,9 @@ public class SimpleChatBubble : MonoBehaviour {
 		Disappear ();
 	}
 
-	// Update is called once per frame
 	void Update () {
 		transform.position = host.position + offsetPos;
-		transform.LookAt (Camera.main.transform);
+		transform.LookAt (CameraSwitcher.main.ActiveCam.position);
 	}
 
 	void OnDisable () {

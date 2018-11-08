@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class ThingManager : MonoBehaviour {
     public static ThingManager main;
@@ -11,10 +12,13 @@ public class ThingManager : MonoBehaviour {
 
     public List<GameObject> AllThings;
 
+    // public AudioMixer TTTAudioMixer;
+
     public bool generateThings;
     //public Transform spawnBox;
 
-    int spawnAreaRadius = 50;
+    [Range (20, 100)]
+    public int spawnAreaRadius = 50;
 
     private void Awake () {
         main = this;
@@ -27,7 +31,7 @@ public class ThingManager : MonoBehaviour {
             foreach (GameObject thing in allThingPrefabs) {
                 GameObject newThing = Instantiate (thing, transform);
                 newThing.transform.parent = transform;
-                newThing.transform.position = new Vector3 (Random.Range (-spawnAreaRadius, spawnAreaRadius), 20, Random.Range (-spawnAreaRadius, spawnAreaRadius));
+                newThing.transform.position = GetSpawnPosition ();
                 GetBubblePosition (newThing); //for old THINGs
                 AllThings.Add (newThing);
             }
@@ -51,10 +55,9 @@ public class ThingManager : MonoBehaviour {
             Destroy (existingChatBubble.gameObject);
         }
         target.GetComponent<Thing> ().bubbleOffsetPosition = bubblePosition;
+    }
 
-        // //let chatbubble and thing know who each other
-        // nChatBubble.GetComponent<SimpleChatBubble> ().host = target.transform;
-        // nChatBubble.GetComponent<SimpleChatBubble> ().SetOffsetPos (bubblePosition);
-        // target.GetComponent<Thing> ().chatBubble = nChatBubble.GetComponent<SimpleChatBubble> ();
+    public Vector3 GetSpawnPosition () {
+        return new Vector3 (Random.Range (-spawnAreaRadius, spawnAreaRadius), 20, Random.Range (-spawnAreaRadius, spawnAreaRadius));
     }
 }

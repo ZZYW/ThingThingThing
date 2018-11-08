@@ -13,25 +13,25 @@ public class TTTEventsManager : MonoBehaviour {
 
     public static TTTEventsManager main;
 
-    public class CDer {
+    // public class CDer {
 
-        public bool inCD;
-        public float timeStamp;
-        public readonly float cdTime = 0.01f;
+    //     public bool inCD;
+    //     public float timeStamp;
+    //     public readonly float cdTime = 0.01f;
 
-        public void Check () {
-            if (Time.time - timeStamp > cdTime && inCD) {
-                inCD = false;
-            }
-        }
-        public void Cooldown () {
-            inCD = true;
-            timeStamp = Time.time;
-        }
-    }
+    //     public void Check () {
+    //         if (Time.time - timeStamp > cdTime && inCD) {
+    //             inCD = false;
+    //         }
+    //     }
+    //     public void Cooldown () {
+    //         inCD = true;
+    //         timeStamp = Time.time;
+    //     }
+    // }
 
-    CDer sparkCDer;
-    CDer talkCDer;
+    Cooldown sparkCDer;
+    Cooldown talkCDer;
 
     //public delegate void SpeakListener(GameObject which);
 
@@ -39,8 +39,8 @@ public class TTTEventsManager : MonoBehaviour {
         if (main == null) {
             main = this;
         }
-        talkCDer = new CDer ();
-        sparkCDer = new CDer ();
+        talkCDer = new Cooldown (0.01f);
+        sparkCDer = new Cooldown (0.01f);
     }
 
     void Update () {
@@ -49,12 +49,12 @@ public class TTTEventsManager : MonoBehaviour {
     }
 
     public void SomeoneSparked (GameObject who) {
-        if (!sparkCDer.inCD) { sparkCDer.Cooldown (); } else { return; }
+        if (!sparkCDer.inCD) { sparkCDer.GoCooldown (); } else { return; }
         if (OnSomeoneSparking != null) OnSomeoneSparking (who);
     }
 
     public void SomeoneSpoke (GameObject who) {
-        if (!talkCDer.inCD) { talkCDer.Cooldown (); } else { return; }
+        if (!talkCDer.inCD) { talkCDer.GoCooldown (); } else { return; }
         if (OnSomeoneSpeaking != null) OnSomeoneSpeaking (who);
     }
 }

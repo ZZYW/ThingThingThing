@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-// [RequireComponent (typeof (SphereCollider))]
 [RequireComponent (typeof (BoxCollider))]
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (AudioSource))]
@@ -47,31 +46,36 @@ public class Thing : MonoBehaviour {
     protected string MyName { get; private set; }
 
     //cool down stuff to avoid crash
-    private float speakCooldown;
-    private bool speakInCD;
-    private float spokeTimeStamp;
+    Cooldown speakCD;
+    Cooldown playSoundCD;
+    // float speakCooldown;
+    // bool speakInCD;
+    // float spokeTimeStamp;
 
-    private float detectEnterExitCooldown;
-    private bool detectingEnter;
-    private bool detectingExit;
+    float detectEnterExitCooldown;
+    bool detectingEnter;
+    bool detectingExit;
 
-    private bool stopWalkingAround;
-    private bool stopTalking;
-    private ThingMotor motor;
-    private SphereCollider neighborDetector;
+    bool stopWalkingAround;
+    bool stopTalking;
+    ThingMotor motor;
+    SphereCollider neighborDetector;
 
-    private ParticleSystem explodePS;
-    private AudioSource audioSource;
-    private List<GameObject> neighborList;
-    private static string soundFilePath = "Sounds/";
-    private static string matColor = "_Color";
-    private Color originalColor;
-    private StringBuilder stringBuilder;
+    ParticleSystem explodePS;
+    AudioSource audioSource;
+    List<GameObject> neighborList;
+
+    static string soundFilePath = "Sounds/";
+    static string matColor = "_Color";
+    static GameObject generatedCubeContainer;
+    static string thingTag = "Thing";
+
+    Color originalColor;
+    StringBuilder stringBuilder;
 
     [Header ("Your Main Material For Color Changing")]
-    [SerializeField] private Material mMat;
-    private static GameObject generatedCubeContainer;
-    private static string thingTag = "Thing";
+    [SerializeField] Material mMat;
+
     public int DesiredFollowDistance { get { return settings.cameraOffset; } }
 
     private void OnEnable () {
@@ -90,7 +94,9 @@ public class Thing : MonoBehaviour {
     }
 
     private void Awake () {
-        speakCooldown = Random.Range (5f, 10f);
+        speakCD = new Cooldown (Random.Range (5f, 10f));
+        playSoundCD = new Cooldown (1);
+
         MyName = gameObject.name;
         settings = new Settings ();
         stringBuilder = new StringBuilder ();
@@ -124,26 +130,29 @@ public class Thing : MonoBehaviour {
 
         //Sound
         audioSource = gameObject.GetComponent<AudioSource> ();
-        audioSource.rolloffMode = AudioRolloffMode.Linear;
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
+        audioSource.bypassListenerEffects = false;
         audioSource.spatialBlend = 1f;
-        audioSource.maxDistance = 50;
+        audioSource.maxDistance = 35;
+        audioSource.dopplerLevel = 5;
 
         TTTStart ();
 
-        speakInCD = true;
-        spokeTimeStamp = Time.time;
+        speakCD.GoCooldown ();
 
     }
     private void Update () {
+        //check cooldown
+        speakCD.Check ();
+        playSoundCD.Check ();
 
-        if (speakInCD && Time.time - spokeTimeStamp > speakCooldown) {
-            speakInCD = false;
-        }
-
+        //check position
         if (Vector3.Distance (transform.position, transform.parent.position) > 200) {
             ResetPosition ();
         }
 
+        //check neighbors
         foreach (GameObject t in ThingManager.main.AllThings) {
             float dist = Vector3.Distance (transform.position, t.transform.position);
             if (dist < settings.neighborDetectorRadius) {
@@ -173,25 +182,6 @@ public class Thing : MonoBehaviour {
             OnNeigborSparkingParticles ();
         }
     }
-
-    // private void OnTriggerEnter (Collider other) {
-    //     if (other.gameObject.CompareTag (thingTag)) {
-    //         OnMeetingSomeone (other.gameObject);
-    //         //  ThingConsole.Log (gameObject.name + " is meeting " + other.name);
-    //         if (!neighborList.Contains (other.gameObject)) {
-    //             neighborList.Add (other.gameObject);
-    //         }
-    //     }
-    // }
-
-    // private void OnTriggerExit (Collider other) {
-    //     if (other.gameObject.CompareTag (thingTag)) {
-    //         OnLeavingSomeone (other.gameObject);
-    //         if (neighborList.Contains (other.gameObject)) {
-    //             neighborList.Remove (other.gameObject);
-    //         }
-    //     }
-    // }
 
     //use string builder to concat string to avoid memory leak
     private string FormatString (string format, params object[] args) {
@@ -267,17 +257,13 @@ public class Thing : MonoBehaviour {
     protected void Speak (string content) {
         if (myChatBubble == null) return;
         if (stopTalking) return;
-        if (speakInCD) return;
+        if (speakCD.inCD) return;
 
         TTTEventsManager.main.SomeoneSpoke (gameObject);
-
         myChatBubble.Speak (content);
-
-        speakInCD = true;
-        spokeTimeStamp = Time.time;
-
         ThingConsole.Log (FormatString ("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
 
+        speakCD.GoCooldown ();
     }
 
     protected void Spark (Color particleColor, int numberOfParticles) {
@@ -329,21 +315,21 @@ public class Thing : MonoBehaviour {
         mMat.SetColor (matColor, c);
     }
 
-    protected int PlaySound (int soundFileID) {
+    protected void PlaySound (int soundFileID) {
         if (soundFileID < 1 || soundFileID > 102) Debug.LogWarning ("sound file id exceed the range, range is 1->102, you are calling " + soundFileID);
-        return PlaySound (soundFileID.ToString ());
+        PlaySound (soundFileID.ToString ());
     }
 
-    protected int PlaySound (string soundFileName) {
-        if (audioSource.isPlaying) return 2;
+    protected void PlaySound (string soundFileName) {
+        if (playSoundCD.inCD) return;
+        playSoundCD.GoCooldown ();
+        audioSource.pitch = Random.Range (1.0f, 2.2f);
+        if (audioSource.isPlaying) return;
         string soundUrl = soundFilePath + soundFileName;
         audioSource.clip = Resources.Load (soundUrl) as AudioClip;
         if (audioSource.clip != null) {
             audioSource.Play ();
-            Spark (Color.white, 10);
-            return 0;
-        } else {
-            return 1;
+            Spark (Color.white, 5);
         }
     }
 
@@ -356,13 +342,8 @@ public class Thing : MonoBehaviour {
     }
 
     protected void ResetPosition () {
-        // Debug.Log (MyName + "  got reset");
-        motor.rb.position = ThingManager.main.transform.position + new Vector3 (Random.Range (-20, 20), 0, Random.Range (-20, 20));
+        motor.rb.position = ThingManager.main.GetSpawnPosition ();
         motor.rb.velocity = Vector3.zero;
-
-        // stringBuilder.Length = 0;
-        // stringBuilder.AppendFormat ("{0} position was reset", MyName);
-        // ThingConsole.Log (stringBuilder.ToString ());
     }
 
     //VIRTUAL

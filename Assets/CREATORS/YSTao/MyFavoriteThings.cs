@@ -38,7 +38,6 @@ public class MyFavoriteThings : Thing {
 
 	protected override void OnNeigborSparkingParticles () {
 		Speak ("These are a few of my favorite things.");
-		PlaySound (26);
 	}
 
 }
