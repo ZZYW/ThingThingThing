@@ -15,7 +15,7 @@ public class ThingJMParticle : Thing
     // Use this for initialization
 
     public float degreePerSecond = 15.0f;
-    public float amplitude = 1f;
+    public float amplitude = 0.1f;
     public float frequency = 1f;
     //position storage variables
     //Vector3 posOffset = new Vector3();

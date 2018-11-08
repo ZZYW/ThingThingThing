@@ -7,7 +7,7 @@ public class SimpleChatBubble : MonoBehaviour {
 
 	public Transform host;
 	public Vector3 offsetPos;
-	
+
 	[SerializeField] private Text text;
 	[SerializeField] private Image bubble;
 

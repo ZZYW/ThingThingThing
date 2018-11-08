@@ -5,46 +5,56 @@ using UnityEngine;
 /// <summary>
 /// This is the center of all broadcasting messages
 /// </summary>
-public class TTTEventsManager : MonoBehaviour
-{
+public class TTTEventsManager : MonoBehaviour {
 
-
-    public delegate void CreatureAction(GameObject who);
+    public delegate void CreatureAction (GameObject who);
     public static event CreatureAction OnSomeoneSpeaking;
     public static event CreatureAction OnSomeoneSparking;
 
     public static TTTEventsManager main;
 
-    //public delegate void SpeakListener(GameObject which);
+    public class CDer {
 
+        public bool inCD;
+        public float timeStamp;
+        public readonly float cdTime = 0.01f;
 
-    private void Awake()
-    {
-        if (main == null)
-        {
-            main = this;
+        public void Check () {
+            if (Time.time - timeStamp > cdTime && inCD) {
+                inCD = false;
+            }
+        }
+        public void Cooldown () {
+            inCD = true;
+            timeStamp = Time.time;
         }
     }
 
-    // Use this for initialization
-    void Start()
-    {
+    CDer sparkCDer;
+    CDer talkCDer;
 
+    //public delegate void SpeakListener(GameObject which);
+
+    private void Awake () {
+        if (main == null) {
+            main = this;
+        }
+        talkCDer = new CDer ();
+        sparkCDer = new CDer ();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    void Update () {
+        talkCDer.Check ();
+        sparkCDer.Check ();
     }
 
-    public void SomeoneSparked(GameObject who)
-    {
-        if (OnSomeoneSparking != null) OnSomeoneSparking(who);
+    public void SomeoneSparked (GameObject who) {
+        if (!sparkCDer.inCD) { sparkCDer.Cooldown (); } else { return; }
+        if (OnSomeoneSparking != null) OnSomeoneSparking (who);
     }
 
-    public void SomeoneSpoke(GameObject who)
-    {
-        if (OnSomeoneSpeaking != null) OnSomeoneSpeaking(who);
+    public void SomeoneSpoke (GameObject who) {
+        if (!talkCDer.inCD) { talkCDer.Cooldown (); } else { return; }
+        if (OnSomeoneSpeaking != null) OnSomeoneSpeaking (who);
     }
 }

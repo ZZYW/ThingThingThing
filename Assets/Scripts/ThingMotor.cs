@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[RequireComponent(typeof(Rigidbody))]
-public class ThingMotor : MonoBehaviour
-{
+[RequireComponent (typeof (Rigidbody))]
+public class ThingMotor : MonoBehaviour {
 
     Vector3 target;
     float acceleration;
@@ -16,60 +14,48 @@ public class ThingMotor : MonoBehaviour
     [HideInInspector]
     public Rigidbody rb;
 
-
-    public void SetTarget(Vector3 target)
-    {
+    public void SetTarget (Vector3 target) {
         this.target = target;
     }
 
-    public void SetAccel(float value)
-    {
+    public void SetAccel (float value) {
         acceleration = value;
     }
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
+    private void Awake () {
+        rb = GetComponent<Rigidbody> ();
     }
 
-
-    void Start()
-    {
+    void Start () {
         rb.freezeRotation = true;
         rb.angularDrag = 10f;
     }
 
-
-    void FixedUpdate()
-    {
+    void FixedUpdate () {
         Vector3 force = Vector3.zero;
-        if (seekingTarget)
-        {
+        if (seekingTarget) {
             Vector3 diff = target - transform.position;
             if (diff.magnitude < 5) return;
-            diff.Normalize();
+            diff.Normalize ();
             diff *= acceleration;
-            force += diff;
+            force = diff;
 
-            if (facingTarget)
-            {
-                Quaternion targetRotation = Quaternion.LookRotation(diff);
-                Quaternion newRotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothSpeed);
+            if (facingTarget) {
+                Quaternion targetRotation = Quaternion.LookRotation (diff);
+                Quaternion newRotation = Quaternion.Slerp (transform.rotation, targetRotation, Time.fixedDeltaTime * rotationSmoothSpeed);
                 rb.rotation = newRotation;
             }
 
         }
 
-        rb.AddForce(force);
+        rb.AddForce (force);
 
     }
-    public void FacingTarget(bool value)
-    {
+    public void FacingTarget (bool value) {
         facingTarget = value;
     }
 
-    public void Stop()
-    {
+    public void Stop () {
         rb.velocity = Vector3.zero;
     }
 }

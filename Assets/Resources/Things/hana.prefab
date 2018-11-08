@@ -145,7 +145,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 32, y: 12, z: 36}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82802857993459312
 AudioSource:
@@ -255,7 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myChatBubble: {fileID: 0}
   bubbleOffsetPosition: {x: 0, y: 0, z: 0}
-  speakInCD: 0
   mMat: {fileID: 0}
 --- !u!114 &114921568194048760
 MonoBehaviour:

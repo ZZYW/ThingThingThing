@@ -29,11 +29,11 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 0
   antialiasing:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       method: 0
       fxaaSettings:
-        preset: 2
+        preset: 4
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
@@ -42,7 +42,7 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 0
     m_Settings:
-      intensity: 0.29
+      intensity: 0.04
       radius: 1.03
       sampleCount: 3
       downsampling: 0
@@ -114,18 +114,18 @@ MonoBehaviour:
       tonemapping:
         tonemapper: 2
         neutralBlackIn: 0.02
-        neutralWhiteIn: 10
-        neutralBlackOut: 0
-        neutralWhiteOut: 10
+        neutralWhiteIn: 13.83
+        neutralBlackOut: -0.0137
+        neutralWhiteOut: 16.58
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
         postExposure: 0
-        temperature: 0
-        tint: 0
+        temperature: -12.9
+        tint: -28.2
         hueShift: 0
-        saturation: 1
-        contrast: 1
+        saturation: 2
+        contrast: 1.625
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -313,9 +313,9 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       colored: 0
-      intensity: 0.447
-      size: 0.65
-      luminanceContribution: 0.28
+      intensity: 0.506
+      size: 0.578
+      luminanceContribution: 0.217
   vignette:
     m_Enabled: 0
     m_Settings:

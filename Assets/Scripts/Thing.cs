@@ -28,12 +28,12 @@ public class Thing : MonoBehaviour {
             cameraOffset = 15;
             acceleration = 4;
             drag = 1.8f;
-            mass = 0.2f;
-            chatBubbleOffsetHeight = 3;
+            mass = 1f;
+            chatBubbleOffsetHeight = 10;
             getNewDestinationInterval = 5;
             newDestinationRange = 40;
             alwaysFacingTarget = true;
-            neighborDetectorRadius = 5;
+            neighborDetectorRadius = 10;
         }
     }
 
@@ -111,7 +111,7 @@ public class Thing : MonoBehaviour {
 
         //motor
         motor = GetComponent<ThingMotor> ();
-        motor.SetAccel (settings.acceleration);
+        motor.SetAccel (settings.acceleration * 4);
         motor.rb.drag = settings.drag;
         motor.rb.mass = settings.mass;
         motor.FacingTarget (settings.alwaysFacingTarget);
@@ -129,6 +129,10 @@ public class Thing : MonoBehaviour {
         audioSource.maxDistance = 50;
 
         TTTStart ();
+
+        speakInCD = true;
+        spokeTimeStamp = Time.time;
+
     }
     private void Update () {
 
@@ -136,7 +140,7 @@ public class Thing : MonoBehaviour {
             speakInCD = false;
         }
 
-        if (transform.position.y < -9 || transform.position.y > 157) {
+        if (Vector3.Distance (transform.position, transform.parent.position) > 100) {
             ResetPosition ();
         }
 
@@ -289,6 +293,8 @@ public class Thing : MonoBehaviour {
         explodePS.emission.SetBurst (0, newBurst);
         explodePS.Play ();
         TTTEventsManager.main.SomeoneSparked (gameObject);
+
+        ThingConsole.Log (FormatString ("<color=orange>{0}</color> sparked", MyName));
     }
 
     protected void CreateCube () {
@@ -334,6 +340,7 @@ public class Thing : MonoBehaviour {
         audioSource.clip = Resources.Load (soundUrl) as AudioClip;
         if (audioSource.clip != null) {
             audioSource.Play ();
+            Spark (Color.white, 10);
             return 0;
         } else {
             return 1;
@@ -349,7 +356,10 @@ public class Thing : MonoBehaviour {
     }
 
     protected void ResetPosition () {
-        motor.rb.position = ThingManager.main.transform.position;
+        // Debug.Log (MyName + "  got reset");
+        motor.rb.position = ThingManager.main.transform.position + new Vector3 (Random.Range (-20, 20), 0, Random.Range (-20, 20));
+        motor.rb.velocity = Vector3.zero;
+
         // stringBuilder.Length = 0;
         // stringBuilder.AppendFormat ("{0} position was reset", MyName);
         // ThingConsole.Log (stringBuilder.ToString ());

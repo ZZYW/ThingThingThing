@@ -58,7 +58,7 @@ Material:
     - _AmbientColorInfluence: 1
     - _BumpScale: 1
     - _ColorSculpt: 0
-    - _Cutoff: 0.187
+    - _Cutoff: 0
     - _Cutoff1: 0
     - _DarkColorBrightness: 0
     - _DetailNormalMapScale: 1
@@ -72,8 +72,8 @@ Material:
     - _LightCutoff: 0.86
     - _Metallic: 0
     - _Mode: 0
-    - _Multiplier_displacement: 9.1
-    - _Multiplier_time: 16.98
+    - _Multiplier_displacement: 0
+    - _Multiplier_time: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _REPLACEVCs: 1

@@ -10,7 +10,7 @@ public class MyFavoriteThings : Thing {
 		settings.drag = 5;
 		settings.cameraOffset = 20;
 		settings.chatBubbleOffsetHeight = 20;
-		settings.newDestinationRange = 100;
+		settings.newDestinationRange = 40;
 		settings.myCubeColor = Color.red;
 		Speak ("Debug Complete.");
 		InvokeRepeating ("RandomSetDestination", 2, 2);

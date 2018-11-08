@@ -14,7 +14,7 @@ public class ThingManager : MonoBehaviour {
     public bool generateThings;
     //public Transform spawnBox;
 
-    int spawnAreaRadius = 80;
+    int spawnAreaRadius = 35;
 
     private void Awake () {
         main = this;
@@ -30,7 +30,6 @@ public class ThingManager : MonoBehaviour {
                 newThing.transform.position = new Vector3 (Random.Range (-spawnAreaRadius, spawnAreaRadius), 0, Random.Range (-spawnAreaRadius, spawnAreaRadius));
                 GetBubblePosition (newThing); //for old THINGs
                 AllThings.Add (newThing);
-
             }
         }
 

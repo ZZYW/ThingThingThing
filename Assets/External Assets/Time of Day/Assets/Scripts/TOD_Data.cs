@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TOD_Data : MonoBehaviour {
 
@@ -9,7 +11,9 @@ public class TOD_Data : MonoBehaviour {
 
     public static TOD_Data main;
 
-    private TOD_Sky sky;
+    [SerializeField] Text timeText;
+    TOD_Sky sky;
+    StringBuilder stringBuilder;
 
     public bool IsDay { get; private set; }
     public bool IsNight { get; private set; }
@@ -36,6 +40,7 @@ public class TOD_Data : MonoBehaviour {
         sky = GetComponent<TOD_Sky> ();
         IsDay = true;
         IsNight = false;
+        stringBuilder = new StringBuilder ();
     }
 
     // Update is called once per frame
@@ -62,14 +67,14 @@ public class TOD_Data : MonoBehaviour {
             Invoke ("ResetSunriseReportFlag", reportCoolDown);
         }
 
+        stringBuilder.Length = 0;
+        stringBuilder.AppendFormat ("\n\n{0}", sky.Cycle.DateTime.TimeOfDay.ToString ());
+        timeText.text = stringBuilder.ToString ();
+
     }
 
     void ResetSunsetReportFlag () {
         sunsetReported = false;
-    }
-
-    void OnGUI () {
-        GUI.Label (new Rect (Screen.width - 100, Screen.height - 100, 100, 100), "Time in ThingThingThing: " + TimeNow.ToString ());
     }
 
     void ResetSunriseReportFlag () {
