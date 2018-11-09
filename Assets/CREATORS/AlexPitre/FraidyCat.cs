@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class FraidyCat : Thing {
 	 
-	AudioSource FCsound;
+    ParticleSystem particleSys;
+    ParticleSystem.MinMaxGradient startColor;
 
-	protected override void OnMeetingSomeone(GameObject other){
-		
-		ChangeColor (Color.cyan);
-		FCsound = GetComponent<AudioSource> ();
-		FCsound.Play (0);
-	transform.Translate (new Vector3 (0,0,1));
+    protected override void TTTStart()
+    {
+        particleSys= GetComponentInChildren<ParticleSystem>();
+        startColor = particleSys.main.startColor;
+        transform.position = transform.parent.position;
+    }
 
+    protected override void OnMeetingSomeone(GameObject other){
+        var mainModule = particleSys.main;
+        mainModule.startColor = Color.black;
+        PlaySound(0);
 	}
-
-
 
 	protected override void OnNeighborSpeaking(){
-		ResetColor ();
-	}
+        var mainModule = particleSys.main;
+        mainModule.startColor = startColor;
+    }
 }
