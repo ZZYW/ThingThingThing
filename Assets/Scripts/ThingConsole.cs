@@ -78,11 +78,10 @@ public class ThingConsole : MonoBehaviour {
         Log (errorString.ToString ());
     }
 
-    public static void Log (string content) {
-
+    public static void Log (string content) {        
         if (disableLogging) return;
         if (cooldown) { return; }
-        if (consoleText.text == null) return;
+        if(consoleText!=null) if (consoleText.text == null) return;
 
         normalString.Length = 0;
         normalString.AppendFormat ("[<i>{0}</i>]<color=cyan> <b>ThingThingThing</b> </color> -> {1}", System.DateTime.Now.ToString (), content);

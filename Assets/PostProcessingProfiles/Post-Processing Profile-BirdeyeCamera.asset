@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -109,23 +110,23 @@ MonoBehaviour:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.02
-        neutralWhiteIn: 13.83
-        neutralBlackOut: -0.0137
-        neutralWhiteOut: 16.58
+        neutralBlackIn: -0.0343
+        neutralWhiteIn: 14.46
+        neutralBlackOut: 0
+        neutralWhiteOut: 10
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
         postExposure: 0
-        temperature: -12.9
-        tint: -28.2
+        temperature: -10.1
+        tint: 0
         hueShift: 0
-        saturation: 2
-        contrast: 1.625
+        saturation: 1.322
+        contrast: 1.211
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
