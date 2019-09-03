@@ -5,9 +5,10 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: terrain2mat
-  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -78,7 +79,7 @@ Material:
     - _DustAmount: 0
     - _FOGTOGGLE: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _GradientScaler: 0.1
     - _GradientStrength: 0.5
@@ -89,7 +90,7 @@ Material:
     - _LightColor: 1
     - _LightColorBrightness: 1
     - _LightCutoff: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
     - _ModulationSpeed: 0.5
     - _Multiplier_displacement: 0
@@ -127,7 +128,7 @@ Material:
     - _heightFogStart: 0
     - _samplingRate: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.018393278, g: 1, b: 0.56078434, a: 1}
     - _DustColor: {r: 0.16176468, g: 0.052335635, b: 0.052335635, a: 0}
     - _DustDirection: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

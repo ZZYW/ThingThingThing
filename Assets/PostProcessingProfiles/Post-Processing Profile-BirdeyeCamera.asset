@@ -51,7 +51,7 @@ MonoBehaviour:
       ambientOnly: 0
       highPrecision: 0
   screenSpaceReflection:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       reflection:
         blendType: 0
@@ -101,10 +101,10 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       bloom:
-        intensity: 0.72
-        threshold: 1.48
-        softKnee: 0.133
-        radius: 2.18
+        intensity: 1.59
+        threshold: 1.08
+        softKnee: 0.248
+        radius: 3.11
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 1
+      intensity: 0.26
   grain:
     m_Enabled: 0
     m_Settings:

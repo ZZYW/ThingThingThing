@@ -5,9 +5,10 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: terrain1mat
-  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _REPLACEVCS_ON _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -65,12 +66,12 @@ Material:
     - _DstBlend: 0
     - _FOGTOGGLE: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 1
     - _GlossyReflections: 0
     - _LerpScaler: 0
     - _LightColorBrightness: 1
     - _LightCutoff: 0.86
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
     - _Multiplier_displacement: 0
     - _Multiplier_time: 0

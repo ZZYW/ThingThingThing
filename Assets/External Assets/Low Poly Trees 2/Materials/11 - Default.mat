@@ -4,10 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: 11 - Default
-  m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _RAINBOW_ON _VERTEXOFFSET_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -69,7 +70,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.13
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _HeightFog: 0
     - _HeightFogEnd: 1
@@ -77,7 +78,7 @@ Material:
     - _LerpScaler: 0
     - _LightColorBrightness: 1
     - _LightCutoff: 0
-    - _Metallic: 0.31
+    - _Metallic: 1
     - _Mode: 0
     - _Multiplier1: 100
     - _Multiplier2: 1
