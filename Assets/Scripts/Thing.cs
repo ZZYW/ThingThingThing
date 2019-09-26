@@ -5,10 +5,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(BoxCollider))]
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(ThingMotor))]
 public class Thing : MonoBehaviour
 {
 
@@ -30,7 +26,7 @@ public class Thing : MonoBehaviour
             cameraOffset = 15;
             acceleration = 4;
             drag = 1.8f;
-            mass = 1f;
+            mass = 20f;
             chatBubbleOffsetHeight = 10;
             getNewDestinationInterval = 5;
             newDestinationRange = 40;
@@ -42,7 +38,7 @@ public class Thing : MonoBehaviour
     public SimpleChatBubble myChatBubble;
     public Settings settings { get; protected set; }
 
-    [HideInInspector] public Vector3 bubbleOffsetPosition;
+
 
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
@@ -76,8 +72,7 @@ public class Thing : MonoBehaviour
     Color originalColor;
     StringBuilder stringBuilder;
 
-    [Header("Your Main Material For Color Changing")]
-    [SerializeField] Material mMat;
+    Material mMat;
 
     public int DesiredFollowDistance { get { return settings.cameraOffset; } }
 
@@ -103,28 +98,35 @@ public class Thing : MonoBehaviour
         speakCD = new Cooldown(Random.Range(5f, 10f));
         playSoundCD = new Cooldown(1);
 
+  
+        Instantiate(ResourceManager.main.sparkPSPrefab, transform, false);
+
+
         MyName = gameObject.name;
         settings = new Settings();
         stringBuilder = new StringBuilder();
         gameObject.tag = thingTag;
         gameObject.layer = 14;
         neighborList = new List<GameObject>();
-        TTTAwake();
+        ThingAwake();
     }
 
     private void Start()
     {
-        //neighbor detector
-        // neighborDetector = GetComponent<SphereCollider> ();
-        // neighborDetector.isTrigger = true;
-        //no longer use sphere collider as neighbor detector
-        if (GetComponent<SphereCollider>())
-        {
-            Destroy(GetComponent<SphereCollider>());
-        }
+        //add essential part
+        gameObject.AddComponent<MeshRenderer>();
+        gameObject.AddComponent<MeshFilter>().mesh = ResourceManager.main.cubeMesh.mesh;
+        gameObject.AddComponent<AudioSource>();
+        gameObject.AddComponent<BoxCollider>();
+        var rb = gameObject.AddComponent<Rigidbody>();
+
+
+        //get the material
+        mMat = GetComponent<Renderer>().material;
+
 
         //motor
-        motor = GetComponent<ThingMotor>();
+        motor = gameObject.AddComponent<ThingMotor>();
         motor.SetAccel(settings.acceleration * 4);
         motor.rb.drag = settings.drag;
         motor.rb.mass = settings.mass;
@@ -132,9 +134,6 @@ public class Thing : MonoBehaviour
 
         //Instantiating Particle Object
         explodePS = GetComponentInChildren<ParticleSystem>();
-        if (explodePS == null)
-        {
-        }
 
         //Sound
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -145,7 +144,7 @@ public class Thing : MonoBehaviour
         audioSource.maxDistance = 35;
         audioSource.dopplerLevel = 5;
 
-        TTTStart();
+        ThingStart();
 
         speakCD.GoCooldown();
 
@@ -156,11 +155,6 @@ public class Thing : MonoBehaviour
         speakCD.Check();
         playSoundCD.Check();
 
-        //check position
-        if (Vector3.Distance(transform.position, transform.parent.position) > 200)
-        {
-            ResetPosition();
-        }
 
         //check neighbors
         foreach (GameObject t in ThingManager.main.AllThings)
@@ -184,7 +178,7 @@ public class Thing : MonoBehaviour
             }
         }
 
-        TTTUpdate();
+        ThingUpdate();
     }
 
     private void OnSomeoneSpeaking(GameObject who)
@@ -211,13 +205,6 @@ public class Thing : MonoBehaviour
         return stringBuilder.ToString();
     }
 
-    private void RescueFromWater()
-    {
-        if (InWater)
-        {
-            ResetPosition();
-        }
-    }
 
     public void OnWaterEnter()
     {
@@ -312,7 +299,7 @@ public class Thing : MonoBehaviour
 
     }
 
-    protected void CreateCube()
+    protected void CreateChildren()
     {
         GameObject acube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         acube.layer = 12;
@@ -323,7 +310,7 @@ public class Thing : MonoBehaviour
         if (generatedCubeContainer == null)
         {
             generatedCubeContainer = new GameObject();
-            generatedCubeContainer.name = "Generated Cube Container";
+            generatedCubeContainer.name = MyName + "'s child";
             generatedCubeContainer.AddComponent<ChildrenCounter>();
         }
 
@@ -351,9 +338,7 @@ public class Thing : MonoBehaviour
     {
         if (playSoundCD.inCD) return;
         playSoundCD.GoCooldown();
-        audioSource.pitch = Random.Range(1.0f, 2.2f);
         if (audioSource.isPlaying) return;
-        audioSource.clip = Resources.Load("101") as AudioClip;
         if (audioSource.clip != null)
         {
             audioSource.Play();
@@ -370,16 +355,49 @@ public class Thing : MonoBehaviour
         SetRandomTarget(settings.newDestinationRange);
     }
 
-    protected void ResetPosition()
+
+
+
+    private void AddCubeMesh()
     {
-        motor.rb.position = ThingManager.main.GetSpawnPosition();
-        motor.rb.velocity = Vector3.zero;
+        Vector3[] vertices = {
+            new Vector3 (0, 0, 0),
+            new Vector3 (1, 0, 0),
+            new Vector3 (1, 1, 0),
+            new Vector3 (0, 1, 0),
+            new Vector3 (0, 1, 1),
+            new Vector3 (1, 1, 1),
+            new Vector3 (1, 0, 1),
+            new Vector3 (0, 0, 1),
+        };
+
+        int[] triangles = new int[]
+        {
+            3, 1, 0,        3, 2, 1,        // Bottom	
+	        7, 5, 4,        7, 6, 5,        // Left
+	        11, 9, 8,       11, 10, 9,      // Front
+	        15, 13, 12,     15, 14, 13,     // Back
+	        19, 17, 16,     19, 18, 17,	    // Right
+	        23, 21, 20,     23, 22, 21,	    // Top
+        };
+
+        Mesh mesh = gameObject.AddComponent<MeshFilter>().mesh;
+
+
+
+        mesh.Clear();
+        mesh.vertices = vertices;
+        mesh.triangles = triangles;
+        //  mesh.Optimize();
+        mesh.RecalculateNormals();
+        mesh.RecalculateBounds();
+        mesh.RecalculateTangents();
     }
 
     //VIRTUAL
-    protected virtual void TTTAwake() { }
-    protected virtual void TTTStart() { }
-    protected virtual void TTTUpdate() { }
+    protected virtual void ThingAwake() { }
+    protected virtual void ThingStart() { }
+    protected virtual void ThingUpdate() { }
     protected virtual void OnMeetingSomeone(GameObject other) { }
     protected virtual void OnLeavingSomeone(GameObject other) { }
     protected virtual void OnNeighborSpeaking() { }

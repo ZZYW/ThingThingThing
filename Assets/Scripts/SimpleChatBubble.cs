@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SimpleChatBubble : MonoBehaviour {
 
 	public Transform host;
-	public Vector3 offsetPos;
+	//public Vector3 offsetPos;
 
 	[SerializeField] private Text text;
 	[SerializeField] private Image bubble;
@@ -22,7 +22,7 @@ public class SimpleChatBubble : MonoBehaviour {
 	}
 
 	void Update () {
-		transform.position = host.position + offsetPos;
+		transform.position = host.position + Vector3.up * host.localScale.y * 3;
 		transform.LookAt (CameraSwitcher.main.ActiveCam.position);
 	}
 

@@ -43,8 +43,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 0
     m_Settings:
-      intensity: 0.04
-      radius: 1.03
+      intensity: 0.79
+      radius: 0.42
       sampleCount: 3
       downsampling: 0
       forceForwardCompatibility: 0
@@ -101,9 +101,9 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.63
+        intensity: 0.4
         threshold: 1.08
-        softKnee: 0.064
+        softKnee: 0.146
         radius: 3.02
         antiFlicker: 0
       lensDirt:
@@ -306,10 +306,10 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0
+      intensity: 1
   grain:
     m_Enabled: 0
     m_Settings:

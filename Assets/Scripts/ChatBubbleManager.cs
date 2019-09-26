@@ -31,7 +31,7 @@ public class ChatBubbleManager : MonoBehaviour {
 
 			//set SimepleChatBubble vital references
 			simpleChatBubble.host = targetThing.transform;
-			simpleChatBubble.offsetPos = targetThing.GetComponent<Thing> ().bubbleOffsetPosition;
+     
 
 			//link chatbubble with thing
 			targetThing.GetComponent<Thing> ().myChatBubble = simpleChatBubble;

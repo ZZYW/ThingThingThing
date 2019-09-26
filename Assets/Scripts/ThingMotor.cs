@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof (Rigidbody))]
 public class ThingMotor : MonoBehaviour {
 
     Vector3 target;
@@ -27,7 +26,6 @@ public class ThingMotor : MonoBehaviour {
     }
 
     void Start () {
-        rb.freezeRotation = true;
         rb.angularDrag = 10f;
     }
 
