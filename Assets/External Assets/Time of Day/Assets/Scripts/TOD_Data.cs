@@ -50,7 +50,6 @@ public class TOD_Data : MonoBehaviour {
         if (hour > 19f && hour < 19.2f && !sunsetReported) {
             print ("------Sunset------");
             if (OnSunset != null) OnSunset ();
-            ThingConsole.LogWarning ("Sunset");
             sunsetReported = true;
             IsDay = false;
             IsNight = true;
@@ -60,7 +59,6 @@ public class TOD_Data : MonoBehaviour {
         if (hour > 7f && hour < 7.2f && !sunriseReported) {
             print ("------Sunrise------");
             if (OnSunrise != null) OnSunrise ();
-            ThingConsole.LogWarning ("Sunrise");
             IsDay = true;
             IsNight = false;
             sunriseReported = true;

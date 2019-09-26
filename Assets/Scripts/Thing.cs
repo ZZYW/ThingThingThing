@@ -124,9 +124,6 @@ public class Thing : MonoBehaviour {
 
         //Instantiating Particle Object
         explodePS = GetComponentInChildren<ParticleSystem> ();
-        if (explodePS == null) {
-            ThingConsole.LogWarning (FormatString ("{0} doesn't have a particle system?!", MyName));
-        }
 
         //Sound
         audioSource = gameObject.GetComponent<AudioSource> ();
@@ -193,7 +190,6 @@ public class Thing : MonoBehaviour {
     private void RescueFromWater () {
         if (InWater) {
             ResetPosition ();
-            ThingConsole.LogWarning (FormatString ("{0} is rescued from water", MyName));
         }
     }
 
@@ -207,20 +203,17 @@ public class Thing : MonoBehaviour {
         InWater = false;
         CancelInvoke ("RescueFromWater");
         OnLeaveWater ();
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> left <color=blue>water</color>.", MyName));
     }
 
     protected void SetTarget (Vector3 target) {
         if (!stopWalkingAround) {
             motor.SetTarget (target);
-            ThingConsole.Log (FormatString ("<color=orange>{0}</color> gained a <color=red>new</color> target.", MyName));
         }
     }
 
     protected void StopMoving () {
         stopWalkingAround = true;
         motor.Stop ();
-        ThingConsole.Log (FormatString ("{0} stopped moving", MyName));
     }
 
     protected void StopMoving (float seconds) {
@@ -230,12 +223,10 @@ public class Thing : MonoBehaviour {
 
     protected void Mute () {
         stopTalking = true;
-        ThingConsole.LogWarning (FormatString ("{0} is being muted.", MyName));
     }
 
     protected void DeMute () {
         stopTalking = false;
-        ThingConsole.Log (FormatString ("{0} can speak again", MyName));
     }
 
     protected void RestartWalking () {
@@ -261,8 +252,6 @@ public class Thing : MonoBehaviour {
 
         TTTEventsManager.main.SomeoneSpoke (gameObject);
         myChatBubble.Speak (content);
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
-
         speakCD.GoCooldown ();
     }
 
@@ -280,7 +269,6 @@ public class Thing : MonoBehaviour {
         explodePS.Play ();
         TTTEventsManager.main.SomeoneSparked (gameObject);
 
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> sparked", MyName));
     }
 
     protected void CreateCube () {
@@ -307,7 +295,6 @@ public class Thing : MonoBehaviour {
     protected void ResetColor () {
         if (mMat == null) return;
         mMat.color = originalColor;
-        ThingConsole.Log (FormatString ("{0} reset its own color", MyName));
     }
 
     protected void ChangeColor (Color c) {

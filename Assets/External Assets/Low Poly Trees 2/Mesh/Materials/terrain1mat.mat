@@ -66,12 +66,12 @@ Material:
     - _DstBlend: 0
     - _FOGTOGGLE: 0
     - _GlossMapScale: 1
-    - _Glossiness: 1
+    - _Glossiness: 0
     - _GlossyReflections: 0
     - _LerpScaler: 0
     - _LightColorBrightness: 1
     - _LightCutoff: 0.86
-    - _Metallic: 1
+    - _Metallic: 0
     - _Mode: 0
     - _Multiplier_displacement: 0
     - _Multiplier_time: 0
@@ -95,7 +95,7 @@ Material:
     - _heightFogStart: 0
     - _node_2797: 0.734
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlitchColor: {r: 1, g: 0, b: 0, a: 1}
     - _HIGHLIGHTCOLORreplaceVCblue: {r: 1, g: 1, b: 1, a: 1}
