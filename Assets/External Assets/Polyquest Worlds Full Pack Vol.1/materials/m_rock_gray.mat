@@ -55,6 +55,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -84,15 +88,19 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Rainbow: 1
+    - _Rigidness: 6
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 50
     - _SrcBlend: 1
+    - _SwayMax: 0.0862
     - _TimeOfffset: 0
     - _TimeScale: 30
     - _UVSec: 0
     - _UseRainbowColors: 0
     - _UseVertexColor: 0
     - _VertexOffset: 1
+    - _YOffset: 0.5
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -347,8 +347,6 @@ public class Thing : MonoBehaviour
         mMat.SetColor(matColor, c);
     }
 
-
-
     protected void PlaySound()
     {
         if (playSoundCD.inCD) return;
