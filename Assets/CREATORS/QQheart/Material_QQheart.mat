@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Material_QQheart
   m_Shader: {fileID: 4800000, guid: 037aec7832bb04d539292882933b0565, type: 3}
   m_ShaderKeywords: _VERTEXOFFSET_ON
@@ -36,7 +37,7 @@ Material:
     - _UseVertexColor: 0
     - _VertexOffset: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.8636496, b: 0.4764151, a: 1}
     - _rainbowcolor1: {r: 1, g: 0, b: 0, a: 1}
     - _rainbowcolor2: {r: 0.07586192, g: 0, b: 1, a: 1}
     - _rainbowcolor3: {r: 0, g: 1, b: 0.006896496, a: 1}
