@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Space
   m_Shader: {fileID: 4800000, guid: d27767d1af032488f8624d0f842ea983, type: 3}
   m_ShaderKeywords: 
@@ -20,7 +21,7 @@ Material:
     m_TexEnvs:
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 76d6dbcc7de494a818bc98bd498fd0be, type: 3}
-        m_Scale: {x: 5.44, y: 5.44}
+        m_Scale: {x: 7.39, y: 7.39}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors: []

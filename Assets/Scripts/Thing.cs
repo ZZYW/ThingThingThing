@@ -125,7 +125,7 @@ public class Thing : MonoBehaviour {
         //Instantiating Particle Object
         explodePS = GetComponentInChildren<ParticleSystem> ();
         if (explodePS == null) {
-            ThingConsole.LogWarning (FormatString ("{0} doesn't have a particle system?!", MyName));
+            ThingConsole.LogWarning (FormatString ("{0} doesn't know how to spark?!", MyName));
         }
 
         //Sound
@@ -193,7 +193,7 @@ public class Thing : MonoBehaviour {
     private void RescueFromWater () {
         if (InWater) {
             ResetPosition ();
-            ThingConsole.LogWarning (FormatString ("{0} is rescued from water", MyName));
+            ThingConsole.LogWarning (FormatString ("{0} is being rescued from water", MyName));
         }
     }
 
@@ -207,20 +207,20 @@ public class Thing : MonoBehaviour {
         InWater = false;
         CancelInvoke ("RescueFromWater");
         OnLeaveWater ();
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> left <color=blue>water</color>.", MyName));
+        ThingConsole.Log (FormatString ("{0} left water.", MyName));
     }
 
     protected void SetTarget (Vector3 target) {
         if (!stopWalkingAround) {
             motor.SetTarget (target);
-            ThingConsole.Log (FormatString ("<color=orange>{0}</color> gained a <color=red>new</color> target.", MyName));
+            ThingConsole.Log (FormatString ("{0} has decided to walk to another spot.", MyName));
         }
     }
 
     protected void StopMoving () {
         stopWalkingAround = true;
         motor.Stop ();
-        ThingConsole.Log (FormatString ("{0} stopped moving", MyName));
+        ThingConsole.Log (FormatString ("{0} wants to take a break", MyName));
     }
 
     protected void StopMoving (float seconds) {
@@ -230,12 +230,12 @@ public class Thing : MonoBehaviour {
 
     protected void Mute () {
         stopTalking = true;
-        ThingConsole.LogWarning (FormatString ("{0} is being muted.", MyName));
+        ThingConsole.LogWarning (FormatString ("{0} stopped talking.", MyName));
     }
 
     protected void DeMute () {
         stopTalking = false;
-        ThingConsole.Log (FormatString ("{0} can speak again", MyName));
+        ThingConsole.Log (FormatString ("{0} is deciding to speak again", MyName));
     }
 
     protected void RestartWalking () {
@@ -261,7 +261,7 @@ public class Thing : MonoBehaviour {
 
         TTTEventsManager.main.SomeoneSpoke (gameObject);
         myChatBubble.Speak (content);
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
+        ThingConsole.Log (FormatString ("{0} is saying {1} to other Things", MyName, content));
 
         speakCD.GoCooldown ();
     }
@@ -280,7 +280,7 @@ public class Thing : MonoBehaviour {
         explodePS.Play ();
         TTTEventsManager.main.SomeoneSparked (gameObject);
 
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> sparked", MyName));
+        ThingConsole.Log (FormatString ("{0} gets excited!", MyName));
     }
 
     protected void CreateCube () {
@@ -307,7 +307,7 @@ public class Thing : MonoBehaviour {
     protected void ResetColor () {
         if (mMat == null) return;
         mMat.color = originalColor;
-        ThingConsole.Log (FormatString ("{0} reset its own color", MyName));
+        ThingConsole.Log (FormatString ("{0} changed its own color!", MyName));
     }
 
     protected void ChangeColor (Color c) {
@@ -321,6 +321,7 @@ public class Thing : MonoBehaviour {
     }
 
     protected void PlaySound (string soundFileName) {
+        if (audioSource == null) return;
         if (playSoundCD.inCD) return;
         playSoundCD.GoCooldown ();
         audioSource.pitch = Random.Range (1.0f, 2.2f);

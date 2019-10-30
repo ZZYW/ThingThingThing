@@ -69,7 +69,6 @@ public class TOD_Data : MonoBehaviour {
 
         stringBuilder.Length = 0;
         stringBuilder.AppendFormat ("\n\n{0}", sky.Cycle.DateTime.TimeOfDay.ToString ());
-        timeText.text = stringBuilder.ToString ();
 
     }
 

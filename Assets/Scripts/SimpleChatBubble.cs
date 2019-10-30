@@ -23,7 +23,7 @@ public class SimpleChatBubble : MonoBehaviour {
 
 	void Update () {
 		transform.position = host.position + offsetPos;
-		transform.LookAt (CameraSwitcher.main.ActiveCam.position);
+		transform.LookAt (Camera.main.transform);
 	}
 
 	void OnDisable () {

@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: terrain1mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _REPLACEVCS_ON _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 0
+  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _REPLACEVCS_ON _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,10 +55,27 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _V_WIRE_AoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _V_WIRE_NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _V_WIRE_SourceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _V_WIRE_WireTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AmbientColorInfluence: 1
     - _BumpScale: 1
     - _ColorSculpt: 0
+    - _Cull: 2
     - _Cutoff: 0
     - _Cutoff1: 0
     - _DarkColorBrightness: 0
@@ -78,12 +95,54 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _REPLACEVCs: 1
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _UVSec: 0
     - _UseRainbowColors: 0
     - _UseVertexColor: 0
+    - _V_WIRE_Ao: 0
+    - _V_WIRE_AoStrength: 1
+    - _V_WIRE_BumpEnumID: 0
+    - _V_WIRE_DistanceFade: 0
+    - _V_WIRE_DistanceFadeEnd: 10
+    - _V_WIRE_DistanceFadeStart: 5
+    - _V_WIRE_DynamicGI: 0
+    - _V_WIRE_DynamicGIEnumID: 0
+    - _V_WIRE_DynamicGIStrength: 0
+    - _V_WIRE_DynamicMaskEffectsBaseTexEnumID: 0
+    - _V_WIRE_DynamicMaskEffectsBaseTexInvert: 0
+    - _V_WIRE_DynamicMaskEnumID: 0
+    - _V_WIRE_DynamicMaskInvert: -1
+    - _V_WIRE_DynamicMaskSmooth: 1
+    - _V_WIRE_DynamicMaskType: 1
+    - _V_WIRE_EmissionStrength: 0
+    - _V_WIRE_FixedSize: 0
+    - _V_WIRE_FresnelBias: 0
+    - _V_WIRE_FresnelEnumID: 0
+    - _V_WIRE_FresnelInvert: 0
+    - _V_WIRE_FresnelPow: 1
+    - _V_WIRE_ImprovedBlendEnumID: 0
+    - _V_WIRE_IncludeLightEnumID: 0
+    - _V_WIRE_NormalScale: 1
+    - _V_WIRE_RenderingOptions_PBREnumID: 0
+    - _V_WIRE_Size: 1
+    - _V_WIRE_Source_Options: 0
+    - _V_WIRE_Tag: 0
+    - _V_WIRE_Title_M_Options: 0
+    - _V_WIRE_Title_S_Options: 0
+    - _V_WIRE_Title_UAR_Options: 0
+    - _V_WIRE_Title_V_Options: 0
+    - _V_WIRE_Title_W_Options: 0
+    - _V_WIRE_TransparencyEnumID: 0
+    - _V_WIRE_Transparency_M_Options: 0
+    - _V_WIRE_TransparentTex_Alpha_Offset: 0
+    - _V_WIRE_TransparentTex_Invert: 0
+    - _V_WIRE_TryQuad: 0
+    - _V_WIRE_VertexColor: 0
+    - _V_WIRE_WireTex_UVSet: 0
+    - _V_WIRE_WireVertexColor: 0
     - _VertexOffset: 0
     - _VertexOffsetIntensity: 0
     - _VertexOffsetPara01: 1
@@ -94,15 +153,23 @@ Material:
     - _heightFogEnd: 1
     - _heightFogStart: 0
     - _node_2797: 0.734
+    - _x: 0
+    - _y: 0
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.4811321, g: 0, b: 0, a: 1}
     - _GlitchColor: {r: 1, g: 0, b: 0, a: 1}
     - _HIGHLIGHTCOLORreplaceVCblue: {r: 1, g: 1, b: 1, a: 1}
     - _HeightFogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _MainColor: {r: 0.15862082, g: 1, b: 0, a: 1}
     - _PRIMARYCOLORreplaceVCblack: {r: 1, g: 0, b: 0, a: 1}
     - _SECONDARYCOLORreplaceVCred: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 1, g: 0, b: 0, a: 1}
+    - _V_WIRE_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _V_WIRE_MainTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
+    - _V_WIRE_ObjectWorldPos: {r: 0, g: 0, b: 0, a: 0}
+    - _V_WIRE_SourceTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
+    - _V_WIRE_WireTex_Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _node_2284: {r: 0, g: 0, b: 0, a: 1}
     - _node_8193: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _rainbowcolor1: {r: 0.5, g: 0.5, b: 0.5, a: 1}

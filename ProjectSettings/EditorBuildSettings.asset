@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TTTWorldScene.unity
     guid: 31757b28fd9d74ec08d6170f3366d0a7
   - enabled: 0
-    path: Assets/Test/TEST.unity
-    guid: e14bb5a8fd41d494293e9225a5872ff1
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/TestScenes/simpel chat bubble test.unity
-    guid: 17167123805535941bf02816df493019
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/MultiScreenTest.unity
+    guid: 9badd0b8b184b7e4b90fd255fc6cea64
   m_configObjects: {}
