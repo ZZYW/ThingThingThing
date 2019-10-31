@@ -55,6 +55,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _V_WIRE_AoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -95,10 +99,13 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _REPLACEVCs: 1
+    - _Rigidness: 25
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
+    - _Speed: 25
     - _SrcBlend: 1
+    - _SwayMax: 0.005
     - _UVSec: 0
     - _UseRainbowColors: 0
     - _UseVertexColor: 0
@@ -149,6 +156,7 @@ Material:
     - _VertexOffsetSmoothFactor: 0
     - _VertexOffsetTimeMulti: 0
     - _VertexOffset_UVMult: 1
+    - _YOffset: 0.5
     - _ZWrite: 1
     - _heightFogEnd: 1
     - _heightFogStart: 0

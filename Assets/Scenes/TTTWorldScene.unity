@@ -4765,6 +4765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1067960597}
   - component: {fileID: 1067960598}
+  - component: {fileID: 1067960599}
   m_Layer: 0
   m_Name: Main Camera(Group)
   m_TagString: Untagged
@@ -4809,6 +4810,20 @@ MonoBehaviour:
   noiseSeedZIncremental: 0.005
   worldCenter: {fileID: 716206117}
   alwaysLookAtCenter: 1
+--- !u!114 &1067960599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067960596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74393606beb60ce4fb1605caff0b5170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftCam: {fileID: 2121162009}
+  rightCam: {fileID: 1141571593}
 --- !u!1 &1071208978
 GameObject:
   m_ObjectHideFlags: 0
