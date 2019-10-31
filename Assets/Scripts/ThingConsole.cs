@@ -89,7 +89,7 @@ public class ThingConsole : MonoBehaviour {
         mainStringBuilder.Append (normalString.ToString ());
         //lineCount++;
 
-        while (mainStringBuilder.Length > 2000)
+        while (mainStringBuilder.Length > 1500)
         {
             mainStringBuilder.Remove(0, 1);
         }
