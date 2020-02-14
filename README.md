@@ -1,27 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-- [About The Project](#about-the-project)
-- [Past Events](#past-events)
-- [Steps for participants:](#steps-for-participants)
-- [Technical Document](#technical-document)
-  - [Properties/Fields For You To Get](#propertiesfields-for-you-to-get)
-  - [Events You can Use to Fill Code Inside](#events-you-can-use-to-fill-code-inside)
-  - [Settings of your Thing you can change](#settings-of-your-thing-you-can-change)
-  - [Ready to Use Methods](#ready-to-use-methods)
-- [Tips](#tips)
-  - [How to keep your cloned repository up to date](#how-to-keep-your-cloned-repository-up-to-date)
-  - [Where to put my files](#where-to-put-my-files)
-      - [Where to put my prefabs:](#where-to-put-my-prefabs)
-      - [Where to put my materials and scripts](#where-to-put-my-materials-and-scripts)
-      - [Where to put my own sound files](#where-to-put-my-own-sound-files)
-  - [How to use your own sound files](#how-to-use-your-own-sound-files)
-  - [Some Basic about C# Programming](#some-basic-about-c-programming)
-  - [Some useful methods from Unity](#some-useful-methods-from-unity)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # About The Project
 
 _ThingThingThing_
