@@ -26,17 +26,22 @@
 
 _ThingThingThing_
 
-_ThingThingThing_ explores open source software development’s potential as a framework for generative narrative made collectively.
+_ThingThingThing_ is a computational system that invites audiences to take part in collective world-making. It is built with easily-accessible tools and interfaces, allowing everyone to contribute a computational object of their own. All computational objects created by audiences are integrated automatically by the software algorithms. The result is an ever-evolving, never concluding, three-dimensional system of instantiations, created by everyone yet owned by no one. 
 
-_ThingThingThing_ is a zero-player game. The artists and contributors jointly determine its evolution by setting an initial seed state of each _Thing_, which later requires no further human control. Viewers interact with _ThingThingthing_ by navigating a giant eyeball and observing how the world evolves. _ThingThingthing_ is an unending, three-dimensional system of instantiations, each of which is populated by an individual contributor. _ThingThingthing_’s aggregation algorithm copies individual avatars into an upstream account, enabling them to interact with each other.
+_ThingThingThing_ is both object and process. The world of ThingThingThing is a real-time simulation, a video game that plays itself, a never-ending film. The participants jointly determine its evolution by setting an initial seed state of their computational object, which later requires no further human control. All viewers can interact with the world by navigating an in-game eyeball and observe the behavior of all living objects. 
 
-The artists have been hosting a series of workshops, enabling anyone from students, designers to technologists to quickly build creatures with intelligence and interaction. One can also contribute remotely through _ThingThingthing_’s online development environment. _ThingThingthing_ is not perfect. Anyone can make a _Thing_, with its unique glitches, awkwardness, and clumsiness. Once creators send off their code, they walk away from the keyboard and computer screen, let their Things take on a life of its own in the universe of _ThingThingthing_.
+### Piloting 
 
-Prior _ThingThingthing_ collaborations also include
+The artists and technologists have been hosting a series of workshops with museums and art institutions around the world. The workshop enables everyone from students, artists, designers, architects and technologists to create their own programmed creatures with intelligence. Past collaborators include: 
 
-- Macy Art Gallery, Teachers College Columbia University;
-- Creative Tech Week(CTW) New York;
-- Asia Art Archive in America.
+- Macy Art Gallery, Teachers College, Columbia University, New York, NY
+- City University of New York (CUNY), New York, NY
+- Guangzhou Academy of Art (GAFA), Guangzhou, China
+- Creative Tech Week (CTW), New York, NY
+- Asia Art Archive in America (AAA-A), Brooklyn, NY
+- Power Station of Art (PSA), Shanghai, China. 
+
+The latest ThingThingThing exhibition and workshop were hosted at NEW INC, the Art & Technology incubator of New Museum in September, 2019.
 
 <!-- ---------- -->
 
@@ -51,18 +56,14 @@ Prior _ThingThingthing_ collaborations also include
 
 ---
 
-# Past Events
 
-- Saturday, April 14 and Sunday, April 15, 1:00-5:00pm | Asia Art Archive in America | 43 Remsen Street, Brooklyn, NY 11201
 
----
-
-# Steps for participants:
+<!-- # Steps for participants:
 
 [Google Doc Link](https://docs.google.com/document/d/18rqBA01xjrEOiLuYqoa7b_HeCmha066y6eLI37iUFIA/edit?usp=sharing)  
 [石墨文档](https://shimo.im/docs/DhxNEZhaCGgABntM/)
 
----
+--- -->
 
 # Technical Document
 
