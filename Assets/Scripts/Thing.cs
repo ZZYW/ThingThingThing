@@ -261,7 +261,7 @@ public class Thing : MonoBehaviour {
 
         TTTEventsManager.main.SomeoneSpoke (gameObject);
         myChatBubble.Speak (content);
-        ThingConsole.Log (FormatString ("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
+        ThingConsole.Log(FormatString("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
 
         speakCD.GoCooldown ();
     }
