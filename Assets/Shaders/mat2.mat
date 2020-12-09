@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6766792462683574661
+--- !u!114 &-4967960806213702322
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: teswt
+  m_Name: mat2
   m_Shader: {fileID: -6465566751694194690, guid: 51ea908695ec74ef0bd0c455c7af79e7,
     type: 3}
   m_ShaderKeywords: 
@@ -63,10 +63,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
+    - _AnimatorSwitch: 1
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DitherSize: -0
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -74,6 +76,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _OffsetTime: -0.13
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -86,5 +89,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorA1: {r: 0, g: 0.990566, b: 0.42005244, a: 0}
+    - _ColorA2: {r: 1, g: 0, b: 0.34887505, a: 0}
+    - _ColorB1: {r: 1, g: 0.95179456, b: 0, a: 0}
+    - _ColorB2: {r: 0, g: 1, b: 0.95004964, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
