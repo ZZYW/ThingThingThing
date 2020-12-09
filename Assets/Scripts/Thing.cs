@@ -255,15 +255,15 @@ public class Thing : MonoBehaviour {
     }
 
     protected void Speak (string content) {
-        if (myChatBubble == null) return;
-        if (stopTalking) return;
-        if (speakCD.inCD) return;
+        // if (myChatBubble == null) return;
+        // if (stopTalking) return;
+        // if (speakCD.inCD) return;
 
-        TTTEventsManager.main.SomeoneSpoke (gameObject);
-        myChatBubble.Speak (content);
-        ThingConsole.Log(FormatString("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
+        // TTTEventsManager.main.SomeoneSpoke (gameObject);
+        // myChatBubble.Speak (content);
+        // ThingConsole.Log(FormatString("<color=orange>{0}</color> is speaking <i>{1}</i>", MyName, content));
 
-        speakCD.GoCooldown ();
+        // speakCD.GoCooldown ();
     }
 
     protected void Spark (Color particleColor, int numberOfParticles) {
