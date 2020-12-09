@@ -15,11 +15,7 @@ public class ShaderSwapper : MonoBehaviour
         var allrends = GameObject.FindObjectsOfType<Renderer>();
         foreach (var rend in allrends)
         {            
-            int i = Random.Range(0, 3);
-            Color[] colors = new Color[] { Color.red, Color.green, Color.blue };
             
-            rend.material = ColorManager.instance.GetMaterial();
-            rend.material.color = Color.HSVToRGB(Random.Range(0f, 1f), 1f, 1f); //colors[i];
         }
     }
 

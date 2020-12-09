@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8405386637919757104
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb60a22f311433c4c962b888d1393f88, type: 3}
+  m_Name: PaniniProjection
+  m_EditorClassIdentifier: 
+  active: 0
+  m_AdvancedMode: 0
+  distance:
+    m_OverrideState: 1
+    m_Value: 0.235
+    min: 0
+    max: 1
+  cropToFit:
+    m_OverrideState: 1
+    m_Value: 0.096
+    min: 0
+    max: 1
 --- !u!114 &-3087884214849300152
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -16,7 +40,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
 --- !u!114 &-1273223870343562293
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -33,7 +57,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.434
+    m_Value: 0.111
     min: 0
     max: 1
 --- !u!114 &11400000
@@ -54,6 +78,9 @@ MonoBehaviour:
   - {fileID: -3087884214849300152}
   - {fileID: -1273223870343562293}
   - {fileID: 5010606132090713754}
+  - {fileID: 3880206877442369013}
+  - {fileID: 6682097679517829942}
+  - {fileID: -8405386637919757104}
 --- !u!114 &4565344950455058
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -93,6 +120,44 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
     min: 0
+--- !u!114 &3880206877442369013
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 4.43
+  contrast:
+    m_OverrideState: 1
+    m_Value: -11
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 1
+    m_Value: 12
+    min: -100
+    max: 100
 --- !u!114 &5010606132090713754
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -130,6 +195,36 @@ MonoBehaviour:
     m_Value: 0.73
     min: 0.01
     max: 5
+--- !u!114 &6682097679517829942
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  m_AdvancedMode: 0
+  mode:
+    m_OverrideState: 0
+    m_Value: 0
+  quality:
+    m_OverrideState: 1
+    m_Value: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.138
+    min: 0
+    max: 1
+  clamp:
+    m_OverrideState: 0
+    m_Value: 0.05
+    min: 0
+    max: 0.2
 --- !u!114 &7077621473077591897
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -145,12 +240,12 @@ MonoBehaviour:
   active: 0
   m_AdvancedMode: 0
   threshold:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 1.1
     min: 0
   intensity:
-    m_OverrideState: 0
-    m_Value: 6.72
+    m_OverrideState: 1
+    m_Value: 2.13
     min: 0
   scatter:
     m_OverrideState: 0

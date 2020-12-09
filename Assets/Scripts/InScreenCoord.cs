@@ -8,7 +8,7 @@ public class InScreenCoord : MonoBehaviour
     public float length;
     LineRenderer[] lines;
     public float width = 1;
-    public Vector3 screenPositon;
+    public Vector2 screenPositon;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,8 @@ public class InScreenCoord : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Camera.main.ViewportToScreenPoint(screenPositon);
-        transform.localRotation = Camera.main.transform.rotation;
+        // transform.position = Camera.main.ViewportToScreenPoint(new Vector3(screenPositon.x, screenPositon.y, Camera.main.nearClipPlane));
+        // transform.localRotation = Camera.main.transform.rotation;
 
 
         r.SetPositions(new Vector3[] { Vector3.zero, Vector3.right * length });

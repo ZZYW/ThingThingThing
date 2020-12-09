@@ -433,6 +433,6 @@ MonoBehaviour:
   r: {fileID: 899015394879032197}
   g: {fileID: 899015395134363535}
   b: {fileID: 899015395593836090}
-  length: 1
-  width: 0.05
-  screenPositon: {x: 50, y: 50, z: 10}
+  length: 0.5
+  width: 0.1
+  screenPositon: {x: 0.1, y: 0.1}

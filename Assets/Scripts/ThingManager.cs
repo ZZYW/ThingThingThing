@@ -37,10 +37,10 @@ public class ThingManager : MonoBehaviour
                 GameObject newThing = Instantiate(thing, transform);
                 newThing.transform.parent = transform;
                 newThing.transform.position = GetSpawnPosition();
-                // var newCoord = GameObject.Instantiate(coord, newThing.transform.position, Quaternion.identity);
-                // newCoord.transform.SetParent(newThing.transform);
-                // newCoord.transform.localRotation = Quaternion.identity;
-                // newCoord.transform.localScale = Vector3.one;
+                var newCoord = GameObject.Instantiate(coord, newThing.transform.position, Quaternion.identity);
+                newCoord.transform.SetParent(newThing.transform);
+                newCoord.transform.localRotation = Quaternion.identity;
+                newCoord.transform.localScale = Vector3.one/20f;
 
 
                 GetBubblePosition(newThing); //for old THINGs

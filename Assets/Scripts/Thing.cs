@@ -146,6 +146,13 @@ public class Thing : MonoBehaviour
         audioSource.maxDistance = 35;
         audioSource.dopplerLevel = 5;
 
+        //material 
+        var renderers = gameObject.GetComponentsInChildren<Renderer>();
+        foreach (var rend in renderers)
+        {
+            rend.material = ColorManager.instance.GetMaterial(1f, Random.Range(0f, 1f) > 0.6f ? true : false);
+        }
+
         TTTStart();
 
         speakCD.GoCooldown();
@@ -187,10 +194,10 @@ public class Thing : MonoBehaviour
             }
         }
 
-        TTTUpdate();    
+        TTTUpdate();
 
     }
-    
+
 
     private void OnSomeoneSpeaking(GameObject who)
     {
@@ -365,17 +372,17 @@ public class Thing : MonoBehaviour
     protected void PlaySound(int soundFileID)
     {
         if (soundFileID < 1 || soundFileID > 102) Debug.LogWarning("sound file id exceed the range, range is 1->102, you are calling " + soundFileID);
-        PlaySound(soundFileID.ToString());
+
+        PlaySound(Random.Range(0, 100).ToString());
     }
 
     protected void PlaySound(string soundFileName)
     {
-        if (playSoundCD.inCD) return;
-        playSoundCD.GoCooldown();
-        audioSource.pitch = Random.Range(1.0f, 2.2f);
-        if (audioSource.isPlaying) return;
-        string soundUrl = soundFilePath + soundFileName;
-        audioSource.clip = Resources.Load(soundUrl) as AudioClip;
+        // if (playSoundCD.inCD) return;
+        // playSoundCD.GoCooldown();
+        // if (audioSource.isPlaying) return;
+        // string soundUrl = soundFilePath + soundFileName;
+        audioSource.clip = SoundManager.instance.GetSound();
         if (audioSource.clip != null)
         {
             audioSource.Play();
