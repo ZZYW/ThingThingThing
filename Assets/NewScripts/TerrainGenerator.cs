@@ -168,7 +168,7 @@ public class TerrainGenerator : MonoBehaviour
             chunk.gameObject.AddComponent<MeshFilter>().mesh = chunkMesh;
             chunk.gameObject.AddComponent<MeshCollider>().sharedMesh = chunkMesh;
             var rend = chunk.gameObject.AddComponent<MeshRenderer>();
-            rend.material = ColorManager.instance.GetMaterial(1f, false);
+            rend.material = ColorManager.instance.GetMaterial(1f, false,false);
             chunk.gameObject.AddComponent<MeshCollider>();
             chunk.transform.parent = transform;
             chunk.transform.position = new Vector3(-xsize / 4f, 0, -ysize / 4f);

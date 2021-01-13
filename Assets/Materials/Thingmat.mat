@@ -63,6 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
+    - _AnimatorSwitch: 1
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
@@ -84,6 +85,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _TimeScale: 0.15
+    - _UVMultiplier: 1.1
+    - _VertexAnimation: 0
+    - _VertexDisNoiseScale: 24.6
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -95,3 +100,4 @@ Material:
     - _ColorB2: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _VertexDisScale: {r: 2.5, g: 2.92, b: 3.81, a: 0}

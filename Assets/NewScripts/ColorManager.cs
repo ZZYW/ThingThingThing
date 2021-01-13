@@ -34,16 +34,22 @@ public class ColorManager : MonoBehaviour
 
     }
 
-    internal Material GetMaterial(float ditherSize, bool animate)
+    internal Material GetMaterial(float ditherSize, bool animate, bool animateVertex = true)
     {
         Material newMat = GameObject.Instantiate(material);
         newMat.SetColor("_ColorA1", GetColor());
         newMat.SetColor("_ColorA2", GetColor());
         newMat.SetColor("_ColorB1", GetColor());
         newMat.SetColor("_ColorB2", GetColor());
+
+        newMat.SetInt("_VertexAnimation", animateVertex ? 1 : 0);
+        newMat.SetVector("_VertexDisScale", new Vector3(Random.Range(0, 2f), Random.Range(0, 2f), Random.Range(0, 2f)));
+        newMat.SetFloat("_VertexDisNoiseScale", Random.Range(10f, 200f));
         newMat.SetFloat("_DitherSize", ditherSize);
+        newMat.SetFloat("_TimeScale", Random.Range(0.01f, 0.1f));
         newMat.SetFloat("_OffsetTime", Random.Range(0f, 10f));
         newMat.SetInt("_AnimatorSwitch", animate ? 1 : 0);
+
 
 
         return newMat;

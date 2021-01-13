@@ -43,7 +43,7 @@ public class ThingManager : MonoBehaviour
                 newCoord.transform.localScale = Vector3.one/20f;
 
 
-                GetBubblePosition(newThing); //for old THINGs
+            
                 AllThings.Add(newThing);
             }
         }
@@ -53,22 +53,6 @@ public class ThingManager : MonoBehaviour
 
     }
 
-    void GetBubblePosition(GameObject target)
-    {
-
-        //if it has chatbubble(old one), destroy it and remember its position
-        Transform existingChatBubble = target.transform.Find("Chat Balloon");
-
-        //default position
-        Vector3 bubblePosition = Vector3.up * target.GetComponent<Thing>().settings.chatBubbleOffsetHeight;
-
-        if (existingChatBubble != null)
-        {
-            bubblePosition = existingChatBubble.transform.localPosition * target.transform.localScale.y;
-            Destroy(existingChatBubble.gameObject);
-        }
-        target.GetComponent<Thing>().bubbleOffsetPosition = bubblePosition;
-    }
 
     public Vector3 GetSpawnPosition()
     {

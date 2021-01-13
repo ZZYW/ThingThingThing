@@ -150,6 +150,7 @@ public class Thing : MonoBehaviour
         var renderers = gameObject.GetComponentsInChildren<Renderer>();
         foreach (var rend in renderers)
         {
+            if(rend.gameObject.GetComponent<LineRenderer>())continue;
             rend.material = ColorManager.instance.GetMaterial(1f, Random.Range(0f, 1f) > 0.6f ? true : false);
         }
 
