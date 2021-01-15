@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbstractOne : Thing
+public class Urchin : Thing
 {
     protected override void TTTAwake()
     {
@@ -20,12 +20,6 @@ public class AbstractOne : Thing
     }
 
 
-    private void ChangeScale()
-    {
-      float newScale = Mathf.Lerp(300, 500, Time.time);
-      transform.localScale = new Vector3(newScale, newScale, newScale);
-    }
-
     protected override void TTTStart()
     {
         //examples:
@@ -36,7 +30,7 @@ public class AbstractOne : Thing
 
     protected override void TTTUpdate()
     {
-        ChangeScale();
+
 
         // a bunch of examples:
         if (Input.GetKeyDown(KeyCode.J))
