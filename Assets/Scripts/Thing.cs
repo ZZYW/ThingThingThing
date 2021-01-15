@@ -147,10 +147,9 @@ public class Thing : MonoBehaviour
         audioSource.dopplerLevel = 5;
 
         //material 
-        var renderers = gameObject.GetComponentsInChildren<Renderer>();
+        var renderers = gameObject.GetComponentsInChildren<MeshRenderer>();
         foreach (var rend in renderers)
         {
-            if(rend.gameObject.GetComponent<LineRenderer>())continue;
             rend.material = ColorManager.instance.GetMaterial(1f, Random.Range(0f, 1f) > 0.6f ? true : false);
         }
 
