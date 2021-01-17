@@ -168,10 +168,11 @@ public class TerrainGenerator : MonoBehaviour
             chunk.gameObject.AddComponent<MeshFilter>().mesh = chunkMesh;
             chunk.gameObject.AddComponent<MeshCollider>().sharedMesh = chunkMesh;
             var rend = chunk.gameObject.AddComponent<MeshRenderer>();
-            rend.material = ColorManager.instance.GetMaterial(1f, false,false);
+            rend.sharedMaterial = material;
+            // rend.material = ColorManager.instance.GetMaterial(1f, false,false);
             chunk.gameObject.AddComponent<MeshCollider>();
             chunk.transform.parent = transform;
-            chunk.transform.position = new Vector3(-xsize / 4f, 0, -ysize / 4f);
+            chunk.transform.position = new Vector3(-xsize / 4f, transform.position.y, -ysize / 4f);
             // chunk.transform.Translate(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f));
         }
     }

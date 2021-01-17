@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23562560637190214}
   - component: {fileID: 54328537629397134}
   - component: {fileID: 82802857993459312}
-  - component: {fileID: 65637058383044176}
   - component: {fileID: 114921568194048760}
   - component: {fileID: 114889815545006032}
   m_Layer: 0
@@ -198,19 +197,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &65637058383044176
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141799655846482}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.0000001}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114921568194048760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5066,7 +5052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4178658347446508
 Transform:
   m_ObjectHideFlags: 0

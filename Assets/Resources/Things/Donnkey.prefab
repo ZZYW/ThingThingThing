@@ -4980,7 +4980,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4888096839339084}
   - component: {fileID: 114821408599505138}
-  - component: {fileID: 65884103378436628}
   - component: {fileID: 54187446383567510}
   - component: {fileID: 82675817950929980}
   - component: {fileID: 114402863368639992}
@@ -5029,19 +5028,6 @@ MonoBehaviour:
   myChatBubble: {fileID: 0}
   bubbleOffsetPosition: {x: 0, y: 0, z: 0}
   mMat: {fileID: 0}
---- !u!65 &65884103378436628
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390210322274590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &54187446383567510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5355,7 +5341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4991523943370892
 Transform:
   m_ObjectHideFlags: 0

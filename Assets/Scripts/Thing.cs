@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(BoxCollider))]
+// [RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(ThingMotor))]
@@ -46,7 +46,7 @@ public class Thing : MonoBehaviour
 
     protected bool InWater { get; private set; }
     protected int NeighborCount { get { return neighborList.Count; } }
-    protected string MyName { get; private set; }
+    public string MyName { get; private set; }
 
     //cool down stuff to avoid crash
     Cooldown speakCD;
@@ -79,7 +79,6 @@ public class Thing : MonoBehaviour
     [Header("Your Main Material For Color Changing")]
     [SerializeField] Material mMat;
 
-    public int DesiredFollowDistance { get { return settings.cameraOffset; } }
 
     private void OnEnable()
     {
@@ -98,17 +97,36 @@ public class Thing : MonoBehaviour
         CancelInvoke();
     }
 
+
+
     private void Awake()
     {
         speakCD = new Cooldown(Random.Range(5f, 10f));
         playSoundCD = new Cooldown(1);
 
-        MyName = gameObject.name;
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        int nameLength = 8;
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<nameLength;i++){
+            sb.Append(chars[Random.Range(0,chars.Length)]);
+        }
+
+        MyName = sb.ToString();
         settings = new Settings();
         stringBuilder = new StringBuilder();
         gameObject.tag = thingTag;
         gameObject.layer = 14;
         neighborList = new List<GameObject>();
+
+        //add mesh collider to all mesh renderers
+        var rends = GetComponentsInChildren<MeshRenderer>();
+        foreach (var r in rends)
+        {
+            if (r.GetComponent<MeshCollider>() == null)
+            {
+                r.gameObject.AddComponent<MeshCollider>().convex = true;
+            }
+        }
         TTTAwake();
     }
 
@@ -156,6 +174,8 @@ public class Thing : MonoBehaviour
         TTTStart();
 
         speakCD.GoCooldown();
+
+
 
     }
     private void Update()

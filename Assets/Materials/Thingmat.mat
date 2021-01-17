@@ -88,7 +88,7 @@ Material:
     - _TimeScale: 0.15
     - _UVMultiplier: 1.1
     - _VertexAnimation: 0
-    - _VertexDisNoiseScale: 24.6
+    - _VertexDisNoiseScale: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

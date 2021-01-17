@@ -40,10 +40,10 @@ public class ThingManager : MonoBehaviour
                 var newCoord = GameObject.Instantiate(coord, newThing.transform.position, Quaternion.identity);
                 newCoord.transform.SetParent(newThing.transform);
                 newCoord.transform.localRotation = Quaternion.identity;
-                newCoord.transform.localScale = Vector3.one/20f;
+                newCoord.transform.localScale = Vector3.one / 20f;
 
 
-            
+
                 AllThings.Add(newThing);
             }
         }
@@ -51,6 +51,11 @@ public class ThingManager : MonoBehaviour
         //Instantiate chat bubble objects
         ChatBubbleManager.main.Init(allThingPrefabs.Length);
 
+    }
+
+    public void MinusOneVertex()
+    {
+        // var allMesh = new 
     }
 
 
