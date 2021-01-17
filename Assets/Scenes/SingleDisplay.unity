@@ -3212,6 +3212,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: abstract1
       objectReference: {fileID: 0}
+    - target: {fileID: 2707731393402923865, guid: f76dad2613eed4d29a505da820c3fd7e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3375478671342318051, guid: f76dad2613eed4d29a505da820c3fd7e,
         type: 3}
       propertyPath: m_LocalPosition.x
