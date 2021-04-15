@@ -26,6 +26,7 @@ public class MakeAllRainbow : MonoBehaviour
         foreach(GameObject g in all)
         {
             Renderer rend = g.GetComponent<Renderer>();
+            Debug.Log("test");
             if(rend!=null && g.tag != "norainbow" && Random.Range(0f,1f)>0.7f)
             {
                 rend.material.shader = rainbowShader;

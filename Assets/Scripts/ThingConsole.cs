@@ -65,6 +65,7 @@ public class ThingConsole : MonoBehaviour {
     }
 
     public static void LogWarning (string content) {
+        return;
         if (cooldown) return;
         warningString.Length = 0;
         warningString.AppendFormat ("<color=yellow>{0}</color>\n", content);
@@ -72,13 +73,15 @@ public class ThingConsole : MonoBehaviour {
     }
 
     public static void LogError (string content) {
+        return;
         if (cooldown) return;
         errorString.Length = 0;
         errorString.AppendFormat ("<color=red>{0}</color>\n", content);
         Log (errorString.ToString ());
     }
 
-    public static void Log (string content) {        
+    public static void Log (string content) {
+        return;
         if (disableLogging) return;
         if (cooldown) { return; }
         if(consoleText!=null) if (consoleText.text == null) return;

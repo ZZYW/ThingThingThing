@@ -1,96 +1,192 @@
 fileFormatVersion: 2
 guid: 415131988dc2286439b2208331589215
-timeCreated: 1455210825
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Sheep_body
-    100004: Sheep_Head
-    100006: Sheep_Legs_00
-    100008: Sheep_Legs_01
-    100010: Sheep_Legs_02
-    100012: Sheep_Legs_03
-    400000: //RootNode
-    400002: Sheep_body
-    400004: Sheep_Head
-    400006: Sheep_Legs_00
-    400008: Sheep_Legs_01
-    400010: Sheep_Legs_02
-    400012: Sheep_Legs_03
-    2300000: Sheep_body
-    2300002: Sheep_Head
-    2300004: Sheep_Legs_00
-    2300006: Sheep_Legs_01
-    2300008: Sheep_Legs_02
-    2300010: Sheep_Legs_03
-    3300000: Sheep_body
-    3300002: Sheep_Head
-    3300004: Sheep_Legs_00
-    3300006: Sheep_Legs_01
-    3300008: Sheep_Legs_02
-    3300010: Sheep_Legs_03
-    4300000: Sheep_Head
-    4300002: Sheep_Legs_02
-    4300004: Sheep_Legs_03
-    4300006: Sheep_Legs_00
-    4300008: Sheep_Legs_01
-    4300010: Sheep_body
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Sheep_body
+  - first:
+      1: 100004
+    second: Sheep_Head
+  - first:
+      1: 100006
+    second: Sheep_Legs_00
+  - first:
+      1: 100008
+    second: Sheep_Legs_01
+  - first:
+      1: 100010
+    second: Sheep_Legs_02
+  - first:
+      1: 100012
+    second: Sheep_Legs_03
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Sheep_body
+  - first:
+      4: 400004
+    second: Sheep_Head
+  - first:
+      4: 400006
+    second: Sheep_Legs_00
+  - first:
+      4: 400008
+    second: Sheep_Legs_01
+  - first:
+      4: 400010
+    second: Sheep_Legs_02
+  - first:
+      4: 400012
+    second: Sheep_Legs_03
+  - first:
+      23: 2300000
+    second: Sheep_body
+  - first:
+      23: 2300002
+    second: Sheep_Head
+  - first:
+      23: 2300004
+    second: Sheep_Legs_00
+  - first:
+      23: 2300006
+    second: Sheep_Legs_01
+  - first:
+      23: 2300008
+    second: Sheep_Legs_02
+  - first:
+      23: 2300010
+    second: Sheep_Legs_03
+  - first:
+      33: 3300000
+    second: Sheep_body
+  - first:
+      33: 3300002
+    second: Sheep_Head
+  - first:
+      33: 3300004
+    second: Sheep_Legs_00
+  - first:
+      33: 3300006
+    second: Sheep_Legs_01
+  - first:
+      33: 3300008
+    second: Sheep_Legs_02
+  - first:
+      33: 3300010
+    second: Sheep_Legs_03
+  - first:
+      43: 4300000
+    second: Sheep_Head
+  - first:
+      43: 4300002
+    second: Sheep_Legs_02
+  - first:
+      43: 4300004
+    second: Sheep_Legs_03
+  - first:
+      43: 4300006
+    second: Sheep_Legs_00
+  - first:
+      43: 4300008
+    second: Sheep_Legs_01
+  - first:
+      43: 4300010
+    second: Sheep_body
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
-    swapUVChannels: 0
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalSmoothAngle: 0
+    normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

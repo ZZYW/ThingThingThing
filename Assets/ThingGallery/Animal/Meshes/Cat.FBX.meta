@@ -1,96 +1,192 @@
 fileFormatVersion: 2
 guid: 92f77c0ef046cd542b686b46d4ef1fe4
-timeCreated: 1455210825
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cat_Head
-    100004: Cat_Legs_002
-    100006: Cat_Legs_003
-    100008: Cat_Legs_004
-    100010: Cat_Legs_01
-    100012: Cat_Tail
-    400000: //RootNode
-    400002: Cat_Head
-    400004: Cat_Legs_002
-    400006: Cat_Legs_003
-    400008: Cat_Legs_004
-    400010: Cat_Legs_01
-    400012: Cat_Tail
-    2300000: Cat_Head
-    2300002: Cat_Legs_002
-    2300004: Cat_Legs_003
-    2300006: Cat_Legs_004
-    2300008: Cat_Legs_01
-    2300010: Cat_Tail
-    3300000: Cat_Head
-    3300002: Cat_Legs_002
-    3300004: Cat_Legs_003
-    3300006: Cat_Legs_004
-    3300008: Cat_Legs_01
-    3300010: Cat_Tail
-    4300000: Cat_Legs_003
-    4300002: Cat_Legs_004
-    4300004: Cat_Tail
-    4300006: Cat_Legs_01
-    4300008: Cat_Legs_002
-    4300010: Cat_Head
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Cat_Head
+  - first:
+      1: 100004
+    second: Cat_Legs_002
+  - first:
+      1: 100006
+    second: Cat_Legs_003
+  - first:
+      1: 100008
+    second: Cat_Legs_004
+  - first:
+      1: 100010
+    second: Cat_Legs_01
+  - first:
+      1: 100012
+    second: Cat_Tail
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Cat_Head
+  - first:
+      4: 400004
+    second: Cat_Legs_002
+  - first:
+      4: 400006
+    second: Cat_Legs_003
+  - first:
+      4: 400008
+    second: Cat_Legs_004
+  - first:
+      4: 400010
+    second: Cat_Legs_01
+  - first:
+      4: 400012
+    second: Cat_Tail
+  - first:
+      23: 2300000
+    second: Cat_Head
+  - first:
+      23: 2300002
+    second: Cat_Legs_002
+  - first:
+      23: 2300004
+    second: Cat_Legs_003
+  - first:
+      23: 2300006
+    second: Cat_Legs_004
+  - first:
+      23: 2300008
+    second: Cat_Legs_01
+  - first:
+      23: 2300010
+    second: Cat_Tail
+  - first:
+      33: 3300000
+    second: Cat_Head
+  - first:
+      33: 3300002
+    second: Cat_Legs_002
+  - first:
+      33: 3300004
+    second: Cat_Legs_003
+  - first:
+      33: 3300006
+    second: Cat_Legs_004
+  - first:
+      33: 3300008
+    second: Cat_Legs_01
+  - first:
+      33: 3300010
+    second: Cat_Tail
+  - first:
+      43: 4300000
+    second: Cat_Legs_003
+  - first:
+      43: 4300002
+    second: Cat_Legs_004
+  - first:
+      43: 4300004
+    second: Cat_Tail
+  - first:
+      43: 4300006
+    second: Cat_Legs_01
+  - first:
+      43: 4300008
+    second: Cat_Legs_002
+  - first:
+      43: 4300010
+    second: Cat_Head
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
-    swapUVChannels: 0
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalSmoothAngle: 0
+    normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

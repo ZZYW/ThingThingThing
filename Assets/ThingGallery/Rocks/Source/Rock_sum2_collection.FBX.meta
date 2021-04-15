@@ -1,214 +1,706 @@
 fileFormatVersion: 2
 guid: 9b0efafa87ba4454e9304c3e5bea2897
-timeCreated: 1479593326
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Group15174
-    100002: Group19228
-    100004: Group23563
-    100006: Group23770
-    100008: Group24920
-    100010: Group31114
-    100012: Group31868
-    100014: Group35311
-    100016: Group35764
-    100018: Group370
-    100020: Group38348
-    100022: Group39475
-    100024: Group42010
-    100026: Group42054
-    100028: Group44034
-    100030: Group44291
-    100032: Group46102
-    100034: Group46228
-    100036: Group46266
-    100038: Group46761
-    100040: Group48503
-    100042: Group48528
-    100044: Group51263
-    100046: Group51331
-    100048: Group54484
-    100050: Group56424
-    100052: Group56918
-    100054: Group57635
-    100056: Group57775
-    100058: Group9469
-    100060: Group9594
-    100062: //RootNode
-    400000: Group15174
-    400002: Group19228
-    400004: Group23563
-    400006: Group23770
-    400008: Group24920
-    400010: Group31114
-    400012: Group31868
-    400014: Group35311
-    400016: Group35764
-    400018: Group370
-    400020: Group38348
-    400022: Group39475
-    400024: Group42010
-    400026: Group42054
-    400028: Group44034
-    400030: Group44291
-    400032: Group46102
-    400034: Group46228
-    400036: Group46266
-    400038: Group46761
-    400040: Group48503
-    400042: Group48528
-    400044: Group51263
-    400046: Group51331
-    400048: Group54484
-    400050: Group56424
-    400052: Group56918
-    400054: Group57635
-    400056: Group57775
-    400058: Group9469
-    400060: Group9594
-    400062: //RootNode
-    2300000: Group15174
-    2300002: Group19228
-    2300004: Group23563
-    2300006: Group23770
-    2300008: Group24920
-    2300010: Group31114
-    2300012: Group31868
-    2300014: Group35311
-    2300016: Group35764
-    2300018: Group370
-    2300020: Group38348
-    2300022: Group39475
-    2300024: Group42010
-    2300026: Group42054
-    2300028: Group44034
-    2300030: Group44291
-    2300032: Group46102
-    2300034: Group46228
-    2300036: Group46266
-    2300038: Group46761
-    2300040: Group48503
-    2300042: Group48528
-    2300044: Group51263
-    2300046: Group51331
-    2300048: Group54484
-    2300050: Group56424
-    2300052: Group56918
-    2300054: Group57635
-    2300056: Group57775
-    2300058: Group9469
-    2300060: Group9594
-    3300000: Group15174
-    3300002: Group19228
-    3300004: Group23563
-    3300006: Group23770
-    3300008: Group24920
-    3300010: Group31114
-    3300012: Group31868
-    3300014: Group35311
-    3300016: Group35764
-    3300018: Group370
-    3300020: Group38348
-    3300022: Group39475
-    3300024: Group42010
-    3300026: Group42054
-    3300028: Group44034
-    3300030: Group44291
-    3300032: Group46102
-    3300034: Group46228
-    3300036: Group46266
-    3300038: Group46761
-    3300040: Group48503
-    3300042: Group48528
-    3300044: Group51263
-    3300046: Group51331
-    3300048: Group54484
-    3300050: Group56424
-    3300052: Group56918
-    3300054: Group57635
-    3300056: Group57775
-    3300058: Group9469
-    3300060: Group9594
-    4300000: Group38348
-    4300002: Group35764
-    4300004: Group31868
-    4300006: Group23563
-    4300008: Group57775
-    4300010: Group370
-    4300012: Group46228
-    4300014: Group51263
-    4300016: Group9469
-    4300018: Group19228
-    4300020: Group44034
-    4300022: Group46761
-    4300024: Group39475
-    4300026: Group46102
-    4300028: Group15174
-    4300030: Group31114
-    4300032: Group9594
-    4300034: Group42054
-    4300036: Group48528
-    4300038: Group48503
-    4300040: Group42010
-    4300042: Group56918
-    4300044: Group51331
-    4300046: Group24920
-    4300048: Group56424
-    4300050: Group44291
-    4300052: Group23770
-    4300054: Group35311
-    4300056: Group54484
-    4300058: Group46266
-    4300060: Group57635
-    9500000: //RootNode
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Group15174
+  - first:
+      1: 100002
+    second: Group19228
+  - first:
+      1: 100004
+    second: Group23563
+  - first:
+      1: 100006
+    second: Group23770
+  - first:
+      1: 100008
+    second: Group24920
+  - first:
+      1: 100010
+    second: Group31114
+  - first:
+      1: 100012
+    second: Group31868
+  - first:
+      1: 100014
+    second: Group35311
+  - first:
+      1: 100016
+    second: Group35764
+  - first:
+      1: 100018
+    second: Group370
+  - first:
+      1: 100020
+    second: Group38348
+  - first:
+      1: 100022
+    second: Group39475
+  - first:
+      1: 100024
+    second: Group42010
+  - first:
+      1: 100026
+    second: Group42054
+  - first:
+      1: 100028
+    second: Group44034
+  - first:
+      1: 100030
+    second: Group44291
+  - first:
+      1: 100032
+    second: Group46102
+  - first:
+      1: 100034
+    second: Group46228
+  - first:
+      1: 100036
+    second: Group46266
+  - first:
+      1: 100038
+    second: Group46761
+  - first:
+      1: 100040
+    second: Group48503
+  - first:
+      1: 100042
+    second: Group48528
+  - first:
+      1: 100044
+    second: Group51263
+  - first:
+      1: 100046
+    second: Group51331
+  - first:
+      1: 100048
+    second: Group54484
+  - first:
+      1: 100050
+    second: Group56424
+  - first:
+      1: 100052
+    second: Group56918
+  - first:
+      1: 100054
+    second: Group57635
+  - first:
+      1: 100056
+    second: Group57775
+  - first:
+      1: 100058
+    second: Group9469
+  - first:
+      1: 100060
+    second: Group9594
+  - first:
+      1: 100062
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Group15174
+  - first:
+      4: 400002
+    second: Group19228
+  - first:
+      4: 400004
+    second: Group23563
+  - first:
+      4: 400006
+    second: Group23770
+  - first:
+      4: 400008
+    second: Group24920
+  - first:
+      4: 400010
+    second: Group31114
+  - first:
+      4: 400012
+    second: Group31868
+  - first:
+      4: 400014
+    second: Group35311
+  - first:
+      4: 400016
+    second: Group35764
+  - first:
+      4: 400018
+    second: Group370
+  - first:
+      4: 400020
+    second: Group38348
+  - first:
+      4: 400022
+    second: Group39475
+  - first:
+      4: 400024
+    second: Group42010
+  - first:
+      4: 400026
+    second: Group42054
+  - first:
+      4: 400028
+    second: Group44034
+  - first:
+      4: 400030
+    second: Group44291
+  - first:
+      4: 400032
+    second: Group46102
+  - first:
+      4: 400034
+    second: Group46228
+  - first:
+      4: 400036
+    second: Group46266
+  - first:
+      4: 400038
+    second: Group46761
+  - first:
+      4: 400040
+    second: Group48503
+  - first:
+      4: 400042
+    second: Group48528
+  - first:
+      4: 400044
+    second: Group51263
+  - first:
+      4: 400046
+    second: Group51331
+  - first:
+      4: 400048
+    second: Group54484
+  - first:
+      4: 400050
+    second: Group56424
+  - first:
+      4: 400052
+    second: Group56918
+  - first:
+      4: 400054
+    second: Group57635
+  - first:
+      4: 400056
+    second: Group57775
+  - first:
+      4: 400058
+    second: Group9469
+  - first:
+      4: 400060
+    second: Group9594
+  - first:
+      4: 400062
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: Group15174
+  - first:
+      23: 2300002
+    second: Group19228
+  - first:
+      23: 2300004
+    second: Group23563
+  - first:
+      23: 2300006
+    second: Group23770
+  - first:
+      23: 2300008
+    second: Group24920
+  - first:
+      23: 2300010
+    second: Group31114
+  - first:
+      23: 2300012
+    second: Group31868
+  - first:
+      23: 2300014
+    second: Group35311
+  - first:
+      23: 2300016
+    second: Group35764
+  - first:
+      23: 2300018
+    second: Group370
+  - first:
+      23: 2300020
+    second: Group38348
+  - first:
+      23: 2300022
+    second: Group39475
+  - first:
+      23: 2300024
+    second: Group42010
+  - first:
+      23: 2300026
+    second: Group42054
+  - first:
+      23: 2300028
+    second: Group44034
+  - first:
+      23: 2300030
+    second: Group44291
+  - first:
+      23: 2300032
+    second: Group46102
+  - first:
+      23: 2300034
+    second: Group46228
+  - first:
+      23: 2300036
+    second: Group46266
+  - first:
+      23: 2300038
+    second: Group46761
+  - first:
+      23: 2300040
+    second: Group48503
+  - first:
+      23: 2300042
+    second: Group48528
+  - first:
+      23: 2300044
+    second: Group51263
+  - first:
+      23: 2300046
+    second: Group51331
+  - first:
+      23: 2300048
+    second: Group54484
+  - first:
+      23: 2300050
+    second: Group56424
+  - first:
+      23: 2300052
+    second: Group56918
+  - first:
+      23: 2300054
+    second: Group57635
+  - first:
+      23: 2300056
+    second: Group57775
+  - first:
+      23: 2300058
+    second: Group9469
+  - first:
+      23: 2300060
+    second: Group9594
+  - first:
+      33: 3300000
+    second: Group15174
+  - first:
+      33: 3300002
+    second: Group19228
+  - first:
+      33: 3300004
+    second: Group23563
+  - first:
+      33: 3300006
+    second: Group23770
+  - first:
+      33: 3300008
+    second: Group24920
+  - first:
+      33: 3300010
+    second: Group31114
+  - first:
+      33: 3300012
+    second: Group31868
+  - first:
+      33: 3300014
+    second: Group35311
+  - first:
+      33: 3300016
+    second: Group35764
+  - first:
+      33: 3300018
+    second: Group370
+  - first:
+      33: 3300020
+    second: Group38348
+  - first:
+      33: 3300022
+    second: Group39475
+  - first:
+      33: 3300024
+    second: Group42010
+  - first:
+      33: 3300026
+    second: Group42054
+  - first:
+      33: 3300028
+    second: Group44034
+  - first:
+      33: 3300030
+    second: Group44291
+  - first:
+      33: 3300032
+    second: Group46102
+  - first:
+      33: 3300034
+    second: Group46228
+  - first:
+      33: 3300036
+    second: Group46266
+  - first:
+      33: 3300038
+    second: Group46761
+  - first:
+      33: 3300040
+    second: Group48503
+  - first:
+      33: 3300042
+    second: Group48528
+  - first:
+      33: 3300044
+    second: Group51263
+  - first:
+      33: 3300046
+    second: Group51331
+  - first:
+      33: 3300048
+    second: Group54484
+  - first:
+      33: 3300050
+    second: Group56424
+  - first:
+      33: 3300052
+    second: Group56918
+  - first:
+      33: 3300054
+    second: Group57635
+  - first:
+      33: 3300056
+    second: Group57775
+  - first:
+      33: 3300058
+    second: Group9469
+  - first:
+      33: 3300060
+    second: Group9594
+  - first:
+      43: 4300000
+    second: Group38348
+  - first:
+      43: 4300002
+    second: Group35764
+  - first:
+      43: 4300004
+    second: Group31868
+  - first:
+      43: 4300006
+    second: Group23563
+  - first:
+      43: 4300008
+    second: Group57775
+  - first:
+      43: 4300010
+    second: Group370
+  - first:
+      43: 4300012
+    second: Group46228
+  - first:
+      43: 4300014
+    second: Group51263
+  - first:
+      43: 4300016
+    second: Group9469
+  - first:
+      43: 4300018
+    second: Group19228
+  - first:
+      43: 4300020
+    second: Group44034
+  - first:
+      43: 4300022
+    second: Group46761
+  - first:
+      43: 4300024
+    second: Group39475
+  - first:
+      43: 4300026
+    second: Group46102
+  - first:
+      43: 4300028
+    second: Group15174
+  - first:
+      43: 4300030
+    second: Group31114
+  - first:
+      43: 4300032
+    second: Group9594
+  - first:
+      43: 4300034
+    second: Group42054
+  - first:
+      43: 4300036
+    second: Group48528
+  - first:
+      43: 4300038
+    second: Group48503
+  - first:
+      43: 4300040
+    second: Group42010
+  - first:
+      43: 4300042
+    second: Group56918
+  - first:
+      43: 4300044
+    second: Group51331
+  - first:
+      43: 4300046
+    second: Group24920
+  - first:
+      43: 4300048
+    second: Group56424
+  - first:
+      43: 4300050
+    second: Group44291
+  - first:
+      43: 4300052
+    second: Group23770
+  - first:
+      43: 4300054
+    second: Group35311
+  - first:
+      43: 4300056
+    second: Group54484
+  - first:
+      43: 4300058
+    second: Group46266
+  - first:
+      43: 4300060
+    second: Group57635
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low10default
+    second: {fileID: 2100000, guid: 0ad44a4d1dce34cc0a0ebfa30781be05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low11default
+    second: {fileID: 2100000, guid: 064fb41252859419ea31fa4bfdd084c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low12default
+    second: {fileID: 2100000, guid: 0fb788cafb0b94edc92739184992897e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low13default
+    second: {fileID: 2100000, guid: d9b9ac28eb7e544f39d90b2b7a2cc70a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low14default
+    second: {fileID: 2100000, guid: 078bafa4303d54b6182a20d9d3522f78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low15default
+    second: {fileID: 2100000, guid: 6e68c2bbd1c17405f821ba253926f1ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low16default
+    second: {fileID: 2100000, guid: d8e000d10e2554b198586f3988200c25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low18default
+    second: {fileID: 2100000, guid: d9b5ce1de309446a1a02700d6bfaef59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low19default
+    second: {fileID: 2100000, guid: 234bf910944d84277aa3085fc93fe035, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low1default
+    second: {fileID: 2100000, guid: c7376228da1bc41d79885ab86a1e5419, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "_firstrock_low1\xDFdefault"
+    second: {fileID: 2100000, guid: 6b50a91c4fe90403d809b4af22add686, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low20default
+    second: {fileID: 2100000, guid: 5b6f944abd0c64d428d40d5dad1ac574, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low21default
+    second: {fileID: 2100000, guid: 26123aedd464f48a3985408a9eb8345b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low22default
+    second: {fileID: 2100000, guid: 95d94665077d64ca9824b04d650ef973, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low23default
+    second: {fileID: 2100000, guid: fa5252dd5c6124269be5b2bc14046bfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low24default
+    second: {fileID: 2100000, guid: 4fef4a0667eae4f2aa36ec394bd7e51d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low25default
+    second: {fileID: 2100000, guid: b6a052e23e7d948cb8ab18b79ba3b90c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low26default
+    second: {fileID: 2100000, guid: 9a7df405cab1a4e6ba852cba601f7971, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low27default
+    second: {fileID: 2100000, guid: 518412121c210492f913d598475e55f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low28default
+    second: {fileID: 2100000, guid: 885a961371a30437aaa1a2ed2750bb08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low29default
+    second: {fileID: 2100000, guid: 9a27831773e2f4c01b76bc2b806bcd30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low2default
+    second: {fileID: 2100000, guid: 340fda07b44384cae9f3af1790d91cb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low30default
+    second: {fileID: 2100000, guid: 3beed1eadfa514efcb8a8ab24340c8a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low31default
+    second: {fileID: 2100000, guid: c63f5437c23a24344850bc20a421cfca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low3default
+    second: {fileID: 2100000, guid: caf4c7ea80e1243969f53a96c04eb0b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low4default
+    second: {fileID: 2100000, guid: 24c08863029104fc295e4c1895516ee2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low5default
+    second: {fileID: 2100000, guid: c85a9e1d19a6845d3b0addf327fc8926, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low6default
+    second: {fileID: 2100000, guid: 5ffd50b3d1c704b7399517f65344c593, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low7default
+    second: {fileID: 2100000, guid: 930960d2f849f4c7b90c76e2b68d7ec7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low8default
+    second: {fileID: 2100000, guid: d1c26d89275cb4bb4a9e10f2c3f6927d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _firstrock_low9default
+    second: {fileID: 2100000, guid: 445b0611411ca41e3a8c3de18c37a0b0, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
-    swapUVChannels: 0
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 0
+    normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -218,11 +710,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
